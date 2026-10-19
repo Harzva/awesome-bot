@@ -32,7 +32,6 @@
       "line": "#d7cec1",
       "lineStrong": "#aaa095",
       "accent": "#ad382b",
-      "accentSoft": "#f1d2c9",
       "focus": "#1d68ae"
     },
     "typography": {
@@ -43,8 +42,10 @@
     },
     "space": {
       "gutterDesktop": "24px",
+      "gutterMedium": "16px",
       "gutterMobile": "12px",
-      "rowVertical": "25px",
+      "rowPaddingDesktop": "25px 0 23px",
+      "rowPaddingMobile": "22px 0 20px",
       "section": "36px"
     },
     "radii": {
@@ -54,35 +55,48 @@
     },
     "motion": {
       "standard": "120ms ease",
-      "reducedMotion": "disable nonessential transitions and smooth scroll"
+      "reducedMotion": "remove smooth scrolling; reduce transitions and animations to 0.01ms and one animation iteration"
     }
   },
   "principles": [
     "Search and inspect before downloading.",
     "Use thin-rule rows for directory density instead of a card wall.",
     "Keep source, version, license, and requested permissions visible.",
+    "Use a pressed button group for collection filtering and keep the result surface in place.",
+    "Draw external, download, and close marks with authored CSS shapes while keeping labels accessible.",
     "Use a self-hosted OFL font plus platform Chinese fallbacks and relative assets so GitHub Pages stays portable.",
     "Treat missing data, empty results, and untested real tasks as visible states."
   ],
   "responsive": {
-    "wide": "header, search, filters, list, and utility rail fit within 1180px",
-    "medium": "utility rail moves below list and controls retain native focus",
-    "small": "navigation simplifies, rows stack actions, dialog fills the viewport"
+    "wide": "header, search, filters, list, and utility rail fit within 1180px; default side gutters are 24px",
+    "medium": "at max-width 930px the utility rail moves below the list; at max-width 760px side gutters become 16px",
+    "small": "at max-width 760px navigation simplifies and rows stack actions; at max-width 480px side gutters become 12px and the dialog has an 8px outer margin"
   },
   "safety": {
     "entryText": "textContent or text nodes only",
     "links": "https or site-relative paths",
     "downloads": "static configuration files; counts are data-driven; null bulk URLs show a per-entry fallback without an href",
-    "permissions": "requested capabilities are descriptive and never treated as granted"
+    "permissions": "requested capabilities are descriptive and never treated as granted",
+    "provenance": "source authors and template authors retain distinct labels; format and import checks do not certify real task execution",
+    "icons": "authored CSS shapes; no Unicode icon glyphs for external, download, or close actions; the external-link diagonal uses a linear-gradient as icon geometry",
+    "collectionControl": "role=group with button aria-pressed state",
+    "focus": "visible outline plus soft focus-within shadow for the search field"
   },
   "qa": {
+    "status": "completed local-preview checks recorded by implementation and visual review; this documentation pass compared source text and existing review records",
     "viewports": [
-      "1440x900",
       "1280x720",
       "390x844",
       "375x812"
     ],
-    "states": [
+    "capturedScenarios": [
+      "desktop directory",
+      "mobile directory at both recorded widths",
+      "mobile first result",
+      "detail dialog",
+      "empty results"
+    ],
+    "sourceReviewedStates": [
       "loading",
       "catalogue error",
       "search results",
@@ -93,6 +107,14 @@
       "reduced motion"
     ],
     "evidenceDirectory": "research/awesome-bot-20261020/ui/",
-    "evidenceVisibility": "local acceptance evidence; outside the public site"
+    "evidenceVisibility": "workspace local acceptance evidence outside this Git repository; not public site assets or deployed links",
+    "reviewFixEvidence": [
+      "awesome-bot-review-fix-1280x720.png",
+      "awesome-bot-review-fix-mobile-390x844.png",
+      "awesome-bot-review-fix-mobile-375x812.png",
+      "awesome-bot-review-fix-mobile-first-result.png",
+      "awesome-bot-review-fix-detail.png",
+      "awesome-bot-review-fix-empty.png"
+    ]
   }
 }

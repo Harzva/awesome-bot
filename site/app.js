@@ -7,7 +7,7 @@
 
   const copy = {
     zh: {
-      navCatalog: '目录', navSubmit: '投稿 ↗', kicker: '一份可审阅的 Bot 目录', languageToggle: '切换界面语言',
+      navCatalog: '目录', navSubmit: '投稿', kicker: '一份可审阅的 Bot 目录', languageToggle: '切换界面语言',
       filterLabel: '目录筛选', botTypeLabel: 'Bot 类型', categoryFilter: '按分类筛选', sortControlLabel: '排序方式',
       title: '找到一个，把事情推进下去。',
       lede: '按角色和任务查找中文 Bot。看清职责、步骤和权限需求，再下载可复现的配置。',
@@ -23,7 +23,7 @@
       bulkLimit: '超过单包上限，请逐项下载',
       sourceKicker: '来源与编辑', sourceTitle: '保留来路',
       sourceBody: '每个条目会标出来源、版本和许可证；缺少来源的社区条目会明确显示。',
-      openRepo: '查看仓库 ↗', indexKicker: '机器可读',
+      openRepo: '查看仓库', indexKicker: '机器可读',
       indexBody: '复制目录索引地址，交给脚本或团队内部工具使用。', copyIndex: '复制索引 URL',
       footerText: '开源目录，欢迎审阅与投稿。', allCategories: '全部分类', nameSort: '名称',
       originalNameSort: '来源名称', role: '角色', workflow: '任务', community: '社区条目',
@@ -41,7 +41,7 @@
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
-      navCatalog: 'Directory', navSubmit: 'Submit ↗', kicker: 'A reviewable Bot directory', languageToggle: 'Switch interface language',
+      navCatalog: 'Directory', navSubmit: 'Submit', kicker: 'A reviewable Bot directory', languageToggle: 'Switch interface language',
       filterLabel: 'Directory filters', botTypeLabel: 'Bot type', categoryFilter: 'Filter by category', sortControlLabel: 'Sort order',
       title: 'Find one that moves work forward.',
       lede: 'Search Chinese Bots by role or task. Review the mission, steps and requested permissions before downloading a reproducible configuration.',
@@ -57,7 +57,7 @@
       bulkLimit: 'Over the single-bundle limit; download entries individually',
       sourceKicker: 'Source and editing', sourceTitle: 'Keep the trail',
       sourceBody: 'Each entry records its source, version and license. Community entries without a source say so clearly.',
-      openRepo: 'Open repository ↗', indexKicker: 'Machine readable',
+      openRepo: 'Open repository', indexKicker: 'Machine readable',
       indexBody: 'Copy the directory index for scripts or an internal team tool.', copyIndex: 'Copy index URL',
       footerText: 'Open directory for review and contributions.', allCategories: 'All categories', nameSort: 'Name',
       originalNameSort: 'Source name', role: 'Role', workflow: 'Task', community: 'Community entry',
@@ -449,7 +449,7 @@
     doc.querySelectorAll('.collection-tab').forEach((button) => {
       const active = button.dataset.collection === state.collection;
       button.classList.toggle('is-active', active);
-      button.setAttribute('aria-selected', active ? 'true' : 'false');
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     const favoriteButton = doc.getElementById('favorites-toggle');
     if (favoriteButton) favoriteButton.setAttribute('aria-pressed', state.favoritesOnly ? 'true' : 'false');
@@ -644,10 +644,9 @@
     state.previousFocus = doc.activeElement;
     const shell = make('div', 'detail-shell');
     const header = make('header', 'detail-header');
-    header.append(make('p', 'section-kicker', collectionLabel(collectionOf(entry))));
     const title = make('h2', '', entry.name);
     title.id = 'detail-title';
-    const close = make('button', 'detail-close', '×');
+    const close = make('button', 'detail-close');
     close.type = 'button';
     close.setAttribute('aria-label', label('detailClose'));
     close.addEventListener('click', () => dialog.close());

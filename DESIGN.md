@@ -4,7 +4,7 @@ This document records the visual decisions for the static catalogue in `site/`. 
 
 ## Evidence and direction
 
-The supplied reference screenshot is `research/awesome-bot-20261020/ui/dsh-reference.png` (1280 × 720). Direct observations from that image:
+The supplied reference screenshot is `research/awesome-bot-20261020/ui/dsh-reference.png` (1280 × 720). The implementation's reference review recorded these observations:
 
 - The reference uses a warm paper background, a restrained top navigation, and a large black-and-red heading.
 - Search is the first useful control. It is a wide white field with a dark outline and a visible result count.
@@ -17,10 +17,10 @@ The screenshot does not expose the reference list rows, detail behavior, mobile 
 
 ## Surface structure
 
-1. A compact header identifies Awesome Bot and keeps Directory, Submit, GitHub, and language controls reachable.
+1. A compact header identifies Awesome Bot and keeps Directory, Submit, GitHub, and language controls reachable on wide screens; narrow navigation retains GitHub and language controls.
 2. The masthead explains the job of the directory in Chinese by default. Its red sentence fragment creates a memorable accent without introducing a promotional hero.
 3. A high-contrast search field accepts Chinese names, summaries, tags, source names, and IDs. The result count is inside the same control line.
-4. Collection tabs divide `全部`, `角色`, and `任务`. Category, sort, and saved-only controls sit beside them on wide screens and wrap on narrow screens.
+4. Collection controls divide `全部`, `角色`, and `任务` as a labelled button group with pressed state. Category, sort, and saved-only controls sit beside them on wide screens and wrap on narrow screens.
 5. Work-area chips provide a quick horizontal scan. The results are thin-rule rows with a source label, summary, a small amount of metadata, a saved toggle, and a detail action.
 6. The right rail carries bulk downloads, provenance guidance, and the machine-readable registry link. It collapses below the list on smaller widths.
 7. A native dialog gives each entry a reviewable detail surface: mission, style, inputs, outputs, steps, requirements, skills, guidance, requested permissions, verification status, and safe links to manifests and sources.
@@ -31,38 +31,45 @@ The screenshot does not expose the reference list rows, detail behavior, mobile 
 | --- | --- | --- |
 | `paper` | `#f5f0e8` | Page background |
 | `surface` | `#fffdf9` | Search field and dialog |
+| `surface-soft` | `#eee7dc` | Secondary detail surfaces |
 | `ink` | `#201d1a` | Type, rules, primary controls |
 | `muted` | `#5b554d` | Supporting copy and metadata |
 | `line` | `#d7cec1` | Quiet dividers |
+| `line-strong` | `#aaa095` | Control borders and scroll affordances |
 | `accent` | `#ad382b` | Editorial emphasis and active details |
 | `focus` | `#1d68ae` | Keyboard focus ring |
 | `radius-sm` | `4px` | Controls and buttons |
 | `radius-md` | `10px` | Search and dialog |
+| `chip` | `99px` | Category capsules |
 
-Typography uses self-hosted IBM Plex Sans weights for Latin interface text, licensed under SIL OFL 1.1 in `site/fonts/OFL-1.1.txt`, followed by the platform's Chinese sans fallbacks for broad glyph coverage. Its measured, editorial forms suit a practical directory better than a default browser stack. The static site has no remote font dependency or tracking request. Headings use tight spacing and the body remains readable at 15px. The UI intentionally avoids gradients, glass effects, oversized metric cards, and decorative texture that would compete with the directory content.
+Typography uses self-hosted IBM Plex Sans weights for Latin interface text, licensed under SIL OFL 1.1 in `site/fonts/OFL-1.1.txt`, followed by the platform's Chinese sans fallbacks for broad glyph coverage. Its measured, editorial forms suit a practical directory better than a default browser stack. The static site has no remote font dependency or tracking request. Headings use tight spacing and the body remains readable at 15px. The UI intentionally avoids decorative gradient surfaces, glass effects, oversized metric cards, and decorative texture that would compete with the directory content. The external-link icon uses a CSS linear-gradient to draw its diagonal; that is icon geometry rather than a gradient surface.
 
 ## Interaction and state rules
 
 - The default language is Chinese. The language toggle changes interface labels to English; Bot names, personas, source text, and other authored entry content remain as supplied.
-- Search, collection, category, sort, and saved-only filters can be combined. Search matching is case-insensitive and covers `name`, `summary`, `tags`, `sourceName`, `id`, mission, style, category, and capabilities.
+- Search, collection, category, sort, and saved-only filters can be combined. Search matching is case-insensitive and covers `name`, `summary`, `tags`, `sourceName`, `sourceAuthor`, `id`, mission, style, category, and capabilities.
 - Favorites are stored in `localStorage` under `awesome-bot:favorites:v1`. Storage failure leaves an in-memory session state and does not block browsing.
 - Detail views use a native `dialog`, close with the close control, backdrop click, or Escape, and return focus to the control that opened them.
+- The collection button group exposes `aria-pressed` state instead of tab semantics because it filters the directory in place.
+- External-link, download, and close marks are authored CSS shapes with decorative semantics; the accessible names remain in the surrounding text and button labels.
+- Decorative section eyebrows have been removed from the HTML; functional entry metadata remains.
 - “下载配置” links to a static fleet file. The page does not install, execute, or call a model.
 - Batch download labels read the computed catalogue counts. If a generator returns `null` for a bundle above the single-bundle limit, the row stays visible without an `href` and says “超过单包上限，请逐项下载”; individual entry downloads remain available.
 - Permission rows describe requested configuration capabilities only. They do not imply that tools, screen access, or a container have been granted.
+- Source authors and template authors retain distinct labels. Format and import checks do not certify real task execution.
 - All entry content is inserted with `textContent` or text nodes. Link targets accept `https:` or site-relative paths only; unsupported schemes are omitted.
 - Missing catalogue data shows an explicit build-state empty view. A zero-result search shows a separate empty state with a clear-filters action.
 
 ## Responsive and accessibility notes
 
-- The content width is capped at 1180px, with 24px side gutters on small screens. The first viewport remains search-led at 1440px and 1280px.
-- Below 930px, the utility rail moves below the results. Below 760px, navigation and toolbar controls simplify while result actions move below each row. The detail dialog becomes a near-full-screen sheet below 480px.
-- Native buttons, labels, selects, and dialog semantics provide keyboard access. Focus rings use a blue outline with a 3px offset and remain visible on the paper palette.
+- The content width is capped at 1180px. Side gutters are 24px by default, 16px at widths up to 760px, and 12px at widths up to 480px.
+- At widths up to 930px, the utility rail moves below the results. At widths up to 760px, navigation and toolbar controls simplify while result actions move below each row. The detail dialog becomes a near-full-screen sheet at widths up to 480px.
+- Native buttons, labels, selects, and dialog semantics provide keyboard access. Focus rings use a blue outline or a soft blue focus-within shadow and remain visible on the paper palette.
 - `aria-live` announces result counts and copy status. The list exposes busy state while the catalogue loads.
-- `prefers-reduced-motion: reduce` removes nonessential transitions and smooth scrolling.
+- `prefers-reduced-motion: reduce` removes smooth scrolling and reduces transition and animation duration to 0.01ms.
 
 ## Visual QA record
 
-The supplied reference was inspected at 1280 × 720 before implementation. The implementation should be checked at 1440 × 900, 1280 × 720, 390 × 844, and 375 × 812 after `npm run build:site` and the local preview server are available. Verify the first viewport, search focus ring, category overflow, dialog focus return, empty state, and downloaded-link paths. Final screenshots are local acceptance evidence under `research/awesome-bot-20261020/ui/`; they are outside the public site and are not linked from the deployed surface. The supplied reference remains evidence only and is not copied into public site assets.
+The implementation and visual review recorded completed local-preview checks at 1280 × 720, 390 × 844, and 375 × 812. The review-fix evidence set includes `awesome-bot-review-fix-1280x720.png`, `awesome-bot-review-fix-mobile-390x844.png`, `awesome-bot-review-fix-mobile-375x812.png`, `awesome-bot-review-fix-mobile-first-result.png`, `awesome-bot-review-fix-detail.png`, and `awesome-bot-review-fix-empty.png`.
 
-The first implementation pass was checked in the local preview at 1280 × 720, 390 × 844, and 375 × 812. The evidence set includes `awesome-bot-parent-1280x720.png`, `awesome-bot-final-mobile-390x844.png`, `awesome-bot-final-mobile-375x812.png`, `awesome-bot-detail-dialog.png`, `awesome-bot-empty-state.png`, `awesome-bot-keyboard-focus.png`, and `awesome-bot-bulk-limit-state.png`.
+The reference and acceptance screenshots are local evidence in the workspace's `research/awesome-bot-20261020/ui/` directory, outside this Git repository. They are not public site assets or deployed links. The reference remains evidence only and is not copied into public assets. This documentation pass compared source text and existing review records; it did not inspect screenshots or run another visual review.
