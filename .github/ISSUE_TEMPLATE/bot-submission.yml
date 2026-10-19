@@ -1,0 +1,51 @@
+name: Suggest a Bot or workflow
+description: Propose one concrete, source-backed catalogue entry.
+title: '[Submission] '
+labels: []
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Bot or workflow name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Original source URL
+      description: Link to the author's repository or primary product documentation.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Entry type
+      options:
+        - Bot role template
+        - Task workflow
+        - External reference only
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Concrete task and expected result
+      description: Include required input, tools, accounts, and a useful example.
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: Author, license, and verification
+      description: State which content may be redistributed and what was actually tested.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Submission checks
+      options:
+        - label: I have not included credentials, private conversations, or private memory.
+          required: true
+        - label: I distinguish a proposed capability from a task I actually verified.
+          required: true

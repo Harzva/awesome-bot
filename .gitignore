@@ -1,0 +1,15 @@
+node_modules/
+.cache/
+out/
+*.private.*
+dist/
+native-verification*.json
+verification.json
+scripts/verify-native.mjs
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/config.local.json
+.impeccable/*.log
+.impeccable/*
+!.impeccable/design.json
+.DS_Store

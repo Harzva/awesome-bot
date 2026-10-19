@@ -1,0 +1,2803 @@
+{
+  "schema": "awesome.bot.upstream-inventory/1",
+  "checkedAt": "2026-10-19T18:31:38.453478+00:00",
+  "listingSnapshotAt": "2026-10-19T18:18:58.983228+00:00",
+  "checkedTimezone": "Asia/Shanghai",
+  "marketplaceBotCount": 90,
+  "officialTeamCategoryCount": 54,
+  "useCaseCount": 56,
+  "marketplaceCategoryCounts": {
+    "From Grok Bot Team": 54,
+    "Engineering": 8,
+    "Sales": 23,
+    "Marketing": 25,
+    "Design": 4,
+    "Personal": 14,
+    "Recruiting & People": 2,
+    "Product": 7,
+    "Operations": 4
+  },
+  "useCaseCategoryCounts": {
+    "General": 6,
+    "Sales": 10,
+    "Marketing": 13,
+    "Customer Success & Support": 4,
+    "Recruiting & People": 4,
+    "Operations & Finance": 5,
+    "Engineering": 5,
+    "Life & Leverage": 4,
+    "Product": 5
+  },
+  "collectionMethod": "Public unauthenticated HTML; Next RSC templates prop on marketplace, all nine category-page visible links, visible use-case article cards, and four public detail-page samples. No private/account endpoints or images fetched.",
+  "sources": [
+    {
+      "url": "https://x.ai/bot/marketplace",
+      "sha256": "234d31a15bfe0be023498c18cc00afb43153f33f10e3d814aa5a45fa63e663ff"
+    },
+    {
+      "url": "https://x.ai/bot/use-cases",
+      "sha256": "61df7d8a9d12c0cb2862f766fa65212b6c1ad52e69a42e22d90d785f64af4722"
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/overview",
+      "reviewed": true
+    }
+  ],
+  "completenessChecks": {
+    "publicTemplatesArrayUniqueIds": 90,
+    "categoryUnionUniqueIds": 88,
+    "categoryIdsAbsentFromTemplatesArray": [],
+    "templatesWithoutCategoryPageMembership": [
+      "overheard",
+      "tradbot-2"
+    ],
+    "useCasesMatchesDeclaredTotal": true,
+    "publicTemplateFieldsNote": "All listed counts describe public page payload fields; instructions empty does not prove persona absent from actual importer.",
+    "featuredOnlyIdsHaveDetailPages": true
+  },
+  "marketplaceBots": [
+    {
+      "id": "dr-eggbot-v2",
+      "name": "dr eggbot",
+      "author": "Lauren Tan",
+      "handle": "poteto",
+      "categories": [
+        "From Grok Bot Team"
+      ],
+      "publicPurpose": "根据用户偏好设计职责明确的机器人并协助创建。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/dr-eggbot-v2",
+        "htmlSha256": "61e189b5a52d609c321cc3415bd7f31aafbdffd8e2b764dc60ca0283ab4ea492"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/dr-eggbot-v2",
+      "originalAddUrl": "https://x.ai/bot/_jOdbfkB16zxu7MRcmReE",
+      "updatedAt": "2026-09-04T22:19:28.701Z",
+      "localTemplateId": "awesome/grok-dr-eggbot-v2",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "overheard",
+      "name": "Overheard",
+      "author": "Lenny Rachitsky",
+      "handle": "lennysan",
+      "categories": [],
+      "publicPurpose": "监测公开平台对品牌的提及并筛选值得关注的动态。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/overheard",
+        "htmlSha256": "4e5e63eec223cc240c28be1a729619a9fcd0c557217e9b65c9b82846868b5af3"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/overheard",
+      "originalAddUrl": "https://x.ai/bot/NIEguoGUjA648fUPle8F5",
+      "updatedAt": "2026-09-04T22:21:40.855Z",
+      "localTemplateId": "awesome/grok-overheard",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "tradbot-2",
+      "name": "Tradbot",
+      "author": "Claire Vo",
+      "handle": "clairevo",
+      "categories": [],
+      "publicPurpose": "整理家庭邮件与日历事务以发现遗漏和时间冲突。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/tradbot-2",
+        "htmlSha256": "8bd8050cc4416a5f85938ce2b14602851685a0ca017396a3564e4b6cccf6a0b4"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/tradbot-2",
+      "originalAddUrl": "https://x.ai/bot/wOE4e95HNxhSbrzyLkSI-",
+      "updatedAt": "2026-09-04T22:21:14.735Z",
+      "localTemplateId": "awesome/grok-tradbot-2",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "projects-manager",
+      "name": "Projects Manager",
+      "author": "Eric Zakariasson",
+      "handle": "ericzakariasson",
+      "categories": [
+        "From Grok Bot Team",
+        "Engineering"
+      ],
+      "publicPurpose": "以团队项目台账协调专业机器人认领和推进任务。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/projects-manager",
+        "htmlSha256": "46ab487f566324efe5f20c46704baa501c67fdee3f586a15d1678c9e5e968849"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/projects-manager",
+      "originalAddUrl": "https://x.ai/bot/AZKaQOsjrAa51Nb4xvTur",
+      "updatedAt": "2026-09-03T06:55:18.353Z",
+      "localTemplateId": "awesome/grok-projects-manager",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "pg",
+      "name": "Outbound Prospecting",
+      "author": "Krista Letz",
+      "handle": "kristaletz",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "依据理想客户条件研究潜在客户并起草首次联系。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/pg",
+        "htmlSha256": "edf82750d7b7c7c08627660ce1efa1f3aaf44ba9ba25bbed5c9b55f6f8513a7d"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/pg",
+      "originalAddUrl": "https://x.ai/bot/i03IaF768-ielyzegoGye",
+      "updatedAt": "2026-09-03T07:01:11.949Z",
+      "localTemplateId": "awesome/grok-pg",
+      "relatedWorkflowTemplateId": "awesome/sales-outbound",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "seo-aeo-desk",
+      "name": "SEO & AEO Desk",
+      "author": "Adam Tanguay",
+      "handle": "adamta",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "将搜索关键词转化为内容选题和可交给作者的简报。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/seo-aeo-desk",
+        "htmlSha256": "affe7ba8a3b370c029514bb834a51042b6165da7c25f95aba5b15c4f7546625f"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/seo-aeo-desk",
+      "originalAddUrl": "https://x.ai/bot/0IhyZWxwbf2cFmsmroZQL",
+      "updatedAt": "2026-09-03T09:05:03.873Z",
+      "localTemplateId": "awesome/grok-seo-aeo-desk",
+      "relatedWorkflowTemplateId": "awesome/seo-aeo-auditor",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "imogen",
+      "name": "Imogen",
+      "author": "Kent C. Dodds",
+      "handle": "kentcdodds",
+      "categories": [
+        "Design"
+      ],
+      "publicPurpose": "提炼图片中的关键内容并写成便于使用的无障碍文本。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/imogen",
+        "htmlSha256": "4d036dcc5e55d89bcc395d6992559bd12636610e68115fc31de91081ad8762f8"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/imogen",
+      "originalAddUrl": "https://x.ai/bot/Eeu5NZp62OzQjtlY4ons2",
+      "updatedAt": "2026-09-03T16:16:39.536Z",
+      "localTemplateId": "awesome/grok-imogen",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "researchy",
+      "name": "Researchy",
+      "author": "Farzad",
+      "handle": "farzyness",
+      "categories": [
+        "Engineering"
+      ],
+      "publicPurpose": "通过实时网页研究核对主张并记录来源和时间。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/researchy",
+        "htmlSha256": "82adc482c084da75d2865b0002fa14e6a8f85c89dbcb66640e0b7a5b07d089f8"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/researchy",
+      "originalAddUrl": "https://x.ai/bot/i2hvaEONDg6_gEF5C9RlK",
+      "updatedAt": "2026-09-05T00:02:09.796Z",
+      "localTemplateId": "awesome/grok-researchy",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "haggle-bot",
+      "name": "Haggle Bot",
+      "author": "Daniel Gartshein",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team"
+      ],
+      "publicPurpose": "核查软件订阅支出并识别节约机会和准备议价材料。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/haggle-bot",
+        "htmlSha256": "75793c5f84dbd261f16cbc1f8e9fcef928025def3c8cc3f33f73ea6e66b52ad8"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/haggle-bot",
+      "originalAddUrl": "https://x.ai/bot/pwQ612YrX3R0eACnIMlom",
+      "updatedAt": "2026-09-04T22:20:34.452Z",
+      "localTemplateId": "awesome/grok-haggle-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "credit-card-max",
+      "name": "Credit Card Max",
+      "author": "Trevin Chow",
+      "handle": "trevin",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "结合用卡目标与交易信息整理积分权益和到期提醒。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/credit-card-max",
+        "htmlSha256": "26ac936bf12366da7450a536b209b32cf557cb025704eab8a5386710970592bc"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/credit-card-max",
+      "originalAddUrl": "https://x.ai/bot/q4u8YgzGQqCAOUZcg0Lgt",
+      "updatedAt": "2026-10-14T04:42:04.977Z",
+      "localTemplateId": "awesome/grok-credit-card-max",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "mr-toms",
+      "name": "Recruiting Coordinator",
+      "author": "Tommy Hansen",
+      "handle": "TommyHansenTA",
+      "categories": [
+        "From Grok Bot Team",
+        "Recruiting & People"
+      ],
+      "publicPurpose": "协调面试日程与面试官准备并跟进停滞的招聘环节。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/mr-toms",
+        "htmlSha256": "df7fc39b774f98b8a758423c7a7d6ba80e0c7e3190cf0b023c2f7bed0a1ce2ee"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/mr-toms",
+      "originalAddUrl": "https://x.ai/bot/KDahOjiDbbAvxqx9KaGcq",
+      "updatedAt": "2026-09-03T07:22:59.899Z",
+      "localTemplateId": "awesome/grok-mr-toms",
+      "relatedWorkflowTemplateId": "awesome/calendar-coordinator",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "image-gen-bot",
+      "name": "Stills & Clips Desk",
+      "author": "Matt Palmer",
+      "handle": "mattyp",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "从已有视频素材制作静帧封面和适配平台的短片。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/image-gen-bot",
+        "htmlSha256": "0116713d6bac952d6479a8c2bd2927ed0a040e71fcfd8e866369651c11299758"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/image-gen-bot",
+      "originalAddUrl": "https://x.ai/bot/V8XugyLxzbQXLM9o5b3B-",
+      "updatedAt": "2026-09-03T16:16:33.332Z",
+      "localTemplateId": "awesome/grok-image-gen-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "figma-bro",
+      "name": "figma bro",
+      "author": "John Bai",
+      "handle": "johnbai",
+      "categories": [
+        "From Grok Bot Team",
+        "Design"
+      ],
+      "publicPurpose": "将设计稿整理为开发规格并检查组件规范和交互动效。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/figma-bro",
+        "htmlSha256": "da855adfff6519e6634b3c248e71803a20139d77571048b7275a6f7747601526"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/figma-bro",
+      "originalAddUrl": "https://x.ai/bot/pXNvc_U2cGyZmheYrUuF_",
+      "updatedAt": "2026-09-03T16:16:39.143Z",
+      "localTemplateId": "awesome/grok-figma-bro",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "follow-through-agent",
+      "name": "GTM Loop Closer",
+      "author": "Jon Grigull",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "梳理会议和业务工具中的承诺以补齐客户后续行动。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/follow-through-agent",
+        "htmlSha256": "8caaa59a122433a94904a4942e679b4c47e5e3d5da1506790bd070b034559782"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/follow-through-agent",
+      "originalAddUrl": "https://x.ai/bot/gj3IlHOOpzecm6xpmPJOt",
+      "updatedAt": "2026-09-03T09:06:22.191Z",
+      "localTemplateId": "awesome/grok-follow-through-agent",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "sales-call-coach",
+      "name": "Sales Call Coach",
+      "author": "Daniel Brill",
+      "handle": "danielbrill_",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "依据销售通话记录评估表现并提出下一次交流的改进。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/sales-call-coach",
+        "htmlSha256": "8cff04a1c0771461eacc8cea49a43f43ac17500e1e6331be8c5802e2b3c95651"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/sales-call-coach",
+      "originalAddUrl": "https://x.ai/bot/yZ5MFQFdl32vHt6fcIJAc",
+      "updatedAt": "2026-09-03T09:04:41.247Z",
+      "localTemplateId": "awesome/grok-sales-call-coach",
+      "relatedWorkflowTemplateId": "awesome/sales-call-coach",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "echo",
+      "name": "Meeting Recap Deck",
+      "author": "Krista Letz",
+      "handle": "kristaletz",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "使用既有幻灯片模板将会议笔记整理为回顾演示稿。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/echo",
+        "htmlSha256": "288117da6687e67df5d507dede56efdf8d8e9fc7bda28da1f22d6683498106c3"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/echo",
+      "originalAddUrl": "https://x.ai/bot/YklttiPpAHweKbOLV1TSF",
+      "updatedAt": "2026-09-03T07:05:46.679Z",
+      "localTemplateId": "awesome/grok-echo",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "pitch-deck-coach",
+      "name": "Pitch Deck Coach",
+      "author": "Hiten Shah",
+      "handle": "hnshah",
+      "categories": [
+        "Sales"
+      ],
+      "publicPurpose": "从投资者理解和可信度角度审阅并改进融资演示稿。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/pitch-deck-coach",
+        "htmlSha256": "d15cd3f2814f404f011dabf220d0ac1911770a10f2659664852e28dcf224b67b"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/pitch-deck-coach",
+      "originalAddUrl": "https://x.ai/bot/zkVS-PkX1ooTE2nP21DPO",
+      "updatedAt": "2026-09-03T03:35:06.843Z",
+      "localTemplateId": "awesome/grok-pitch-deck-coach",
+      "relatedWorkflowTemplateId": "awesome/presentation-designer",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "clip-bot",
+      "name": "Clip Bot",
+      "author": "This Week in AI",
+      "handle": "ThisWeeknAI",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "从长录音视频中挑选片段并制作带字幕的短内容。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/clip-bot",
+        "htmlSha256": "480bd674b47873876d5eeda658a186e27b5452de524a766cfa0a6d6fae708b60"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/clip-bot",
+      "originalAddUrl": "https://x.ai/bot/-L1yFJ5mtwPgn3O_iYUo_",
+      "updatedAt": "2026-09-03T06:33:12.986Z",
+      "localTemplateId": "awesome/grok-clip-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "human-copywriter",
+      "name": "Copy Humanizer",
+      "author": "Massimo De Luisa",
+      "handle": "massimodeluisa",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "在保留原意和事实的前提下润色邮件文章及网页文案。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/human-copywriter",
+        "htmlSha256": "b2d7df9c02df17038ee995c4f20f10f09e71fef15052119472fc440d2ccacf8b"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/human-copywriter",
+      "originalAddUrl": "https://x.ai/bot/YwxIbVEWqXN-HYCxiMCoB",
+      "updatedAt": "2026-09-03T06:17:21.396Z",
+      "localTemplateId": "awesome/grok-human-copywriter",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "ai-search-visibility",
+      "name": "AI Search Visibility",
+      "author": "Adam Tanguay",
+      "handle": "adamta",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "检查搜索与人工智能问答是否推荐目标品牌及其竞品。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/ai-search-visibility",
+        "htmlSha256": "a43487d2564fb29e8fc213564acdcefec9903a82459fdc917119433bf1882d1f"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/ai-search-visibility",
+      "originalAddUrl": "https://x.ai/bot/BFiw9Y7BzTQ-3jFBAro1X",
+      "updatedAt": "2026-09-03T16:16:31.430Z",
+      "localTemplateId": "awesome/grok-ai-search-visibility",
+      "relatedWorkflowTemplateId": "awesome/seo-aeo-auditor",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "engineer-bot",
+      "name": "Lingxi's Engineer Bot",
+      "author": "Lingxi Li",
+      "handle": "lingxi",
+      "categories": [
+        "From Grok Bot Team",
+        "Engineering"
+      ],
+      "publicPurpose": "组织代码仓库任务并监督云端代理及拉取请求的进度。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/engineer-bot",
+        "htmlSha256": "706ec5e7ce65bb0eab0aa68117415de3b3129700f9b6e59dd75952342cd221e7"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/engineer-bot",
+      "originalAddUrl": "https://x.ai/bot/SxqbG1NT5qEw7ggmHqQu_",
+      "updatedAt": "2026-09-03T10:01:19.058Z",
+      "localTemplateId": "awesome/grok-engineer-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "tinkabot",
+      "name": "tinkabot",
+      "author": "Lauren Tan",
+      "handle": "poteto",
+      "categories": [
+        "From Grok Bot Team",
+        "Engineering"
+      ],
+      "publicPurpose": "围绕已有接口构建并验证包含工具与技能的插件。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/tinkabot",
+        "htmlSha256": "1345f898a20a7b0cabeb8304c9940259aa7736564db31aaedda7f821855678e6"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/tinkabot",
+      "originalAddUrl": "https://x.ai/bot/-hmCmHB0ynJGvSKxeINfS",
+      "updatedAt": "2026-09-03T10:01:21.217Z",
+      "localTemplateId": "awesome/grok-tinkabot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "critiquito",
+      "name": "Critiquito: Design Critique",
+      "author": "Manuel Muñoz Solera",
+      "handle": "mamuso",
+      "categories": [
+        "From Grok Bot Team",
+        "Design"
+      ],
+      "publicPurpose": "评审截图或设计稿并按优先级提出具体界面改进建议。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/critiquito",
+        "htmlSha256": "3d0544dfafbeb7d00b2faa30aeb4ebf8ec66266604a0cb55360ca4eda3fc4c38"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/critiquito",
+      "originalAddUrl": "https://x.ai/bot/NqdH9qGvrq-yWRaXhJGM-",
+      "updatedAt": "2026-09-03T07:11:17.786Z",
+      "localTemplateId": "awesome/grok-critiquito",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "sable-game-art",
+      "name": "Game Art Director",
+      "author": "Danny Limanseta",
+      "handle": "DannyLimanseta",
+      "categories": [
+        "Design"
+      ],
+      "publicPurpose": "围绕游戏概念制定视觉风格并检查素材一致性。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/sable-game-art",
+        "htmlSha256": "2d4e7466db280dd37b711447bf317cc217e110e86d25f406d19f30153566abfe"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/sable-game-art",
+      "originalAddUrl": "https://x.ai/bot/KQnsHIvv4_Xk7HyhmewP3",
+      "updatedAt": "2026-09-03T07:11:16.703Z",
+      "localTemplateId": "awesome/grok-sable-game-art",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "home-robots",
+      "name": "Home robots",
+      "author": "Sawyer Merritt",
+      "handle": "SawyerMerritt",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "通过对话查询或控制已接入的清洁割草等家庭机器人。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/home-robots",
+        "htmlSha256": "1ea17278cf21832e9191b973fa28b3d93626c7c0d7bedc0f4bb762974856bef9"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/home-robots",
+      "originalAddUrl": "https://x.ai/bot/c47Jj2QSSR1UXEcuBgUtQ",
+      "updatedAt": "2026-09-05T00:01:57.829Z",
+      "localTemplateId": "awesome/grok-home-robots",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "flora",
+      "name": "Flora: Plant Care Log",
+      "author": "Rich Silver",
+      "handle": "RichSilver",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "记录室内植物养护情况并维护可查阅的植物日志。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/flora",
+        "htmlSha256": "ee4cf41ccce9a77c9611a496169bdd173031765fcd14f75fe244d4d01918cd9f"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/flora",
+      "originalAddUrl": "https://x.ai/bot/dGYdqS9vLSXpxoNCPBHys",
+      "updatedAt": "2026-09-03T16:16:37.164Z",
+      "localTemplateId": "awesome/grok-flora",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "sherlock",
+      "name": "Talent Discovery",
+      "author": "Tommy Hansen",
+      "handle": "TommyHansenTA",
+      "categories": [
+        "From Grok Bot Team",
+        "Recruiting & People"
+      ],
+      "publicPurpose": "按照招聘条件寻找尚未进入现有招聘系统的人选。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/sherlock",
+        "htmlSha256": "8963ff0e5effeaac6d7ed1f5039a5c2ae6d1b4ee5854b6015302e51dbd9780ff"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/sherlock",
+      "originalAddUrl": "https://x.ai/bot/vIX2YW6rr6nQnf8-Rhyzc",
+      "updatedAt": "2026-09-03T16:16:36.637Z",
+      "localTemplateId": "awesome/grok-sherlock",
+      "relatedWorkflowTemplateId": "awesome/talent-scout",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "cooper",
+      "name": "Cooper",
+      "author": "Tommy Hansen",
+      "handle": "TommyHansenTA",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "筛选人工智能科技创投与商业新闻并提供重点简报。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/cooper",
+        "htmlSha256": "c11a308fc8b1724cdf936f3e57864916d9e9715558d20d7a610a285c1ec3c15a"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/cooper",
+      "originalAddUrl": "https://x.ai/bot/8hhdYqfvRzigWstUtcmBZ",
+      "updatedAt": "2026-09-03T16:16:38.660Z",
+      "localTemplateId": "awesome/grok-cooper",
+      "relatedWorkflowTemplateId": "awesome/daily-briefing-writer",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "video-editor",
+      "name": "Video Editor",
+      "author": "Ethan Ng",
+      "handle": "Ethan_Ng_13",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "将竖屏口播原片整理为含字幕和辅助素材的短视频。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/video-editor",
+        "htmlSha256": "dffe21f7a5909c9b29e327ed2ac283b4febce7e58f28975e73b9684f7225da99"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/video-editor",
+      "originalAddUrl": "https://x.ai/bot/14O3EsptD43aAhoAzvfq3",
+      "updatedAt": "2026-10-07T07:55:06.511Z",
+      "localTemplateId": "awesome/grok-video-editor",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "distro-bot",
+      "name": "Distro Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "协调广告创意渠道分析和潜客触达形成营销工作循环。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/distro-bot",
+        "htmlSha256": "34ed82870e257f67a66d5e5656416e421a8fff2d1c7276bebc1232ef4db51249"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/distro-bot",
+      "originalAddUrl": "https://x.ai/bot/XbN6iofs_Qjsi2Od1yjyI",
+      "updatedAt": "2026-10-01T14:51:08.231Z",
+      "localTemplateId": "awesome/grok-distro-bot",
+      "relatedWorkflowTemplateId": "awesome/social-media-manager",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "proto-bot",
+      "name": "Proto Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Product"
+      ],
+      "publicPurpose": "在实际应用中把想法制作成可演示的原型和草稿变更。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/proto-bot",
+        "htmlSha256": "d548d0249939e1346f731bc307633f6f5a542dd08cc2d50b6ade2850644b9d18"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/proto-bot",
+      "originalAddUrl": "https://x.ai/bot/p4sSEZV7xqcBgdT7m2O8i",
+      "updatedAt": "2026-10-01T06:31:02.350Z",
+      "localTemplateId": "awesome/grok-proto-bot",
+      "relatedWorkflowTemplateId": "awesome/prototype-builder",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "sell-bot",
+      "name": "Sell Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "从客户触达到激活支持持续整理销售与客户服务工作。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/sell-bot",
+        "htmlSha256": "665b7327fd3b9bbd5e99b2d29724dd85dc0ceb4a5f3e26f7ddbb96d439ed7327"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/sell-bot",
+      "originalAddUrl": "https://x.ai/bot/znrhzY4AYMg4v3QTfU0IJ",
+      "updatedAt": "2026-10-01T06:31:04.646Z",
+      "localTemplateId": "awesome/grok-sell-bot",
+      "relatedWorkflowTemplateId": "awesome/sales-outbound",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "startup-qa-bot",
+      "name": "Startup QA Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Product"
+      ],
+      "publicPurpose": "使用独立测试账号巡检产品变化并记录可复现问题。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/startup-qa-bot",
+        "htmlSha256": "fd1c2dbf20b36922a9ecf87e0936bcbf185ab430fb34f42b66f25bdc4c4138cf"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/startup-qa-bot",
+      "originalAddUrl": "https://x.ai/bot/XBauviUoNcdi05-ExoOo4",
+      "updatedAt": "2026-10-01T06:31:07.235Z",
+      "localTemplateId": "awesome/grok-startup-qa-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "qa-bot",
+      "name": "QA bot",
+      "author": "Ulysses Ng",
+      "handle": "",
+      "categories": [
+        "Engineering"
+      ],
+      "publicPurpose": "依照发布验收清单检查线上部署并给出通过结论。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/qa-bot",
+        "htmlSha256": "74fda122401277ec2ff36497fa9d4033769d0da0aaf9edbc0211c7e6489c9dd3"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/qa-bot",
+      "originalAddUrl": "https://x.ai/bot/lKQWoQAvYgg_7Bkg2R-m7",
+      "updatedAt": "2026-09-25T20:44:27.200Z",
+      "localTemplateId": "awesome/grok-qa-bot",
+      "relatedWorkflowTemplateId": "awesome/bug-reproduction",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "pm-bot",
+      "name": "PM bot",
+      "author": "Ulysses Ng",
+      "handle": "",
+      "categories": [
+        "Product"
+      ],
+      "publicPurpose": "明确产品需求范围和完成标准供负责人审批执行。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/pm-bot",
+        "htmlSha256": "de5de567e2971d21a43354e3b36db9ffeabbecc3e4991d8c9488eddb8d019a18"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/pm-bot",
+      "originalAddUrl": "https://x.ai/bot/FeeqMRMJr2jwixCROZcIh",
+      "updatedAt": "2026-09-25T20:44:31.496Z",
+      "localTemplateId": "awesome/grok-pm-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "engineering-lead",
+      "name": "Engineering Lead",
+      "author": "Lauren Tan",
+      "handle": "poteto",
+      "categories": [
+        "Engineering"
+      ],
+      "publicPurpose": "分解工程任务并持续跟进代理执行评审和持续集成。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/engineering-lead",
+        "htmlSha256": "db11f01499dea86a37ad6561d3368a8ec2d9c8eff5ae4b80c30dde489a4e2630"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/engineering-lead",
+      "originalAddUrl": "https://x.ai/bot/Ks3X7JpD-6I86s3zkJFRh",
+      "updatedAt": "2026-09-25T16:10:01.165Z",
+      "localTemplateId": "awesome/grok-engineering-lead",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "pfp-bot",
+      "name": "Pfp Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Personal"
+      ],
+      "publicPurpose": "从参考照片生成保留主体特征的机器人风格头像。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/pfp-bot",
+        "htmlSha256": "eab57a610477f134ac04af75263791990ebad44c69e182bee2096a87c6cb5e00"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/pfp-bot",
+      "originalAddUrl": "https://x.ai/bot/eFnHzlDcKdoA406SzZbNZ",
+      "updatedAt": "2026-09-23T23:21:16.194Z",
+      "localTemplateId": "awesome/grok-pfp-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "import-bot",
+      "name": "Import Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Personal"
+      ],
+      "publicPurpose": "整理其他助手中的配置并转为机器人设置及专家角色。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/import-bot",
+        "htmlSha256": "f406b1e59a3b95abae62a84f1c7375d4c00940b4aadcb265d466dcfc0babb568"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/import-bot",
+      "originalAddUrl": "https://x.ai/bot/HP4Q8GHtSIjbyGeI2vg7S",
+      "updatedAt": "2026-09-22T18:42:27.855Z",
+      "localTemplateId": "awesome/grok-import-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "sequencer",
+      "name": "Sequencer",
+      "author": "Simon Lackowski",
+      "handle": "",
+      "categories": [
+        "Sales"
+      ],
+      "publicPurpose": "管理销售触达序列状态并按客户画像和口吻准备草稿。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/sequencer",
+        "htmlSha256": "118eff4a2aa475a47311612a41bdc3aad4ea2c118f19da656416187e32ee06cb"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/sequencer",
+      "originalAddUrl": "https://x.ai/bot/6xnxd_CHg0cXVMQCwnRrZ",
+      "updatedAt": "2026-09-21T21:30:03.244Z",
+      "localTemplateId": "awesome/grok-sequencer",
+      "relatedWorkflowTemplateId": "awesome/sales-outbound",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "marketing-project-manager",
+      "name": "Project Manager",
+      "author": "Josh Kim",
+      "handle": "joshkim",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "协调市场研究定位网页广告与分析等营销专项工作。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/marketing-project-manager",
+        "htmlSha256": "d5b1b32883f46aacec143f1c7b277808e9a5fd5b82ea23bdf5c3b572962e4344"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/marketing-project-manager",
+      "originalAddUrl": "https://x.ai/bot/AMa1ig4YyoxfYtWFe7PLi",
+      "updatedAt": "2026-09-21T01:46:15.724Z",
+      "localTemplateId": "awesome/grok-marketing-project-manager",
+      "relatedWorkflowTemplateId": "awesome/marketing-calendar-owner",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "marketing-analyst",
+      "name": "Marketing Analyst",
+      "author": "Josh Kim",
+      "handle": "joshkim",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "使用广告导出数据分析表现并监测预算消耗异常。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/marketing-analyst",
+        "htmlSha256": "ad83e10ed2cf5d71d3be51ba1097b3b850cee58edd945d567863e32806dc26ea"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/marketing-analyst",
+      "originalAddUrl": "https://x.ai/bot/1RbG9yW5MpQ55XcQlJ0aQ",
+      "updatedAt": "2026-09-21T01:46:12.631Z",
+      "localTemplateId": "awesome/grok-marketing-analyst",
+      "relatedWorkflowTemplateId": "awesome/paid-media",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "performance-marketer",
+      "name": "Performance Marketer",
+      "author": "Josh Kim",
+      "handle": "joshkim",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "将营销文案制作成暂停状态的搜索广告供测试审批。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/performance-marketer",
+        "htmlSha256": "5e480987a23224e357500a45c299102d21a2490a7a7fabd9ffd2724034e29212"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/performance-marketer",
+      "originalAddUrl": "https://x.ai/bot/JeNCKNe0ItsLMWYrLiRcb",
+      "updatedAt": "2026-09-21T01:46:09.557Z",
+      "localTemplateId": "awesome/grok-performance-marketer",
+      "relatedWorkflowTemplateId": "awesome/paid-media",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "website-ops",
+      "name": "Website Ops",
+      "author": "Josh Kim",
+      "handle": "joshkim",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "通过代码变更和审计维护网站内容及营销落地页。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/website-ops",
+        "htmlSha256": "51d3fd01ce49fa0a4cf1090966a0a1ca39aaed90c0eabf999c9c0114a585f5cb"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/website-ops",
+      "originalAddUrl": "https://x.ai/bot/NYDai_DOI_2pNDIKerrpD",
+      "updatedAt": "2026-09-21T01:46:06.198Z",
+      "localTemplateId": "awesome/grok-website-ops",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "product-marketer",
+      "name": "Product Marketer",
+      "author": "Josh Kim",
+      "handle": "joshkim",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "依据产品品牌与竞品研究形成定位和营销文案。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/product-marketer",
+        "htmlSha256": "c5a6727a662f84149fc4a905756a176de4b8bf87dc97f5ef81a53209665d6fad"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/product-marketer",
+      "originalAddUrl": "https://x.ai/bot/nXp4Rp2trKV8AK-RC1Ohf",
+      "updatedAt": "2026-09-21T01:45:59.802Z",
+      "localTemplateId": "awesome/grok-product-marketer",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "market-researcher",
+      "name": "Market Researcher",
+      "author": "Josh Kim",
+      "handle": "joshkim",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "持续观察竞品公开营销和定价变化并提出策略建议。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/market-researcher",
+        "htmlSha256": "fc5766c134f124b66562f176135e36725858a110d2203bd5745fa9bb7aa42384"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/market-researcher",
+      "originalAddUrl": "https://x.ai/bot/xzkXiUbdYfPd7g30OhLGf",
+      "updatedAt": "2026-09-21T01:45:56.557Z",
+      "localTemplateId": "awesome/grok-market-researcher",
+      "relatedWorkflowTemplateId": "awesome/competitive-intelligence-analyst",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "stalk-bot",
+      "name": "Stalk Bot",
+      "author": "Shub Gaur",
+      "handle": "shubgaur",
+      "categories": [
+        "From Grok Bot Team",
+        "Product"
+      ],
+      "publicPurpose": "体验竞品入门流程并跟踪产品价格及公开传播变化。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/stalk-bot",
+        "htmlSha256": "42aa4f27e0eeee28bc1d41bf8cb0047e83f07ae4e6267f130f76707fde9aa79d"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/stalk-bot",
+      "originalAddUrl": "https://x.ai/bot/Y7iWVNiPdorgu6oFY-PRG",
+      "updatedAt": "2026-09-15T21:51:57.350Z",
+      "localTemplateId": "awesome/grok-stalk-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "ebr-value-deck-builder",
+      "name": "EBR & Value Deck Builder",
+      "author": "Krista Letz",
+      "handle": "kristaletz",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "以客户业务和使用数据制作高管回顾及价值演示稿。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/ebr-value-deck-builder",
+        "htmlSha256": "d63ac888b31f0160ad23afef3ba9a3b255454cde82200d23409f6ef9583268fd"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/ebr-value-deck-builder",
+      "originalAddUrl": "https://x.ai/bot/yA2-Ti3sPVNFO-zRzkwuX",
+      "updatedAt": "2026-09-10T21:44:01.229Z",
+      "localTemplateId": "awesome/grok-ebr-value-deck-builder",
+      "relatedWorkflowTemplateId": "awesome/deck-updater",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "signal-prospector",
+      "name": "Signal Prospector",
+      "author": "Krista Letz",
+      "handle": "kristaletz",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "从客户和产品数据中识别意向信号并准备首次触达。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/signal-prospector",
+        "htmlSha256": "fc732b8b27f9c63fb83730757b12fa11ab37ee02a18e66a6e3c4a740bbca1ee9"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/signal-prospector",
+      "originalAddUrl": "https://x.ai/bot/wsbOPOkHApmIYLrErnC4e",
+      "updatedAt": "2026-09-10T21:45:14.949Z",
+      "localTemplateId": "awesome/grok-signal-prospector",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "the-morning-newspaper",
+      "name": "The Morning Newspaper",
+      "author": "Karen X. Cheng",
+      "handle": "karenxcheng",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "结合个人邮件和日历生成可打印的定制晨间报纸。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/the-morning-newspaper",
+        "htmlSha256": "0f51bf4a21879e1ad26b0f0a694087c7540003b1bb3f805c542ef8ed0404f7c9"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/the-morning-newspaper",
+      "originalAddUrl": "https://x.ai/bot/1xAJYJPes3X7dUM2mk9Di",
+      "updatedAt": "2026-09-04T19:00:07.111Z",
+      "localTemplateId": "awesome/grok-the-morning-newspaper",
+      "relatedWorkflowTemplateId": "awesome/daily-briefing-writer",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "nightly-audit-engineer",
+      "name": "Nightly Audit Engineer",
+      "author": "Lingxi Li",
+      "handle": "lingxi",
+      "categories": [
+        "From Grok Bot Team",
+        "Engineering"
+      ],
+      "publicPurpose": "定期审视完整代码仓库并按领域准备清理变更。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/nightly-audit-engineer",
+        "htmlSha256": "aa85ce3c228c47c39082776607a03e3db55754f68183ece1fbffb3a9fa6674cc"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/nightly-audit-engineer",
+      "originalAddUrl": "https://x.ai/bot/0LLQmzk-yzwHi0zuiV0lC",
+      "updatedAt": "2026-09-03T10:01:13.032Z",
+      "localTemplateId": "awesome/grok-nightly-audit-engineer",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "office-ops-desk",
+      "name": "Office Ops Desk",
+      "author": "Erika Cabrera",
+      "handle": "ericacabera",
+      "categories": [
+        "From Grok Bot Team",
+        "Operations"
+      ],
+      "publicPurpose": "整理办公物流设施事项和团队纪念日形成运营摘要。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/office-ops-desk",
+        "htmlSha256": "db7f5334b47e4baa8beae9346610f25fa927abeb782baabb5ef6b6651167584a"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/office-ops-desk",
+      "originalAddUrl": "https://x.ai/bot/afZj-XnYkThA4MB7GfZK6",
+      "updatedAt": "2026-09-03T09:04:57.009Z",
+      "localTemplateId": "awesome/grok-office-ops-desk",
+      "relatedWorkflowTemplateId": "awesome/executive-assistant",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "event-request-desk",
+      "name": "Event Request Desk",
+      "author": "Emma Weyrauch",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Operations"
+      ],
+      "publicPurpose": "评估活动赞助和演讲邀请并起草接受或拒绝意见。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/event-request-desk",
+        "htmlSha256": "e99ece63eb638eccb0fb32923559ee2719499f02e87b2d9603b71b8921fc0a19"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/event-request-desk",
+      "originalAddUrl": "https://x.ai/bot/hp7QlVUPuYUp09kc6IFAA",
+      "updatedAt": "2026-09-03T09:04:51.420Z",
+      "localTemplateId": "awesome/grok-event-request-desk",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "call-follow-ups",
+      "name": "Call Follow-Ups",
+      "author": "Daniel Brill",
+      "handle": "danielbrill_",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "把录制通话整理成后续邮件行动事项和客户记录建议。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/call-follow-ups",
+        "htmlSha256": "7bddbda78c1e9075b50236a238547f8de9114a0be6f812cc98987652f2c42de0"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/call-follow-ups",
+      "originalAddUrl": "https://x.ai/bot/estQ8HWdKqhheDNmOGjcy",
+      "updatedAt": "2026-09-10T21:31:01.723Z",
+      "localTemplateId": "awesome/grok-call-follow-ups",
+      "relatedWorkflowTemplateId": "awesome/sales-call-coach",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "apple-search-ads-review",
+      "name": "Apple Search Ads Review",
+      "author": "Chris Everett",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "依据获客成本目标审阅苹果搜索广告的预算和出价。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/apple-search-ads-review",
+        "htmlSha256": "3d5d4a25317fa5ce59074dcd6ba7e522484bf097c36a2061ac0391249355d0f8"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/apple-search-ads-review",
+      "originalAddUrl": "https://x.ai/bot/gadc3bVOsg9iIwmzAGRve",
+      "updatedAt": "2026-09-03T09:05:07.331Z",
+      "localTemplateId": "awesome/grok-apple-search-ads-review",
+      "relatedWorkflowTemplateId": "awesome/paid-media",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "hiring-activity-monitor",
+      "name": "Hiring Signals",
+      "author": "Simon Lackowski",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "观察目标公司招聘变化并将信号传入客户研究流程。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/hiring-activity-monitor",
+        "htmlSha256": "2c571dc5e2d132a495ec15b3d8f16ae2f756111234d904ca90c9e9c36f90a36e"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/hiring-activity-monitor",
+      "originalAddUrl": "https://x.ai/bot/EbF8AR1wEHSWCGOp9D1qK",
+      "updatedAt": "2026-09-03T09:05:28.706Z",
+      "localTemplateId": "awesome/grok-hiring-activity-monitor",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "warm-intro-finder",
+      "name": "GTM Connections",
+      "author": "Brian Joseph",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "从关系历史和共同联系人寻找进入目标客户的路径。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/warm-intro-finder",
+        "htmlSha256": "700daef6144a16c5abb9937d22ed1d7626098760d8a2a2cad38ff644021ae572"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/warm-intro-finder",
+      "originalAddUrl": "https://x.ai/bot/aUF_wTHXGWKU3-QPm6PmN",
+      "updatedAt": "2026-09-03T09:17:45.734Z",
+      "localTemplateId": "awesome/grok-warm-intro-finder",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "pipeline-health-and-forecast",
+      "name": "Pipeline Pulse",
+      "author": "Krista Letz",
+      "handle": "kristaletz",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "检查销售管道变化陈旧事项和预测风险并建议补录。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/pipeline-health-and-forecast",
+        "htmlSha256": "c70f77016bad213ecaf3d930ab048e1213260ba9dd58c5fc0120c0f2afa4fcec"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/pipeline-health-and-forecast",
+      "originalAddUrl": "https://x.ai/bot/X-hZf_AreWNt-ZQPYs0Ev",
+      "updatedAt": "2026-09-03T09:06:45.965Z",
+      "localTemplateId": "awesome/grok-pipeline-health-and-forecast",
+      "relatedWorkflowTemplateId": "awesome/pipeline-analyst",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "deal-qualification",
+      "name": "Deal Inspector",
+      "author": "Jon Grigull",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "根据真实通话证据检查商机阶段是否符合资格标准。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/deal-qualification",
+        "htmlSha256": "5acb9a659de54aa8baa56d1d2a059bf94dfa6704a43a69464223c9f314a0dcd3"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/deal-qualification",
+      "originalAddUrl": "https://x.ai/bot/vZfC76-4UC1XU7qC4m726",
+      "updatedAt": "2026-09-10T21:33:37.176Z",
+      "localTemplateId": "awesome/grok-deal-qualification",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "prospector",
+      "name": "GTM Prospecting",
+      "author": "Caro Scalercio",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "根据客户画像整理有背景信息的潜客名单及联系草稿。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/prospector",
+        "htmlSha256": "4d291cc736b9d0da30ddcb88d39ba51169a7da79b62288261af548c90a7f05df"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/prospector",
+      "originalAddUrl": "https://x.ai/bot/RpAQeGjhzaiO6_Rq_4fyC",
+      "updatedAt": "2026-09-03T09:17:31.208Z",
+      "localTemplateId": "awesome/grok-prospector",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "account-research",
+      "name": "GTM Account Research",
+      "author": "Stefan Markarian",
+      "handle": "",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "在会议或商机评审前汇集客户公司人物和关系背景。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/account-research",
+        "htmlSha256": "ebd12214676c4a1470985d4c108065fb8461be5a2a68a72f895a56325d01c739"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/account-research",
+      "originalAddUrl": "https://x.ai/bot/B6nsTFJlkGP4R-BbdIzeV",
+      "updatedAt": "2026-09-03T09:17:25.354Z",
+      "localTemplateId": "awesome/grok-account-research",
+      "relatedWorkflowTemplateId": "awesome/account-research-specialist",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "dial-bot",
+      "name": "dial bot",
+      "author": "Matt Palmer",
+      "handle": "mattyp",
+      "categories": [
+        "From Grok Bot Team",
+        "Personal"
+      ],
+      "publicPurpose": "按用户指令借助已配置的语音服务拨打外呼电话。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/dial-bot",
+        "htmlSha256": "9bbb2a04bfce420945c085f9d1b4ec4d15feb51ab2a62fd88057493b05389e19"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/dial-bot",
+      "originalAddUrl": "https://x.ai/bot/tIas6udS9kSXpcAz6LFd1",
+      "updatedAt": "2026-09-03T16:16:32.292Z",
+      "localTemplateId": "awesome/grok-dial-bot",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "skippy",
+      "name": "skippy",
+      "author": "Matt Palmer",
+      "handle": "mattyp",
+      "categories": [
+        "From Grok Bot Team",
+        "Personal"
+      ],
+      "publicPurpose": "利用旧金山市政数据查询指定路段的下次街道清扫。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/skippy",
+        "htmlSha256": "3f1864a7385e820b73eed556cf090f3e94824cdcae79eebe26ddbf7984256b58"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/skippy",
+      "originalAddUrl": "https://x.ai/bot/X4NHZvN9cvBBS5EgdjsLx",
+      "updatedAt": "2026-09-03T16:16:32.740Z",
+      "localTemplateId": "awesome/grok-skippy",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "writing-bot",
+      "name": "Writing Bot",
+      "author": "Matt Palmer",
+      "handle": "mattyp",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "通过结构化修订改善文章邮件和文档的表达组织。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/writing-bot",
+        "htmlSha256": "9d253ccca031ac91da21842761601379dae9e1564838902c85caa353a191d39c"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/writing-bot",
+      "originalAddUrl": "https://x.ai/bot/wtq-j01kD7o8gQFx7E9zv",
+      "updatedAt": "2026-09-03T03:35:07.450Z",
+      "localTemplateId": "awesome/grok-writing-bot",
+      "relatedWorkflowTemplateId": "awesome/newsletter-writer",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "tech-demos",
+      "name": "Tech Demos",
+      "author": "Matt Palmer",
+      "handle": "mattyp",
+      "categories": [
+        "From Grok Bot Team",
+        "Personal"
+      ],
+      "publicPurpose": "从技术书签挑选新代码库并构建可以验证的演示。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/tech-demos",
+        "htmlSha256": "bf7e60cc42232338c267fdb18e629894762841b67fbbf459f357360fc708268f"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/tech-demos",
+      "originalAddUrl": "https://x.ai/bot/PaYvPhWPSynlUwFqMX7nc",
+      "updatedAt": "2026-09-03T16:16:33.881Z",
+      "localTemplateId": "awesome/grok-tech-demos",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "frank",
+      "name": "Executive Assistant",
+      "author": "Natasha Kuo",
+      "handle": "tashatweetss",
+      "categories": [
+        "From Grok Bot Team",
+        "Operations"
+      ],
+      "publicPurpose": "协助高管整理会议室面试准备渠道和日历相关事务。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/frank",
+        "htmlSha256": "3839e98c714ef80ea27bd258fadeb5358e3c2e3340b4ff26c3078ccfdff59ab0"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/frank",
+      "originalAddUrl": "https://x.ai/bot/_DnP777DCicZpaTtm9_h5",
+      "updatedAt": "2026-09-03T16:16:34.508Z",
+      "localTemplateId": "awesome/grok-frank",
+      "relatedWorkflowTemplateId": "awesome/executive-assistant",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "company-docs-q-a",
+      "name": "Company Docs Q&A",
+      "author": "Anoop Baliga",
+      "handle": "akbaliga96",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "优先查询最新产品文档并带来源回答内部知识问题。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/company-docs-q-a",
+        "htmlSha256": "131e2c5ce7e7ecf01699516599a91aab8f5010ee97e714b2c6bc742cba6698b4"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/company-docs-q-a",
+      "originalAddUrl": "https://x.ai/bot/GVAnpUah1K6PzJtG9EuG9",
+      "updatedAt": "2026-09-04T22:48:15.894Z",
+      "localTemplateId": "awesome/grok-company-docs-q-a",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "customer-question-drafter",
+      "name": "Product Support Inbox Assistant",
+      "author": "Anoop Baliga",
+      "handle": "akbaliga96",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "查找产品问题所需资料并准备供人工发送的答复。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/customer-question-drafter",
+        "htmlSha256": "2a9083a1bbffdac8dc6af90487c8064481709dd7cc4698b664762e093d65664e"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/customer-question-drafter",
+      "originalAddUrl": "https://x.ai/bot/Rw8d83KAzTYQWBAtAscin",
+      "updatedAt": "2026-09-04T22:48:25.250Z",
+      "localTemplateId": "awesome/grok-customer-question-drafter",
+      "relatedWorkflowTemplateId": "awesome/ticket-triage-specialist",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "customer-call-coach",
+      "name": "Customer Call Coach & Assistant",
+      "author": "Anoop Baliga",
+      "handle": "akbaliga96",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "在客户通话前准备背景并在结束后复盘交流表现。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/customer-call-coach",
+        "htmlSha256": "e63feff4c80f99a9ca133aff8c850c3a6a1218f689a1d426558ff750f95dfe8d"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/customer-call-coach",
+      "originalAddUrl": "https://x.ai/bot/v1lSvhJCo4UrNGZxc5Fw8",
+      "updatedAt": "2026-09-04T22:48:35.488Z",
+      "localTemplateId": "awesome/grok-customer-call-coach",
+      "relatedWorkflowTemplateId": "awesome/sales-call-coach",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "chief-health",
+      "name": "Chief Health Officer",
+      "author": "AJAC",
+      "handle": "AJA_Cortes",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "跟踪训练执行和健康数据并调整后续训练安排。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/chief-health",
+        "htmlSha256": "7ed29f2ae01c90d55fe9d72bb11786abbf4cc19e88a2c47f037550fd2f5f29a0"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/chief-health",
+      "originalAddUrl": "https://x.ai/bot/PwWb6fJXpeG857af6tEYi",
+      "updatedAt": "2026-09-03T09:12:03.915Z",
+      "localTemplateId": "awesome/grok-chief-health",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "deal-hunting",
+      "name": "Deal Hunting",
+      "author": "Shimecki",
+      "handle": "scheemunai",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "比较商品实际价格运费和税费以辅助购物选择。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/deal-hunting",
+        "htmlSha256": "dea5782a36ce872bc28f16f18171d77edadf97407d224932ad14dae0f645fc8f"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/deal-hunting",
+      "originalAddUrl": "https://x.ai/bot/yTeKCLayahHnMdHFG9GJg",
+      "updatedAt": "2026-09-03T03:35:07.064Z",
+      "localTemplateId": "awesome/grok-deal-hunting",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "webby",
+      "name": "Webby",
+      "author": "Farzad",
+      "handle": "farzyness",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "维护个人网站内容及邮件通讯并整理公开状态看板。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/webby",
+        "htmlSha256": "302f7dae78d2114ad817c943179a38b85b114dd37c0210856cd23f6784cace5b"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/webby",
+      "originalAddUrl": "https://x.ai/bot/BX4-kOUI2CzphgiYLZ1hb",
+      "updatedAt": "2026-09-03T03:35:07.039Z",
+      "localTemplateId": "awesome/grok-webby",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "account-book",
+      "name": "Account Research Desk",
+      "author": "Anoop Baliga",
+      "handle": "akbaliga96",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "研究目标客户公司并准备会前摘要和客户经营计划。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/account-book",
+        "htmlSha256": "1280c6181fe674215218e570616a12abcfb3b21cfba9d9b4263eeb5f1cb1fe36"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/account-book",
+      "originalAddUrl": "https://x.ai/bot/O3iqVd_ZrdRtrDJpxcKss",
+      "updatedAt": "2026-09-03T16:16:37.664Z",
+      "localTemplateId": "awesome/grok-account-book",
+      "relatedWorkflowTemplateId": "awesome/account-research-specialist",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "customer-stories",
+      "name": "Customer Proof Desk",
+      "author": "Anoop Baliga",
+      "handle": "akbaliga96",
+      "categories": [
+        "Sales"
+      ],
+      "publicPurpose": "把真实客户通话材料整理为案例证言和可用论据。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/customer-stories",
+        "htmlSha256": "b6926791c07f62bd61b2d65e81ff45d0262d4dfede6c1e3076ca894edf51dc0c"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/customer-stories",
+      "originalAddUrl": "https://x.ai/bot/AamPlGjd2lIdDv6seEMXR",
+      "updatedAt": "2026-09-03T16:16:38.201Z",
+      "localTemplateId": "awesome/grok-customer-stories",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "dan-lanning",
+      "name": "Partnerships Call Coach",
+      "author": "Jenna Nanpei",
+      "handle": "jennananpei",
+      "categories": [
+        "From Grok Bot Team",
+        "Sales"
+      ],
+      "publicPurpose": "复盘合作赞助和需求探索通话并改进表达方式。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/dan-lanning",
+        "htmlSha256": "d849d9606fb43b2e0655954b23f3c0d5d4af39d303ac8d70aa20113dfdf8b412"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/dan-lanning",
+      "originalAddUrl": "https://x.ai/bot/PlsyvUb0KnHIQr6psoy0L",
+      "updatedAt": "2026-09-03T09:49:34.142Z",
+      "localTemplateId": "awesome/grok-dan-lanning",
+      "relatedWorkflowTemplateId": "awesome/sales-call-coach",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "alfred",
+      "name": "Alfred",
+      "author": "Robin Delta",
+      "handle": "heyrobinai",
+      "categories": [
+        "Operations"
+      ],
+      "publicPurpose": "围绕公司目标审查机器人组织分工并减少重复职责。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/alfred",
+        "htmlSha256": "0da3477c1c8182fdaa04ea19680281c3b7b8db367681bed8cdfcdce6594f73c0"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/alfred",
+      "originalAddUrl": "https://x.ai/bot/p7Gh6HIrfv4AGzIow6-9X",
+      "updatedAt": "2026-09-04T17:39:31.716Z",
+      "localTemplateId": "awesome/grok-alfred",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "leadsworth",
+      "name": "Lead Pipeline Desk",
+      "author": "Miguel Cruz",
+      "handle": "cruzmiguel000",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "对入站线索评分去重分派并识别推进停滞的事项。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/leadsworth",
+        "htmlSha256": "479f1a423611285442de192b701fd3096231beb699016f1b14cce935ba0032d0"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/leadsworth",
+      "originalAddUrl": "https://x.ai/bot/oPDkINUfpUXhJDdsfRZht",
+      "updatedAt": "2026-09-03T16:16:40.060Z",
+      "localTemplateId": "awesome/grok-leadsworth",
+      "relatedWorkflowTemplateId": "awesome/crm-operations-manager",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "tally",
+      "name": "Paid Media Report Desk",
+      "author": "Miguel Cruz",
+      "handle": "cruzmiguel000",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "把多个广告平台导出汇总成包含解释的营销周报。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/tally",
+        "htmlSha256": "864024aaf2a69489115127c783fe75be2d215b77513284a595275c11401b870d"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/tally",
+      "originalAddUrl": "https://x.ai/bot/qBFjPRQ3IbHG69qIFHblE",
+      "updatedAt": "2026-09-03T06:40:48.597Z",
+      "localTemplateId": "awesome/grok-tally",
+      "relatedWorkflowTemplateId": "awesome/paid-media",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "luma-pages",
+      "name": "Luma Pages",
+      "author": "Jenna Nanpei",
+      "handle": "jennananpei",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "维护私有活动页面及报名设置并核对活动文档同步。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/luma-pages",
+        "htmlSha256": "d57ec013dd0374c457f45679affcfbe05e7c501911d7a895903f8f5ae2e4f823"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/luma-pages",
+      "originalAddUrl": "https://x.ai/bot/jHT5FLhpCMx7JeIq9BEHY",
+      "updatedAt": "2026-09-03T03:35:06.601Z",
+      "localTemplateId": "awesome/grok-luma-pages",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "wtd",
+      "name": "WTD",
+      "author": "Jenna Nanpei",
+      "handle": "jennananpei",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "跟踪贵宾接待活动与票务计划并维护对外可见状态。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/wtd",
+        "htmlSha256": "8c99eb064588ba7c0c45f755c1621a0262328672a2f3bef700c7b191775c253e"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/wtd",
+      "originalAddUrl": "https://x.ai/bot/Q3VCc_x0Y8lWd4m-rung2",
+      "updatedAt": "2026-09-03T03:35:06.574Z",
+      "localTemplateId": "awesome/grok-wtd",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "event-producer",
+      "name": "Event Producer",
+      "author": "Jenna Nanpei",
+      "handle": "jennananpei",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "把活动资料整理为执行流程宾客名单和现场清单。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/event-producer",
+        "htmlSha256": "9b7a92df8e7a8953b5ca3bc440a6261b3800a9dbd6f5ce19095a456c15131555"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/event-producer",
+      "originalAddUrl": "https://x.ai/bot/wtEIGNZ8oipDDVQTDHMPB",
+      "updatedAt": "2026-09-03T06:40:41.257Z",
+      "localTemplateId": "awesome/grok-event-producer",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "last30days",
+      "name": "last30days",
+      "author": "Matt Van Horn",
+      "handle": "mvanhorn",
+      "categories": [
+        "Product",
+        "Marketing"
+      ],
+      "publicPurpose": "研究近三十天跨平台讨论并形成有依据的主题简报。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/last30days",
+        "htmlSha256": "f8c3748df59ba0b655d0583b6967e845bdca81d970b25a1437f486a46480ff39"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/last30days",
+      "originalAddUrl": "https://x.ai/bot/TxB-fy1KryaYJLYWBcGtT",
+      "updatedAt": "2026-09-04T23:13:40.055Z",
+      "localTemplateId": "awesome/grok-last30days",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "site-audit",
+      "name": "Site Audit",
+      "author": "Shimecki",
+      "handle": "scheemunai",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "检查网站搜索内容性能无障碍及转化问题并排序。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/site-audit",
+        "htmlSha256": "ae10ca68a163a7711cdb61012fd823dde7a0ea8bc6af9b32d8d9b567018613fe"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/site-audit",
+      "originalAddUrl": "https://x.ai/bot/_rzRrKKlUyBD3znUN5b3Q",
+      "updatedAt": "2026-09-03T03:35:06.480Z",
+      "localTemplateId": "awesome/grok-site-audit",
+      "relatedWorkflowTemplateId": "awesome/seo-aeo-auditor",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "x-brief",
+      "name": "X Brief",
+      "author": "Dan McAteer",
+      "handle": "daniel_mac8",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "将指定账号和主题的动态整理成简短的每日阅读简报。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/x-brief",
+        "htmlSha256": "a3c9b605d4b1572cad6e6b51954a469cdfdc795719449235986618d19580fdb7"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/x-brief",
+      "originalAddUrl": "https://x.ai/bot/RO8GwQZFXL9O95i13epqF",
+      "updatedAt": "2026-09-03T06:25:45.139Z",
+      "localTemplateId": "awesome/grok-x-brief",
+      "relatedWorkflowTemplateId": "awesome/daily-briefing-writer",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "competitor-watching",
+      "name": "Competitor Watch",
+      "author": "Shimecki",
+      "handle": "scheemunai",
+      "categories": [
+        "Product"
+      ],
+      "publicPurpose": "依据指定竞品网址跟踪价格产品和招聘页面变化。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/competitor-watching",
+        "htmlSha256": "81a6eff3d3ee60f7a3fe1da4add991f505d6859612f24e3d7596f24460e73a1e"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/competitor-watching",
+      "originalAddUrl": "https://x.ai/bot/aw0Zj54sIsAK7vMnajdz0",
+      "updatedAt": "2026-09-03T04:30:10.803Z",
+      "localTemplateId": "awesome/grok-competitor-watching",
+      "relatedWorkflowTemplateId": "awesome/competitive-intelligence-analyst",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "product-idea-stress-test",
+      "name": "Product Idea Stress Test",
+      "author": "Hiten Shah",
+      "handle": "hnshah",
+      "categories": [
+        "Product"
+      ],
+      "publicPurpose": "调查创业或产品想法的关键假设并提出验证方向。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/product-idea-stress-test",
+        "htmlSha256": "ad32c4304af412e765134c37a89fc4b91b71f7ebeebbce1abb2fe83f760de475"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/product-idea-stress-test",
+      "originalAddUrl": "https://x.ai/bot/ph-u_zkF5Vui1GdGnysn9",
+      "updatedAt": "2026-09-03T03:35:06.357Z",
+      "localTemplateId": "awesome/grok-product-idea-stress-test",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "fuse",
+      "name": "Ad Spend Watch",
+      "author": "Miguel Cruz",
+      "handle": "cruzmiguel000",
+      "categories": [
+        "From Grok Bot Team",
+        "Marketing"
+      ],
+      "publicPurpose": "监测广告支出和表现以发现可能持续消耗预算的问题。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/fuse",
+        "htmlSha256": "41ae6e7e7441918bea8d37d2c8f2d898bf6c4f2548fad65bfad9103a4b2446d2"
+      },
+      "isFromGrokBotTeamCategory": true,
+      "url": "https://x.ai/bot/marketplace/bots/fuse",
+      "originalAddUrl": "https://x.ai/bot/MK5zStpj_As8CsRwg3r6w",
+      "updatedAt": "2026-09-03T06:40:41.219Z",
+      "localTemplateId": "awesome/grok-fuse",
+      "relatedWorkflowTemplateId": "awesome/paid-media",
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "nyc-parent",
+      "name": "NYC Parent",
+      "author": "Dennison",
+      "handle": "DennisonBertram",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "帮助纽约家庭整理学校活动日历与家务后续行动。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/nyc-parent",
+        "htmlSha256": "8e57ccc356db23325403ba4bdf1ca9399704338e51566116b836b0a75a35e64f"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/nyc-parent",
+      "originalAddUrl": "https://x.ai/bot/cht7ytAhe3euOQy2wnEg9",
+      "updatedAt": "2026-09-03T03:35:06.267Z",
+      "localTemplateId": "awesome/grok-nyc-parent",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "love",
+      "name": "Love ❤️",
+      "author": "Danny Buck",
+      "handle": "dannybuck",
+      "categories": [
+        "Personal"
+      ],
+      "publicPurpose": "整理伴侣关系中的纪念提醒约会地点和礼物研究。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/love",
+        "htmlSha256": "bff012d9320e53d633e33ed00909526639837af6379a0e79e9d577466bf1fd8e"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/love",
+      "originalAddUrl": "https://x.ai/bot/qDtCI8WZgVJKbN3rogL8j",
+      "updatedAt": "2026-09-03T03:35:06.185Z",
+      "localTemplateId": "awesome/grok-love",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "best-video-editor",
+      "name": "Video Edit Desk",
+      "author": "X Freeze",
+      "handle": "xfreeze",
+      "categories": [
+        "Marketing"
+      ],
+      "publicPurpose": "根据用户笔记把上传素材剪成带字幕和平台规格的视频。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/best-video-editor",
+        "htmlSha256": "2e3f44a92f31dfed84111a9c09cb782e0b9c5931a643dd53b82445ea805cdb49"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/best-video-editor",
+      "originalAddUrl": "https://x.ai/bot/kGiyk73f5CF8XtBMIh0gW",
+      "updatedAt": "2026-09-03T06:33:09.398Z",
+      "localTemplateId": "awesome/grok-best-video-editor",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    },
+    {
+      "id": "seed-a91e4c",
+      "name": "SWE",
+      "author": "Cursor",
+      "handle": "cursor_ai",
+      "categories": [
+        "Engineering"
+      ],
+      "publicPurpose": "处理软件开发问题分类及生产运行监测等工程工作。",
+      "publicPurposeEvidence": {
+        "url": "https://x.ai/bot/marketplace/bots/seed-a91e4c",
+        "htmlSha256": "9bdf39cd093d11119e0cdcf78565c1816f557994fb0b9691c6ad1890a95dd872"
+      },
+      "isFromGrokBotTeamCategory": false,
+      "url": "https://x.ai/bot/marketplace/bots/seed-a91e4c",
+      "originalAddUrl": "https://x.ai/bot/sd4474cf03cd8552905ff",
+      "updatedAt": "2026-08-29T00:00:00.000Z",
+      "localTemplateId": "awesome/grok-seed-a91e4c",
+      "relatedWorkflowTemplateId": null,
+      "adaptationStatus": "openbot-original-role",
+      "configurationImported": false,
+      "note": "对应OpenBot独立编写的职责模板，不是原Bot配置的转换或相同行为保证。"
+    }
+  ],
+  "useCases": [
+    {
+      "id": "use-case/chief-of-staff",
+      "name": "Chief of Staff",
+      "localName": "幕僚长",
+      "category": "General",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sc0a0ec3ce9c675824106",
+      "localTemplateId": "awesome/chief-of-staff",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/sales-outbound",
+      "name": "Sales Outbound",
+      "localName": "销售拓客员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s8ff03023f140bab479f7",
+      "localTemplateId": "awesome/sales-outbound",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/paid-media",
+      "name": "Paid Media",
+      "localName": "付费投放分析员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s59facc90a46a8b4f59da",
+      "localTemplateId": "awesome/paid-media",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/account-health",
+      "name": "Account Health",
+      "localName": "客户健康观察员",
+      "category": "Customer Success & Support",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s5465ebb9e192551741f7",
+      "localTemplateId": "awesome/account-health",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/talent-scout",
+      "name": "Talent Scout",
+      "localName": "人才搜寻员",
+      "category": "Recruiting & People",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sac3a109dfe021c555c7c",
+      "localTemplateId": "awesome/talent-scout",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/expense-manager",
+      "name": "Expense Manager",
+      "localName": "费用核对员",
+      "category": "Operations & Finance",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s50bb9361d891bd788a23",
+      "localTemplateId": "awesome/expense-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/bug-reproduction",
+      "name": "Bug Reproduction",
+      "localName": "缺陷复现工程师",
+      "category": "Engineering",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s2d62197e15bd11a1bd63",
+      "localTemplateId": "awesome/bug-reproduction",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/product-performance",
+      "name": "Product Performance",
+      "localName": "产品性能工程师",
+      "category": "Engineering",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s6d5f1cc3a564c8da972a",
+      "localTemplateId": "awesome/product-performance",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/account-manager",
+      "name": "Account Manager",
+      "localName": "客户协作经理",
+      "category": "Customer Success & Support",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sd4333bc337078a9752ac",
+      "localTemplateId": "awesome/account-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/account-research-specialist",
+      "name": "Account Research Specialist",
+      "localName": "客户研究专员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sa7d7f82d0068c2367a17",
+      "localTemplateId": "awesome/account-research-specialist",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/apartment-scout",
+      "name": "Apartment Scout",
+      "localName": "租房搜寻员",
+      "category": "Life & Leverage",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sd6f165284d7fd2f25e56",
+      "localTemplateId": "awesome/apartment-scout",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/beta-adoption-watcher",
+      "name": "Beta Adoption Watcher",
+      "localName": "内测采用观察员",
+      "category": "Product",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sfcf5d046a2784045938d",
+      "localTemplateId": "awesome/beta-adoption-watcher",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/calendar-coordinator",
+      "name": "Calendar Coordinator",
+      "localName": "日程协调员",
+      "category": "Recruiting & People",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s634fd63ee875502d8df9",
+      "localTemplateId": "awesome/calendar-coordinator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/call-faq-miner",
+      "name": "Call FAQ Miner",
+      "localName": "通话常见问题分析员",
+      "category": "Product",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s297976f738dc390d23df",
+      "localTemplateId": "awesome/call-faq-miner",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/cloud-agent-orchestrator",
+      "name": "Cloud Agent Orchestrator",
+      "localName": "云端智能体协调员",
+      "category": "Engineering",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s20b2c65ebeebb7362fa7",
+      "localTemplateId": "awesome/cloud-agent-orchestrator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/community-operations-manager",
+      "name": "Community Operations Manager",
+      "localName": "社区运营员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/seb9d6ba6765c64113941",
+      "localTemplateId": "awesome/community-operations-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/compelling-events-monitor",
+      "name": "Compelling Events Monitor",
+      "localName": "业务事件观察员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sdeb02761a9d185e5899f",
+      "localTemplateId": "awesome/compelling-events-monitor",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/competitive-intelligence-analyst",
+      "name": "Competitive Intelligence Analyst",
+      "localName": "竞争情报分析员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sa2d131975aaab07e43f2",
+      "localTemplateId": "awesome/competitive-intelligence-analyst",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/contract-desk",
+      "name": "Contract Desk",
+      "localName": "合同协作台",
+      "category": "Operations & Finance",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sd358e6cf5e8bed188eec",
+      "localTemplateId": "awesome/contract-desk",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/crm-operations-manager",
+      "name": "CRM Operations Manager",
+      "localName": "客户关系数据管理员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s162b4ed38d6cf1d56731",
+      "localTemplateId": "awesome/crm-operations-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/daily-briefing-writer",
+      "name": "Daily Briefing Writer",
+      "localName": "每日简报员",
+      "category": "General",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sb94d44175e650dbb703e",
+      "localTemplateId": "awesome/daily-briefing-writer",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/deal-desk-coordinator",
+      "name": "Deal Desk Coordinator",
+      "localName": "交易协作员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sb434ef300dea2b88aa58",
+      "localTemplateId": "awesome/deal-desk-coordinator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/deck-updater",
+      "name": "Deck Updater",
+      "localName": "演示材料更新员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s2a289081613e5e361c79",
+      "localTemplateId": "awesome/deck-updater",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/docs-auditor",
+      "name": "Docs Auditor",
+      "localName": "产品文档审查员",
+      "category": "Product",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s1025e1ebe0b11f048bd4",
+      "localTemplateId": "awesome/docs-auditor",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/enablement-fulfillment-specialist",
+      "name": "Enablement Fulfillment Specialist",
+      "localName": "客户赋能资料员",
+      "category": "Customer Success & Support",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s0dfd5486dc759d409d69",
+      "localTemplateId": "awesome/enablement-fulfillment-specialist",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/event-guest-screener",
+      "name": "Event Guest Screener",
+      "localName": "活动嘉宾筛选员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s47ebc74c9fcf9359b5a9",
+      "localTemplateId": "awesome/event-guest-screener",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/executive-assistant",
+      "name": "Executive Assistant",
+      "localName": "行政助理",
+      "category": "General",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sf813cbd3aadad1cfda46",
+      "localTemplateId": "awesome/executive-assistant",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/feature-request-tracker",
+      "name": "Feature Request Tracker",
+      "localName": "功能请求跟踪员",
+      "category": "Product",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s229dcca5bc0eaa01b09c",
+      "localTemplateId": "awesome/feature-request-tracker",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/hiring-screener",
+      "name": "Hiring Screener",
+      "localName": "招聘资料核对员",
+      "category": "Recruiting & People",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/scfddc8ad204a669484d0",
+      "localTemplateId": "awesome/hiring-screener",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/inbox-manager",
+      "name": "Inbox Manager",
+      "localName": "收件箱助理",
+      "category": "General",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s4f048c7b7da9e010c2c3",
+      "localTemplateId": "awesome/inbox-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/internal-communications-manager",
+      "name": "Internal Communications Manager",
+      "localName": "内部沟通编辑",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s066a9145d936e74d0c80",
+      "localTemplateId": "awesome/internal-communications-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/invoice-coordinator",
+      "name": "Invoice Coordinator",
+      "localName": "发票协同员",
+      "category": "Operations & Finance",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s072bae9387b9fc03cac8",
+      "localTemplateId": "awesome/invoice-coordinator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/linkedin-campaign-manager",
+      "name": "LinkedIn Campaign Manager",
+      "localName": "职业社交活动策划员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s4d10d16bdbe2391aa753",
+      "localTemplateId": "awesome/linkedin-campaign-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/marketing-calendar-owner",
+      "name": "Marketing Calendar Owner",
+      "localName": "营销排期管理员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/se318a72a31fad75c277e",
+      "localTemplateId": "awesome/marketing-calendar-owner",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/meeting-prep-buddy",
+      "name": "Meeting Prep Buddy",
+      "localName": "销售会前准备员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s445a0c9a2ca4bea7729e",
+      "localTemplateId": "awesome/meeting-prep-buddy",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/merch-fulfillment-operator",
+      "name": "Merch Fulfillment Operator",
+      "localName": "周边履约协调员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/se479952f3c9e373dfd64",
+      "localTemplateId": "awesome/merch-fulfillment-operator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/newsletter-writer",
+      "name": "Newsletter Writer",
+      "localName": "通讯编辑",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s5d2839123b973b4480f9",
+      "localTemplateId": "awesome/newsletter-writer",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/onboarding-manager",
+      "name": "Onboarding Manager",
+      "localName": "入职流程协调员",
+      "category": "Recruiting & People",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s9c881536413c0bbfa776",
+      "localTemplateId": "awesome/onboarding-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/paid-media-creative-strategist",
+      "name": "Paid Media Creative Strategist",
+      "localName": "投放创意策划员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s45471f3a8af234c13047",
+      "localTemplateId": "awesome/paid-media-creative-strategist",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/personal-site-builder",
+      "name": "Personal Site Builder",
+      "localName": "个人站点策划员",
+      "category": "Life & Leverage",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s3c76c85a840b32b8fed8",
+      "localTemplateId": "awesome/personal-site-builder",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/pipeline-analyst",
+      "name": "Pipeline Analyst",
+      "localName": "销售管道分析员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s98af8b9dcde521e1a9fa",
+      "localTemplateId": "awesome/pipeline-analyst",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/playtest-operator",
+      "name": "Playtest Operator",
+      "localName": "游戏试玩检查员",
+      "category": "Engineering",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s2cfcbb8a38b8e22b7d18",
+      "localTemplateId": "awesome/playtest-operator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/presentation-designer",
+      "name": "Presentation Designer",
+      "localName": "演示叙事设计师",
+      "category": "General",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s25997c2d0308b4e76024",
+      "localTemplateId": "awesome/presentation-designer",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/product-feedback-analyst",
+      "name": "Product Feedback Analyst",
+      "localName": "产品反馈分析员",
+      "category": "Product",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s9e2a2591b97ca74fbeaa",
+      "localTemplateId": "awesome/product-feedback-analyst",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/prospecting-plan-builder",
+      "name": "Prospecting Plan Builder",
+      "localName": "拓客计划策划员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s8b59eb62f90871ac5c36",
+      "localTemplateId": "awesome/prospecting-plan-builder",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/prototype-builder",
+      "name": "Prototype Builder",
+      "localName": "原型构建员",
+      "category": "Engineering",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s2e4acfb8db3cc0669a1b",
+      "localTemplateId": "awesome/prototype-builder",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/renewal-desk-operator",
+      "name": "Renewal Desk Operator",
+      "localName": "续约协作员",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s4c86a54f188668096400",
+      "localTemplateId": "awesome/renewal-desk-operator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/sales-call-coach",
+      "name": "Sales Call Coach",
+      "localName": "销售通话教练",
+      "category": "Sales",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s8173b3a9c49917de5b2d",
+      "localTemplateId": "awesome/sales-call-coach",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/security-questionnaire-filler",
+      "name": "Security Questionnaire Filler",
+      "localName": "安全问卷协作员",
+      "category": "Operations & Finance",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s1bde25ba45eca88ff276",
+      "localTemplateId": "awesome/security-questionnaire-filler",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/seo-aeo-auditor",
+      "name": "SEO / AEO Auditor",
+      "localName": "搜索可见性审查员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sb6d579c33f7a32d0e7af",
+      "localTemplateId": "awesome/seo-aeo-auditor",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/social-media-manager",
+      "name": "Social Media Manager",
+      "localName": "社交内容运营员",
+      "category": "Marketing",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s634cb1edf26493e86be2",
+      "localTemplateId": "awesome/social-media-manager",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/status-report-writer",
+      "name": "Status Report Writer",
+      "localName": "进度报告编辑",
+      "category": "General",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sde2c69536d2f2564fe1b",
+      "localTemplateId": "awesome/status-report-writer",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/subscription-cleaner",
+      "name": "Subscription Cleaner",
+      "localName": "订阅整理员",
+      "category": "Life & Leverage",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sb36667ce9e1fdc00cfe7",
+      "localTemplateId": "awesome/subscription-cleaner",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/ticket-triage-specialist",
+      "name": "Ticket Triage Specialist",
+      "localName": "工单分流专员",
+      "category": "Customer Success & Support",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s7aaf6431077930df326f",
+      "localTemplateId": "awesome/ticket-triage-specialist",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/travel-coordinator",
+      "name": "Travel Coordinator",
+      "localName": "行程协调员",
+      "category": "Life & Leverage",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/sc693906bdeded166b7ba",
+      "localTemplateId": "awesome/travel-coordinator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    },
+    {
+      "id": "use-case/vendor-portal-operator",
+      "name": "Vendor Portal Operator",
+      "localName": "供应商门户协作员",
+      "category": "Operations & Finance",
+      "url": "https://x.ai/bot/use-cases",
+      "originalAddUrl": "https://x.ai/bot/s98a7368e786130ad172b",
+      "localTemplateId": "awesome/vendor-portal-operator",
+      "adaptationStatus": "openbot-original",
+      "configurationImported": false
+    }
+  ],
+  "limitations": [
+    "公开目录快照；新增、移除或登录后内容可能变化。",
+    "Grok Bot Team是来源页面的分类标签，和OpenBot发布者签名及实际安装状态无关。",
+    "部分详情可看到设置文本，未复制人设、技能正文或图片，未导入原平台配置、凭据或运行环境。",
+    "市场角色和任务场景分别保留；相关任务映射不表示原Bot的功能已完整适配。"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "awesome.bot.vendored-engine/1",
+  "sourceProject": "OpenBot",
+  "sourceComponent": "openbot-multiplatform-start/market",
+  "sourceRepository": "https://github.com/Harzva/openbot",
+  "sourceAvailability": "The workspace marketplace component is first distributed as this standalone snapshot; no public upstream commit is claimed.",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 OpenBot contributors",
+  "modified": false,
+  "policy": "Vendored source files are byte-for-byte snapshots. Awesome Bot adapters live outside engine/. No publisher keys, credentials, caches or runtime data are included.",
+  "files": [
+    {
+      "path": "src/cache-gc.mjs",
+      "sha256": "c1d1796c2fe2871ddff49d768887cc2fbe59ebde014226e3a4da9e55c0b07974"
+    },
+    {
+      "path": "src/cache.mjs",
+      "sha256": "7221f60b4a0e4d75d213088732712609d8d88a22c5cb5c648759dafc106d33c5"
+    },
+    {
+      "path": "src/catalogue.mjs",
+      "sha256": "30ac93993f570832e58ae55ee46b19ee9fda7806d5a456b519383dc9f9fba759"
+    },
+    {
+      "path": "src/cli-args.mjs",
+      "sha256": "c19d281fbf911b6a1da55b0f63f6a6f5b53566b5f73843694e3ecb5a3d2ff03d"
+    },
+    {
+      "path": "src/coverage.mjs",
+      "sha256": "83dba3b099f0dc3b781bc555f01a0652ad7fd00373a422055048d106ae7bb242"
+    },
+    {
+      "path": "src/guidance.mjs",
+      "sha256": "052225edb4ebd2305c7813368f05798baf302adff7d4168ce1e9f2b335869d12"
+    },
+    {
+      "path": "src/install.mjs",
+      "sha256": "da397523dc567683ef3b9947a171586ac1d7d8a100eaf7feacf84222a0359b6a"
+    },
+    {
+      "path": "src/leak-scan.mjs",
+      "sha256": "162a8c8daa91fec4cac3a7a4da1f836bbde1a1cac3056b68192cdc57353e1a3e"
+    },
+    {
+      "path": "src/lifetime.mjs",
+      "sha256": "a0a3c6b2a8a0ccdb471ccef1e49d745fcaf1932788ffb67ecfb70f9103913330"
+    },
+    {
+      "path": "src/manifest.mjs",
+      "sha256": "cb1cbf7846f903a49fe80e84d45f6dea061f73b01a976f21fa7be22cd1a7fa50"
+    },
+    {
+      "path": "src/plan.mjs",
+      "sha256": "7ede23be8c283e76a50b0ecaae97aa3e6078f2056d745d848e7da939e1a1936b"
+    },
+    {
+      "path": "src/registry.mjs",
+      "sha256": "b2adb00f34d2473a134b5567d1f9c223e891ed7e94288e2cb62bb2a98196bc54"
+    },
+    {
+      "path": "src/semver.mjs",
+      "sha256": "37ace84dada1f4f148d595af2660eaed6aeeeb342a60a5d504de360c1d56926b"
+    },
+    {
+      "path": "src/sign.mjs",
+      "sha256": "81e1161d4ef66729e7b3409de4b743ace5570f3e25d6f4001eaf911f0720fe86"
+    },
+    {
+      "path": "src/sources.mjs",
+      "sha256": "320bbbf2bc245ac6b113e9096870435cfda93a8c2eb3ba4e2b58c3de0f2d6845"
+    },
+    {
+      "path": "src/trust.mjs",
+      "sha256": "e3dd944960b41bf90ffa23c18378b962fa2a98755510df1614be883dbdbcf464"
+    },
+    {
+      "path": "src/update.mjs",
+      "sha256": "1798dd73ae4aa030d89c58fa48b1f2cf0b404980972bdc01cd5ffae2a9f224d7"
+    },
+    {
+      "path": "scripts/market.mjs",
+      "sha256": "7e41f2b53c0ff9a1b3c50f5efabaf5b4cfafb0474c9aa2cfb114a8762fb0b197"
+    }
+  ]
+}

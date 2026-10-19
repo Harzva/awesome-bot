@@ -1,0 +1,78 @@
+{
+  "schema": "awesome.bot.catalogue/1",
+  "name": "Awesome Bot",
+  "updatedAt": "2026-10-20T02:42:34+08:00",
+  "categories": [
+    {
+      "id": "general",
+      "name": "通用助理"
+    },
+    {
+      "id": "sales",
+      "name": "销售与客户拓展"
+    },
+    {
+      "id": "marketing",
+      "name": "营销与内容"
+    },
+    {
+      "id": "support",
+      "name": "客户成功与支持"
+    },
+    {
+      "id": "people",
+      "name": "招聘与人事"
+    },
+    {
+      "id": "operations",
+      "name": "运营与财务流程"
+    },
+    {
+      "id": "engineering",
+      "name": "工程与开发"
+    },
+    {
+      "id": "design",
+      "name": "设计与创作"
+    },
+    {
+      "id": "product",
+      "name": "产品与反馈"
+    },
+    {
+      "id": "personal",
+      "name": "生活与个人事务"
+    }
+  ],
+  "sources": [
+    {
+      "id": "grok-marketplace",
+      "name": "Grok Bot Marketplace",
+      "url": "https://x.ai/bot/marketplace",
+      "checkedAt": "2026-10-20T02:31:38.453478+08:00",
+      "note": "90个公开Bot，54个带Grok Bot Team分类；分类页并集88加首页另2项，名称不是本地账号或已安装实例。"
+    },
+    {
+      "id": "grok-use-cases",
+      "name": "Grok Bot Use Cases",
+      "url": "https://x.ai/bot/use-cases",
+      "checkedAt": "2026-10-20T02:18:58+08:00",
+      "note": "56个任务场景、9类。OpenBot据场景独立编写模板，未复制原人设或技能正文。"
+    },
+    {
+      "id": "awesome-dsh-plugin",
+      "name": "Awesome DSH Plugin",
+      "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+      "checkedAt": "2026-10-20T02:19:00+08:00",
+      "note": "社区精选目录，19,524 stars、6,068个YAML条目、23类，CC0-1.0；参考维护机制，未将插件计成Bot。"
+    },
+    {
+      "id": "dsh-market",
+      "name": "DSH Market",
+      "url": "https://github.com/dsh-market/dsh-market",
+      "checkedAt": "2026-10-20T02:19:00+08:00",
+      "note": "社区插件市场，7,461 stars，MIT；参考市场组织，不作为OpenBot安装格式。"
+    }
+  ],
+  "entriesDir": "data/entries"
+}

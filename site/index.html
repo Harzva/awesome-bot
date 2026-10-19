@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Awesome Bot：可检索、可审阅、可下载的 OpenBot bot 目录。">
+    <meta name="theme-color" content="#f5f0e8">
+    <title>Awesome Bot · OpenBot 目录</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Awesome Bot 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Awesome Bot</strong>
+          <small>OpenBot directory</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#catalog" data-i18n="navCatalog">目录</a>
+        <a id="submit-link" href="https://github.com/Harzva/awesome-bot/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer" data-i18n="navSubmit">投稿 ↗</a>
+        <a href="https://github.com/Harzva/awesome-bot" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <button id="language-toggle" class="language-toggle" type="button" aria-label="切换界面语言" data-i18n-aria-label="languageToggle">EN</button>
+      </nav>
+    </header>
+
+    <main id="catalog">
+      <section class="masthead" aria-labelledby="page-title">
+        <div class="masthead-copy">
+          <p class="section-kicker" data-i18n="kicker">一份可审阅的 Bot 目录</p>
+          <h1 id="page-title" data-i18n="title">找到一个，<br><em>把事情推进下去。</em></h1>
+          <p id="page-lede" class="lede" data-i18n="lede">按角色和任务查找中文 Bot。看清职责、步骤和权限需求，再下载可复现的配置。</p>
+        </div>
+        <div class="masthead-note" aria-label="目录说明">
+          <span class="note-rule" aria-hidden="true"></span>
+          <p><strong id="inventory-count">—</strong> <span data-i18n="botsLabel">个 Bot 可查</span></p>
+          <p class="muted" data-i18n="updatedLabel">目录更新时间：—</p>
+        </div>
+      </section>
+
+      <section class="search-section" aria-labelledby="search-label">
+        <label id="search-label" class="sr-only" for="search-input" data-i18n="searchLabel">搜索 Bot</label>
+        <div class="search-shell">
+          <span class="search-symbol" aria-hidden="true"></span>
+          <input id="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="搜索名称、职责、标签或来源" data-i18n-placeholder="searchPlaceholder">
+          <span id="search-count" class="search-count" aria-live="polite">—</span>
+        </div>
+        <p class="search-hint" data-i18n="searchHint">支持中文名称、摘要、标签、来源名称和条目 ID</p>
+      </section>
+
+      <section class="catalog-toolbar" aria-label="目录筛选" data-i18n-aria-label="filterLabel">
+        <div class="collection-tabs" role="tablist" aria-label="Bot 类型" data-i18n-aria-label="botTypeLabel">
+          <button class="collection-tab is-active" type="button" role="tab" aria-selected="true" data-collection="all"><span data-i18n="allLabel">全部</span> <b data-count-for="all">—</b></button>
+          <button class="collection-tab" type="button" role="tab" aria-selected="false" data-collection="roles"><span data-i18n="rolesLabel">角色</span> <b data-count-for="roles">—</b></button>
+          <button class="collection-tab" type="button" role="tab" aria-selected="false" data-collection="workflows"><span data-i18n="workflowsLabel">任务</span> <b data-count-for="workflows">—</b></button>
+        </div>
+        <div class="toolbar-controls">
+          <label class="select-control">
+            <span data-i18n="categoryLabel">分类</span>
+            <select id="category-select" aria-label="按分类筛选" data-i18n-aria-label="categoryFilter">
+              <option value="all">全部分类</option>
+            </select>
+          </label>
+          <label class="select-control">
+            <span data-i18n="sortLabel">排序</span>
+            <select id="sort-select" aria-label="排序方式" data-i18n-aria-label="sortControlLabel">
+              <option value="name">名称</option>
+              <option value="original-name">来源名称</option>
+            </select>
+          </label>
+          <button id="favorites-toggle" class="quiet-button" type="button" aria-pressed="false" data-i18n="favoritesLabel">只看收藏</button>
+        </div>
+      </section>
+
+      <section class="category-strip" aria-labelledby="category-strip-title">
+        <div class="strip-heading">
+          <h2 id="category-strip-title" data-i18n="categoriesTitle">按工作场景</h2>
+          <span class="strip-line" aria-hidden="true"></span>
+        </div>
+        <div id="category-list" class="category-list" role="list"></div>
+      </section>
+
+      <div class="content-grid">
+        <section class="results-section" aria-labelledby="results-title">
+          <div class="results-heading">
+            <div>
+              <h2 id="results-title"><span data-i18n="resultsTitle">全部条目</span> <span id="results-total" class="heading-count">—</span></h2>
+            </div>
+            <p id="results-status" class="results-status" aria-live="polite">正在加载目录…</p>
+          </div>
+          <div id="results" class="results-list" aria-live="polite" aria-busy="true"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <span class="empty-mark" aria-hidden="true">/</span>
+            <h3 data-i18n="emptyTitle">没有匹配的 Bot</h3>
+            <p data-i18n="emptyBody">换一个关键词，或清除筛选后再试。</p>
+            <button id="clear-filters" class="text-button" type="button" data-i18n="clearFilters">清除筛选</button>
+          </div>
+        </section>
+
+        <aside class="directory-aside" aria-label="目录工具">
+          <section class="aside-block">
+            <h2 data-i18n="downloadsTitle">带走一组配置</h2>
+            <p class="aside-copy" data-i18n="downloadsBody">下载只是配置文件，不会在本页面安装或启动 Bot。</p>
+            <div class="download-links">
+              <a class="download-link" data-download="roles" href="#" hidden><span class="download-title"><span data-i18n="downloadRoles">角色</span> <b data-download-count="roles">—</b></span><span class="download-arrow" aria-hidden="true">↓</span><span class="download-limit" data-download-limit="roles" hidden></span></a>
+              <a class="download-link" data-download="workflows" href="#" hidden><span class="download-title"><span data-i18n="downloadWorkflows">任务</span> <b data-download-count="workflows">—</b></span><span class="download-arrow" aria-hidden="true">↓</span><span class="download-limit" data-download-limit="workflows" hidden></span></a>
+              <a class="download-link" data-download="all" href="#" hidden><span class="download-title"><span data-i18n="downloadAll">全部</span> <b data-download-count="all">—</b></span><span class="download-arrow" aria-hidden="true">↓</span><span class="download-limit" data-download-limit="all" hidden></span></a>
+            </div>
+          </section>
+          <section class="aside-block source-block">
+            <h2 data-i18n="sourceTitle">保留来路</h2>
+            <p class="aside-copy" data-i18n="sourceBody">每个条目会标出来源、版本和许可证；缺少来源的社区条目会明确显示。</p>
+            <a class="text-link" href="https://github.com/Harzva/awesome-bot" target="_blank" rel="noreferrer" data-i18n="openRepo">查看仓库 ↗</a>
+          </section>
+          <section class="aside-block index-block">
+            <h2>registry/index.json</h2>
+            <p class="aside-copy" data-i18n="indexBody">复制目录索引地址，交给脚本或团队内部工具使用。</p>
+            <button id="copy-index" class="copy-button" type="button" data-i18n="copyIndex">复制索引 URL</button>
+            <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Awesome Bot · <span data-i18n="footerText">开源目录，欢迎审阅与投稿。</span></p>
+      <a href="https://github.com/Harzva/awesome-bot/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT ↗</a>
+    </footer>
+
+    <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title">
+      <div id="detail-content"></div>
+    </dialog>
+
+    <noscript>
+      <div class="no-script">需要启用 JavaScript 才能搜索和查看目录。</div>
+    </noscript>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

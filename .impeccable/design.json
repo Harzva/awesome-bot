@@ -1,0 +1,98 @@
+{
+  "schema": "impeccable.design/1",
+  "product": "Awesome Bot",
+  "surface": "static catalogue",
+  "mode": "operate",
+  "evidence": [
+    {
+      "path": "research/awesome-bot-20261020/ui/dsh-reference.png",
+      "size": "1280x720",
+      "observations": [
+        "warm paper field",
+        "search-first directory hierarchy",
+        "large black and red heading",
+        "thin list-oriented rhythm",
+        "category chips below the source and index area"
+      ]
+    }
+  ],
+  "identity": {
+    "name": "Awesome Bot",
+    "mark": "four-cell circular mark with a single red cell",
+    "voice": "clear, reviewable, practical",
+    "defaultLanguage": "zh-CN"
+  },
+  "tokens": {
+    "color": {
+      "paper": "#f5f0e8",
+      "surface": "#fffdf9",
+      "surfaceSoft": "#eee7dc",
+      "ink": "#201d1a",
+      "muted": "#5b554d",
+      "line": "#d7cec1",
+      "lineStrong": "#aaa095",
+      "accent": "#ad382b",
+      "accentSoft": "#f1d2c9",
+      "focus": "#1d68ae"
+    },
+    "typography": {
+      "family": "IBM Plex Sans (self-hosted, SIL OFL 1.1) with platform Chinese sans fallbacks",
+      "bodySize": "15px",
+      "headingTracking": "-0.04em",
+      "bodyLineHeight": "1.55"
+    },
+    "space": {
+      "gutterDesktop": "24px",
+      "gutterMobile": "12px",
+      "rowVertical": "25px",
+      "section": "36px"
+    },
+    "radii": {
+      "control": "4px",
+      "field": "10px",
+      "chip": "99px"
+    },
+    "motion": {
+      "standard": "120ms ease",
+      "reducedMotion": "disable nonessential transitions and smooth scroll"
+    }
+  },
+  "principles": [
+    "Search and inspect before downloading.",
+    "Use thin-rule rows for directory density instead of a card wall.",
+    "Keep source, version, license, and requested permissions visible.",
+    "Use a self-hosted OFL font plus platform Chinese fallbacks and relative assets so GitHub Pages stays portable.",
+    "Treat missing data, empty results, and untested real tasks as visible states."
+  ],
+  "responsive": {
+    "wide": "header, search, filters, list, and utility rail fit within 1180px",
+    "medium": "utility rail moves below list and controls retain native focus",
+    "small": "navigation simplifies, rows stack actions, dialog fills the viewport"
+  },
+  "safety": {
+    "entryText": "textContent or text nodes only",
+    "links": "https or site-relative paths",
+    "downloads": "static configuration files; counts are data-driven; null bulk URLs show a per-entry fallback without an href",
+    "permissions": "requested capabilities are descriptive and never treated as granted"
+  },
+  "qa": {
+    "viewports": [
+      "1440x900",
+      "1280x720",
+      "390x844",
+      "375x812"
+    ],
+    "states": [
+      "loading",
+      "catalogue error",
+      "search results",
+      "zero results",
+      "detail dialog",
+      "saved filter",
+      "keyboard focus",
+      "reduced motion"
+    ],
+    "evidenceDirectory": "research/awesome-bot-20261020/ui/",
+    "evidenceVisibility": "local acceptance evidence; outside the public site"
+  }
+}

@@ -1,0 +1,35 @@
+name: Source link report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '31 2 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-links
+  cancel-in-progress: false
+
+jobs:
+  report:
+    if: github.repository == 'Harzva/awesome-bot'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - run: npm ci --ignore-scripts
+      - name: Report source availability without changing entries
+        run: npm run check:links -- --out=dist/reports/source-links.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: source-link-report
+          path: dist/reports/source-links.json
+          retention-days: 30

@@ -1,0 +1,132 @@
+{
+  "schema": "awesome.bot.dsh-reference/1",
+  "checkedAt": "2026-10-19T18:19:44.833216+00:00",
+  "checkedTimezone": "Asia/Shanghai",
+  "awesomeCatalog": {
+    "repository": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+    "publisherType": "community",
+    "notDeepSeekOfficial": true,
+    "snapshotSha": "1ae7fd8589e091bd1310053d77b5a0bd3da8e4c1",
+    "stars": 19524,
+    "forks": 4582,
+    "license": "CC0-1.0",
+    "catalogEntryFiles": 6068,
+    "categories": [
+      "agi",
+      "ui",
+      "usage",
+      "theme",
+      "model",
+      "identity",
+      "session",
+      "memory",
+      "tools",
+      "wsl",
+      "browser",
+      "vision",
+      "voice",
+      "docs",
+      "skill",
+      "workflow",
+      "git",
+      "notify",
+      "dev",
+      "security",
+      "remote",
+      "market",
+      "fun"
+    ],
+    "entryModel": {
+      "required": [
+        "url",
+        "name",
+        "category",
+        "description.en"
+      ],
+      "optional": [
+        "description.zh",
+        "tarball"
+      ],
+      "identity": "owner__repo.yml; monorepo paths append --packages-subpath",
+      "sourceOfTruth": "data/plugins/*.yml",
+      "generated": [
+        "README.md",
+        "README.zh.md",
+        "static website",
+        "plugins.json",
+        "DSH format-1 index.json"
+      ]
+    },
+    "contributionFlow": [
+      "One PR adds up to three entry YAML files.",
+      "CI checks submission shape, dsh.bundle manifest and source requirements.",
+      "A maintainer reads the plugin source and checks functionality claims.",
+      "Merge regenerates bilingual READMEs, triggers static website build and deployment.",
+      "Scheduled probes refresh npm mapping, stars, releases, and other metadata; decay scanning supports removal review."
+    ],
+    "publishedInterfaces": {
+      "website": "https://awesome-dsh-plugin.com",
+      "richCatalog": "https://awesome-dsh-plugin.com/plugins.json",
+      "dshMarketIndex": "https://cdn.jsdelivr.net/npm/dsh-plugin-catalog/index.json",
+      "websiteIndex": "https://awesome-dsh-plugin.com/index.json",
+      "mirror": "https://dshmarket.com/index.json"
+    }
+  },
+  "marketApp": {
+    "repository": "https://github.com/dsh-market/dsh-market",
+    "publisherType": "community",
+    "stars": 7461,
+    "forks": 292,
+    "license": "MIT",
+    "snapshotSha": "350b0201adf9fec5b4742e7bad9a2bf69d3106d8",
+    "source": "https://github.com/dsh-market/dsh-market/blob/main/README.md",
+    "features": [
+      "Search and category filters",
+      "Stars and top/new ordering",
+      "Bilingual descriptions",
+      "Host-version compatibility declarations",
+      "Source-confirmed installation and updates",
+      "Screenshots and plugin details",
+      "Favorites, groups and local notes",
+      "Backup, restore and recovery",
+      "One discussion per plugin shared across surfaces"
+    ]
+  },
+  "deepseekOfficial": {
+    "repository": "https://github.com/deepseek-ai/deepseek-harness",
+    "license": "MIT",
+    "generatorSource": "https://github.com/deepseek-ai/deepseek-harness/blob/master/apps/plugin-market-generator/README.md",
+    "validatorSource": "https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/util/plugin-market-index/README.md",
+    "standard": "DSH plugin market format 1",
+    "generatorBehavior": "Reads npm manifests and Git objects, retains per-source last successful results, pins immutable versions/commits, validates index, and does not run package code.",
+    "limits": [
+      "A valid format does not prove package metadata matches code.",
+      "The caller must enforce document size limits.",
+      "Only DSH bundle declarations qualify.",
+      "OpenBot persona, memory, permission and model binding semantics need their own schema."
+    ]
+  },
+  "recommendedReuse": {
+    "adopt": [
+      "Single entry file per item with strict schema validation",
+      "One canonical catalog generates documentation, website and app index",
+      "Source URL, author, license, version/commit and verification date on every item",
+      "Bilingual discovery and category search",
+      "Contributor PR plus automated checks plus functional review",
+      "Maintenance probes and clear stale/unavailable states"
+    ],
+    "adapt": [
+      "Catalog app interaction patterns to OpenBot native UI",
+      "Separate Bot templates, skill packs, DSH plugins and runtime integrations with explicit item kinds",
+      "Use existing OpenBot market install/upgrade/rollback core for Bot templates",
+      "Read the DSH standard only for DSH-compatible plugin entries; keep a thin adapter"
+    ],
+    "doNotCopy": [
+      "Treating thousands of DSH plugins as thousands of Bot identities",
+      "Calling community plugins DeepSeek official",
+      "Assuming catalog CC0 grants rights to all package code",
+      "Installing every entry solely because it is high-star or listed",
+      "Exporting live profile credentials as public Bot templates"
+    ]
+  }
+}

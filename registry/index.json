@@ -1,0 +1,3219 @@
+{
+  "schema": "openbot.market.registry/1",
+  "name": "Awesome Bot — OpenBot 原创模板（开发目录，未签名）",
+  "updatedAt": "2026-10-20T02:42:34+08:00",
+  "entries": [
+    {
+      "id": "awesome/account-health",
+      "kind": "template",
+      "name": "客户健康观察员",
+      "summary": "综合产品使用、支持工单和沟通记录识别客户风险。",
+      "tags": [
+        "support",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/account-health/1.0.0.json",
+          "integrity": "sha256-3rbQYq0EH8McfyFU43CcxARCDIUHjFVvOcELG17isTE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/account-manager",
+      "kind": "template",
+      "name": "客户协作经理",
+      "summary": "维护客户承诺、需求和行动项，让后续跟进有明确依据。",
+      "tags": [
+        "support",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/account-manager/1.0.0.json",
+          "integrity": "sha256-/LOGMEBjGa3M/2hVR42Fv1F2nrViZXTLJoulMqKE+aw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/account-research-specialist",
+      "kind": "template",
+      "name": "客户研究专员",
+      "summary": "调查目标公司的业务、变化和购买相关角色，形成销售前研究。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/account-research-specialist/1.0.0.json",
+          "integrity": "sha256-R78EuCrnkfYFP6dFA4SBjqRl3tacmw77IqgoC/Ta5Ek=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/apartment-scout",
+      "kind": "template",
+      "name": "租房搜寻员",
+      "summary": "按预算、通勤和居住条件整理房源，核对信息与待询事项。",
+      "tags": [
+        "personal",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/apartment-scout/1.0.0.json",
+          "integrity": "sha256-Dcll2W0g3V/Kcw+PtKeBBxvLMI23qA3BZVvsiRhvzdM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/beta-adoption-watcher",
+      "kind": "template",
+      "name": "内测采用观察员",
+      "summary": "跟踪内测用户的激活、使用和反馈，识别采用阻塞。",
+      "tags": [
+        "product",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/beta-adoption-watcher/1.0.0.json",
+          "integrity": "sha256-YxU7C7CnUQiDQybUzowCjFhAsWFbA1n/HmqTTK5MgUQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/bug-reproduction",
+      "kind": "template",
+      "name": "缺陷复现工程师",
+      "summary": "把含糊的问题反馈转成可重复的最小复现与诊断证据。",
+      "tags": [
+        "engineering",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/bug-reproduction/1.0.0.json",
+          "integrity": "sha256-ryxRm0vcYc5jQcCSXTue6Rz4yVW+iAMPTlRRFQhtwF4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/calendar-coordinator",
+      "kind": "template",
+      "name": "日程协调员",
+      "summary": "核对参会人的可用时间、时区和会议条件，准备排期方案。",
+      "tags": [
+        "people",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/calendar-coordinator/1.0.0.json",
+          "integrity": "sha256-G12g5eLI/4xXqFemhqSP4mqH7kuvX5wNCtA+0UzXIP0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/call-faq-miner",
+      "kind": "template",
+      "name": "通话常见问题分析员",
+      "summary": "从获准的通话记录中提炼反复出现的问题和回答缺口。",
+      "tags": [
+        "product",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/call-faq-miner/1.0.0.json",
+          "integrity": "sha256-+4x5giXFOKqwQxbABawV3phzoAdY3CmPmsUUjBemybQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/chief-of-staff",
+      "kind": "template",
+      "name": "幕僚长",
+      "summary": "把分散的目标、进度和决策整理成可推进的经营待办。",
+      "tags": [
+        "general",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/chief-of-staff/1.0.0.json",
+          "integrity": "sha256-wBlCrvc1v3QjhhT3kh7ecttzoIMkpxy8uQw76nzOZXQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cloud-agent-orchestrator",
+      "kind": "template",
+      "name": "云端智能体协调员",
+      "summary": "把开发目标拆成有边界的任务，协调已授权的执行器并验收结果。",
+      "tags": [
+        "engineering",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cloud-agent-orchestrator/1.0.0.json",
+          "integrity": "sha256-Zaei6LA85Aui6lwqzDKdsOo8xtIHpeKSoAc9aDg+bWw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/community-operations-manager",
+      "kind": "template",
+      "name": "社区运营员",
+      "summary": "整理社区问题、活动和维护事项，推动有依据的响应。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/community-operations-manager/1.0.0.json",
+          "integrity": "sha256-rYz69W2iBtQxlF+xwj7YDtqX1rh3yj58xKUsiPIqCWk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/compelling-events-monitor",
+      "kind": "template",
+      "name": "业务事件观察员",
+      "summary": "跟踪与目标市场相关的公开变化，识别有时限的业务机会。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/compelling-events-monitor/1.0.0.json",
+          "integrity": "sha256-Ez2QjIFeIEk7SkZbn5cdgqFm0GoQRqSnGJYNLvpiy/8=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/competitive-intelligence-analyst",
+      "kind": "template",
+      "name": "竞争情报分析员",
+      "summary": "用公开可核对资料比较竞争产品及其近期变化。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/competitive-intelligence-analyst/1.0.0.json",
+          "integrity": "sha256-cTjNY1SNXiWvAvB7RA3nQzObN2pAhy+gfr2UJCD8k6A=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/contract-desk",
+      "kind": "template",
+      "name": "合同协作台",
+      "summary": "整理合同版本、商务要点和待确认差异，协助交接给专业人员。",
+      "tags": [
+        "operations",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/contract-desk/1.0.0.json",
+          "integrity": "sha256-Ez8q5o8hnxhXp+VjdmkMhu37Vw5opAtWnmGsDoR2Kls=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/crm-operations-manager",
+      "kind": "template",
+      "name": "客户关系数据管理员",
+      "summary": "核对CRM数据质量、阶段定义和缺失字段，准备修复计划。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/crm-operations-manager/1.0.0.json",
+          "integrity": "sha256-UlEKYpTStd1htd/00R9BMrjiBXYWS/jd6g3qkYeVc7c=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/daily-briefing-writer",
+      "kind": "template",
+      "name": "每日简报员",
+      "summary": "把已授权的信息流整理成与用户目标相关的短简报。",
+      "tags": [
+        "general",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/daily-briefing-writer/1.0.0.json",
+          "integrity": "sha256-km3DkeaUSWFrhwK5JXDR9Kfu7WbLJnk8fDfdDqUepjs=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/deal-desk-coordinator",
+      "kind": "template",
+      "name": "交易协作员",
+      "summary": "整理销售交易中的报价、审批与交付条件，推动跨部门确认。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/deal-desk-coordinator/1.0.0.json",
+          "integrity": "sha256-TgCg8dO1+Es5oTaD1yt7ZbhMv2XLmUERXh2YoEs5iiQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/deck-updater",
+      "kind": "template",
+      "name": "演示材料更新员",
+      "summary": "核对演示文稿中的过期数据、产品截图和说法，准备可审阅更新。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/deck-updater/1.0.0.json",
+          "integrity": "sha256-kkDFMS/Uzvqf1XhU48wB8KwlzBdPhj6VteaTUW5sFKM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/docs-auditor",
+      "kind": "template",
+      "name": "产品文档审查员",
+      "summary": "检查产品文档与当前行为的差异、失效链接和上手阻塞。",
+      "tags": [
+        "product",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/docs-auditor/1.0.0.json",
+          "integrity": "sha256-0iVdycMTSysIEgSqtRVpIt1CW17aFml6Cpw9wVjAxgg=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/enablement-fulfillment-specialist",
+      "kind": "template",
+      "name": "客户赋能资料员",
+      "summary": "为客户或销售请求匹配已批准的培训、案例和产品资料。",
+      "tags": [
+        "support",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/enablement-fulfillment-specialist/1.0.0.json",
+          "integrity": "sha256-oXaPXEOlj9cgTpAXuN/Hp2w/vPV+4VjhnM33SFfnLvM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/event-guest-screener",
+      "kind": "template",
+      "name": "活动嘉宾筛选员",
+      "summary": "按活动定位和公开职业证据核对报名者或拟邀嘉宾。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/event-guest-screener/1.0.0.json",
+          "integrity": "sha256-DtoJVCTMmsFZiA85/Fz0kOo9U5bhBanHtt2LB34L1cU=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/executive-assistant",
+      "kind": "template",
+      "name": "行政助理",
+      "summary": "整理用户的日程、准备事项和授权范围内的行政待办。",
+      "tags": [
+        "general",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/executive-assistant/1.0.0.json",
+          "integrity": "sha256-ls8sC/DybVlU3Y7pZcI3xCVajybERdsfyTAY9fm1f40=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/expense-manager",
+      "kind": "template",
+      "name": "费用核对员",
+      "summary": "整理报销材料并按公司规则标出缺凭证、重复和超标项目。",
+      "tags": [
+        "operations",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/expense-manager/1.0.0.json",
+          "integrity": "sha256-cU/9XCqOeQ6muCq5TvLoIQSfA3JoEKqqVjEn/EDMQIA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/feature-request-tracker",
+      "kind": "template",
+      "name": "功能请求跟踪员",
+      "summary": "把分散的功能诉求归并成有证据、可追踪的需求清单。",
+      "tags": [
+        "product",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/feature-request-tracker/1.0.0.json",
+          "integrity": "sha256-SaSodPfz+IcIXrWi5KdrseHsUoD+WOqP1g1fZA1c2DQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-account-book",
+      "kind": "template",
+      "name": "客户资料研究台",
+      "summary": "维护客户公司研究底稿，把新增事实和既有假设分开整理。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-account-book/1.0.0.json",
+          "integrity": "sha256-52MMG8mlLGQAxxkWKea8MN6+a4UCuhIY6W1VCIyvyDQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-account-research",
+      "kind": "template",
+      "name": "企业客户情报员",
+      "summary": "整理目标企业的业务、组织和近期变化，为客户交流准备可验证背景。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-account-research/1.0.0.json",
+          "integrity": "sha256-1GWR4H/rLDJUUsL2GPzEWwEY+MBbzy5bIuH8i8RUZvQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-ai-search-visibility",
+      "kind": "template",
+      "name": "AI搜索可见性观察员",
+      "summary": "核查品牌在给定AI搜索问题中的呈现，记录引用来源和信息偏差。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-ai-search-visibility/1.0.0.json",
+          "integrity": "sha256-yAzAe5RUwSUNKRZztOXpBA4q4zeK9Fx28DfjKqKwuGk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-alfred",
+      "kind": "template",
+      "name": "机器人分工治理员",
+      "summary": "围绕组织目标检查机器人职责、交接与人工责任，减少重复和遗漏。",
+      "tags": [
+        "operations",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-alfred/1.0.0.json",
+          "integrity": "sha256-S+AwVXW8nxNFW6VBZZKUKNRLgTKgXHP19qNpsMlVbGY=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-apple-search-ads-review",
+      "kind": "template",
+      "name": "苹果搜索广告复盘员",
+      "summary": "复核苹果搜索广告的花费、关键词和转化表现，提出有证据的调整方案。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-apple-search-ads-review/1.0.0.json",
+          "integrity": "sha256-2n2snVLT8d8CeXW3iqlL751HVLU7O+uSfClgEMkphZA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-best-video-editor",
+      "kind": "template",
+      "name": "视频精剪交付员",
+      "summary": "按明确剪辑意图整理视频结构、镜头和音画修改，准备可验收交付。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-best-video-editor/1.0.0.json",
+          "integrity": "sha256-ZTsT4cHR2Kuo8kWgvoAgLGh4JltmLClyXgvOUQV7nBI=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-call-follow-ups",
+      "kind": "template",
+      "name": "通话后跟进专员",
+      "summary": "把客户通话中的承诺和问题整理成准确的跟进草稿与责任清单。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-call-follow-ups/1.0.0.json",
+          "integrity": "sha256-k1+MjKD/Pj2MGhSB3AHjYm9d5YDahHTRsAYNmgDpBOQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-chief-health",
+      "kind": "template",
+      "name": "训练习惯记录员",
+      "summary": "整理用户授权的训练、营养和健康记录，跟踪执行并准备待确认调整。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-chief-health/1.0.0.json",
+          "integrity": "sha256-p6sxLNGD21b6q6Dpu1pJ5J6sxm/HkXtkfgy5kyXF6SQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-clip-bot",
+      "kind": "template",
+      "name": "短视频切片策划员",
+      "summary": "从获准的长视频或文字稿中挑选可独立理解的短视频片段。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-clip-bot/1.0.0.json",
+          "integrity": "sha256-FGedBf9GazW0BJ/+nCd55ZWI1PpybL8I65lb7p2Hmuk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-company-docs-q-a",
+      "kind": "template",
+      "name": "企业知识问答员",
+      "summary": "从获准的企业文档中查找答案，提供出处并标明版本和适用范围。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-company-docs-q-a/1.0.0.json",
+          "integrity": "sha256-ik7bTGHHlF43lGoVuj9wfYJzg+Nur7ml1D2z/o06f/Q=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-competitor-watching",
+      "kind": "template",
+      "name": "竞品动态观察员",
+      "summary": "跟踪指定竞品的公开变化，核对其事实及对产品判断的可能影响。",
+      "tags": [
+        "product",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-competitor-watching/1.0.0.json",
+          "integrity": "sha256-mrR5FMXLyHFHlVWIWbXraPXybMhASTshOWO5haAfQbY=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-cooper",
+      "kind": "template",
+      "name": "科技创投简报员",
+      "summary": "把AI、科技与创投公开消息整理成有时间和来源的简报。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-cooper/1.0.0.json",
+          "integrity": "sha256-5eq0ZC8UhXDSQeUgpWURzrg/esl2xoJNrpdxXv+i6Hs=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-credit-card-max",
+      "kind": "template",
+      "name": "信用卡权益整理员",
+      "summary": "整理用户提供的信用卡权益、费用和使用条件，帮助核对可用优惠。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-credit-card-max/1.0.0.json",
+          "integrity": "sha256-+P3od5bi4pKdC+CLp67Blu+0n9Z2xT/1CpVn4O4NQe4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-critiquito",
+      "kind": "template",
+      "name": "界面设计评议员",
+      "summary": "依据真实界面和任务目标检查视觉层级、交互与可访问性问题。",
+      "tags": [
+        "design",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-critiquito/1.0.0.json",
+          "integrity": "sha256-MQW9BrISpbg+2PCpnI+rCcF1fs3Lw4GR0JbPP6MLGlA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-customer-call-coach",
+      "kind": "template",
+      "name": "客户会谈辅导员",
+      "summary": "在客户通话前准备背景，并在结束后按具体片段复盘交流表现。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-customer-call-coach/1.0.0.json",
+          "integrity": "sha256-9x4YDALp3+3boWOA4zKggYs5VaVoMpZm5EfOsROdgpE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-customer-question-drafter",
+      "kind": "template",
+      "name": "产品邮件答复员",
+      "summary": "分类产品支持来信，核对已批准资料并准备有边界的回复草稿。",
+      "tags": [
+        "support",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-customer-question-drafter/1.0.0.json",
+          "integrity": "sha256-qyos+XTnJCq5+hxeYc5/sTgy5rY76Zl6o+j96qZ0wGs=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-customer-stories",
+      "kind": "template",
+      "name": "客户案例证据员",
+      "summary": "把经批准的客户素材整理为可验证、可复用的案例与成效证明。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-customer-stories/1.0.0.json",
+          "integrity": "sha256-K8vhqqA/8Lyd5V3KVYoCpGk/pwplXWJvOUgKsXu4wfw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-dan-lanning",
+      "kind": "template",
+      "name": "伙伴会谈教练",
+      "summary": "围绕合作目标复盘伙伴会谈，梳理利益、承诺与下一轮谈话策略。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-dan-lanning/1.0.0.json",
+          "integrity": "sha256-pEFr/jA/3Mwhh8YFVhi5FM72NTkq/E+Un69KuozEY7w=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-deal-hunting",
+      "kind": "template",
+      "name": "到手价比较员",
+      "summary": "核对商品价格、运费、税费和退换条件，提供可比较的购物方案。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-deal-hunting/1.0.0.json",
+          "integrity": "sha256-rx0W0mr+l+WTG+HPpPa0WS+0UCfAl8hrL8ufR0OMDfM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-deal-qualification",
+      "kind": "template",
+      "name": "商机资格检查员",
+      "summary": "按明确标准检查客户需求、决策流程和成交条件，识别商机证据缺口。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-deal-qualification/1.0.0.json",
+          "integrity": "sha256-y11duXGhwXz/LUBAkCM9U93OluBsNUmdGb3qs1kj9r4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-dial-bot",
+      "kind": "template",
+      "name": "授权电话外呼员",
+      "summary": "依据用户明确指令和已配置语音服务准备外呼并核对通话回执。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-dial-bot/1.0.0.json",
+          "integrity": "sha256-llnXhQtIFYROWVhVp5HocD4rIyrWauYBgvUrOi3aIXQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-distro-bot",
+      "kind": "template",
+      "name": "营销循环协调员",
+      "summary": "协调广告创意、渠道分析和潜客触达，形成可复盘的营销工作循环。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-distro-bot/1.0.0.json",
+          "integrity": "sha256-X5bWX1KAjGYwSUdYzTCoCMZHi9a/qUtx8/BGbr27Mqk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-dr-eggbot-v2",
+      "kind": "template",
+      "name": "Bot角色设计师",
+      "summary": "通过访谈把用户目标整理成职责、记忆边界和可测试的Bot配置草案。",
+      "tags": [
+        "general",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-dr-eggbot-v2/1.0.0.json",
+          "integrity": "sha256-jgrUo39YbWQojhIl8c0NMwUNcpVo1EyWMrXxoxiQg0M=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-ebr-value-deck-builder",
+      "kind": "template",
+      "name": "客户价值汇报台",
+      "summary": "把客户业务目标、实际使用和已证实成效组织成季度价值汇报。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-ebr-value-deck-builder/1.0.0.json",
+          "integrity": "sha256-KfUlmhQ4/ljgxjGiwGTZgflNvwje13CAvHDDG7ZSCzA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-echo",
+      "kind": "template",
+      "name": "会议回顾演示编辑",
+      "summary": "将会议记录组织成重点清晰的回顾演示和行动说明。",
+      "tags": [
+        "sales",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-echo/1.0.0.json",
+          "integrity": "sha256-hivlLT1sxvxYT1T3Wp7mtC36QJyzi1EX2CEsQqIiXBM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-engineer-bot",
+      "kind": "template",
+      "name": "工程代理监督员",
+      "summary": "组织代码仓库任务并监督已授权云端执行器和拉取请求的进展。",
+      "tags": [
+        "engineering",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-engineer-bot/1.0.0.json",
+          "integrity": "sha256-nScSt2xehb6QYz9Ad5oPlIAc4jZdrQvDx14pJXevGAY=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-engineering-lead",
+      "kind": "template",
+      "name": "工程负责人助理",
+      "summary": "协调工程设计、实现边界、评审和交付风险，让团队依据证据推进。",
+      "tags": [
+        "engineering",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-engineering-lead/1.0.0.json",
+          "integrity": "sha256-qXASOAeqNIybTX/E5FwMrQUE+h6NuzqmNOsB9CD4m3U=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-event-producer",
+      "kind": "template",
+      "name": "活动全程统筹员",
+      "summary": "把活动目标、内容、供应商和传播安排组织成可执行的全程计划。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-event-producer/1.0.0.json",
+          "integrity": "sha256-Fq1hZYiOFc6yNP+kdZq70vs1m47eP0LwWnIZnkmf/4g=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-event-request-desk",
+      "kind": "template",
+      "name": "活动邀约评估员",
+      "summary": "评估赞助、演讲等活动邀请，按明确标准准备接受或拒绝意见。",
+      "tags": [
+        "operations",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-event-request-desk/1.0.0.json",
+          "integrity": "sha256-WOdIbPN2pDbI3aQNv7tQr6Jd+H8BOT6GL2mswaGGzgg=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-figma-bro",
+      "kind": "template",
+      "name": "Figma协作设计助理",
+      "summary": "围绕已有Figma设计梳理组件、界面修改和可交接的实现说明。",
+      "tags": [
+        "design",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-figma-bro/1.0.0.json",
+          "integrity": "sha256-eLXXKslZQML4kif7hVUg4i2CmbVIN0uWapM/VVLvAlk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-flora",
+      "kind": "template",
+      "name": "植物照护记录员",
+      "summary": "记录用户植物的生长与照护观察，整理规律和需要核实的养护问题。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-flora/1.0.0.json",
+          "integrity": "sha256-y3EzeBQ6CtD/mHVwkm6cnza25wRsbdri7IKW4n/7jXw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-follow-through-agent",
+      "kind": "template",
+      "name": "商机闭环跟进员",
+      "summary": "追踪销售沟通后的承诺与待办，避免下一步因缺少负责人而中断。",
+      "tags": [
+        "support",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-follow-through-agent/1.0.0.json",
+          "integrity": "sha256-vhNBi7r7Ak/DdWVdSnKOhvga5+Ivza0KadxNLzfL2X0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-frank",
+      "kind": "template",
+      "name": "日程事务助理台",
+      "summary": "核对日历、待办与往来材料，协助安排优先事项和事务交接。",
+      "tags": [
+        "operations",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-frank/1.0.0.json",
+          "integrity": "sha256-RuEOUoMX3Eo7+Mq069iKXMgAKG1NcrtHXga4I9TBP9Y=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-fuse",
+      "kind": "template",
+      "name": "广告预算巡查员",
+      "summary": "跟踪广告花费与预算边界，识别异常消耗并准备可审阅处置建议。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-fuse/1.0.0.json",
+          "integrity": "sha256-TY7ulUylTBdfsa6/dVf9bNH3D5sfKoTgRvrN4CGEY8I=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-haggle-bot",
+      "kind": "template",
+      "name": "软件订阅议价助理",
+      "summary": "核对SaaS账单、席位和续约条件，为节约成本准备比较与议价材料。",
+      "tags": [
+        "operations",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-haggle-bot/1.0.0.json",
+          "integrity": "sha256-45mFV9pbbg5QvMzCYG17c85DTXqr6/V7HXFWr8VqdGE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-hiring-activity-monitor",
+      "kind": "template",
+      "name": "招聘动向线索员",
+      "summary": "跟踪目标公司的公开招聘变化，提供有依据的销售研究线索。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-hiring-activity-monitor/1.0.0.json",
+          "integrity": "sha256-ylJuGmBMPTY4LMZWSid0py3YXL3gK+asTKK9aNwSmmc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-home-robots",
+      "kind": "template",
+      "name": "家庭机器人协调员",
+      "summary": "围绕已连接家用机器人的明确能力准备清洁、割草等任务安排。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-home-robots/1.0.0.json",
+          "integrity": "sha256-1BJQ/KfbwukJbOwas+R7ngvrB1AbhG8NpCoqX6Qtmh8=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-human-copywriter",
+      "kind": "template",
+      "name": "自然表达编辑",
+      "summary": "把生硬或重复的文案改成面向具体读者、信息清楚的自然表达。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-human-copywriter/1.0.0.json",
+          "integrity": "sha256-4hwnUXjuhuLkbqu0EIAX0YPVNkNPAbAqACE+F7twBdI=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-image-gen-bot",
+      "kind": "template",
+      "name": "静帧与短片素材台",
+      "summary": "从已有视频和截图制作静帧、封面与适配不同平台的短片方案。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-image-gen-bot/1.0.0.json",
+          "integrity": "sha256-qSmcTm2OrTv4JVBYw7p1/sLg+R3mDqILiqeF+iOMm+o=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-imogen",
+      "kind": "template",
+      "name": "图片无障碍编辑",
+      "summary": "根据图片内容与页面用途编写简明、有帮助的替代文本。",
+      "tags": [
+        "design",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-imogen/1.0.0.json",
+          "integrity": "sha256-hAaSZWLxp002Rolp/a6B4lJzjvm0/Mna/K5lqRnIQIE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-import-bot",
+      "kind": "template",
+      "name": "助手配置迁移顾问",
+      "summary": "将用户提供的其他工具配置整理为新的专家Bot草案，并明确迁移缺口。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-import-bot/1.0.0.json",
+          "integrity": "sha256-xvmotw80WtGffxN3IXLvi35BI1vhCCZwVIKiqYKVmIo=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-last30days",
+      "kind": "template",
+      "name": "近月主题研究员",
+      "summary": "研究近三十天跨平台公开讨论，整理带时间范围与来源的主题证据。",
+      "tags": [
+        "product",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-last30days/1.0.0.json",
+          "integrity": "sha256-RTNTITnas7Ut1zEJQihHoogGchJ3hlGAZf2OuucME3s=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-leadsworth",
+      "kind": "template",
+      "name": "营销线索分拣员",
+      "summary": "核对营销线索的来源和适配信息，为销售交接准备清晰优先队列。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-leadsworth/1.0.0.json",
+          "integrity": "sha256-zC2nY2KA9j+UE5ek+SGeLE/0SeI7sVOgX3qgt5o6HNA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-love",
+      "kind": "template",
+      "name": "纪念约会规划员",
+      "summary": "整理主动提供的纪念事项、约会需求和礼物偏好，准备体贴的备选安排。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-love/1.0.0.json",
+          "integrity": "sha256-daA34ZVYjPybHNL9XPLIglH7NxXJ09mB0kIQm0PffH0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-luma-pages",
+      "kind": "template",
+      "name": "活动报名页面员",
+      "summary": "核对活动资料、报名设置与获准名单，准备活动页面和文档同步更新。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-luma-pages/1.0.0.json",
+          "integrity": "sha256-ZuPTc88Rk6Z4keV5OoV7kCeuw5vUFmOoPD84FmALAMg=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-market-researcher",
+      "kind": "template",
+      "name": "竞争营销研究员",
+      "summary": "持续核查竞品公开营销、定位和定价变化，形成有依据的策略建议。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-market-researcher/1.0.0.json",
+          "integrity": "sha256-mlhwomFZxMzT3OiNpJbeNWPBQlHkaBgSjapOXg9SlaM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-marketing-analyst",
+      "kind": "template",
+      "name": "营销数据分析师",
+      "summary": "分析广告导出、准备周月营销报告并识别预算消耗异常。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-marketing-analyst/1.0.0.json",
+          "integrity": "sha256-Avz1ixgpblaQS+kHYxhj3C3fa96eX+qkv8YotH2pZnE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-marketing-project-manager",
+      "kind": "template",
+      "name": "营销项目推进经理",
+      "summary": "协调营销项目的素材、渠道、审批和上线依赖。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-marketing-project-manager/1.0.0.json",
+          "integrity": "sha256-n6cgULz+SMhpwoLXXA+0inBQRSxxwDZ92JgUWLgSw+o=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-mr-toms",
+      "kind": "template",
+      "name": "招聘排期助理",
+      "summary": "协调招聘面试、候选人沟通和面试官准备事项。",
+      "tags": [
+        "people",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-mr-toms/1.0.0.json",
+          "integrity": "sha256-s0CGyNqX22OX4UZK1S5wPMfAiqVvGRHZUU1WHDxKI9s=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-nightly-audit-engineer",
+      "kind": "template",
+      "name": "夜间代码审计员",
+      "summary": "按约定周期审视完整代码仓库，按领域准备可检查的清理变更方案。",
+      "tags": [
+        "engineering",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-nightly-audit-engineer/1.0.0.json",
+          "integrity": "sha256-pwmA28uE5XA49nD8ZWhNlotp4npKHQBIdAP5cFY2KOU=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-nyc-parent",
+      "kind": "template",
+      "name": "纽约家庭事务员",
+      "summary": "整理纽约家庭的学校、活动与家务信息，形成有时区和负责人的安排。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-nyc-parent/1.0.0.json",
+          "integrity": "sha256-NX4KA/6l4u0BIjgskAC/wIibX2OozXygLSfo1ExyJ7Y=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-office-ops-desk",
+      "kind": "template",
+      "name": "办公室事务台",
+      "summary": "整理办公物流、设施事项和团队纪念日，形成可追踪的运营摘要。",
+      "tags": [
+        "operations",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-office-ops-desk/1.0.0.json",
+          "integrity": "sha256-XJuLzmCS/01xYwwje3T3U92X6uLJrtOx2xC91v4AsT4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-overheard",
+      "kind": "template",
+      "name": "品牌提及观察员",
+      "summary": "监测获准公开来源中的品牌提及，区分真实反馈、重复传播和需要回应的问题。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-overheard/1.0.0.json",
+          "integrity": "sha256-UTk9XevDA2a4oBOKRx2s0jwC/7gr9lZ0Yx1w1BOvaeo=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-performance-marketer",
+      "kind": "template",
+      "name": "搜索广告测试策划员",
+      "summary": "把批准的营销文案整理为供测试审阅的搜索广告草案。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-performance-marketer/1.0.0.json",
+          "integrity": "sha256-svyosORf5eTpcerfUNXhmiuQhx6wBR14hdgNCqjeg8Y=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-pfp-bot",
+      "kind": "template",
+      "name": "机器人头像创意师",
+      "summary": "根据用户授权的照片与偏好设计胶囊形机器人风头像方案。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-pfp-bot/1.0.0.json",
+          "integrity": "sha256-VNCQdNQ7Az6hSEZY11wnRarmvTES1a3hL3xdoLwPnxs=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-pg",
+      "kind": "template",
+      "name": "客户开发助理",
+      "summary": "为目标客户制作有业务理由的研究、分层和个性化外联草稿。",
+      "tags": [
+        "sales",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-pg/1.0.0.json",
+          "integrity": "sha256-wRLocWrXeY5OOoHpc6pSMxHshXgXnkiWm15gGw8q69o=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-pipeline-health-and-forecast",
+      "kind": "template",
+      "name": "销售预测巡检员",
+      "summary": "检查销售机会的推进质量和预测假设，标明风险、缺证据与变化。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-pipeline-health-and-forecast/1.0.0.json",
+          "integrity": "sha256-mImbMTqtZYlLEI5dkkLSTuKHya34Ttm1NW43e7y46rA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-pitch-deck-coach",
+      "kind": "template",
+      "name": "融资演示稿教练",
+      "summary": "从投资者理解、论据可信度与叙事角度审阅融资演示稿。",
+      "tags": [
+        "sales",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-pitch-deck-coach/1.0.0.json",
+          "integrity": "sha256-vm+ttWibAZNQqy6e0RWjbMQNmj4ul41s+7Qhv01XNZE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-pm-bot",
+      "kind": "template",
+      "name": "产品规划经理",
+      "summary": "把用户问题、证据和约束整理成可讨论的产品需求与验证计划。",
+      "tags": [
+        "product",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-pm-bot/1.0.0.json",
+          "integrity": "sha256-eI87t2gJ4IvrRAy8ZLvZ/TEiphvffoJDhU2hV9Emwmw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-product-idea-stress-test",
+      "kind": "template",
+      "name": "产品构想质询员",
+      "summary": "对产品构想的用户问题、价值、可行性和风险提出可检验的质询。",
+      "tags": [
+        "product",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-product-idea-stress-test/1.0.0.json",
+          "integrity": "sha256-XOtWirUWb13jZPnH9vDYye3/ItF15avO2xDEQWyj2GM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-product-marketer",
+      "kind": "template",
+      "name": "产品定位与上市策划员",
+      "summary": "连接用户问题、产品证据与市场表达，整理定位和上市材料。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-product-marketer/1.0.0.json",
+          "integrity": "sha256-fxGNtXu0Z5itPi4VUdoqCyqUX/JXO37HbxF1NNZCNws=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-projects-manager",
+      "kind": "template",
+      "name": "Bot项目协调经理",
+      "summary": "以项目台账协调专业Bot认领、执行和验收团队任务。",
+      "tags": [
+        "engineering",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-projects-manager/1.0.0.json",
+          "integrity": "sha256-T3hMv8WnZhIm6fveDkXHsPB10ORbITc1oGIlrC4u68g=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-prospector",
+      "kind": "template",
+      "name": "目标客户拓展台",
+      "summary": "把理想客户条件转成可核对的公司清单与个性化拓展准备。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-prospector/1.0.0.json",
+          "integrity": "sha256-oVJnYQqU9/lMNkuP7woiCCQPZfSqbO8hwi0wN3S3AYg=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-proto-bot",
+      "kind": "template",
+      "name": "产品试验原型师",
+      "summary": "把模糊产品想法转成可演示关键任务的原型及验证安排。",
+      "tags": [
+        "product",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-proto-bot/1.0.0.json",
+          "integrity": "sha256-y4miKQqCBO1fAwYa/FiiM2/GaLpJiLVTIxzOPMpmjCU=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-qa-bot",
+      "kind": "template",
+      "name": "部署验收检查员",
+      "summary": "对已部署版本按明确验收清单核查并形成可追溯的通过或失败结论。",
+      "tags": [
+        "engineering",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-qa-bot/1.0.0.json",
+          "integrity": "sha256-Vc/vE1ixE+ZZpvUfLFR9eLQHt/jX9YkpRDpf5NXqz10=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-researchy",
+      "kind": "template",
+      "name": "实时研究核查员",
+      "summary": "围绕问题检索当前公开资料，交叉核实后给出有来源的研究答复。",
+      "tags": [
+        "engineering",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-researchy/1.0.0.json",
+          "integrity": "sha256-304wTuBDcPwt6deJ8gyypLXldCzBYCX4OqOc3GnjD0o=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-sable-game-art",
+      "kind": "template",
+      "name": "游戏美术指导",
+      "summary": "把游戏世界与玩法要求转成一致的美术方向、资产规格和审阅标准。",
+      "tags": [
+        "design",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-sable-game-art/1.0.0.json",
+          "integrity": "sha256-ODsQ66u6qy/ioUMT8sadiIvOR0zW03Yw21KFAOyy+Ek=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-sales-call-coach",
+      "kind": "template",
+      "name": "销售实战教练",
+      "summary": "对销售通话中的需求发现、追问和行动约定给出基于片段的训练建议。",
+      "tags": [
+        "sales",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-sales-call-coach/1.0.0.json",
+          "integrity": "sha256-+Rkc8doWqZFSry9949le+mIcReMJHbVcGXnHlRUSaQ0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-seed-a91e4c",
+      "kind": "template",
+      "name": "软件交付与巡检员",
+      "summary": "处理获准软件变更、问题分类与运行信息，提供经过验证的工程交付。",
+      "tags": [
+        "engineering",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-seed-a91e4c/1.0.0.json",
+          "integrity": "sha256-i6udq2wp1u7LOVHaaiYlJzndB+vARLFM89SV90pz+7w=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-sell-bot",
+      "kind": "template",
+      "name": "销售推进助手",
+      "summary": "整理客户需求、产品证据和商机下一步，帮助销售对话持续推进。",
+      "tags": [
+        "sales",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-sell-bot/1.0.0.json",
+          "integrity": "sha256-dvp+Safnl9+/9NDXkxJVtC9S5xXPKtkeUruZs3foy3Q=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-seo-aeo-desk",
+      "kind": "template",
+      "name": "搜索选题与简报编辑",
+      "summary": "把关键词和搜索观察转成有优先级的内容选题与写作简报。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-seo-aeo-desk/1.0.0.json",
+          "integrity": "sha256-PMXfO6mwTyoz/yA6VJEB7OylQ7Xzn7JJJT5vF/BHQtQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-sequencer",
+      "kind": "template",
+      "name": "销售跟进序列策划员",
+      "summary": "为不同客户情境规划有节奏的销售沟通序列和退出条件。",
+      "tags": [
+        "sales",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-sequencer/1.0.0.json",
+          "integrity": "sha256-MrB1A5qS6/RN5eZWWD9FwREc3NFXBHN9FeXvCkgL8Jk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-sherlock",
+      "kind": "template",
+      "name": "人才发现研究员",
+      "summary": "围绕具体岗位和能力证据，从获准公开资料发现合适的人才。",
+      "tags": [
+        "people",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-sherlock/1.0.0.json",
+          "integrity": "sha256-FZfqWqF3p79VjVSS6KhrRC+/WEYwj21eqrepuFTTx+o=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-signal-prospector",
+      "kind": "template",
+      "name": "线索信号观察员",
+      "summary": "从获准客户关系与产品使用数据识别意向信号，准备有证据的首次触达。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-signal-prospector/1.0.0.json",
+          "integrity": "sha256-UzXbgjZJY+C3nLmrRm6+s01cjldGGVCv2wL/aT9LAeQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-site-audit",
+      "kind": "template",
+      "name": "网站诊断专员",
+      "summary": "检查获准网站的搜索内容、性能、无障碍和转化路径，形成带证据的优先清单。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-site-audit/1.0.0.json",
+          "integrity": "sha256-X98aL1XBMdbNfFYqqU1LuAxM8MYiDsO+/s704JTEBD4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-skippy",
+      "kind": "template",
+      "name": "旧金山清扫查询员",
+      "summary": "核对旧金山指定路段市政清扫信息，给出下次时间与适用限制。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-skippy/1.0.0.json",
+          "integrity": "sha256-K7dC0ON11/3R7DEdcPBpzeyWHPOhBgZccYF+ik/Af/w=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-stalk-bot",
+      "kind": "template",
+      "name": "竞品入门体验员",
+      "summary": "研究竞品公开入门流程、价格和传播变化，形成可核对的体验与差异记录。",
+      "tags": [
+        "product",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-stalk-bot/1.0.0.json",
+          "integrity": "sha256-OWV2oKRh55PmLT8d1mBxLeoU7DgfgYGokeOFxgJwc1s=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-startup-qa-bot",
+      "kind": "template",
+      "name": "创业产品质量检查员",
+      "summary": "围绕初创产品的关键用户路径检查功能、文案和上线阻塞。",
+      "tags": [
+        "product",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-startup-qa-bot/1.0.0.json",
+          "integrity": "sha256-jzM4UNsD/aEMBk9/eV0UvOzP+0vYKxCTntIVmGLhmcQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-tally",
+      "kind": "template",
+      "name": "媒体投放报告员",
+      "summary": "将多渠道广告报表整理成口径一致、可核对的媒体投放读数。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-tally/1.0.0.json",
+          "integrity": "sha256-joxVy6sWr8wnU3zp3OkVjmzzx5qknBrXHGqB+iY2H/E=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-tech-demos",
+      "kind": "template",
+      "name": "技术书签演示员",
+      "summary": "从获准技术书签和代码库中选择主题，规划并验证小型代码演示。",
+      "tags": [
+        "engineering",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-tech-demos/1.0.0.json",
+          "integrity": "sha256-CDlWO340DoFtDmbR1Pua6OWk8ug8bADuWruES/nJ+tU=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-the-morning-newspaper",
+      "kind": "template",
+      "name": "个人晨报编排员",
+      "summary": "把用户获准的邮件和日历整理成便于晨读或打印的定制报纸。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-the-morning-newspaper/1.0.0.json",
+          "integrity": "sha256-3Qi9WrlNFGvx9ZLGMm8pLBa8sWr4TgIeQDUq8wzvN3I=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-tinkabot",
+      "kind": "template",
+      "name": "MCP工具封装工程师",
+      "summary": "把已有API设计成边界清晰的MCP工具与使用技能说明。",
+      "tags": [
+        "engineering",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-tinkabot/1.0.0.json",
+          "integrity": "sha256-MiOMDrD+kgeNwXvkDrM3y46/cMV6nNOtM0xwp90zXrc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-tradbot-2",
+      "kind": "template",
+      "name": "家庭事务助理",
+      "summary": "从获准的家庭邮件和日历整理活动、账单期限与家庭准备事项。",
+      "tags": [
+        "personal",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-tradbot-2/1.0.0.json",
+          "integrity": "sha256-kKP/fTa3fikX0fyYVLAJdiS0MwPgdeaIO2n7WvcMUio=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-video-editor",
+      "kind": "template",
+      "name": "视频叙事剪辑助理",
+      "summary": "围绕视频目标和现有素材规划剪辑结构、字幕与交付检查。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-video-editor/1.0.0.json",
+          "integrity": "sha256-ToZ5GhAY5Khq0OVnCQURhYSONnG6evpa/qSTnh8VU/4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-warm-intro-finder",
+      "kind": "template",
+      "name": "关系引荐检索员",
+      "summary": "在用户授权的关系资料中寻找合适的共同联系人并准备引荐请求。",
+      "tags": [
+        "sales",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-warm-intro-finder/1.0.0.json",
+          "integrity": "sha256-zAkxHrDGdL2YpQc321ot2Fi+kkNjFhQdnAVvbb+B0c0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-webby",
+      "kind": "template",
+      "name": "个人站点通讯员",
+      "summary": "维护个人网站、邮件通讯和公开状态信息，准备一致的更新内容。",
+      "tags": [
+        "personal",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-webby/1.0.0.json",
+          "integrity": "sha256-XXO0juhOLNixKaimah5zxDoXC4NHviMk37IGB2rDG4E=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-website-ops",
+      "kind": "template",
+      "name": "网站内容运营员",
+      "summary": "维护网站内容、链接和常规更新，确保修改可审阅并与当前事实一致。",
+      "tags": [
+        "marketing",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-website-ops/1.0.0.json",
+          "integrity": "sha256-2w24fCU8DqPiLDoh2DJ9XjBMFSzhTfDBuFJ/YyGQnt4=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-writing-bot",
+      "kind": "template",
+      "name": "文本修订编辑台",
+      "summary": "通过结构化修订改善文章、邮件和文档的表达组织，保持原意与事实。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-writing-bot/1.0.0.json",
+          "integrity": "sha256-V15YBjMZqy3l5Z4vgWJTcWUQzTvXAfWlC2c6CmETWAk=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-wtd",
+      "kind": "template",
+      "name": "贵宾接待协调员",
+      "summary": "梳理贵宾活动、票务和提名资料，维护接待计划与对外状态。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-wtd/1.0.0.json",
+          "integrity": "sha256-M7ETyxyC5+Pr5qifSbfTky5okZi8616FKMosXii4BaM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/grok-x-brief",
+      "kind": "template",
+      "name": "X动态简报员",
+      "summary": "在获准范围整理X平台主题和账号动态，区分原帖、转述与评论。",
+      "tags": [
+        "marketing",
+        "marketplace-role"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/grok-x-brief/1.0.0.json",
+          "integrity": "sha256-J1IkWX0crp/XfYt1HNWQ1IK7U5bEjepUx5sOz6iCKPA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/hiring-screener",
+      "kind": "template",
+      "name": "招聘资料核对员",
+      "summary": "按事先明确的岗位标准整理候选资料和面试待核实点。",
+      "tags": [
+        "people",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/hiring-screener/1.0.0.json",
+          "integrity": "sha256-c1h+KKO566bO5370uPprjbuw/5G9J90B1TiBzJ23Tpc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/inbox-manager",
+      "kind": "template",
+      "name": "收件箱助理",
+      "summary": "对获准邮件分类、提取待办并准备符合用户口径的回复草稿。",
+      "tags": [
+        "general",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/inbox-manager/1.0.0.json",
+          "integrity": "sha256-URYzUV9G9JW9lesn34bvyo1KdzIRyEbpqpWjwUuyhHQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/internal-communications-manager",
+      "kind": "template",
+      "name": "内部沟通编辑",
+      "summary": "把已确认的组织消息改写成适合不同团队阅读的通知和问答。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/internal-communications-manager/1.0.0.json",
+          "integrity": "sha256-98VdlN8aG4wqseCwtSliaBFfAAR0JgU67jLADL9SLkY=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/invoice-coordinator",
+      "kind": "template",
+      "name": "发票协同员",
+      "summary": "将发票、采购订单和收付款记录逐笔匹配，整理待解决差异。",
+      "tags": [
+        "operations",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/invoice-coordinator/1.0.0.json",
+          "integrity": "sha256-pJDdyRcwOtAj7f8WFucT32lLCePOdMKJuCWmbKSJzRE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/linkedin-campaign-manager",
+      "kind": "template",
+      "name": "职业社交活动策划员",
+      "summary": "围绕目标受众制定LinkedIn内容与触达计划并跟踪反馈。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/linkedin-campaign-manager/1.0.0.json",
+          "integrity": "sha256-N9jzJPVrUCdMkH7IxJdnLSGUl+M/eAtWih1/M1aPoG8=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/marketing-calendar-owner",
+      "kind": "template",
+      "name": "营销排期管理员",
+      "summary": "把营销活动、素材和渠道依赖整理成可执行的发布日历。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/marketing-calendar-owner/1.0.0.json",
+          "integrity": "sha256-4pzSGAM/EyJFDVMf8HL2e0HIxGsvxCuj9Ye+3LaneqU=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/meeting-prep-buddy",
+      "kind": "template",
+      "name": "销售会前准备员",
+      "summary": "为客户会谈整理参会背景、现有关系、目标和关键问题。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/meeting-prep-buddy/1.0.0.json",
+          "integrity": "sha256-apo1nF7Fs5871+CgIHkhiQgk5Aq+LokHMYWl/0xK2Zw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/merch-fulfillment-operator",
+      "kind": "template",
+      "name": "周边履约协调员",
+      "summary": "整理周边物料的申请、库存和寄送依赖，减少错发和漏单。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/merch-fulfillment-operator/1.0.0.json",
+          "integrity": "sha256-KTg8J3AY0JljtPJm308yu4mZVQeSdvrnw3dNaZUCgOQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/newsletter-writer",
+      "kind": "template",
+      "name": "通讯编辑",
+      "summary": "把可靠素材组织成面向指定订阅读者的周期通讯。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/newsletter-writer/1.0.0.json",
+          "integrity": "sha256-cV0DtS9Ytuq6FyIbVSvy7Ad6lE2C5iyC2Bjzed/PAbc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/onboarding-manager",
+      "kind": "template",
+      "name": "入职流程协调员",
+      "summary": "按岗位与入职日期组织新员工准备、培训和责任交接。",
+      "tags": [
+        "people",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/onboarding-manager/1.0.0.json",
+          "integrity": "sha256-LglGMxIjZNvIIlgIHivfPVS4T3Ka7kVneyk49xvnrwM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/paid-media-creative-strategist",
+      "kind": "template",
+      "name": "投放创意策划员",
+      "summary": "从目标受众和已有表现中提出可测试的广告创意方向。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/paid-media-creative-strategist/1.0.0.json",
+          "integrity": "sha256-YIdbvm2nEDFKdxUstRbHr7+8VVkKUC1Z5vcXgs/GVxM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/paid-media",
+      "kind": "template",
+      "name": "付费投放分析员",
+      "summary": "核对投放报表、定位预算偏差，并提出可验证的调整建议。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/paid-media/1.0.0.json",
+          "integrity": "sha256-hecCHJ7x/UUt8Jl4ddIR9YFnqNAKu7I51lc7FbX2gKc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/personal-site-builder",
+      "kind": "template",
+      "name": "个人站点策划员",
+      "summary": "把个人经历与作品组织成清晰、可维护的个人网站方案。",
+      "tags": [
+        "personal",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/personal-site-builder/1.0.0.json",
+          "integrity": "sha256-jLlh16NdvyBmfG5KmwBCyHSM+rQwBobbuG3ynq9qVgM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/pipeline-analyst",
+      "kind": "template",
+      "name": "销售管道分析员",
+      "summary": "核对销售机会的阶段、时间和金额，识别预测偏差与推进风险。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/pipeline-analyst/1.0.0.json",
+          "integrity": "sha256-rqbKSxVnrbA5E1WQ6OvGN9v9MYwrw/3dGPut/SiTD1Q=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/playtest-operator",
+      "kind": "template",
+      "name": "游戏试玩检查员",
+      "summary": "按明确版本和任务路径执行试玩，记录缺陷与体验阻塞。",
+      "tags": [
+        "engineering",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/playtest-operator/1.0.0.json",
+          "integrity": "sha256-nHnbYnF9F+eVc2xKHVOXUsBF1l1Ph8RGCMlv0LW6WwE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/presentation-designer",
+      "kind": "template",
+      "name": "演示叙事设计师",
+      "summary": "将材料组织成面向具体受众的演示结构、逐页重点和视觉说明。",
+      "tags": [
+        "general",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/presentation-designer/1.0.0.json",
+          "integrity": "sha256-8r6ZS27kgB8Wrp4iSxzZ/3CJ1sTXCDeoIqV+TEZy0rY=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/product-feedback-analyst",
+      "kind": "template",
+      "name": "产品反馈分析员",
+      "summary": "从多渠道反馈中识别体验问题、用户目标和可验证改进机会。",
+      "tags": [
+        "product",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/product-feedback-analyst/1.0.0.json",
+          "integrity": "sha256-5X5BJL/n4Oh4e3tg8ElZZcYRgf2MBZKP6wXRORma3nI=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/product-performance",
+      "kind": "template",
+      "name": "产品性能工程师",
+      "summary": "测量关键产品路径的响应、资源占用和退化来源。",
+      "tags": [
+        "engineering",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/product-performance/1.0.0.json",
+          "integrity": "sha256-IP708l8Yv8WAlr1dgQ+hofyua3Nuv3VwfkOT/RWPMyQ=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/prospecting-plan-builder",
+      "kind": "template",
+      "name": "拓客计划策划员",
+      "summary": "把增长目标转成可分工、有节奏和检查点的客户开发计划。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/prospecting-plan-builder/1.0.0.json",
+          "integrity": "sha256-in+HIN39fHKGfcXg247AefqMYJKkAnGQ4b3VdJVSoMw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/prototype-builder",
+      "kind": "template",
+      "name": "原型构建员",
+      "summary": "把待验证的产品假设收敛成能演示关键路径的最小原型。",
+      "tags": [
+        "engineering",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/prototype-builder/1.0.0.json",
+          "integrity": "sha256-5aRkeskd/8Pyb+oiusKNSYQZJDXoHBEezStO08hC+W0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/renewal-desk-operator",
+      "kind": "template",
+      "name": "续约协作员",
+      "summary": "汇总合同期限、使用价值和客户问题，准备续约协同材料。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/renewal-desk-operator/1.0.0.json",
+          "integrity": "sha256-YKhXs0NmfAxoqiWOBZpQBeOrKccnGAJkEPg2PvLLZEA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/sales-call-coach",
+      "kind": "template",
+      "name": "销售通话教练",
+      "summary": "依据实际通话观察提问、倾听和推进质量，给出可练习的改进。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/sales-call-coach/1.0.0.json",
+          "integrity": "sha256-GXf9tWV+596bLYmd9FWe7ko1hCTkXniCrJJUKGR8gEA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/sales-outbound",
+      "kind": "template",
+      "name": "销售拓客员",
+      "summary": "根据理想客户条件筛选潜在客户，准备有依据的触达草稿。",
+      "tags": [
+        "sales",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/sales-outbound/1.0.0.json",
+          "integrity": "sha256-p3LYuAivTUA3H/DbzgZyn+ozWyOng+QFDIMKxRJVzWw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/security-questionnaire-filler",
+      "kind": "template",
+      "name": "安全问卷协作员",
+      "summary": "将客户安全问卷逐题匹配已批准证据，标出需要负责人确认的回答。",
+      "tags": [
+        "operations",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/security-questionnaire-filler/1.0.0.json",
+          "integrity": "sha256-HXuj6SUJwb6ybjMwOthb3VBQVvkczGXagIuawZ1XX54=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/seo-aeo-auditor",
+      "kind": "template",
+      "name": "搜索可见性审查员",
+      "summary": "检查网站内容、索引与回答可用性，提出有证据的搜索优化动作。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/seo-aeo-auditor/1.0.0.json",
+          "integrity": "sha256-hyjZu7bC8Ny2UWiw/41ynC30k7wnQtglBWZyICzkR9A=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/social-media-manager",
+      "kind": "template",
+      "name": "社交内容运营员",
+      "summary": "围绕品牌目标规划内容、准备回复并整理受众反馈。",
+      "tags": [
+        "marketing",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/social-media-manager/1.0.0.json",
+          "integrity": "sha256-UUsYsiUNKlXl8yN3JFHbyaRO7b8DDBi10/us26kkwNA=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/status-report-writer",
+      "kind": "template",
+      "name": "进度报告编辑",
+      "summary": "把项目事实整理成目标、进展、偏差与下一步清楚的状态报告。",
+      "tags": [
+        "general",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/status-report-writer/1.0.0.json",
+          "integrity": "sha256-BwDJAU2wv8lUD/AvgcvpH9prYkak7Gvmxna9IiVbIRc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/subscription-cleaner",
+      "kind": "template",
+      "name": "订阅整理员",
+      "summary": "整理订阅账单、使用情况和取消条件，帮助用户判断保留或停用。",
+      "tags": [
+        "personal",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/subscription-cleaner/1.0.0.json",
+          "integrity": "sha256-NN8EfJjSi0BfLgld9pbmw6T4b6GO/94neQSMbjW/Ycw=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/talent-scout",
+      "kind": "template",
+      "name": "人才搜寻员",
+      "summary": "围绕岗位能力与公开职业信息寻找并比较候选人才。",
+      "tags": [
+        "people",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/talent-scout/1.0.0.json",
+          "integrity": "sha256-+xayLgInm0waP1oxFxnByhtneWexuB6rxgJb0NzLzzM=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/ticket-triage-specialist",
+      "kind": "template",
+      "name": "工单分流专员",
+      "summary": "按影响、紧急度和产品范围整理工单，准备明确的处理交接。",
+      "tags": [
+        "support",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/ticket-triage-specialist/1.0.0.json",
+          "integrity": "sha256-rII5laXzGJnY5ybPqs9NchKIE0Ht2sSivJXXGlctlcc=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/travel-coordinator",
+      "kind": "template",
+      "name": "行程协调员",
+      "summary": "按时间、预算和出行偏好对比交通住宿并准备衔接清楚的行程。",
+      "tags": [
+        "personal",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/travel-coordinator/1.0.0.json",
+          "integrity": "sha256-EfYrnFjFVHRncTkO07TzSwo8PuxbWJ8nBJNP9YfwYeE=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/vendor-portal-operator",
+      "kind": "template",
+      "name": "供应商门户协作员",
+      "summary": "将供应商门户中的提交要求整理成可核对的材料与操作计划。",
+      "tags": [
+        "operations",
+        "task-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/vendor-portal-operator/1.0.0.json",
+          "integrity": "sha256-85RMLkHdbhgRMnANH9LjqI3HKoqi9i+bNdoe9DEWi0c=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    }
+  ]
+}

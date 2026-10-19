@@ -1,0 +1,24 @@
+{
+  "name": "awesome-bot-market",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A source-backed Bot directory with original OpenBot roles, workflows and reproducible configuration downloads",
+  "repository": { "type": "git", "url": "https://github.com/Harzva/awesome-bot.git" },
+  "homepage": "https://harzva.github.io/awesome-bot/",
+  "bugs": { "url": "https://github.com/Harzva/awesome-bot/issues" },
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "build:site": "node scripts/build-site.mjs",
+    "serve": "node scripts/serve-site.mjs",
+    "audit:public": "node scripts/audit-public.mjs",
+    "pack:release": "node scripts/pack-release.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "export-all": "node scripts/export-all.mjs",
+    "test": "node --test test/*.test.mjs",
+    "market": "node scripts/market.mjs"
+  }
+}
