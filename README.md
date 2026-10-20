@@ -5,7 +5,7 @@
 
 A source-backed directory of useful Bot roles and task workflows, with readable instructions and downloadable OpenBot configurations.
 
-[Browse the market](https://harzva.github.io/awesome-bot/) · [中文说明](README.zh-CN.md) · [Full catalogue](CATALOGUE.md) · [Contribute](CONTRIBUTING.md) · [Releases](https://github.com/Harzva/awesome-bot/releases)
+[Browse the market](https://harzva.github.io/awesome-bot/?lang=en) · [中文说明](README.zh-CN.md) · [Full catalogue](CATALOGUE.en.md) · [Contribute](CONTRIBUTING.md) · [Releases](https://github.com/Harzva/awesome-bot/releases)
 
 The initial collection contains **90 original role templates** corresponding to public Grok Marketplace entries and **56 original task workflows**. Browse them separately, inspect their responsibilities and prerequisites, then download a configuration. Every original source and author remains visible. Templates contain instructions, not executable installation hooks.
 
@@ -13,22 +13,28 @@ The repository builds independently after a clean clone. One JSON file per entry
 
 ## Start with a task
 
-Choose a scenario in the [market](https://harzva.github.io/awesome-bot/) to get 1–2 relevant Bots, the materials to prepare, a first task you can copy, and a small configuration download. Begin with [a customer meeting](https://harzva.github.io/awesome-bot/?scenario=customer-meeting), or read the generated [first-use guide](START_HERE.md). You review each output and pass it to the next Bot; the scenario download does not execute a workflow.
+Choose a scenario in the [market](https://harzva.github.io/awesome-bot/?lang=en) to get 1–2 relevant Bots, the materials to prepare, a first task you can copy, and a small configuration download. Begin with [a customer meeting](https://harzva.github.io/awesome-bot/?lang=en&scenario=customer-meeting), or read the generated [first-use guide](START_HERE.en.md). You review each output and pass it to the next Bot; the scenario download does not execute a workflow.
 
 Every Bot detail also offers its existing first-task example and a feedback form prefilled with the public Bot ID, template version and source. Supply your own materials when starting a task; keep private account or task data out of public feedback.
 
 ## Find a Bot
 
-Use the [market](https://harzva.github.io/awesome-bot/) to search Chinese responsibilities or original English titles, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.
+Use the [market](https://harzva.github.io/awesome-bot/?lang=en) to search English responsibilities, titles or sources, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.
 
-- [90 role configurations](https://harzva.github.io/awesome-bot/exports/awesome-bot-roles.fleet.json)
+- [90 role configurations](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-roles.fleet.json)
 - [56 task workflows](https://harzva.github.io/awesome-bot/exports/awesome-bot-workflows.fleet.json)
 - [Complete configuration collection](https://harzva.github.io/awesome-bot/exports/awesome-bot-all.fleet.json)
 - [Machine-readable market index](https://harzva.github.io/awesome-bot/registry/index.json)
 
 Import a downloaded Fleet file through **OpenBot → Settings → Data & Sync → Import configuration** and review the summary. Model, tool and account connections need their own setup. New ordinary Bots receive no granted tool or container permissions. In an empty library, OpenBot selects its first Bot as the primary Bot, which carries management capabilities. Importing does not start tasks or environments.
 
-Authored personas are currently **Chinese**. Original English titles are searchable; switching interface language does not translate a persona.
+English mode includes all 146 Bot names, responsibilities, skills, personas, examples and configuration downloads, plus five fully translated scenarios. Switch to Chinese for the original content. English configuration projections retain the source role identity and are labelled with a separate content revision; published Chinese manifests remain unchanged. Each role has its own independently authored vector mark.
+
+Release collection files with `-en-` in their names contain English personas and skills. The complete source archive includes both languages and the static Agent context files.
+
+## Read with an Agent
+
+Use **Copy for Agent** in the market or an individual Bot detail, then paste the loading prompt into an Agent that can read links. It discovers a small index and loads only the role you need. Start directly with [llms.txt](https://harzva.github.io/awesome-bot/llms.txt) or the [English Agent index](https://harzva.github.io/awesome-bot/agents/en/index.json). Each Bot provides Markdown, JSON, source/version metadata and a configuration digest. Copying or reading does not install or run a Bot. See the [integration guide](docs/agent-integration.md).
 
 ## Run locally
 

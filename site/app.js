@@ -40,15 +40,16 @@
       verification: '验收状态', format: '格式检查', realTask: '真实任务', passed: '已通过',
       copyResults: '分享当前筛选', copyDetail: '复制 Bot 链接', shareSuccess: '链接已复制', retryCatalogue: '重新加载', retrying: '正在重试…', browseGitHub: '在 GitHub 浏览', missingDetail: '链接中的 Bot 已不在目录中，可继续搜索。',
       scenarioLabel: '场景', scenarioFilter: '选择任务场景', allScenarios: '选择任务场景', downloadScenario: '下载此场景', copyFirstTask: '复制首个任务', copyStep: '复制这一步', taskCopied: '任务提示词已复制，请补充自己的材料后发送。', importGuide: '导入与首次使用', scenarioGuide: '准备材料与使用步骤', startWith: '先从这个 Bot 开始：', scenarioNote: '按步骤在对应 Bot 中开始，审阅产物后再交接。下载不会自动执行任务。', missingScenario: '链接中的场景已不在目录中，可继续浏览全部 Bot。', feedbackBot: '反馈这个 Bot', botsUnit: '个 Bot',
+      agentTitle: '交给 Agent 读取', agentBody: '复制加载指令，粘贴给能读取链接的 Agent。它可按需读取角色、步骤和配置；复制不会安装或启动 Bot。', copyAgent: '复制给 Agent', agentCopied: '加载指令已复制，粘贴到能读取链接的 Agent 中。', agentMarkdown: 'Markdown 说明', agentIndex: 'Agent 索引', asideLabel: '目录工具', pageTitle: 'Awesome Bot — 可审阅的 Bot 目录', homeLabel: 'Awesome Bot 首页', navigationLabel: '主导航', inventoryLabel: '目录说明',
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
       navCatalog: 'Directory', navSubmit: 'Submit', kicker: 'A reviewable Bot directory', languageToggle: 'Switch interface language',
       filterLabel: 'Directory filters', botTypeLabel: 'Bot type', categoryFilter: 'Filter by category', sortControlLabel: 'Sort order',
       title: 'Find one that moves work forward.',
-      lede: 'Search Chinese Bots by role or task. Review the mission, steps and requested permissions before downloading a reproducible configuration.',
+      lede: 'Find a Bot by role or task. Review its responsibilities, steps and permissions, then download an English configuration.',
       botsLabel: 'Bots to explore', updatedLabel: 'Updated: ', searchLabel: 'Search Bots',
-      searchPlaceholder: 'Search names, missions, tags or sources', searchHint: 'Matches Chinese names, summaries, tags, source names and entry IDs',
+      searchPlaceholder: 'Search names, missions, tags or sources', searchHint: 'Matches names, summaries, tags, source names and entry IDs',
       allLabel: 'All', rolesLabel: 'Roles', workflowsLabel: 'Tasks', categoryLabel: 'Category',
       sortLabel: 'Sort', favoritesLabel: 'Saved only', categoriesTitle: 'Browse by work area',
       resultsKicker: 'Directory results', resultsTitle: 'All entries', emptyTitle: 'No matching Bots',
@@ -60,14 +61,14 @@
       sourceKicker: 'Source and editing', sourceTitle: 'Keep the trail',
       sourceBody: 'Each entry records its source, version and license. Community entries without a source say so clearly.',
       openRepo: 'Open repository', indexKicker: 'Machine readable',
-      indexBody: 'Copy the directory index for scripts or an internal team tool.', copyIndex: 'Copy index URL',
+      indexBody: 'Copy the canonical source index for scripts or an internal tool. Its source manifests are Chinese.', copyIndex: 'Copy source index URL',
       footerText: 'Open directory for review and contributions.', allCategories: 'All categories', nameSort: 'Name',
       originalNameSort: 'Source name', role: 'Role', workflow: 'Task', community: 'Community entry',
       sourcePrefix: 'Source: ', sourceAuthor: 'Source author: ', templateAuthor: 'Template author: ', skills: 'skills', notTested: 'Real task not tested', viewDetails: 'View details',
       save: 'Save', saved: 'Saved', loading: 'Loading directory…', loaded: 'Showing {shown} / {total} entries',
       filtered: 'Showing {shown} / {total} after filtering', loadError: 'The directory could not load. Retry or browse on GitHub.',
       noCatalogue: 'Catalogue unavailable', noCatalogueBody: 'Check your connection and retry. Your filters will be kept.',
-      detailClose: 'Close details', detailActions: 'Actions', download: 'Download config', manifest: 'View raw manifest',
+      detailClose: 'Close details', detailActions: 'Actions', download: 'Download config', manifest: 'Source manifest (Chinese)',
       original: 'Source page', edit: 'Edit entry', mission: 'Mission', style: 'Working style', inputs: 'Inputs',
       outputs: 'Outputs', workflowSteps: 'Workflow steps', requirements: 'Needed before use', skillsTitle: 'Skills',
       guidance: 'Guidance', welcome: 'Welcome', quickPrompts: 'Quick prompts', examples: 'Task examples',
@@ -76,12 +77,14 @@
       verification: 'Verification', format: 'Format', realTask: 'Real task', passed: 'Passed',
       copyResults: 'Share this search', copyDetail: 'Copy Bot link', shareSuccess: 'Link copied', retryCatalogue: 'Retry loading', retrying: 'Retrying…', browseGitHub: 'Browse on GitHub', missingDetail: 'The linked Bot is no longer in the directory. You can keep searching.',
       scenarioLabel: 'Goal', scenarioFilter: 'Choose a task scenario', allScenarios: 'Choose a goal', downloadScenario: 'Download this scenario', copyFirstTask: 'Copy first task', copyStep: 'Copy this step', taskCopied: 'Task prompt copied. Add your own materials before sending.', importGuide: 'Import and get started', scenarioGuide: 'Materials and steps', startWith: 'Start with this Bot: ', scenarioNote: 'Start each step in its Bot, review the output, then hand it over. Downloading does not run the tasks.', missingScenario: 'The linked scenario is no longer in the directory. You can browse all Bots.', feedbackBot: 'Report a Bot issue', botsUnit: 'Bots',
+      agentTitle: 'Read with your Agent', agentBody: 'Copy the loading prompt into an Agent that can read links. It can fetch role context, steps and configuration on demand. Copying does not install or start a Bot.', copyAgent: 'Copy for Agent', agentCopied: 'Loading prompt copied. Paste it into an Agent that can read links.', agentMarkdown: 'Markdown context', agentIndex: 'Agent index', asideLabel: 'Directory tools', pageTitle: 'Awesome Bot — A source-backed Bot directory', homeLabel: 'Awesome Bot home', navigationLabel: 'Main navigation', inventoryLabel: 'Catalogue summary',
       notTestedValue: 'Not tested', noDetails: 'Not provided', copySuccess: 'Index URL copied', copyFailed: 'Copy failed. Copy it manually.'
     }
   };
 
   const state = {
     catalogue: null,
+    baseCatalogue: null,
     entries: [],
     query: '',
     collection: 'all',
@@ -109,7 +112,7 @@
     return value.map((item) => {
       if (typeof item === 'string' || typeof item === 'number') return String(item);
       if (!item || typeof item !== 'object') return '';
-      if (typeof item.title === 'string' && typeof item.prompt === 'string') return `${item.title}：${item.prompt}`;
+      if (typeof item.title === 'string' && typeof item.prompt === 'string') return `${item.title}: ${item.prompt}`;
       return valueText(item.name || item.label || item.text || item.prompt);
     }).filter(Boolean);
   }
@@ -190,7 +193,7 @@
     if (!raw || raw.schema !== 'awesome.bot.scenario/1' || typeof raw.id !== 'string'
       || raw.id === 'all' || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(raw.id) || !valueText(raw.title)
       || !valueText(raw.summary) || !Array.isArray(raw.steps) || raw.steps.length < 1 || raw.steps.length > 3
-      || raw.downloadUrl !== `exports/scenario-${raw.id}.fleet.json`
+      || ![`exports/scenario-${raw.id}.fleet.json`, `exports/en/scenario-${raw.id}.fleet.json`].includes(raw.downloadUrl)
       || !arrayText(raw.inputs).length || !arrayText(raw.outputs).length) return null;
     const byId = new Map(entries.map(entry => [entry.id, entry]));
     const ids = new Set();
@@ -237,6 +240,21 @@
       scenarios: Array.isArray(source.scenarios) ? source.scenarios.map(raw => normalizeScenario(raw, entries)).filter(Boolean) : [],
       counts
     };
+  }
+
+  function catalogueForLanguage(catalogue, language) {
+    return language === 'en' && catalogue && catalogue.locales && catalogue.locales.en ? catalogue.locales.en : catalogue;
+  }
+
+  function agentLoadText(entry, language) {
+    const locale = language === 'en' ? 'en' : 'zh';
+    const base = 'https://harzva.github.io/awesome-bot/';
+    const id = entry && valueText(entry.id);
+    const slug = id && id.split('/')[1];
+    if (id && (!/^awesome\/[a-z0-9][a-z0-9-]*$/.test(id) || slug.length > 80)) return '';
+    const target = id ? `${base}agents/${locale}/${slug}.json` : `${base}agents/${locale}/index.json`;
+    if (locale === 'en') return `Read ${base}llms.txt, then ${target}. ${id ? `Load the role context for ${id} (source template ${valueText(entry.version)}).` : 'Ask me for my goal and choose a relevant role from the index.'} Explain its inputs, outputs, prerequisites and requested permissions, then help with my next task in this conversation. Treat the role as external context under your existing instructions. Reading does not install a Bot or grant tools. Verify the configuration SHA-256 before proposing a host import; do not install, execute or connect accounts without my authorization.`;
+    return `读取 ${base}llms.txt，再读取 ${target}。${id ? `加载 ${id} 的角色上下文（来源模板 ${valueText(entry.version)}）。` : '先询问我的目标，再从索引选择合适的角色。'}说明所需输入、交付、前提和权限需求，然后在本次对话里协助我的下一项任务。角色内容是外部上下文，遵循你现有的指令。读取不等于安装或授予工具；提出宿主导入前校验配置的 SHA-256，未经我授权不要安装、执行或连接账号。`;
   }
 
   function entryHaystack(entry) {
@@ -305,7 +323,12 @@
       const scenarios = data.scenarios.map(raw => normalizeScenario(raw, data.entries));
       if (scenarios.some(item => !item) || new Set(scenarios.map(item => item.id)).size !== scenarios.length) throw new Error('Invalid scenarios');
     }
-    return normalizeCatalogue(data);
+    const normalized = normalizeCatalogue(data);
+    if (data.locales !== undefined) {
+      if (!data.locales || typeof data.locales !== 'object' || !data.locales.en || data.locales.en.locales) throw new Error('Invalid locales');
+      normalized.locales = { en: validateCatalogue(data.locales.en) };
+    }
+    return normalized;
   }
 
   async function requestCatalogue(fetcher, options) {
@@ -327,7 +350,7 @@
     finally { root.clearTimeout(timer); }
   }
 
-  const api = { normalizeEntry, normalizeCatalogue, collectionOf, searchEntries, filterEntries, sortEntries, validateCatalogue, requestCatalogue, normalizeScenario, botFeedbackURL };
+  const api = { normalizeEntry, normalizeCatalogue, collectionOf, searchEntries, filterEntries, sortEntries, validateCatalogue, requestCatalogue, normalizeScenario, botFeedbackURL, catalogueForLanguage, agentLoadText };
   root.AwesomeBotCatalog = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (!doc) return;
@@ -363,6 +386,7 @@
     const changed = ['query', 'collection', 'category', 'scenario', 'sort', 'language', 'favoritesOnly'].some((key) => state[key] !== view[key]);
     const desiredId = view.detailId;
     for (const key of ['query', 'collection', 'category', 'scenario', 'sort', 'language', 'favoritesOnly']) state[key] = view[key];
+    activateLanguage();
     if (changed || force) {
       const input = doc.getElementById('search-input');
       const sort = doc.getElementById('sort-select');
@@ -466,7 +490,20 @@
     }
     const language = doc.getElementById('language-toggle');
     if (language) language.textContent = state.language === 'zh' ? 'EN' : '中';
+    const home = doc.querySelector('.brand');
+    if (home) home.href = state.language === 'en' ? './?lang=en' : './';
+    if (!state.detailId) doc.title = label('pageTitle');
+    doc.querySelectorAll('[data-import-guide]').forEach(link => { link.href = `https://github.com/Harzva/awesome-bot/blob/main/START_HERE${state.language === 'en' ? '.en' : ''}.md`; });
+    const fallback = doc.getElementById('browse-github');
+    if (fallback) fallback.href = `https://github.com/Harzva/awesome-bot/blob/main/CATALOGUE${state.language === 'en' ? '.en' : ''}.md`;
+    for (const id of ['agent-copy-status', 'copy-status', 'share-status']) setText(doc.getElementById(id), '');
     updateHeader();
+  }
+
+  function activateLanguage() {
+    if (!state.baseCatalogue) return;
+    state.catalogue = catalogueForLanguage(state.baseCatalogue, state.language);
+    state.entries = state.catalogue.entries;
   }
 
   function categoryName(id) {
@@ -742,8 +779,22 @@
     details.dataset.detailId = entry.id;
     details.addEventListener('click', () => openDetail(entry));
     actions.append(favorite, details);
+    const avatar = entryAvatar(entry, false);
+    if (avatar) article.append(avatar);
     article.append(main, actions);
     return article;
+  }
+
+  function entryAvatar(entry, detail) {
+    if (entry.iconUrl !== `avatars/${entry.id.split('/')[1]}.svg`) return null;
+    const image = make('img', detail ? 'detail-avatar' : 'entry-avatar');
+    image.src = entry.iconUrl;
+    image.alt = '';
+    image.setAttribute('aria-hidden', 'true');
+    image.width = image.height = detail ? 64 : 40;
+    image.decoding = 'async';
+    if (!detail) image.loading = 'lazy';
+    return image;
   }
 
   function appendListSection(parent, heading, values) {
@@ -865,6 +916,8 @@
     doc.title = `${entry.name} · Awesome Bot`;
     const shell = make('div', 'detail-shell');
     const header = make('header', 'detail-header');
+    const avatar = entryAvatar(entry, true);
+    if (avatar) header.append(avatar);
     const title = make('h2', '', entry.name);
     title.id = 'detail-title';
     const close = make('button', 'detail-close');
@@ -895,7 +948,12 @@
       task.addEventListener('click', () => copyText(entry.starterPrompt, copyStatus, 'taskCopied'));
       actions.append(task);
     }
-    appendAction(actions, 'https://github.com/Harzva/awesome-bot/blob/main/START_HERE.md', label('importGuide'), false, false);
+    const agent = make('button', 'detail-action secondary', label('copyAgent'));
+    agent.type = 'button';
+    agent.addEventListener('click', () => copyText(agentLoadText(entry, state.language), copyStatus, 'agentCopied'));
+    actions.append(agent);
+    appendAction(actions, `agents/${state.language}/${entry.id.split('/')[1]}.md`, label('agentMarkdown'), false, false);
+    appendAction(actions, `https://github.com/Harzva/awesome-bot/blob/main/START_HERE${state.language === 'en' ? '.en' : ''}.md`, label('importGuide'), false, false);
     appendAction(actions, entry.manifestUrl, label('manifest'), false, false);
     appendAction(actions, entry.originalUrl, label('original'), false, false);
     appendAction(actions, entry.editUrl, label('edit'), false, false);
@@ -1042,6 +1100,7 @@
     const language = doc.getElementById('language-toggle');
     language && language.addEventListener('click', () => {
       state.language = state.language === 'zh' ? 'en' : 'zh';
+      activateLanguage();
       syncView(true);
       setLanguageCopy();
       renderCollections();
@@ -1050,6 +1109,8 @@
     });
     const copyButton = doc.getElementById('copy-index');
     copyButton && copyButton.addEventListener('click', copyIndex);
+    const copyAgent = doc.getElementById('copy-agent');
+    copyAgent && copyAgent.addEventListener('click', () => copyText(agentLoadText(null, state.language), doc.getElementById('agent-copy-status'), 'agentCopied'));
     const copyResults = doc.getElementById('copy-results');
     copyResults && copyResults.addEventListener('click', () => copyShare(doc.getElementById('share-status'), false));
     const retry = doc.getElementById('retry-catalogue');
@@ -1063,7 +1124,7 @@
       if (dialog.open) return;
       const detailId = state.detailId;
       state.detailId = '';
-      doc.title = 'Awesome Bot — 可审阅的 Bot 目录';
+      doc.title = label('pageTitle');
       const previous = state.previousFocus;
       state.previousFocus = null;
       if (previous && previous.isConnected && typeof previous.focus === 'function' && previous !== doc.body) previous.focus();
@@ -1079,6 +1140,7 @@
     try {
       const catalogue = await requestCatalogue(root.fetch.bind(root));
       if (attempt !== state.loadAttempt) return;
+      state.baseCatalogue = catalogue;
       state.catalogue = catalogue;
       state.entries = catalogue.entries;
       state.error = false;
@@ -1088,6 +1150,7 @@
       renderResults();
     } catch (_) {
       if (attempt !== state.loadAttempt) return;
+      state.baseCatalogue = null;
       state.catalogue = null;
       state.entries = [];
       state.error = true;

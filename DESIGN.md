@@ -46,7 +46,7 @@ Typography uses self-hosted IBM Plex Sans weights for Latin interface text, lice
 
 ## Interaction and state rules
 
-- The default language is Chinese. The language toggle changes interface labels to English; Bot names, personas, source text, and other authored entry content remain as supplied.
+- The default language is Chinese. The language toggle switches the interface and complete authored role, scenario and configuration content to English. Public source names and attribution retain their original identities. Language is part of the URL; localized Fleet projections do not rewrite the published Chinese manifests.
 - Search, collection, category, sort, and saved-only filters can be combined. Search matching is case-insensitive and covers `name`, `summary`, `tags`, `sourceName`, `sourceAuthor`, `id`, mission, style, category, and capabilities.
 - Favorites are stored in `localStorage` under `awesome-bot:favorites:v1`. Storage failure leaves an in-memory session state and does not block browsing.
 - Detail views use a native `dialog`, close with the close control, backdrop click, or Escape, and return focus to the control that opened them.
@@ -90,3 +90,13 @@ The toolbar adds a task-scenario selector without adding a mobile control row. S
 Independent review of current-build screenshots passed at all four acceptance viewports. The first title and detail action remain visible, document-level horizontal overflow is absent, and scenario and detail actions wrap without clipping at 375px. Long scenario instructions and detail content use normal vertical scrolling. The 1280 × 720 first-row summary extends below the initial viewport, while its title and action remain reachable.
 
 Browser checks confirmed scenario result counts, task-copy feedback, detail copy, Escape and opener focus, Back and refresh restoring the scenario and its download count. All five scene exports were downloaded over HTTP and matched their built files; each contains its expected one or two Bots. Scoped layout detection reported no findings. Evidence remains outside the public repository under `research/awesome-bot-20261020/v0.3.0/ui/`; it is local-preview evidence, not a deployed screenshot or real-account task certification.
+
+## Version 0.4 role identity, English and Agent reading
+
+Each role has an original deterministic SVG mark, with ten geometric work-area families and individual details derived from its stable ID. The same mark appears at 40px in the directory and 64px in details; language changes do not change its identity. The marks use the existing paper and ink palette with restrained role colors. They do not reproduce upstream avatars or creator portraits.
+
+The English projection covers all 146 role names, missions, steps, prerequisites, skills, personas, examples and downloads, plus all five scenarios. Category labels, guidance links, fallback catalogue, accessibility labels and transient copy feedback follow the selected language. The 375px English preamble is slightly tighter so its first result action remains visible. Shrinkable toolbar tracks handle longer English labels without clipping the page.
+
+The directory rail and Bot details offer Copy for Agent. The success message reports copying, not installation. Per-Bot Markdown and JSON keep role context, language, source version, content revision, configuration digest and requested permissions together; a small llms.txt entry introduces the reading path without loading every persona at once.
+
+Independent visual review passed Chinese and English at all four acceptance sizes, including the corrected 1200 × 776 captures. Default first titles and detail actions remain visible, and document-level horizontal overflow is absent. English scenario and detail actions wrap without clipping. The local evidence set is `research/awesome-bot-20261020/v0.4.0/ui/`; the accepted 1200px images use the `recapture-` prefix. Other accepted images use `final-`. Browser checks confirmed full English content, English configuration links, real paste of the selected Bot's Agent-loading prompt, language-status cleanup, Escape and opener focus, and refresh preserving the English scenario. Scoped layout detection reported no findings. These checks do not certify every role's real-account execution.

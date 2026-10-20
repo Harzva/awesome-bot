@@ -10,7 +10,7 @@ Set `collection` to `bot-role` for a persistent role or `task-workflow` for a sp
 
 Community originals do **not** need Grok fields. Remove `upstreamMarketplaceId` and `upstreamUseCaseName` when copying an example for a new original. Only verified source adaptations use those mappings. References have `label` and HTTPS `url`; a known catalogue `source` is optional for a new source. Do not invent an official source or endorsement.
 
-Human-facing content is currently Chinese. English names and source titles can remain searchable. Keep language declarations accurate.
+Canonical source roles are Chinese. Complete English overlays live in `data/locales/en/entries/<slug>.json`; translate every authored field and keep the ID and array coverage aligned with the source. The existing 146 source adaptations require these overlays. A new community original can arrive without a translation; it remains available in Chinese and enters the English catalogue when its complete overlay is reviewed. Never silently fall back to Chinese content in an English entry. The build generates localized Fleet projections without rewriting published Chinese manifests.
 
 ## Content review
 
@@ -33,7 +33,7 @@ npm run build:site
 npm run audit:public
 ```
 
-Commit the entry and regenerated `templates/`, `registry/` and `CATALOGUE.md` changes. CI uses Node 22 and 24. Include the concrete task, expected output, source/license and checks performed in your PR. Maintainers review scope, quality, permissions and provenance before merge.
+Commit the entry, its reviewed translations and regenerated templates, registry and catalogue documents. CI uses Node 22 and 24. Include the concrete task, expected output, source/license and checks performed in your PR. Maintainers review scope, quality, permissions and provenance before merge.
 
 For an update, increase the entry's semantic version. The build keeps existing published version files; never edit their bytes in place. Standalone downloads do not yet support applying an upgrade or rollback to an installed App because imported IDs need reconciliation.
 

@@ -73,3 +73,26 @@ test('Bot feedback pre-fills only public identity fields with safe URL encoding'
   assert.ok(!value.href.includes('private'));
   assert.equal(new URL(botFeedbackURL({ ...source, originalUrl: 'https://person:password@example.com/' })).searchParams.has('source_url'), false);
 });
+
+test('English mode selects translated entries, categories, scenarios and configuration links together', () => {
+  const en = { ...catalogue(), entries: [{ ...entry, name: 'Research desk', downloadUrl: 'exports/en/test.fleet.json' }], categories: [{ id: 'sales', name: 'Sales' }], scenarios: [{ ...scenario(), title: 'Weekly report', titleEn: 'Weekly report', summary: 'Draft from evidence.', inputs: ['Evidence'], outputs: ['Draft'], steps: [{ botId: entry.id, prompt: 'Draft a report.', handoff: 'User reviews.' }], downloadUrl: 'exports/en/scenario-weekly-report.fleet.json' }] };
+  const normalized = validateCatalogue({ ...catalogue(), locales: { en } });
+  const active = context.module.exports.catalogueForLanguage(normalized, 'en');
+  assert.equal(active.entries[0].name, 'Research desk');
+  assert.equal(active.entries[0].downloadUrl, 'exports/en/test.fleet.json');
+  assert.equal(active.categories[0].name, 'Sales');
+  assert.equal(active.scenarios[0].steps[0].botName, 'Research desk');
+  assert.equal(context.module.exports.catalogueForLanguage(normalized, 'zh').entries[0].name, '测试 Bot');
+  assert.throws(() => validateCatalogue({ ...catalogue(), locales: { en: { ...en, entries: [entry, entry] } } }), /Invalid/);
+});
+
+test('Agent loading prompts include only public context and never claim installation', () => {
+  const { agentLoadText } = context.module.exports;
+  const value = agentLoadText({ ...entry, version: '1.0.0', query: 'PRIVATE SEARCH', memory: 'PRIVATE MEMORY', favorites: ['PRIVATE SAVED'] }, 'en');
+  assert.ok(value.includes('https://harzva.github.io/awesome-bot/agents/en/test.json'));
+  assert.ok(value.includes('llms.txt'));
+  assert.match(value, /Reading does not install/);
+  assert.doesNotMatch(value, /PRIVATE/);
+  assert.equal(agentLoadText({ ...entry, id: 'awesome/../../private' }, 'en'), '');
+  assert.ok(agentLoadText(null, 'zh').includes('/agents/zh/index.json'));
+});

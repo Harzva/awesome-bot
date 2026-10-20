@@ -1,0 +1,27 @@
+{
+  "id": "feedback-to-requirements",
+  "title": "Turn feedback into requirements",
+  "summary": "Identify feedback themes and user impact, then consolidate a traceable requirements list with questions to clarify.",
+  "inputs": [
+    "Authorized feedback and tickets with timestamps and sources",
+    "Product and user segments, known issues and recent changes",
+    "Existing requirements repository and requirement links"
+  ],
+  "outputs": [
+    "Feedback themes and user tasks retaining original evidence",
+    "Deduplicated requirements list and impact scope",
+    "Validation suggestions and clarification questions without development schedule commitments"
+  ],
+  "steps": [
+    {
+      "botId": "awesome/product-feedback-analyst",
+      "prompt": "Analyze this authorized feedback batch. Feedback records, sources and timestamps: [paste]; product and user segments: [fill in]; known issues and recent changes: [fill in]. Group themes by user context, goal, obstacle and impact. Retain original evidence and contradictory feedback, and describe sample coverage and missing information. Suggest verifiable improvements without promising a development schedule.",
+      "handoff": "I will check themes against the original records and pass confirmed themes and evidence to Feature Request Tracker."
+    },
+    {
+      "botId": "awesome/feature-request-tracker",
+      "prompt": "Turn the following reviewed feedback themes and original evidence into a requirements list. Themes and evidence: [paste]; existing requirements repository: [provide authorized records]; customer and product segments: [fill in]. Merge duplicate requests and link existing requirements, retaining specific problem contexts, impact scope and clarification questions. Separate requirement facts from prioritization suggestions. Do not promise a schedule on behalf of the product owner or modify the requirements repository.",
+      "handoff": "The product owner and I will review requirements and verify missing details before deciding priorities and whether to add records."
+    }
+  ]
+}

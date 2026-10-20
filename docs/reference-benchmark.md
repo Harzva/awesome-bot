@@ -25,7 +25,7 @@ The executable market [DSH Market](https://github.com/dsh-market/dsh-market) is 
 
 Website deployment, CI, and release publication must each be verified after a push. Real-account task execution is a further evidence level and remains separate from schema, source, and import-library checks. See [publishing.md](publishing.md) for the project gates and the distinction between configured and observed behavior.
 
-## Current iteration: first task and per-Bot feedback
+## Version 0.3: first task and per-Bot feedback
 
 Version 0.3 implements the following two flows. Local browser checks, independent visual review, scenario-file download checks and the 47-test suite passed. CI, Pages and release publication remain separate remote checks for each published commit.
 
@@ -39,3 +39,9 @@ GitHub documents form element `id` values as the canonical URL-prefill keys in i
 ## Remaining contribution gap
 
 The reference [contribution guide](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md#adding-a-plugin--收录插件) accepts one entry file without requiring a local build; its main branch generates the derived documents after merge. Awesome Bot currently requires contributors to run validation and commit the generated templates, registry and catalogue documentation alongside their source entry. A true build-free, source-only PR flow still needs a reviewed generation and preview strategy. This iteration does not claim that automation exists.
+
+## Version 0.4: role identity, English and Agent discovery
+
+The [Grok market comparison](grok-market-reference.md) records current primary sources and distinguishes custom Bot avatars, creator images, App import and documentation reading. Awesome Bot now provides original per-role vector marks, complete English content and configuration projections, and a Copy for Agent reading path through llms.txt and individual Markdown/JSON files. See the [integration contract](agent-integration.md).
+
+All 146 initial roles and five scenarios have complete English overlays. Local generation, English-content and export checks passed, with independent Chinese/English visual review at four viewport sizes. Copy and paste were checked against the selected Bot's language-specific context link. No arbitrary-Agent automatic installation API or real-account certification is claimed.

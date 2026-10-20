@@ -743,10 +743,10 @@ a[target="_blank"]::after {
 }
 
 .result-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 14px;
   min-height: 132px;
   padding: 19px 0 17px;
   border-bottom: 1px solid var(--line);
@@ -756,8 +756,18 @@ a[target="_blank"]::after {
   border-bottom: 0;
 }
 
+.entry-avatar {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .result-main {
   min-width: 0;
+  grid-column: 2;
 }
 
 .entry-kicker,
@@ -835,6 +845,8 @@ a[target="_blank"]::after {
 
 .result-actions {
   display: flex;
+  grid-column: 3;
+  grid-row: 1;
   flex: 0 0 auto;
   flex-direction: column;
   align-items: flex-end;
@@ -1100,9 +1112,28 @@ a[target="_blank"]::after {
 
 .detail-header {
   position: relative;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  column-gap: 16px;
   padding-right: 40px;
   padding-bottom: 25px;
   border-bottom: 1px solid var(--ink);
+}
+
+.detail-avatar {
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.detail-header > .section-kicker,
+.detail-header > h2,
+.detail-header > .detail-summary,
+.detail-header > .detail-source {
+  grid-column: 2;
 }
 
 .detail-header .section-kicker {
@@ -1430,14 +1461,23 @@ a[target="_blank"]::after {
 
   .result-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 14px;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    column-gap: 12px;
     min-height: 0;
     padding: 17px 0 15px;
   }
 
-  .result-actions {
+  .entry-avatar {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .result-main {
     grid-column: 2;
+  }
+
+  .result-actions {
+    grid-column: 3;
     grid-row: 1;
     align-items: flex-end;
     justify-content: flex-start;
@@ -1506,7 +1546,17 @@ a[target="_blank"]::after {
 
   .toolbar-controls {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .select-control {
+    min-width: 0;
+  }
+
+  .select-control select {
+    min-width: 0;
+    flex: 1 1 0;
+    width: 0;
   }
 
   .quiet-button {
@@ -1530,6 +1580,22 @@ a[target="_blank"]::after {
 
   .detail-shell {
     max-height: calc(100vh - 16px);
+  }
+
+  html:lang(en) .masthead {
+    padding: 27px 0 18px;
+  }
+
+  html:lang(en) .masthead-note {
+    padding-top: 11px;
+  }
+
+  html:lang(en) .search-section {
+    padding-bottom: 20px;
+  }
+
+  html:lang(en) .category-strip {
+    padding: 10px 0;
   }
 }
 

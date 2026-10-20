@@ -3,6 +3,7 @@ import { dirname, resolve, relative } from 'node:path';
 import { engineModule, root, readCatalogue } from './engine.mjs';
 import { assertVersionImmutability } from './check-versions.mjs';
 import { loadScenarios, renderStartGuide } from './scenarios.mjs';
+import { loadEnglish, renderEnglishStartGuide, renderEnglishCatalogue } from './locales.mjs';
 
 const { validateManifest, integrityOf, REGISTRY_SCHEMA } = await engineModule('manifest');
 const { validateRegistry } = await engineModule('registry');
@@ -10,6 +11,7 @@ const { compare: compareVersions } = await engineModule('semver');
 const check = process.argv.includes('--check');
 const catalogue = await readCatalogue();
 const scenarios = await loadScenarios(catalogue);
+const englishContent = await loadEnglish(catalogue, scenarios);
 const inventory = JSON.parse(await readFile(resolve(root, 'sources/grok-inventory.json'), 'utf8'));
 const errors = [];
 const expected = new Map();
@@ -182,6 +184,8 @@ for (const s of catalogue.sources) lines.push(`- [${s.name}](${s.url})，核验�
 lines.push('');
 expected.set('CATALOGUE.md', lines.join('\n'));
 expected.set('START_HERE.md', renderStartGuide(scenarios));
+expected.set('START_HERE.en.md', renderEnglishStartGuide(englishContent.scenarios));
+expected.set('CATALOGUE.en.md', renderEnglishCatalogue(catalogue, englishContent));
 
 if (errors.length) throw new Error(errors.join('\n'));
 

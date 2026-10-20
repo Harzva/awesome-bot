@@ -4,6 +4,7 @@ import { mkdtemp, readFile, rm, writeFile, cp } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { resolve, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { root, readCatalogue } from '../scripts/engine.mjs';
 
 test('the static market offers complete, deterministic and unprivileged downloads', async () => {
@@ -22,6 +23,11 @@ test('the static market offers complete, deterministic and unprivileged download
     const counts = { roles: catalogue.bots.filter(b => b.collection === 'bot-role').length, workflows: catalogue.bots.filter(b => b.collection === 'task-workflow').length, total: catalogue.bots.length };
     assert.deepEqual(site.counts, counts);
     assert.equal(site.entries.length, counts.total);
+    const en = site.locales.en;
+    assert.equal(en.entries.length, counts.total);
+    assert.deepEqual(en.counts, counts);
+    assert.deepEqual(en.coverage, { translated: counts.total, total: counts.total });
+    const iconDigests = new Set();
     for (const entry of site.entries) {
       assert.match(entry.downloadUrl, /^exports\/[a-z0-9-]+\.fleet\.json$/);
       assert.match(entry.manifestUrl, /^templates\/[a-z0-9-]+\/\d+\.\d+\.\d+\.json$/);
@@ -38,7 +44,43 @@ test('the static market offers complete, deterministic and unprivileged download
       assert.deepEqual(fleet.bots[0].channels, {});
       assert.deepEqual(fleet.bots[0].messages, []);
       assert.deepEqual(fleet.bots[0].memory, { profile: '', journal: [] });
+      const svg = await readFile(join(output, entry.iconUrl), 'utf8');
+      assert.match(svg, /<svg\s/);
+      assert.doesNotMatch(svg, /<script|foreignObject|\bon\w+=|(?:href|src)\s*=/i);
+      iconDigests.add(createHash('sha256').update(svg.replace(/<title>.*?<\/title>/s, '')).digest('hex'));
+      const translated = en.entries.find(item => item.id === entry.id);
+      const englishFleetBytes = await readFile(join(output, translated.downloadUrl));
+      const englishFleet = JSON.parse(englishFleetBytes);
+      assert.equal(englishFleet.bots[0].name, translated.name);
+      assert.equal(englishFleet.bots[0].persona, translated.persona);
+      assert.doesNotMatch(JSON.stringify(englishFleet), /\p{Script=Han}/u, entry.id);
+      assert.equal(englishFleet.bots[0].toolsEnabled, false);
+      assert.equal(englishFleet.bots[0].containerEnabled, false);
+      assert.deepEqual(englishFleet.bots[0].memory, { profile: '', journal: [] });
+      for (const [locale, item] of [['zh', entry], ['en', translated]]) {
+        const card = JSON.parse(await readFile(join(output, `agents/${locale}/${entry.id.split('/')[1]}.json`), 'utf8'));
+        const bytes = await readFile(join(output, item.downloadUrl));
+        assert.equal(card.id, entry.id);
+        assert.equal(card.locale, locale);
+        assert.equal(card.configuration.sha256, createHash('sha256').update(bytes).digest('hex'));
+        assert.equal(card.configuration.url, `https://harzva.github.io/awesome-bot/${item.downloadUrl}`);
+        assert.equal(card.configuration.grantsTools, false);
+        assert.equal(card.configuration.includesAccountsOrMemory, false);
+        assert.equal(card.role.persona, item.persona);
+        assert.equal(card.source.upstreamConfigurationImported, false);
+        if (locale === 'en') assert.doesNotMatch(JSON.stringify(card.role), /\p{Script=Han}/u);
+        const markdown = await readFile(join(output, `agents/${locale}/${entry.id.split('/')[1]}.md`), 'utf8');
+        assert.ok(markdown.includes(card.configuration.sha256));
+        assert.ok(markdown.includes(item.starterPrompt));
+      }
     }
+    assert.equal(iconDigests.size, counts.total, 'each role has a distinct vector identity');
+    const discovery = JSON.parse(await readFile(join(output, 'agents/index.json'), 'utf8'));
+    assert.deepEqual(discovery.languages.map(item => [item.locale, item.count]), [['zh', counts.total], ['en', counts.total]]);
+    const llms = await readFile(join(output, 'llms.txt'), 'utf8');
+    assert.ok(llms.startsWith('# Awesome Bot\n'));
+    assert.ok(llms.includes('/agents/en/index.json'));
+    assert.ok(llms.length < 6000, 'the discovery entry remains small');
     for (const [collection, expected] of [['roles', counts.roles], ['workflows', counts.workflows], ['all', counts.total]]) {
       if (expected > 200) { assert.equal(site.downloads[collection], null); continue; }
       const fleet = JSON.parse(await readFile(join(output, site.downloads[collection]), 'utf8'));
@@ -46,6 +88,13 @@ test('the static market offers complete, deterministic and unprivileged download
       assert.equal(new Set(fleet.bots.map(bot => bot.id)).size, expected);
     }
     assert.equal(site.scenarios.length, 5);
+    assert.equal(en.scenarios.length, 5);
+    for (const scenario of en.scenarios) {
+      assert.doesNotMatch(JSON.stringify(scenario), /\p{Script=Han}/u);
+      const fleet = JSON.parse(await readFile(join(output, scenario.downloadUrl), 'utf8'));
+      assert.deepEqual(fleet.bots.map(bot => bot.name), scenario.steps.map(step => step.botName));
+      assert.doesNotMatch(JSON.stringify(fleet), /\p{Script=Han}/u);
+    }
     const scenarioBytes = new Map();
     for (const scenario of site.scenarios) {
       assert.deepEqual(scenario.botIds, scenario.steps.map(step => step.botId));

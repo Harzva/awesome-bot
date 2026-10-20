@@ -1,0 +1,23 @@
+{
+  "id": "weekly-report",
+  "title": "Write an evidence-backed weekly report",
+  "summary": "Use one Bot to turn project artifacts, verification and blockers into a clear status-report draft.",
+  "inputs": [
+    "This week's reporting period, project goals and milestones",
+    "Completed artifacts, test results and acceptance records",
+    "Ongoing work, blockers and plan changes",
+    "Next-phase plan, pending decisions and responsible owners"
+  ],
+  "outputs": [
+    "Weekly report draft separating delivered work, pending acceptance, ongoing work and blockers",
+    "Evidence-backed risk explanations and decision requests",
+    "Next-phase actions and responsible owners"
+  ],
+  "steps": [
+    {
+      "botId": "awesome/status-report-writer",
+      "prompt": "Write this week's status-report draft from the following project facts. Reporting period, goals and milestones: [fill in]; artifacts, tests and acceptance records: [paste]; ongoing work, blockers and plan changes: [fill in]; next-phase actions and pending decisions: [fill in]. Separate delivered work, pending acceptance, ongoing work and blocked items. Keep evidence for conclusions and explain deviations, risks and required decisions. Leave unsupported progress unknown, and do not equate passing tests with business acceptance.",
+      "handoff": "I will verify the evidence, owners and decision requests, revise and confirm the draft, then send it to the intended readers."
+    }
+  ]
+}

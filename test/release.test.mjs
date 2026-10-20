@@ -44,7 +44,7 @@ test('release selection excludes internal verification and native-only adapters'
 });
 
 test('release archive retains the actual localized and provenance root documents', async () => {
-  const documents = ['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'START_HERE.md', 'CONTRIBUTING.md', 'INTEGRATION.md', 'LICENSE', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'AGENTS.md', 'PRODUCT.md', 'DESIGN.md', 'CHANGELOG.md', '.gitattributes', '.impeccable/design.json'];
+  const documents = ['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'CATALOGUE.en.md', 'START_HERE.md', 'START_HERE.en.md', 'CONTRIBUTING.md', 'INTEGRATION.md', 'LICENSE', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'AGENTS.md', 'PRODUCT.md', 'DESIGN.md', 'CHANGELOG.md', '.gitattributes', '.impeccable/design.json'];
   const files = [];
   for (const path of documents) {
     assert.equal(releaseFileAllowed(path), true, `${path} must remain in the release source`);

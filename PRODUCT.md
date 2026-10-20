@@ -46,4 +46,4 @@ The name is Awesome Bot. The user explicitly chose the successful Awesome DSH Pl
 
 ## Accessibility & Inclusion
 
-Keyboard-operable search, filters, details and download actions; visible focus, readable contrast and responsive layouts for desktop and mobile web. Chinese authored content retains its language label even when interface labels are English.
+Keyboard-operable search, filters, details and download actions; visible focus, readable contrast and responsive layouts for desktop and mobile web. Chinese and English modes cover the full role, scenario and configuration content for all 146 initial entries. Localized projections keep their language and content revision explicit while the original source manifests retain their published versions. Every role has an independently authored vector mark. Agents can discover and read the public catalogue through llms.txt, small indexes and individual Markdown/JSON files; this reading path does not install or execute a Bot.

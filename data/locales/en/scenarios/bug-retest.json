@@ -1,0 +1,28 @@
+{
+  "id": "bug-retest",
+  "title": "Reproduce a bug and plan retesting",
+  "summary": "Create a minimal reproduction, then check affected key paths and release blockers.",
+  "inputs": [
+    "Issue description, expected behavior, frequency and minimal input",
+    "Specified code or testable build, platform and environment details",
+    "Permitted test environment, data, accounts and interface",
+    "Core user tasks, release criteria and known fixes"
+  ],
+  "outputs": [
+    "Minimal reproduction steps, logs and environment details",
+    "Confirmed findings and diagnostic hypotheses still needing validation",
+    "Key-path check records, release blockers and retest order"
+  ],
+  "steps": [
+    {
+      "botId": "awesome/bug-reproduction",
+      "prompt": "Help reproduce this bug first. Issue and expected behavior: [fill in]; specified build and platform: [fill in]; minimal input or sample: [provide authorized data]; permitted test environment and operation scope: [fill in]. Record actual versus expected differences, progressively reduce triggering conditions, retain logs and environment details, and distinguish confirmed causes from hypotheses. If necessary tools or an environment are unavailable, explain the gap and provide steps I can execute; do not claim to have reproduced it.",
+      "handoff": "I will verify the reproduction evidence and pass repeatable steps, the impact scope and confirmed fixes to Startup QA Bot."
+    },
+    {
+      "botId": "awesome/grok-startup-qa-bot",
+      "prompt": "Use the following verified bug reproduction and fix information to check affected core user paths and plan retesting. Reproduction and fixes: [paste]; testable build and core tasks: [fill in]; release criteria, test accounts and authorized interface operations: [fill in]. Record real findings on normal, empty and error paths, then list release blockers and a retest method for each. Explicitly mark unexecuted or unverified items as awaiting checks, and do not access unauthorized environments.",
+      "handoff": "The release owner and I will review check evidence, blockers and retest results to decide whether release criteria are met."
+    }
+  ]
+}

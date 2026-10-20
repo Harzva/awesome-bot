@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 — 2026-10-20
+
+- Give each Bot an original, stable vector role mark in the directory, details and machine-readable context.
+- Add complete English content for all 146 roles and five scenarios, with English personas, skills, first tasks, Fleet downloads, catalogue and first-use guide.
+- Keep the published Chinese template IDs, versions and bytes unchanged; label localized configuration projections with their language and content revision.
+- Add a small llms.txt entry, language indexes and individual Markdown/JSON role context with configuration SHA-256 digests, sources, prerequisites and permission boundaries.
+- Add Copy for Agent to the directory and Bot details. It copies loading instructions for a link-capable Agent; it does not install, execute, connect accounts or grant access.
+
 ## 0.3.0 — 2026-10-20
 
 - Add five task scenarios with 1–2 existing Bots each, required materials, expected outputs, first-task prompts and explicit user-reviewed handoffs.

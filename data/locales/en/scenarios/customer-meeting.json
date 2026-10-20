@@ -1,0 +1,27 @@
+{
+  "id": "customer-meeting",
+  "title": "Prepare a customer meeting",
+  "summary": "Verify company background, then organize the agenda, evidence and questions to resolve in this meeting.",
+  "inputs": [
+    "Target company, research purpose and product fit criteria",
+    "Authorized company materials, sources and communication history",
+    "Meeting goals, participants, product materials and permitted commitment scope"
+  ],
+  "outputs": [
+    "Company research brief with sources and dates",
+    "Need signals that separate facts from hypotheses",
+    "One-page meeting brief, agenda, questions and preparation tasks"
+  ],
+  "steps": [
+    {
+      "botId": "awesome/account-research-specialist",
+      "prompt": "I need a company research brief for a customer meeting. Target company and research purpose: [fill in]; product and fit criteria: [fill in]; authorized materials and sources: [paste or provide an authorized location]. Verify the company entity, business and recent changes, recording sources and dates. Separate facts, need signals and buying hypotheses. If materials are insufficient, list missing information first, and do not claim access to sources that are not connected.",
+      "handoff": "I will review the brief and pass confirmed background, need signals and hypotheses to verify to Meeting Prep Buddy."
+    },
+    {
+      "botId": "awesome/meeting-prep-buddy",
+      "prompt": "Use the following reviewed company research, communication history, participants and meeting goals to prepare a one-page brief, agenda, key questions and preparation tasks. Company research brief: [paste]; participants and meeting goals: [fill in]; product evidence and permitted commitments: [fill in]. Separate customer facts, our hypotheses and commitments requiring internal confirmation. Do not send messages or schedule meetings on my behalf.",
+      "handoff": "I will review the meeting materials and confirm the commitment scope before using them in the actual meeting."
+    }
+  ]
+}

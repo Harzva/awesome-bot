@@ -5,11 +5,13 @@ import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
 import { execFileSync } from 'node:child_process';
 import { auditPublic, publicFiles } from './audit-public.mjs';
+import { loadScenarios } from './scenarios.mjs';
+import { loadEnglish, localizePlan } from './locales.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const ROOT_FILES = new Set(['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'START_HERE.md', 'CONTRIBUTING.md', 'INTEGRATION.md', 'LICENSE', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'CHANGELOG.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'AGENTS.md', 'PRODUCT.md', 'DESIGN.md', 'package.json', 'package-lock.json', 'catalogue.json', '.gitignore', '.gitattributes']);
+const ROOT_FILES = new Set(['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'CATALOGUE.en.md', 'START_HERE.md', 'START_HERE.en.md', 'CONTRIBUTING.md', 'INTEGRATION.md', 'LICENSE', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'CHANGELOG.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'AGENTS.md', 'PRODUCT.md', 'DESIGN.md', 'package.json', 'package-lock.json', 'catalogue.json', '.gitignore', '.gitattributes']);
 const SOURCE_DIRS = new Set(['data', 'engine', 'registry', 'templates', 'sources', 'scripts', 'test', 'site', 'docs', '.github']);
-const REQUIRED = ['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'START_HERE.md', 'CONTRIBUTING.md', 'LICENSE', 'SECURITY.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'catalogue.json', 'registry/index.json'];
+const REQUIRED = ['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'CATALOGUE.en.md', 'START_HERE.md', 'START_HERE.en.md', 'CONTRIBUTING.md', 'LICENSE', 'SECURITY.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'catalogue.json', 'registry/index.json'];
 const sha256 = data => createHash('sha256').update(data).digest('hex');
 
 export function releaseFileAllowed(file) {
@@ -154,11 +156,28 @@ export async function packRelease({ root = ROOT, outDir = resolve(ROOT, 'dist/re
       }
     }
     if (counts.all !== registry.entries.length || counts.roles + counts.workflows !== counts.all) throw new Error('Release collections do not match the registry');
+    const englishContent = await loadEnglish(authored, await loadScenarios(authored, { directory: resolve(root, 'data/scenarios') }), { directory: resolve(root, 'data/locales/en') });
+    const localized = { en: { contentRevision: version, counts: {}, collections: {} } };
+    for (const collection of ['roles', 'workflows', 'all']) {
+      const selected = englishContent.bots.filter(bot => collection === 'all' || bot.collection === (collection === 'roles' ? 'bot-role' : 'task-workflow'));
+      const parts = collectionParts(selected.map(bot => localizePlan(byId.get(bot.id), bot)), { materialize, now: Date.parse(catalogue.updatedAt), collection: `en-${collection}` });
+      localized.en.counts[collection] = selected.length;
+      localized.en.collections[collection] = { count: selected.length, parts: [] };
+      for (const [index, bundle] of parts.entries()) {
+        const suffix = parts.length > 1 ? `-part-${String(index + 1).padStart(3, '0')}-of-${String(parts.length).padStart(3, '0')}` : '';
+        const name = `awesome-bot-${collection}-en${suffix}-v${version}.fleet.json`;
+        const data = Buffer.from(jsonBundle(bundle));
+        if (/\p{Script=Han}/u.test(data.toString('utf8'))) throw new Error('English release contains untranslated content');
+        payload.push({ path: `exports/en/${collection}${suffix}.fleet.json`, data });
+        assets.push({ name, data });
+        localized.en.collections[collection].parts.push({ file: name, bots: bundle.bots.length, sha256: sha256(data) });
+      }
+    }
     const prefix = `awesome-bot-v${version}`;
     assets.unshift({ name: `${prefix}.tar.gz`, data: reproducibleArchive(payload, { prefix, epoch }) });
     const manifest = {
       schema: 'awesome.bot.release/1', version, catalogueSnapshotAt: catalogue.updatedAt,
-      sourceDateEpoch: epoch, counts, collections, targetOpenBotVersion, signed: false,
+      sourceDateEpoch: epoch, counts, collections, localized, targetOpenBotVersion, signed: false,
       contents: payload.map(f => ({ path: f.path, bytes: f.data.length, sha256: sha256(f.data) })).sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0),
       artifacts: assets.map(a => ({ file: a.name, bytes: a.data.length, sha256: sha256(a.data) })),
       scope: 'Original declarative templates. Schema and export checks do not certify real-account task execution.'
@@ -173,6 +192,7 @@ export async function packRelease({ root = ROOT, outDir = resolve(ROOT, 'dist/re
       `${counts.roles} original Bot roles and ${counts.workflows} task workflows (${counts.all} template configurations).`, '',
       '- Every entry retains its source and implementation attribution.',
       '- Download a collection Fleet file for a configuration import, or the archive for the complete standalone project and static marketplace.',
+      '- Files with `-en-` in their names contain English personas and skills. The other collection files preserve the original Chinese configurations.',
       '- Collections larger than 200 are split into numbered files. Host total-Bot limits still apply; install only the roles you need.',
       '- Model, account, tool, and screen setup remain with the host. The unsigned catalogue requires explicit community-source consent.',
       '- Exports contain no private memory or conversation data. Published artifacts are immutable.',
@@ -190,6 +210,8 @@ export async function packRelease({ root = ROOT, outDir = resolve(ROOT, 'dist/re
     return { ok: true, version, counts, files: assets.map(a => a.name), outDir };
   }
 }
+
+function jsonBundle(value) { return `${JSON.stringify(value, null, 2)}\n`; }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const args = process.argv.slice(2);

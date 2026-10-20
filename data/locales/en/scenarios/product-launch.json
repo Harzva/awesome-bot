@@ -1,0 +1,28 @@
+{
+  "id": "product-launch",
+  "title": "Prepare a product launch",
+  "summary": "Build positioning from customer problems and product evidence, then work backward to schedule assets, reviews and channel publication.",
+  "inputs": [
+    "Target customers, need evidence and alternatives",
+    "Product capabilities, limitations and demonstrable differences",
+    "Launch goals, deadlines, existing assets and channels",
+    "Production and review owners and immovable milestones"
+  ],
+  "outputs": [
+    "Positioning, value statements and an audience messaging matrix",
+    "Launch content requirements and validation plan",
+    "Marketing calendar, dependency conflicts and checkpoints"
+  ],
+  "steps": [
+    {
+      "botId": "awesome/grok-product-marketer",
+      "prompt": "Prepare a positioning draft for a product launch. Target customers and need evidence: [fill in]; product capabilities, limitations and evidence of differences: [fill in]; launch goals and existing assets: [fill in]. Map customer tasks and alternatives to demonstrable value, and organize audience messages and content requirements. Keep unproven claims as hypotheses and list follow-up validation. Do not invent customer testimonials or performance results.",
+      "handoff": "I will review the positioning and evidence, then pass confirmed audience messages, content requirements and validation plans to Marketing Calendar Owner."
+    },
+    {
+      "botId": "awesome/marketing-calendar-owner",
+      "prompt": "Work backward from the following reviewed launch content requirements to prepare a marketing calendar. Positioning and content requirements: [paste]; launch goals and deadlines: [fill in]; channels and asset list: [fill in]; production and review owners and fixed milestones: [fill in]. Identify production, review and channel dependencies, resource conflicts and gaps, recording an owner and checkpoint for each item. Prepare a reviewable plan only. Do not publish content, send messages or promise unconfirmed dates on my behalf.",
+      "handoff": "The relevant owners and I will confirm the calendar, resources and review arrangements before carrying out publication through authorized processes."
+    }
+  ]
+}
