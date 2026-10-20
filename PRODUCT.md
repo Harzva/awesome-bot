@@ -30,7 +30,7 @@ The repository must build after a clean clone without a sibling workspace. PR CI
 
 ## Brand Commitments
 
-The name is Awesome Bot. The user explicitly chose the successful Awesome DSH Plugin project as the reference for quality and project organization. The new project has its own identity and preserves source attribution. Its public voice is direct, useful and precise. The user chose the Grok Bot marketplace as the visual reference: neutral light surfaces, category navigation, clear role identity and concise card actions. Awesome Bot retains its own mark and original role artwork.
+The name is Awesome Bot. The user explicitly chose the successful Awesome DSH Plugin project as the reference for quality and project organization. The new project has its own identity and preserves source attribution. Its public voice is direct, useful and precise. The user chose the Grok Bot marketplace as the visual reference: neutral light surfaces, category navigation, clear role identity and concise card actions. Awesome Bot retains its own mark. Bot avatars use the same original OpenBot App characters already assigned in the configurations; repeated avatars are intentional, with Bot names identifying the separate roles.
 
 ## Evidence on Hand
 
@@ -46,4 +46,4 @@ The name is Awesome Bot. The user explicitly chose the successful Awesome DSH Pl
 
 ## Accessibility & Inclusion
 
-Keyboard-operable search, filters, details and download actions; visible focus, readable contrast and responsive layouts for desktop and mobile web. Chinese and English modes cover the full role, scenario and configuration content for all 146 initial entries. Localized projections keep their language and content revision explicit while the original source manifests retain their published versions. Every role has an independently authored vector mark. Agents can discover and read the public catalogue through llms.txt, small indexes and individual Markdown/JSON files; this reading path does not install or execute a Bot.
+Keyboard-operable search, filters, details and download actions; visible focus, readable contrast and responsive layouts for desktop and mobile web. Chinese and English modes cover the full role, scenario and configuration content for all 146 initial entries. Localized projections keep their language and content revision explicit while the original source manifests retain their published versions. Each role displays its declared App character; the two languages share that same artwork. Agents can discover and read the public catalogue through llms.txt, small indexes and individual Markdown/JSON files; this reading path does not install or execute a Bot.

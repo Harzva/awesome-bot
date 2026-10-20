@@ -42,7 +42,7 @@ The reference [contribution guide](https://github.com/awesome-dsh-plugin/awesome
 
 ## Version 0.4: role identity, English and Agent discovery
 
-The [Grok market comparison](grok-market-reference.md) records current primary sources and distinguishes custom Bot avatars, creator images, App import and documentation reading. Awesome Bot now provides original per-role vector marks, complete English content and configuration projections, and a Copy for Agent reading path through llms.txt and individual Markdown/JSON files. See the [integration contract](agent-integration.md).
+The [Grok market comparison](grok-market-reference.md) records current primary sources and distinguishes custom Bot avatars, creator images, App import and documentation reading. Awesome Bot provides the same original character avatars as the OpenBot App, complete English content and configuration projections, and a Copy for Agent reading path through llms.txt and individual Markdown/JSON files. See the [integration contract](agent-integration.md).
 
 All 146 initial roles and five scenarios have complete English overlays. Local generation, English-content and export checks passed, with independent Chinese/English visual review at four viewport sizes. Copy and paste were checked against the selected Bot's language-specific context link. No arbitrary-Agent automatic installation API or real-account certification is claimed.
 

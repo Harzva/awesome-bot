@@ -779,7 +779,9 @@
   function entryAvatar(entry, detail) {
     if (entry.iconUrl !== `avatars/${entry.id.split('/')[1]}.svg`) return null;
     const image = make('img', detail ? 'detail-avatar' : 'entry-avatar');
-    image.src = entry.iconUrl;
+    // The stable role URL may now render updated App artwork. Keep old browser
+    // caches from showing a previous site's geometric mark after publication.
+    image.src = `${entry.iconUrl}?v=${encodeURIComponent(state.catalogue?.contentRevision || '0')}`;
     image.alt = '';
     image.setAttribute('aria-hidden', 'true');
     image.width = image.height = detail ? 64 : 40;

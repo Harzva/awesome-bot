@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1 — 2026-10-21
+
+- Render the existing App character assigned to each Bot in marketplace cards and details, replacing the separate geometric marks. The 146 entries reuse 14 characters; names and identities remain distinct.
+- Pin the App's original MIT SVG generators with source digests. Website generation works after a clean clone without an installed App or sibling repository.
+- Retain all authored roles, published template versions, configuration downloads, localized role content and permissions. Version website assets so cached earlier artwork is refreshed.
+
 ## 0.5.0 — 2026-10-20
 
 - Align marketplace browsing with the Grok Bot reference: a neutral light palette, desktop category navigation, prominent original role marks and responsive Bot cards.

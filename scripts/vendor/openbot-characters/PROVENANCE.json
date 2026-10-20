@@ -1,0 +1,25 @@
+{
+  "schema": "openbot.character.snapshot/1",
+  "repository": "https://github.com/Harzva/openbot",
+  "commit": "ce016ba37f608e4f0863b4a5572d575e9a012a79",
+  "license": "MIT",
+  "copyright": "2026 OpenBot contributors",
+  "purpose": "Build-time App character SVG reuse; no App runtime, account or profile data",
+  "files": [
+    {
+      "source": "renderer/openbot-characters.js",
+      "vendored": "openbot-characters.js",
+      "sha256": "7aca547bfee099c7e182ab76314676024e19caa92b2862c335528b26bf8ff255"
+    },
+    {
+      "source": "renderer/openbot-produce-characters.js",
+      "vendored": "openbot-produce-characters.js",
+      "sha256": "6e723ebbd02f5b9af789a191aa45e8281864ee395eb54f3016fddbfdf5604ded"
+    },
+    {
+      "source": "LICENSE",
+      "vendored": "LICENSE",
+      "sha256": "0ca5e15545b57ba16a95c2f5948628aff9d9b4238ed01bf8ea873f02ae3151bb"
+    }
+  ]
+}

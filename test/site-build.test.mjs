@@ -28,6 +28,14 @@ test('the static market offers complete, deterministic and unprivileged download
     assert.deepEqual(en.counts, counts);
     assert.deepEqual(en.coverage, { translated: counts.total, total: counts.total });
     const iconDigests = new Set();
+    const iconsByAvatar = new Map();
+    const artwork = JSON.parse(await readFile(resolve(root, 'scripts/vendor/openbot-characters/PROVENANCE.json'), 'utf8'));
+    assert.deepEqual(JSON.parse(await readFile(join(output, 'avatars/PROVENANCE.json'), 'utf8')), artwork);
+    assert.deepEqual(await readFile(join(output, 'avatars/LICENSE.txt')), await readFile(resolve(root, 'scripts/vendor/openbot-characters/LICENSE')));
+    for (const item of artwork.files) {
+      const bytes = await readFile(resolve(root, 'scripts/vendor/openbot-characters', item.vendored));
+      assert.equal(createHash('sha256').update(bytes).digest('hex'), item.sha256, 'pinned App artwork remains unchanged');
+    }
     for (const entry of site.entries) {
       assert.match(entry.downloadUrl, /^exports\/[a-z0-9-]+\.fleet\.json$/);
       assert.match(entry.manifestUrl, /^templates\/[a-z0-9-]+\/\d+\.\d+\.\d+\.json$/);
@@ -47,7 +55,14 @@ test('the static market offers complete, deterministic and unprivileged download
       const svg = await readFile(join(output, entry.iconUrl), 'utf8');
       assert.match(svg, /<svg\s/);
       assert.doesNotMatch(svg, /<script|foreignObject|\bon\w+=|(?:href|src)\s*=/i);
-      iconDigests.add(createHash('sha256').update(svg.replace(/<title>.*?<\/title>/s, '')).digest('hex'));
+      const declaredAvatar = catalogue.bots.find(bot => bot.id === entry.id).avatar;
+      assert.equal(fleet.bots[0].avatar, declaredAvatar, 'market and imported Bot use the same declared App character');
+      assert.ok(svg.includes(`data-character="${declaredAvatar.slice(4)}"`));
+      assert.ok(svg.includes('data-motion="off"'));
+      const iconDigest = createHash('sha256').update(svg).digest('hex');
+      iconDigests.add(iconDigest);
+      if (iconsByAvatar.has(declaredAvatar)) assert.equal(iconDigest, iconsByAvatar.get(declaredAvatar), 'roles may share the same App artwork');
+      iconsByAvatar.set(declaredAvatar, iconDigest);
       const translated = en.entries.find(item => item.id === entry.id);
       const englishFleetBytes = await readFile(join(output, translated.downloadUrl));
       const englishFleet = JSON.parse(englishFleetBytes);
@@ -74,7 +89,7 @@ test('the static market offers complete, deterministic and unprivileged download
         assert.ok(markdown.includes(item.starterPrompt));
       }
     }
-    assert.equal(iconDigests.size, counts.total, 'each role has a distinct vector identity');
+    assert.equal(iconDigests.size, new Set(catalogue.bots.map(bot => bot.avatar)).size, 'reuse the declared App characters without inventing per-role marks');
     const discovery = JSON.parse(await readFile(join(output, 'agents/index.json'), 'utf8'));
     assert.deepEqual(discovery.languages.map(item => [item.locale, item.count]), [['zh', counts.total], ['en', counts.total]]);
     const llms = await readFile(join(output, 'llms.txt'), 'utf8');

@@ -41,11 +41,21 @@ await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await writeFile(resolve(output, '.awesome-bot-build'), 'awesome.bot.site/1\n');
 await cp(resolve(root, 'site'), output, { recursive: true });
+// A refreshed homepage must load the scripts/styles that match its catalogue,
+// even when the visitor has the previous release's asset URLs cached.
+const indexFile = resolve(output, 'index.html');
+const indexHtml = await readFile(indexFile, 'utf8');
+await writeFile(indexFile, indexHtml.replace(/((?:href|src)=["'])(\.\/(?:styles\.css|navigation\.js|app\.js))(["'])/g,
+  (_, prefix, asset, suffix) => `${prefix}${asset}?v=${encodeURIComponent(packageMetadata.version)}${suffix}`));
 await cp(resolve(root, 'templates'), resolve(output, 'templates'), { recursive: true });
 await cp(resolve(root, 'registry'), resolve(output, 'registry'), { recursive: true });
 await cp(resolve(root, 'sources'), resolve(output, 'sources'), { recursive: true });
 await writeFile(resolve(output, '.nojekyll'), '');
 await mkdir(resolve(output, 'avatars'), { recursive: true });
+// Keep the original artwork notice and provenance with the distributed images,
+// including a Pages artifact that does not contain the source checkout.
+await cp(resolve(root, 'scripts/vendor/openbot-characters/LICENSE'), resolve(output, 'avatars/LICENSE.txt'));
+await cp(resolve(root, 'scripts/vendor/openbot-characters/PROVENANCE.json'), resolve(output, 'avatars/PROVENANCE.json'));
 
 for (const bot of metadata.bots) {
   const plan = await buildPlan({ id: bot.id, entries: registry.entries, loadManifest: loader, openbotVersion: metadata.targetOpenBotVersion || '0.9.9' });

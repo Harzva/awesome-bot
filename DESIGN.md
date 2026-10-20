@@ -1,6 +1,6 @@
 # Awesome Bot visual system
 
-The current visual direction follows the user's chosen [Grok Bot marketplace](https://x.ai/bot/marketplace) reference. Version 0.5 replaces the earlier warm-paper editorial directory with neutral light surfaces, desktop category navigation and role-led Bot cards. Awesome Bot keeps its own circular four-cell mark, original role artwork and source attribution.
+The current visual direction follows the user's chosen [Grok Bot marketplace](https://x.ai/bot/marketplace) reference. Version 0.5 replaces the earlier warm-paper editorial directory with neutral light surfaces, desktop category navigation and role-led Bot cards. Awesome Bot keeps its own circular four-cell mark and source attribution. Since 0.5.1, Bot artwork reuses the original OpenBot App characters already assigned to each configuration.
 
 ## Reference and boundaries
 
@@ -13,15 +13,15 @@ These patterns inform hierarchy and browsing. Awesome Bot's primary action says 
 - The compact header keeps Awesome Bot, the market, contribution, GitHub and language controls reachable.
 - A short market title and search lead into the catalogue. Roles and tasks remain distinct collections; category, scenario, sort and saved-only filters combine with search.
 - Desktop category navigation sits beside the result grid. Smaller screens use a horizontally scrollable category strip and a single column of cards.
-- Each card gives an original role mark, role name, source author where available, summary, work area and skill count. View details, save and direct configuration download remain explicit actions.
+- Each card gives its assigned App character, role name, source author where available, summary, work area and skill count. View details, save and direct configuration download remain explicit actions.
 - Bulk downloads, source guidance and Agent discovery are supporting utilities. They do not compete with the role grid as a second dashboard.
 - Native Bot details show identity and attribution, then three main actions: configuration download, Copy for Agent and first-task copy. Documentation, original manifest, source, editing and sharing form a quieter resource group. Complete responsibilities, materials, steps, skills, permission requests and verification remain available below.
 
 ## Typography and identity
 
-Self-hosted IBM Plex Sans, licensed under SIL OFL 1.1 in `site/fonts/OFL-1.1.txt`, handles Latin text with platform Chinese sans fallbacks. The page makes no remote font request. Neutral text, light borders and generous separation provide hierarchy; the old red title emphasis is removed. The own-brand red cell and existing original role marks retain their identities.
+Self-hosted IBM Plex Sans, licensed under SIL OFL 1.1 in `site/fonts/OFL-1.1.txt`, handles Latin text with platform Chinese sans fallbacks. The page makes no remote font request. Neutral text, light borders and generous separation provide hierarchy; the old red title emphasis is removed. The own-brand red cell remains unchanged.
 
-Each role mark is generated deterministically from a stable Bot ID. Ten work-area families give related roles a common visual vocabulary while individual geometry remains distinct. A language switch retains the same mark.
+Each Bot's existing `pal-*` avatar selects the same character used by the App. The 146 entries intentionally share 14 characters; role names identify the separate Bots. Cards, details and both languages retain that assignment, and configuration downloads already carry the matching avatar. The pinned MIT generators export static transparent SVGs with motion disabled, without requiring an installed App or a network service. See [App avatar maintenance](docs/app-avatars.md).
 
 ## Core tokens
 

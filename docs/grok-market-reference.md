@@ -15,7 +15,7 @@ Awesome Bot studies the public Grok Bot market's discovery and handoff patterns,
 
 An avatar setting does not establish that every market entry has a unique role logo. In three sampled detail pages—[dr eggbot](https://x.ai/bot/marketplace/bots/dr-eggbot-v2), [Outbound Prospecting](https://x.ai/bot/marketplace/bots/pg), and [Imogen](https://x.ai/bot/marketplace/bots/imogen)—the image links point into an asset directory named `img/creators`. That URL evidence cannot establish the depicted subject or prove uniqueness across all Bots. A visual review is a separate evidence step.
 
-Awesome Bot's role marks are independently generated for its stable IDs. They identify these implementations, not an official upstream avatar or a source creator's portrait. Creator names and source links remain attribution fields. No upstream avatar, private memory, conversation, account connection or original persona is copied into these templates.
+Awesome Bot uses its own OpenBot App characters, selected by the existing avatar field in each Bot configuration. These are not official upstream avatars or source creators' portraits. Repeated characters are intentional; Bot names distinguish roles. Creator names and source links remain attribution fields. No upstream avatar, private memory, conversation, account connection or original persona is copied into these templates.
 
 ## Loading context and importing a template are separate
 
@@ -37,6 +37,12 @@ The earlier 90-role inventory is a dated source snapshot. This review sampled th
 
 The user selected the Grok Bot marketplace as the visual reference for this iteration. The marketplace and dr eggbot detail were revisited on 2026-10-20; workspace-local screenshots record the rendered reference separately from the authored site.
 
-Awesome Bot adopts its neutral light surfaces, desktop category navigation, role-led card browsing and concise action hierarchy. The search, role identity, creator attribution and download are kept close together. Its own circular mark and original per-role SVGs remain. On phones the categories become a horizontal strip and cards use one column.
+Awesome Bot adopts its neutral light surfaces, desktop category navigation, role-led card browsing and concise action hierarchy. The search, role identity, creator attribution and download are kept close together. Its own circular mark remains; the 0.5.1 avatar correction uses the same App characters as the downloaded Bots. On phones the categories become a horizontal strip and cards use one column.
 
 The reference has a Featured section; Awesome Bot does not have editorial selection or popularity evidence for such a section, so this iteration keeps the complete, filterable collection. Its primary action is labelled Download config because the website produces a file. In details, download, Agent-reading copy and first-task copy form the main action group; documentation, source, edit and sharing remain available as quieter resource links.
+
+## Avatar correction recheck — 2026-10-21
+
+The public [marketplace](https://x.ai/bot/marketplace) and its linked [Guides](https://x.ai/bot/guides) were revisited for this bounded correction. The marketplace still presents creator/name search, category navigation, role summaries and separate detail links. The guides describe templates as starting recipes, which does not imply that each listing needs a unique picture.
+
+This text-level recheck does not establish what every creator image depicts or how the official App renders its avatars. An initially guessed documentation URL was not retrievable; that is a source-access limit, not evidence of a product failure. No reference artwork was copied. The implementation instead reuses the checked-in, MIT-licensed OpenBot App generators and existing assignments; [provenance and update procedure](app-avatars.md) record that separate source.
