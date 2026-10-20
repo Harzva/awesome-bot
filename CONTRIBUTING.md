@@ -27,6 +27,7 @@ Human-facing content is currently Chinese. English names and source titles can r
 npm ci --ignore-scripts
 npm run build
 npm run check
+npm run check:versions
 npm test
 npm run build:site
 npm run audit:public
@@ -43,3 +44,5 @@ Use the Bot submission or bug issue form. Keep account data, API keys, personal 
 ## 中文快速说明
 
 一个 PR 修改一个或少量相关的 `data/entries/*.json`。角色与工作流分开声明；社区原创无需 Grok 来源映射。写清职责、材料、步骤、交付、边界和示例，保留作者、版本与许可。执行上面的构建和检查命令，连同生成物一并提交。不要提交账号、记忆、聊天、凭据、未授权复制内容或虚构的验收结果。
+
+Published `templates/<slug>/<version>.json` bytes are immutable. Changes to a role require a new entry version; retain the older manifest. The local generator checks prospective output against Git history (or existing manifests in a source archive), and CI also checks the PR base or push-before snapshot and all available release tags. A synchronized manifest/index edit does not bypass this check. A source archive can compare its supplied snapshot with the build plan; external history verification requires Git history.

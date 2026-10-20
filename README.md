@@ -13,7 +13,7 @@ The repository builds independently after a clean clone. One JSON file per entry
 
 ## Find a Bot
 
-Use the [market](https://harzva.github.io/awesome-bot/) to search Chinese responsibilities or original English titles, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Downloads are configuration files; the website does not install into your App or connect your accounts.
+Use the [market](https://harzva.github.io/awesome-bot/) to search Chinese responsibilities or original English titles, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.
 
 - [90 role configurations](https://harzva.github.io/awesome-bot/exports/awesome-bot-roles.fleet.json)
 - [56 task workflows](https://harzva.github.io/awesome-bot/exports/awesome-bot-workflows.fleet.json)
@@ -33,6 +33,7 @@ git clone https://github.com/Harzva/awesome-bot.git
 cd awesome-bot
 npm ci
 npm run check
+npm run check:versions
 npm test
 npm run build:site
 npm run serve
@@ -57,6 +58,7 @@ Each entry lives in [`data/entries/`](data/entries). Submit a PR that changes on
 ```sh
 npm run build
 npm run check
+npm run check:versions
 npm test
 npm run build:site
 npm run audit:public

@@ -44,8 +44,8 @@
       "gutterDesktop": "24px",
       "gutterMedium": "16px",
       "gutterMobile": "12px",
-      "rowPaddingDesktop": "25px 0 23px",
-      "rowPaddingMobile": "22px 0 20px",
+      "rowPaddingDesktop": "19px 0 17px",
+      "rowPaddingMobile": "17px 0 15px",
       "section": "36px"
     },
     "radii": {
@@ -69,8 +69,8 @@
   ],
   "responsive": {
     "wide": "header, search, filters, list, and utility rail fit within 1180px; default side gutters are 24px",
-    "medium": "at max-width 930px the utility rail moves below the list; at max-width 760px side gutters become 16px",
-    "small": "at max-width 760px navigation simplifies and rows stack actions; at max-width 480px side gutters become 12px and the dialog has an 8px outer margin"
+    "medium": "at max-width 930px the utility rail moves below the list; at max-width 760px side gutters become 16px and the first result action stays beside its row content",
+    "small": "at max-width 760px navigation simplifies and rows keep the detail action beside the content; at max-width 480px side gutters become 12px and the dialog has an 8px outer margin"
   },
   "safety": {
     "entryText": "textContent or text nodes only",
@@ -83,18 +83,16 @@
     "focus": "visible outline plus soft focus-within shadow for the search field"
   },
   "qa": {
-    "status": "completed local-preview checks recorded by implementation and visual review; this documentation pass compared source text and existing review records",
+    "status": "v0.2.0 current build passed four viewport screenshots, independent visual review, runtime checks and final scoped layout scan (no findings)",
     "viewports": [
       "1280x720",
+      "1200x776",
       "390x844",
       "375x812"
     ],
     "capturedScenarios": [
-      "desktop directory",
-      "mobile directory at both recorded widths",
-      "mobile first result",
-      "detail dialog",
-      "empty results"
+      "initial directory at all four viewports, including the first title and detail action",
+      "English retry success with preserved query, collection and language"
     ],
     "sourceReviewedStates": [
       "loading",
@@ -106,15 +104,21 @@
       "keyboard focus",
       "reduced motion"
     ],
-    "evidenceDirectory": "research/awesome-bot-20261020/ui/",
+    "evidenceDirectory": "research/awesome-bot-20261020/v0.2.0/ui/",
     "evidenceVisibility": "workspace local acceptance evidence outside this Git repository; not public site assets or deployed links",
     "reviewFixEvidence": [
-      "awesome-bot-review-fix-1280x720.png",
-      "awesome-bot-review-fix-mobile-390x844.png",
-      "awesome-bot-review-fix-mobile-375x812.png",
-      "awesome-bot-review-fix-mobile-first-result.png",
-      "awesome-bot-review-fix-detail.png",
-      "awesome-bot-review-fix-empty.png"
+      "market-1280x720.jpg",
+      "market-1200x776.jpg",
+      "market-390x844.jpg",
+      "market-375x812.jpg",
+      "awesome-bot-fault-en-retry-1280x720.jpg"
+    ],
+    "runtimeChecks": [
+      "search and detail link copied feedback",
+      "Escape closes and restores opener focus",
+      "Forward reopens detail",
+      "reload of a detail link restores the dialog; close remains in the market",
+      "503 retry preserves English role search and recovers 9 results"
     ]
   }
 }

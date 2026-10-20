@@ -29,8 +29,8 @@
       originalNameSort: '来源名称', role: '角色', workflow: '任务', community: '社区条目',
       sourcePrefix: '来源：', sourceAuthor: '来源作者：', templateAuthor: '模板作者：', skills: '项技能', notTested: '真实任务未测试', viewDetails: '查看职责',
       save: '收藏', saved: '已收藏', loading: '正在加载目录…', loaded: '显示 {shown} / {total} 个条目',
-      filtered: '筛选后显示 {shown} / {total} 个条目', loadError: '目录文件尚未生成，请先运行 npm run build:site。',
-      noCatalogue: '目录暂不可用', noCatalogueBody: '构建目录后刷新此页面。',
+      filtered: '筛选后显示 {shown} / {total} 个条目', loadError: '目录加载失败，可以重试或先在 GitHub 浏览。',
+      noCatalogue: '目录暂不可用', noCatalogueBody: '请检查网络后重试，当前筛选会为你保留。',
       detailClose: '关闭详情', detailActions: '操作', download: '下载配置', manifest: '查看原始清单',
       original: '来源页面', edit: '编辑条目', mission: '职责', style: '工作方式', inputs: '输入',
       outputs: '输出', workflowSteps: '工作步骤', requirements: '使用前需要', skillsTitle: '技能',
@@ -38,6 +38,7 @@
       permissions: '权限需求', permissionNote: '以下是配置请求，不代表当前环境已授予。',
       tools: '工具', screen: '屏幕', container: '容器', requested: '需要', notRequested: '不需要',
       verification: '验收状态', format: '格式检查', realTask: '真实任务', passed: '已通过',
+      copyResults: '分享当前筛选', copyDetail: '复制 Bot 链接', shareSuccess: '链接已复制', retryCatalogue: '重新加载', retrying: '正在重试…', browseGitHub: '在 GitHub 浏览', missingDetail: '链接中的 Bot 已不在目录中，可继续搜索。',
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
@@ -63,8 +64,8 @@
       originalNameSort: 'Source name', role: 'Role', workflow: 'Task', community: 'Community entry',
       sourcePrefix: 'Source: ', sourceAuthor: 'Source author: ', templateAuthor: 'Template author: ', skills: 'skills', notTested: 'Real task not tested', viewDetails: 'View details',
       save: 'Save', saved: 'Saved', loading: 'Loading directory…', loaded: 'Showing {shown} / {total} entries',
-      filtered: 'Showing {shown} / {total} after filtering', loadError: 'The catalogue is not built yet. Run npm run build:site first.',
-      noCatalogue: 'Catalogue unavailable', noCatalogueBody: 'Build the catalogue, then refresh this page.',
+      filtered: 'Showing {shown} / {total} after filtering', loadError: 'The directory could not load. Retry or browse on GitHub.',
+      noCatalogue: 'Catalogue unavailable', noCatalogueBody: 'Check your connection and retry. Your filters will be kept.',
       detailClose: 'Close details', detailActions: 'Actions', download: 'Download config', manifest: 'View raw manifest',
       original: 'Source page', edit: 'Edit entry', mission: 'Mission', style: 'Working style', inputs: 'Inputs',
       outputs: 'Outputs', workflowSteps: 'Workflow steps', requirements: 'Needed before use', skillsTitle: 'Skills',
@@ -72,6 +73,7 @@
       permissions: 'Requested permissions', permissionNote: 'These are configuration requests, not grants in the current environment.',
       tools: 'Tools', screen: 'Screen', container: 'Container', requested: 'Requested', notRequested: 'Not requested',
       verification: 'Verification', format: 'Format', realTask: 'Real task', passed: 'Passed',
+      copyResults: 'Share this search', copyDetail: 'Copy Bot link', shareSuccess: 'Link copied', retryCatalogue: 'Retry loading', retrying: 'Retrying…', browseGitHub: 'Browse on GitHub', missingDetail: 'The linked Bot is no longer in the directory. You can keep searching.',
       notTestedValue: 'Not tested', noDetails: 'Not provided', copySuccess: 'Index URL copied', copyFailed: 'Copy failed. Copy it manually.'
     }
   };
@@ -87,7 +89,7 @@
     favorites: new Set(),
     language: 'zh',
     previousFocus: null,
-    error: false
+    error: false, loading: true, detailId: '', routeNotice: '', loadAttempt: 0
   };
 
   function valueText(value, fallback) {
@@ -191,7 +193,7 @@
       ...source,
       entries,
       categories: normalizeCategories(source, entries),
-      counts: { ...counts, ...(source.counts && typeof source.counts === 'object' ? source.counts : {}) }
+      counts
     };
   }
 
@@ -240,10 +242,95 @@
     return sortEntries(filtered, settings.sort);
   }
 
-  const api = { normalizeEntry, normalizeCatalogue, collectionOf, searchEntries, filterEntries, sortEntries };
+  function validateCatalogue(data) {
+    if (!data || data.schema !== 'awesome.bot.site/1' || !Array.isArray(data.entries) || !data.entries.length) {
+      throw new Error('Invalid catalogue');
+    }
+    const ids = new Set();
+    for (const entry of data.entries) {
+      if (!entry || typeof entry.id !== 'string' || !/^[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9._-]*$/.test(entry.id)
+        || ids.has(entry.id) || typeof entry.name !== 'string' || !entry.name.trim()
+        || !['roles', 'workflows'].includes(entry.collection)
+        || typeof entry.downloadUrl !== 'string' || !entry.downloadUrl.trim()) throw new Error('Invalid entry');
+      ids.add(entry.id);
+    }
+    return normalizeCatalogue(data);
+  }
+
+  async function requestCatalogue(fetcher, options) {
+    const settings = options || {};
+    const controller = typeof root.AbortController === 'function' ? new root.AbortController() : null;
+    let timer;
+    const timeout = new Promise((_, reject) => {
+      timer = root.setTimeout(() => {
+        reject(new Error('Catalogue request timed out'));
+        if (controller) controller.abort();
+      }, settings.timeoutMs || 12000);
+    });
+    const request = Promise.resolve().then(async () => {
+      const response = await fetcher('./catalogue.json', { cache: 'no-store', ...(controller ? { signal: controller.signal } : {}) });
+      if (!response || !response.ok) throw new Error('Catalogue request failed');
+      return validateCatalogue(await response.json());
+    });
+    try { return await Promise.race([request, timeout]); }
+    finally { root.clearTimeout(timer); }
+  }
+
+  const api = { normalizeEntry, normalizeCatalogue, collectionOf, searchEntries, filterEntries, sortEntries, validateCatalogue, requestCatalogue };
   root.AwesomeBotCatalog = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (!doc) return;
+
+  const navigation = root.AwesomeBotNavigation;
+  const navigator = navigation && navigation.createNavigator({ location: root.location, history: root.history });
+
+  function currentView() {
+    const { query, collection, category, sort, language, favoritesOnly, detailId } = state;
+    return { query, collection, category, sort, language, favoritesOnly, detailId };
+  }
+
+  function syncView(replace) {
+    state.routeNotice = '';
+    const notice = doc.getElementById('route-status');
+    if (notice) notice.hidden = true;
+    const status = doc.getElementById('share-status');
+    if (status) status.textContent = '';
+    if (navigator) navigator.write(currentView(), { replace: Boolean(replace) });
+  }
+
+  function applyRoute(force) {
+    if (!navigator) return;
+    const view = navigator.read();
+    state.routeNotice = '';
+    let canonicalize = false;
+    if (state.catalogue && view.category !== 'all' && !state.catalogue.categories.some((item) => item.id === view.category)) {
+      view.category = 'all'; canonicalize = true;
+    }
+    const changed = ['query', 'collection', 'category', 'sort', 'language', 'favoritesOnly'].some((key) => state[key] !== view[key]);
+    const desiredId = view.detailId;
+    for (const key of ['query', 'collection', 'category', 'sort', 'language', 'favoritesOnly']) state[key] = view[key];
+    if (changed || force) {
+      const input = doc.getElementById('search-input');
+      const sort = doc.getElementById('sort-select');
+      if (input) input.value = state.query;
+      if (sort) sort.value = state.sort;
+      setLanguageCopy(); renderCollections(); renderCategories(); renderResults();
+    }
+    const dialog = doc.getElementById('detail-dialog');
+    if (state.catalogue) {
+      const entry = state.entries.find((item) => item.id === desiredId);
+      if (entry) {
+        if (state.detailId !== desiredId || !dialog.open || changed) openDetail(entry, true);
+      } else {
+        state.detailId = '';
+        if (dialog && dialog.open) dialog.close();
+        if (desiredId) { state.routeNotice = 'missingDetail'; canonicalize = true; }
+      }
+    } else state.detailId = desiredId;
+    const notice = doc.getElementById('route-status');
+    if (notice) { notice.hidden = !state.routeNotice; setText(notice, state.routeNotice ? label(state.routeNotice) : ''); }
+    if (canonicalize) navigator.write(currentView(), { replace: true });
+  }
 
   function currentCopy() {
     return copy[state.language] || copy.zh;
@@ -300,7 +387,7 @@
       if (node.id === 'page-title') {
         node.replaceChildren();
         if (state.language === 'zh') {
-          node.append('找到一个，', doc.createElement('br'));
+          node.append('找到一个，');
           const emphasis = make('em', '', '把事情推进下去。');
           node.append(emphasis);
         } else {
@@ -323,6 +410,8 @@
       sortSelect.options[0].textContent = label('nameSort');
       sortSelect.options[1].textContent = label('originalNameSort');
     }
+    const language = doc.getElementById('language-toggle');
+    if (language) language.textContent = state.language === 'zh' ? 'EN' : '中';
     updateHeader();
   }
 
@@ -437,6 +526,7 @@
       button.addEventListener('click', () => {
         state.category = category.id;
         select.value = state.category;
+        syncView(false);
         renderCategories();
         renderResults();
       });
@@ -466,15 +556,21 @@
       favoritesOnly: state.favoritesOnly, favorites: state.favorites, sort: state.sort
     });
     results.replaceChildren();
-    results.setAttribute('aria-busy', 'false');
+    results.setAttribute('aria-busy', state.loading ? 'true' : 'false');
     setText(searchCount, filtered.length ? filtered.length.toLocaleString() : '0');
+    const retry = doc.getElementById('retry-catalogue');
+    const browse = doc.getElementById('browse-github');
+    if (retry) { retry.hidden = !state.error; retry.disabled = state.loading; setText(retry, label(state.loading ? 'retrying' : 'retryCatalogue')); }
+    if (browse) browse.hidden = !state.error;
+    const share = doc.getElementById('copy-results');
+    if (share) share.disabled = !navigation;
     if (state.error) {
       empty.hidden = false;
       setText(empty.querySelector('h3'), label('noCatalogue'));
       setText(empty.querySelector('p'), label('noCatalogueBody'));
       const clear = empty.querySelector('#clear-filters');
       if (clear) clear.hidden = true;
-      setText(status, label('loadError'));
+      setText(status, label(state.loading ? 'loading' : 'loadError'));
       return;
     }
     const clear = empty.querySelector('#clear-filters');
@@ -482,9 +578,9 @@
     empty.hidden = filtered.length !== 0 || state.entries.length === 0;
     setText(empty.querySelector('h3'), label('emptyTitle'));
     setText(empty.querySelector('p'), label('emptyBody'));
-    const statusText = state.query || state.collection !== 'all' || state.category !== 'all' || state.favoritesOnly
+    const statusText = state.loading ? label('loading') : (state.query || state.collection !== 'all' || state.category !== 'all' || state.favoritesOnly
       ? formatLabel('filtered', { shown: filtered.length, total: state.entries.length })
-      : (state.entries.length ? formatLabel('loaded', { shown: filtered.length, total: state.entries.length }) : label('loading'));
+      : (state.entries.length ? formatLabel('loaded', { shown: filtered.length, total: state.entries.length }) : label('loading')));
     setText(status, statusText);
     filtered.forEach((entry) => results.append(renderResult(entry)));
   }
@@ -501,6 +597,7 @@
     const titleButton = make('button', 'entry-title', entry.name);
     titleButton.type = 'button';
     titleButton.setAttribute('aria-haspopup', 'dialog');
+    titleButton.dataset.detailId = entry.id;
     titleButton.addEventListener('click', () => openDetail(entry));
     title.append(titleButton);
     const summary = make('p', 'entry-summary', entry.summary);
@@ -522,6 +619,7 @@
     const details = make('button', 'detail-button', label('viewDetails'));
     details.type = 'button';
     details.setAttribute('aria-haspopup', 'dialog');
+    details.dataset.detailId = entry.id;
     details.addEventListener('click', () => openDetail(entry));
     actions.append(favorite, details);
     article.append(main, actions);
@@ -637,11 +735,14 @@
     }
   }
 
-  function openDetail(entry) {
+  function openDetail(entry, fromRoute) {
     const dialog = doc.getElementById('detail-dialog');
     const content = doc.getElementById('detail-content');
     if (!dialog || !content) return;
-    state.previousFocus = doc.activeElement;
+    if (!dialog.open) state.previousFocus = doc.activeElement;
+    if (!fromRoute && navigator) navigator.open(currentView(), entry.id);
+    state.detailId = entry.id;
+    doc.title = `${entry.name} · Awesome Bot`;
     const shell = make('div', 'detail-shell');
     const header = make('header', 'detail-header');
     const title = make('h2', '', entry.name);
@@ -668,7 +769,15 @@
     appendAction(actions, entry.manifestUrl, label('manifest'), false, false);
     appendAction(actions, entry.originalUrl, label('original'), false, false);
     appendAction(actions, entry.editUrl, label('edit'), false, false);
-    if (actions.childNodes.length) shell.append(actions);
+    const share = make('button', 'detail-action secondary', label('copyDetail'));
+    share.type = 'button';
+    share.disabled = !navigation;
+    const copyStatus = make('p', 'copy-status');
+    copyStatus.id = 'detail-copy-status';
+    copyStatus.setAttribute('role', 'status');
+    share.addEventListener('click', () => copyShare(copyStatus, true));
+    actions.append(share);
+    shell.append(actions, copyStatus);
 
     appendTextSection(shell, label('mission'), entry.mission);
     appendTextSection(shell, label('style'), entry.style);
@@ -692,7 +801,9 @@
     appendPermissions(shell, entry.permissions);
     appendVerification(shell, entry);
     content.replaceChildren(shell);
-    if (typeof dialog.showModal === 'function') dialog.showModal(); else dialog.setAttribute('open', '');
+    if (!dialog.open) {
+      if (typeof dialog.showModal === 'function') dialog.showModal(); else dialog.setAttribute('open', '');
+    }
     close.focus();
   }
 
@@ -702,6 +813,7 @@
     state.category = 'all';
     state.sort = 'name';
     state.favoritesOnly = false;
+    syncView(false);
     const input = doc.getElementById('search-input');
     const select = doc.getElementById('sort-select');
     if (input) input.value = '';
@@ -711,55 +823,75 @@
     renderResults();
   }
 
-  async function copyIndex() {
-    const status = doc.getElementById('copy-status');
+  async function copyText(value, status, success) {
+    const previous = doc.activeElement;
+    let textarea;
+    try {
+      if (root.navigator && root.navigator.clipboard && root.navigator.clipboard.writeText) {
+        await root.navigator.clipboard.writeText(value);
+      } else {
+        textarea = make('textarea');
+        textarea.value = value;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        // Keep the fallback inside the active modal so it is not inert.
+        const dialog = doc.getElementById('detail-dialog');
+        (dialog && dialog.open ? dialog : doc.body).append(textarea);
+        textarea.select();
+        if (!doc.execCommand('copy')) throw new Error('Copy denied');
+      }
+      setText(status, label(success));
+    } catch (_) {
+      setText(status, `${label('copyFailed')} ${value}`);
+    } finally {
+      if (textarea) textarea.remove();
+      if (previous && previous.isConnected && typeof previous.focus === 'function') previous.focus();
+    }
+  }
+
+  function copyIndex() {
     const raw = state.catalogue && state.catalogue.registryUrl || 'registry/index.json';
     const href = safeHref(raw) || 'registry/index.json';
     const absolute = new URL(href, root.location && root.location.href || 'https://harzva.github.io/awesome-bot/').href;
-    try {
-      if (root.navigator && root.navigator.clipboard && root.navigator.clipboard.writeText) {
-        await root.navigator.clipboard.writeText(absolute);
-      } else {
-        const textarea = make('textarea');
-        textarea.value = absolute;
-        textarea.style.position = 'fixed';
-        textarea.style.opacity = '0';
-        doc.body.append(textarea);
-        textarea.select();
-        doc.execCommand('copy');
-        textarea.remove();
-      }
-      setText(status, label('copySuccess'));
-    } catch (_) {
-      setText(status, label('copyFailed'));
-    }
+    return copyText(absolute, doc.getElementById('copy-status'), 'copySuccess');
+  }
+
+  function copyShare(status, includeDetail) {
+    if (!navigation) return;
+    const url = navigation.shareURL({ ...currentView(), detailId: includeDetail ? state.detailId : '' }, root.location.href);
+    return copyText(url, status, 'shareSuccess');
   }
 
   function bindEvents() {
     const input = doc.getElementById('search-input');
     input && input.addEventListener('input', (event) => {
-      state.query = event.target.value;
+      state.query = Array.from(event.target.value).slice(0, 240).join('');
+      syncView(true);
       renderResults();
     });
     doc.querySelectorAll('.collection-tab').forEach((button) => button.addEventListener('click', () => {
       state.collection = button.dataset.collection || 'all';
+      syncView(false);
       renderCollections();
       renderResults();
     }));
     const categorySelect = doc.getElementById('category-select');
     categorySelect && categorySelect.addEventListener('change', (event) => {
       state.category = event.target.value;
+      syncView(false);
       renderCategories();
       renderResults();
     });
     const sortSelect = doc.getElementById('sort-select');
     sortSelect && sortSelect.addEventListener('change', (event) => {
       state.sort = event.target.value;
+      syncView(false);
       renderResults();
     });
     const favoriteToggle = doc.getElementById('favorites-toggle');
     favoriteToggle && favoriteToggle.addEventListener('click', () => {
       state.favoritesOnly = !state.favoritesOnly;
+      syncView(false);
       renderCollections();
       renderResults();
     });
@@ -768,7 +900,7 @@
     const language = doc.getElementById('language-toggle');
     language && language.addEventListener('click', () => {
       state.language = state.language === 'zh' ? 'en' : 'zh';
-      language.textContent = state.language === 'zh' ? 'EN' : '中';
+      syncView(true);
       setLanguageCopy();
       renderCollections();
       renderCategories();
@@ -776,31 +908,48 @@
     });
     const copyButton = doc.getElementById('copy-index');
     copyButton && copyButton.addEventListener('click', copyIndex);
+    const copyResults = doc.getElementById('copy-results');
+    copyResults && copyResults.addEventListener('click', () => copyShare(doc.getElementById('share-status'), false));
+    const retry = doc.getElementById('retry-catalogue');
+    retry && retry.addEventListener('click', loadCatalogue);
+    root.addEventListener('popstate', () => applyRoute(false));
     const dialog = doc.getElementById('detail-dialog');
     dialog && dialog.addEventListener('click', (event) => {
       if (event.target === dialog) dialog.close();
     });
     dialog && dialog.addEventListener('close', () => {
+      if (dialog.open) return;
+      const detailId = state.detailId;
+      state.detailId = '';
+      doc.title = 'Awesome Bot — 可审阅的 Bot 目录';
       const previous = state.previousFocus;
       state.previousFocus = null;
-      if (previous && typeof previous.focus === 'function') previous.focus();
+      if (previous && previous.isConnected && typeof previous.focus === 'function' && previous !== doc.body) previous.focus();
+      else { const search = doc.getElementById('search-input'); if (search) search.focus({ preventScroll: true }); }
+      if (detailId && navigator) navigator.close({ ...currentView(), detailId });
     });
   }
 
   async function loadCatalogue() {
+    const attempt = ++state.loadAttempt;
+    state.loading = true;
+    renderResults();
     try {
-      const response = await root.fetch('./catalogue.json', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`catalogue ${response.status}`);
-      state.catalogue = normalizeCatalogue(await response.json());
-      state.entries = state.catalogue.entries;
+      const catalogue = await requestCatalogue(root.fetch.bind(root));
+      if (attempt !== state.loadAttempt) return;
+      state.catalogue = catalogue;
+      state.entries = catalogue.entries;
       state.error = false;
-      renderCategories();
+      state.loading = false;
+      applyRoute(true);
       updateHeader();
       renderResults();
     } catch (_) {
+      if (attempt !== state.loadAttempt) return;
       state.catalogue = null;
       state.entries = [];
       state.error = true;
+      state.loading = false;
       updateHeader();
       renderResults();
     }
@@ -808,6 +957,11 @@
 
   function init() {
     readFavorites();
+    if (navigator) Object.assign(state, navigator.read());
+    const search = doc.getElementById('search-input');
+    const sort = doc.getElementById('sort-select');
+    if (search) search.value = state.query;
+    if (sort) sort.value = state.sort;
     setLanguageCopy();
     bindEvents();
     renderCollections();

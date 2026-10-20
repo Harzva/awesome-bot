@@ -30,7 +30,7 @@
     <main id="catalog">
       <section class="masthead" aria-labelledby="page-title">
         <div class="masthead-copy">
-          <h1 id="page-title" data-i18n="title">找到一个，<br><em>把事情推进下去。</em></h1>
+          <h1 id="page-title" data-i18n="title">找到一个，<em>把事情推进下去。</em></h1>
           <p id="page-lede" class="lede" data-i18n="lede">按角色和任务查找中文 Bot。看清职责、步骤和权限需求，再下载可复现的配置。</p>
         </div>
         <div class="masthead-note" aria-label="目录说明">
@@ -44,7 +44,7 @@
         <label id="search-label" class="sr-only" for="search-input" data-i18n="searchLabel">搜索 Bot</label>
         <div class="search-shell">
           <span class="search-symbol" aria-hidden="true"></span>
-          <input id="search-input" type="search" autocomplete="off" spellcheck="false" placeholder="搜索名称、职责、标签或来源" data-i18n-placeholder="searchPlaceholder">
+          <input id="search-input" type="search" maxlength="240" autocomplete="off" spellcheck="false" placeholder="搜索名称、职责、标签或来源" data-i18n-placeholder="searchPlaceholder">
           <span id="search-count" class="search-count" aria-live="polite">—</span>
         </div>
         <p class="search-hint" data-i18n="searchHint">支持中文名称、摘要、标签、来源名称和条目 ID</p>
@@ -88,14 +88,21 @@
             <div>
               <h2 id="results-title"><span data-i18n="resultsTitle">全部条目</span> <span id="results-total" class="heading-count">—</span></h2>
             </div>
-            <p id="results-status" class="results-status" aria-live="polite">正在加载目录…</p>
+            <div class="results-heading-tools">
+              <p id="results-status" class="results-status" aria-live="polite">正在加载目录…</p>
+              <button id="copy-results" class="text-button copy-results" type="button" data-i18n="copyResults">复制筛选</button>
+              <p id="share-status" class="copy-status" role="status" aria-live="polite"></p>
+            </div>
           </div>
+          <p id="route-status" class="route-status" role="status" hidden></p>
           <div id="results" class="results-list" aria-live="polite" aria-busy="true"></div>
           <div id="empty-state" class="empty-state" hidden>
             <span class="empty-mark" aria-hidden="true">/</span>
             <h3 data-i18n="emptyTitle">没有匹配的 Bot</h3>
             <p data-i18n="emptyBody">换一个关键词，或清除筛选后再试。</p>
             <button id="clear-filters" class="text-button" type="button" data-i18n="clearFilters">清除筛选</button>
+            <button id="retry-catalogue" class="text-button" type="button" data-i18n="retryCatalogue" hidden>重新加载目录</button>
+            <a id="browse-github" class="text-button" href="https://github.com/Harzva/awesome-bot/blob/main/CATALOGUE.md" target="_blank" rel="noreferrer" data-i18n="browseGitHub" hidden>查看 GitHub 目录</a>
           </div>
         </section>
 
@@ -136,6 +143,7 @@
     <noscript>
       <div class="no-script">需要启用 JavaScript 才能搜索和查看目录。</div>
     </noscript>
+    <script src="./navigation.js" defer></script>
     <script src="./app.js" defer></script>
   </body>
 </html>

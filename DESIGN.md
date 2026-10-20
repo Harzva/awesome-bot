@@ -21,7 +21,7 @@ The screenshot does not expose the reference list rows, detail behavior, mobile 
 2. The masthead explains the job of the directory in Chinese by default. Its red sentence fragment creates a memorable accent without introducing a promotional hero.
 3. A high-contrast search field accepts Chinese names, summaries, tags, source names, and IDs. The result count is inside the same control line.
 4. Collection controls divide `全部`, `角色`, and `任务` as a labelled button group with pressed state. Category, sort, and saved-only controls sit beside them on wide screens and wrap on narrow screens.
-5. Work-area chips provide a quick horizontal scan. The results are thin-rule rows with a source label, summary, a small amount of metadata, a saved toggle, and a detail action.
+5. Work-area chips provide a quick horizontal scan. The compact preamble keeps the first thin-rule result row within the initial viewport, with a source label, summary, a small amount of metadata, a saved toggle, and a detail action.
 6. The right rail carries bulk downloads, provenance guidance, and the machine-readable registry link. It collapses below the list on smaller widths.
 7. A native dialog gives each entry a reviewable detail surface: mission, style, inputs, outputs, steps, requirements, skills, guidance, requested permissions, verification status, and safe links to manifests and sources.
 
@@ -58,18 +58,27 @@ Typography uses self-hosted IBM Plex Sans weights for Latin interface text, lice
 - Permission rows describe requested configuration capabilities only. They do not imply that tools, screen access, or a container have been granted.
 - Source authors and template authors retain distinct labels. Format and import checks do not certify real task execution.
 - All entry content is inserted with `textContent` or text nodes. Link targets accept `https:` or site-relative paths only; unsupported schemes are omitted.
-- Missing catalogue data shows an explicit build-state empty view. A zero-result search shows a separate empty state with a clear-filters action.
+- Loading is bounded to 12 seconds. Failure shows a retry action and GitHub catalogue fallback while keeping the current filters. A zero-result search has its own clear-filters action.
+- Controlled URLs restore search, filters, language and Bot details through refresh and browser navigation. Shared links omit saved-only state and unknown query data; missing Bot links show a notice.
 
 ## Responsive and accessibility notes
 
 - The content width is capped at 1180px. Side gutters are 24px by default, 16px at widths up to 760px, and 12px at widths up to 480px.
-- At widths up to 930px, the utility rail moves below the results. At widths up to 760px, navigation and toolbar controls simplify while result actions move below each row. The detail dialog becomes a near-full-screen sheet at widths up to 480px.
+- At widths up to 930px, the utility rail moves below the results. At widths up to 760px, navigation and toolbar controls simplify while result actions stay aligned beside each row's content so the first detail action remains reachable without an extra scroll. The detail dialog becomes a near-full-screen sheet at widths up to 480px.
+- The acceptance viewports are 1280 × 720, 1200 × 776, 390 × 844, and 375 × 812. Each initial view keeps the search field and the first result title plus detail action together; category chips remain a thin horizontal scan line.
 - Native buttons, labels, selects, and dialog semantics provide keyboard access. Focus rings use a blue outline or a soft blue focus-within shadow and remain visible on the paper palette.
 - `aria-live` announces result counts and copy status. The list exposes busy state while the catalogue loads.
 - `prefers-reduced-motion: reduce` removes smooth scrolling and reduces transition and animation duration to 0.01ms.
 
-## Visual QA record
+## Version 0.1 visual QA record
 
 The implementation and visual review recorded completed local-preview checks at 1280 × 720, 390 × 844, and 375 × 812. The review-fix evidence set includes `awesome-bot-review-fix-1280x720.png`, `awesome-bot-review-fix-mobile-390x844.png`, `awesome-bot-review-fix-mobile-375x812.png`, `awesome-bot-review-fix-mobile-first-result.png`, `awesome-bot-review-fix-detail.png`, and `awesome-bot-review-fix-empty.png`.
 
-The reference and acceptance screenshots are local evidence in the workspace's `research/awesome-bot-20261020/ui/` directory, outside this Git repository. They are not public site assets or deployed links. The reference remains evidence only and is not copied into public assets. This documentation pass compared source text and existing review records; it did not inspect screenshots or run another visual review.
+The reference and acceptance screenshots are local evidence in the workspace's `research/awesome-bot-20261020/ui/` directory, outside this Git repository. They are not public site assets or deployed links. The reference remains evidence only and is not copied into public assets. That version 0.1 documentation pass compared source text and existing review records.
+
+
+## Version 0.2 acceptance
+
+Current-build screenshots at 1280 × 720, 1200 × 776, 390 × 844, and 375 × 812 passed independent visual review. The first result title and detail action are visible at every size; phone widths have no document-level horizontal overflow. Scoped final layout detection reported no findings.
+
+Browser checks covered search and Bot-link copy feedback, Escape and opener focus, Forward, refresh of a direct detail link, and closing without leaving the market. A separate 503 fixture recovered with Retry while preserving the English role search and its 9 matching entries. Evidence remains workspace-local outside the public repository, under `research/awesome-bot-20261020/v0.2.0/ui/`.

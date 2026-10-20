@@ -219,7 +219,7 @@ main,
   align-items: flex-end;
   justify-content: space-between;
   gap: 40px;
-  padding: 67px 0 45px;
+  padding: 35px 0 23px;
 }
 
 .masthead-copy {
@@ -251,13 +251,14 @@ h3 {
 
 h1 {
   max-width: 760px;
-  margin-bottom: 22px;
-  font-size: clamp(2.55rem, 6vw, 5rem);
+  margin-bottom: 17px;
+  font-size: clamp(2.4rem, 5.2vw, 4.5rem);
   font-weight: 750;
   line-height: 0.98;
 }
 
 h1 em {
+  display: inline-block;
   color: var(--accent);
   font-style: normal;
 }
@@ -267,14 +268,14 @@ h1 em {
   margin-bottom: 0;
   color: var(--muted);
   font-size: clamp(1rem, 1.5vw, 1.17rem);
-  line-height: 1.7;
+  line-height: 1.58;
 }
 
 .masthead-note {
   display: grid;
   flex: 0 0 170px;
-  gap: 7px;
-  padding-bottom: 8px;
+  gap: 5px;
+  padding-bottom: 3px;
   color: var(--muted);
   font-size: 12px;
 }
@@ -303,7 +304,7 @@ h1 em {
 
 .search-section {
   max-width: 800px;
-  padding-bottom: 36px;
+  padding-bottom: 24px;
 }
 
 .search-shell {
@@ -389,8 +390,8 @@ a[target="_blank"]::after {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 67px;
-  padding: 13px 0;
+  min-height: 60px;
+  padding: 10px 0;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--line);
 }
@@ -460,14 +461,14 @@ a[target="_blank"]::after {
 }
 
 .category-strip {
-  padding: 26px 0 36px;
+  padding: 15px 0 17px;
 }
 
 .strip-heading {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 
 .strip-heading h2 {
@@ -524,7 +525,7 @@ a[target="_blank"]::after {
   grid-template-columns: minmax(0, 1fr) 245px;
   gap: 58px;
   align-items: start;
-  padding-bottom: 72px;
+  padding-bottom: 60px;
 }
 
 .results-heading {
@@ -532,8 +533,8 @@ a[target="_blank"]::after {
   align-items: flex-end;
   justify-content: space-between;
   gap: 20px;
-  min-height: 61px;
-  margin-bottom: 8px;
+  min-height: 50px;
+  margin-bottom: 5px;
   border-bottom: 1px solid var(--ink);
 }
 
@@ -542,9 +543,18 @@ a[target="_blank"]::after {
 }
 
 .results-heading h2 {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   font-size: 22px;
   font-weight: 700;
+}
+
+.results-heading-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 10px;
+  min-width: 0;
 }
 
 .heading-count {
@@ -556,10 +566,31 @@ a[target="_blank"]::after {
 
 .results-status {
   max-width: 250px;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
   color: var(--muted);
   font-size: 12px;
   text-align: right;
+}
+
+.copy-results {
+  padding: 6px 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.results-heading-tools .copy-status {
+  min-height: 0;
+  margin: 0;
+}
+
+.results-heading-tools .copy-status:empty {
+  display: none;
+}
+
+.route-status {
+  margin: 5px 0 0;
+  color: var(--accent);
+  font-size: 12px;
 }
 
 .results-list {
@@ -571,8 +602,8 @@ a[target="_blank"]::after {
   align-items: flex-start;
   justify-content: space-between;
   gap: 25px;
-  min-height: 150px;
-  padding: 25px 0 23px;
+  min-height: 132px;
+  padding: 19px 0 17px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -663,7 +694,7 @@ a[target="_blank"]::after {
   flex-direction: column;
   align-items: flex-end;
   gap: 9px;
-  padding-top: 26px;
+  padding-top: 20px;
 }
 
 .favorite-button,
@@ -823,7 +854,7 @@ a[target="_blank"]::after {
 }
 
 .empty-state {
-  padding: 63px 0 70px;
+  padding: 48px 0 58px;
   border-bottom: 1px solid var(--ink);
 }
 
@@ -846,6 +877,15 @@ a[target="_blank"]::after {
   font-size: 14px;
 }
 
+.empty-state .text-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.empty-state .text-button + .text-button {
+  margin-left: 8px;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -862,6 +902,30 @@ a[target="_blank"]::after {
 
 .site-footer a {
   text-underline-offset: 4px;
+}
+
+@media (min-width: 761px) {
+  .category-strip {
+    padding-bottom: 4px;
+  }
+
+  .results-heading {
+    min-height: 42px;
+  }
+
+  .result-row {
+    padding-top: 17px;
+  }
+
+  .result-actions {
+    gap: 3px;
+    padding-top: 0;
+  }
+
+  .favorite-button,
+  .detail-button {
+    padding-block: 4px;
+  }
 }
 
 .detail-dialog {
@@ -1144,14 +1208,14 @@ a[target="_blank"]::after {
 
   .masthead {
     display: block;
-    padding: 49px 0 34px;
+    padding: 31px 0 21px;
   }
 
   .masthead-note {
     display: flex;
     align-items: baseline;
     gap: 8px;
-    padding-top: 22px;
+    padding-top: 14px;
   }
 
   .note-rule {
@@ -1161,11 +1225,11 @@ a[target="_blank"]::after {
 
   .catalog-toolbar {
     display: block;
-    padding: 12px 0 14px;
+    padding: 9px 0 10px;
   }
 
   .collection-tabs {
-    margin-bottom: 13px;
+    margin-bottom: 9px;
   }
 
   .toolbar-controls {
@@ -1196,27 +1260,39 @@ a[target="_blank"]::after {
   }
 
   .results-heading {
-    align-items: flex-start;
-    display: block;
+    align-items: end;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: 48px;
+  }
+
+  .results-heading-tools {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .results-status {
-    max-width: none;
-    margin-bottom: 11px;
-    text-align: left;
+    max-width: 160px;
+    margin-bottom: 0;
+    text-align: right;
   }
 
   .result-row {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
     min-height: 0;
-    padding: 22px 0 20px;
+    padding: 17px 0 15px;
   }
 
   .result-actions {
-    flex-direction: row;
-    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: flex-end;
     justify-content: flex-start;
-    padding-top: 14px;
+    padding-top: 20px;
   }
 
   .detail-grid,
@@ -1241,7 +1317,7 @@ a[target="_blank"]::after {
   }
 
   h1 {
-    font-size: clamp(2.05rem, 10vw, 2.55rem);
+    font-size: clamp(2rem, 9.2vw, 2.35rem);
   }
 
   .search-shell {
@@ -1263,6 +1339,19 @@ a[target="_blank"]::after {
     min-width: 48px;
     padding: 0 12px 0 5px;
     font-size: 12px;
+  }
+
+  .category-strip {
+    padding: 12px 0 12px;
+  }
+
+  .strip-heading {
+    margin-bottom: 7px;
+  }
+
+  .empty-state .text-button + .text-button {
+    margin-top: 8px;
+    margin-left: 0;
   }
 
   .toolbar-controls {

@@ -1,6 +1,7 @@
 import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve, relative } from 'node:path';
 import { engineModule, root, readCatalogue } from './engine.mjs';
+import { assertVersionImmutability } from './check-versions.mjs';
 
 const { validateManifest, integrityOf, REGISTRY_SCHEMA } = await engineModule('manifest');
 const { validateRegistry } = await engineModule('registry');
@@ -193,6 +194,9 @@ async function jsonFiles(dir) {
   }
   return paths;
 }
+// Check the prospective output against the prior Git snapshot and released
+// ancestors before writing any manifest or updating its integrity index.
+await assertVersionImmutability({ root, planned: expected });
 for (const [file, content] of expected) {
   const target = resolve(root, file);
   if (check) {

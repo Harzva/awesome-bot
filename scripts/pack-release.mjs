@@ -164,8 +164,12 @@ export async function packRelease({ root = ROOT, outDir = resolve(ROOT, 'dist/re
       scope: 'Original declarative templates. Schema and export checks do not certify real-account task execution.'
     };
     assets.push({ name: 'release-manifest.json', data: Buffer.from(`${JSON.stringify(manifest, null, 2)}\n`) });
+    const changelog = await readFile(resolve(root, 'CHANGELOG.md'), 'utf8');
+    const changes = changelog.split(/^## /m).find(section => section.startsWith(`${version} `) || section.startsWith(`${version}\n`));
+    const changeBody = changes ? changes.split('\n').slice(1).join('\n').trim() : '';
     const notes = [
       `# Awesome Bot v${version}`, '',
+      ...(changeBody ? [changeBody, ''] : []),
       `${counts.roles} original Bot roles and ${counts.workflows} task workflows (${counts.all} template configurations).`, '',
       '- Every entry retains its source and implementation attribution.',
       '- Download a collection Fleet file for a configuration import, or the archive for the complete standalone project and static marketplace.',
