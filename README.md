@@ -11,6 +11,12 @@ The initial collection contains **90 original role templates** corresponding to 
 
 The repository builds independently after a clean clone. One JSON file per entry generates the documentation, searchable website, manifests, index and configuration downloads. No account or backend is required to browse.
 
+## Start with a task
+
+Choose a scenario in the [market](https://harzva.github.io/awesome-bot/) to get 1–2 relevant Bots, the materials to prepare, a first task you can copy, and a small configuration download. Begin with [a customer meeting](https://harzva.github.io/awesome-bot/?scenario=customer-meeting), or read the generated [first-use guide](START_HERE.md). You review each output and pass it to the next Bot; the scenario download does not execute a workflow.
+
+Every Bot detail also offers its existing first-task example and a feedback form prefilled with the public Bot ID, template version and source. Supply your own materials when starting a task; keep private account or task data out of public feedback.
+
 ## Find a Bot
 
 Use the [market](https://harzva.github.io/awesome-bot/) to search Chinese responsibilities or original English titles, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.

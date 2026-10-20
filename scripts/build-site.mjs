@@ -2,6 +2,7 @@ import { mkdir, readdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
 import { resolve, join, dirname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { root, readCatalogue, engineModule } from './engine.mjs';
+import { loadScenarios } from './scenarios.mjs';
 
 const args = process.argv.slice(2);
 if (args.some(arg => !arg.startsWith('--out='))) throw new Error('Usage: node scripts/build-site.mjs [--out=<directory>]');
@@ -13,6 +14,7 @@ if (previous.length && !previous.includes('.awesome-bot-build')) throw new Error
 // Require a reviewed, current manifest snapshot. This never regenerates source.
 execFileSync(process.execPath, [resolve(root, 'scripts/build.mjs'), '--check'], { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 const metadata = await readCatalogue();
+const recipes = await loadScenarios(metadata);
 const inventory = JSON.parse(await readFile(resolve(root, 'sources/grok-inventory.json'), 'utf8'));
 const { loadCatalogue } = await engineModule('catalogue');
 const { createLoader } = await engineModule('sources');
@@ -22,6 +24,7 @@ const registry = await loadCatalogue([resolve(root, 'registry/index.json')]);
 const loader = createLoader(registry);
 const entries = [];
 const fleets = new Map();
+const plansById = new Map();
 const now = Date.parse(metadata.updatedAt);
 const repo = 'https://github.com/Harzva/awesome-bot';
 const json = value => `${JSON.stringify(value, null, 2)}\n`;
@@ -38,6 +41,7 @@ await writeFile(resolve(output, '.nojekyll'), '');
 for (const bot of metadata.bots) {
   const plan = await buildPlan({ id: bot.id, entries: registry.entries, loadManifest: loader, openbotVersion: metadata.targetOpenBotVersion || '0.9.9' });
   if (!plan.ok || plan.bots.length !== 1) throw new Error(`Invalid single template plan: ${bot.id}: ${plan.errors?.join('; ')}`);
+  plansById.set(bot.id, plan);
   const built = materialize(plan, { now });
   if (!built.ok) throw new Error(built.message);
   const slug = bot.id.split('/')[1];
@@ -58,6 +62,7 @@ for (const bot of metadata.bots) {
     collection, category: bot.category, summary: bot.summary, mission: bot.mission, style: bot.style,
     inputs: bot.inputs, outputs: bot.outputs, workflow: bot.workflow,
     requirements: bot.requirements, skills: bot.skills, persona: manifest.bot.persona,
+    starterPrompt: bot.example?.prompt || '',
     guidance: { welcome: bot.welcome, quickPrompts: bot.quickPrompts, taskExamples: [bot.example] },
     permissions: manifest.permissions, capabilities: bot.capabilities,
     originalUrl: source?.url || bot.references[0]?.url || '',
@@ -80,9 +85,23 @@ for (const collection of ['roles', 'workflows', 'all']) {
   if (!built.ok || built.bundle.bots.length !== bots.length) throw new Error(`Incomplete ${collection} export`);
   await writeFile(resolve(output, downloads[collection]), json(built.bundle));
 }
+const scenarios = [];
+for (const recipe of recipes) {
+  const selected = recipe.botIds.flatMap(id => plansById.get(id)?.bots || []);
+  if (selected.length !== recipe.steps.length) throw new Error(`Incomplete scenario plan: ${recipe.id}`);
+  const built = materialize({
+    ok: true, id: `awesome/scenario-${recipe.id}`, kind: 'bulk-export', rootVersion: '1.0.0',
+    bots: selected, sharedSkills: [], workflow: [], warnings: [],
+    permissions: { tools: false, container: false, screen: false }
+  }, { now });
+  if (!built.ok || built.bundle.bots.length !== recipe.steps.length) throw new Error(`Incomplete scenario export: ${recipe.id}`);
+  const downloadUrl = `exports/scenario-${recipe.id}.fleet.json`;
+  await writeFile(resolve(output, downloadUrl), json(built.bundle));
+  scenarios.push({ ...recipe, downloadUrl });
+}
 const counts = { roles: entries.filter(item => item.collection === 'roles').length, workflows: entries.filter(item => item.collection === 'workflows').length, total: entries.length };
-const data = { schema: 'awesome.bot.site/1', name: 'Awesome Bot', updatedAt: metadata.updatedAt, repositoryUrl: repo, categories: metadata.categories, counts, downloads, bulkLimit: 200, registryUrl: 'registry/index.json', entries };
+const data = { schema: 'awesome.bot.site/1', name: 'Awesome Bot', updatedAt: metadata.updatedAt, repositoryUrl: repo, categories: metadata.categories, counts, downloads, bulkLimit: 200, registryUrl: 'registry/index.json', scenarios, entries };
 await writeFile(resolve(output, 'catalogue.json'), json(data));
 await writeFile(resolve(output, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url></urlset>\n');
-console.log(JSON.stringify({ ok: true, output, ...counts, individualDownloads: entries.length }));
+console.log(JSON.stringify({ ok: true, output, ...counts, individualDownloads: entries.length, scenarioDownloads: scenarios.length }));

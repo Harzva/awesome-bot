@@ -14,7 +14,7 @@
       botsLabel: '个 Bot 可查', updatedLabel: '目录更新时间：', searchLabel: '搜索 Bot',
       searchPlaceholder: '搜索名称、职责、标签或来源', searchHint: '支持中文名称、摘要、标签、来源名称和条目 ID',
       allLabel: '全部', rolesLabel: '角色', workflowsLabel: '任务', categoryLabel: '分类',
-      sortLabel: '排序', favoritesLabel: '只看收藏', categoriesTitle: '按工作场景',
+      sortLabel: '排序', favoritesLabel: '只看收藏', categoriesTitle: '按领域浏览',
       resultsKicker: '目录结果', resultsTitle: '全部条目', emptyTitle: '没有匹配的 Bot',
       emptyBody: '换一个关键词，或清除筛选后再试。', clearFilters: '清除筛选',
       downloadsKicker: '批量下载', downloadsTitle: '带走一组配置',
@@ -39,6 +39,7 @@
       tools: '工具', screen: '屏幕', container: '容器', requested: '需要', notRequested: '不需要',
       verification: '验收状态', format: '格式检查', realTask: '真实任务', passed: '已通过',
       copyResults: '分享当前筛选', copyDetail: '复制 Bot 链接', shareSuccess: '链接已复制', retryCatalogue: '重新加载', retrying: '正在重试…', browseGitHub: '在 GitHub 浏览', missingDetail: '链接中的 Bot 已不在目录中，可继续搜索。',
+      scenarioLabel: '场景', scenarioFilter: '选择任务场景', allScenarios: '选择任务场景', downloadScenario: '下载此场景', copyFirstTask: '复制首个任务', copyStep: '复制这一步', taskCopied: '任务提示词已复制，请补充自己的材料后发送。', importGuide: '导入与首次使用', scenarioGuide: '准备材料与使用步骤', startWith: '先从这个 Bot 开始：', scenarioNote: '按步骤在对应 Bot 中开始，审阅产物后再交接。下载不会自动执行任务。', missingScenario: '链接中的场景已不在目录中，可继续浏览全部 Bot。', feedbackBot: '反馈这个 Bot', botsUnit: '个 Bot',
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
@@ -74,6 +75,7 @@
       tools: 'Tools', screen: 'Screen', container: 'Container', requested: 'Requested', notRequested: 'Not requested',
       verification: 'Verification', format: 'Format', realTask: 'Real task', passed: 'Passed',
       copyResults: 'Share this search', copyDetail: 'Copy Bot link', shareSuccess: 'Link copied', retryCatalogue: 'Retry loading', retrying: 'Retrying…', browseGitHub: 'Browse on GitHub', missingDetail: 'The linked Bot is no longer in the directory. You can keep searching.',
+      scenarioLabel: 'Goal', scenarioFilter: 'Choose a task scenario', allScenarios: 'Choose a goal', downloadScenario: 'Download this scenario', copyFirstTask: 'Copy first task', copyStep: 'Copy this step', taskCopied: 'Task prompt copied. Add your own materials before sending.', importGuide: 'Import and get started', scenarioGuide: 'Materials and steps', startWith: 'Start with this Bot: ', scenarioNote: 'Start each step in its Bot, review the output, then hand it over. Downloading does not run the tasks.', missingScenario: 'The linked scenario is no longer in the directory. You can browse all Bots.', feedbackBot: 'Report a Bot issue', botsUnit: 'Bots',
       notTestedValue: 'Not tested', noDetails: 'Not provided', copySuccess: 'Index URL copied', copyFailed: 'Copy failed. Copy it manually.'
     }
   };
@@ -84,6 +86,8 @@
     query: '',
     collection: 'all',
     category: 'all',
+    scenario: 'all',
+    scenarioRenderKey: '',
     sort: 'name',
     favoritesOnly: false,
     favorites: new Set(),
@@ -143,6 +147,7 @@
         name: valueText(skill && skill.name), desc: valueText(skill && (skill.desc || skill.description))
       })).filter((skill) => skill.name || skill.desc) : [],
       persona: valueText(entry.persona),
+      starterPrompt: valueText(entry.starterPrompt, arrayText(guidance.taskExamples)[0] || ''),
       guidance: {
         welcome: valueText(guidance.welcome),
         quickPrompts: arrayText(guidance.quickPrompts),
@@ -181,6 +186,42 @@
     return categories;
   }
 
+  function normalizeScenario(raw, entries) {
+    if (!raw || raw.schema !== 'awesome.bot.scenario/1' || typeof raw.id !== 'string'
+      || raw.id === 'all' || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(raw.id) || !valueText(raw.title)
+      || !valueText(raw.summary) || !Array.isArray(raw.steps) || raw.steps.length < 1 || raw.steps.length > 3
+      || raw.downloadUrl !== `exports/scenario-${raw.id}.fleet.json`
+      || !arrayText(raw.inputs).length || !arrayText(raw.outputs).length) return null;
+    const byId = new Map(entries.map(entry => [entry.id, entry]));
+    const ids = new Set();
+    const steps = [];
+    for (const step of raw.steps) {
+      if (!step || !byId.has(step.botId) || ids.has(step.botId) || !valueText(step.prompt) || !valueText(step.handoff)) return null;
+      ids.add(step.botId);
+      steps.push({ botId: step.botId, botName: byId.get(step.botId).name, prompt: valueText(step.prompt), handoff: valueText(step.handoff) });
+    }
+    return { schema: raw.schema, id: raw.id, title: valueText(raw.title), titleEn: valueText(raw.titleEn, raw.title),
+      summary: valueText(raw.summary), inputs: arrayText(raw.inputs), outputs: arrayText(raw.outputs),
+      steps, botIds: [...ids], downloadUrl: raw.downloadUrl };
+  }
+
+  function botFeedbackURL(entry) {
+    const url = new URL('https://github.com/Harzva/awesome-bot/issues/new');
+    url.searchParams.set('template', 'bot-feedback.yml');
+    url.searchParams.set('title', `[Bot] ${valueText(entry.name)} (${valueText(entry.id)})`);
+    url.searchParams.set('bot_id', valueText(entry.id));
+    url.searchParams.set('bot_version', valueText(entry.version));
+    const source = valueText(entry.originalUrl);
+    try {
+      const parsed = new URL(source);
+      if (parsed.protocol === 'https:' && !parsed.username && !parsed.password) {
+        parsed.search = ''; parsed.hash = '';
+        url.searchParams.set('source_url', parsed.href);
+      }
+    } catch (_) { /* Community entries may have no public source URL. */ }
+    return url.href;
+  }
+
   function normalizeCatalogue(data) {
     const source = data && typeof data === 'object' ? data : {};
     const entries = Array.isArray(source.entries) ? source.entries.map(normalizeEntry) : [];
@@ -193,6 +234,7 @@
       ...source,
       entries,
       categories: normalizeCategories(source, entries),
+      scenarios: Array.isArray(source.scenarios) ? source.scenarios.map(raw => normalizeScenario(raw, entries)).filter(Boolean) : [],
       counts
     };
   }
@@ -235,6 +277,10 @@
     if (settings.category && settings.category !== 'all') {
       filtered = filtered.filter((entry) => valueText(entry.category) === settings.category);
     }
+    if (Array.isArray(settings.entryIds)) {
+      const ids = new Set(settings.entryIds);
+      filtered = filtered.filter(entry => ids.has(entry.id));
+    }
     if (settings.favoritesOnly) {
       const favorites = settings.favorites instanceof Set ? settings.favorites : new Set(settings.favorites || []);
       filtered = filtered.filter((entry) => favorites.has(entry.id));
@@ -253,6 +299,11 @@
         || !['roles', 'workflows'].includes(entry.collection)
         || typeof entry.downloadUrl !== 'string' || !entry.downloadUrl.trim()) throw new Error('Invalid entry');
       ids.add(entry.id);
+    }
+    if (data.scenarios !== undefined) {
+      if (!Array.isArray(data.scenarios)) throw new Error('Invalid scenarios');
+      const scenarios = data.scenarios.map(raw => normalizeScenario(raw, data.entries));
+      if (scenarios.some(item => !item) || new Set(scenarios.map(item => item.id)).size !== scenarios.length) throw new Error('Invalid scenarios');
     }
     return normalizeCatalogue(data);
   }
@@ -276,7 +327,7 @@
     finally { root.clearTimeout(timer); }
   }
 
-  const api = { normalizeEntry, normalizeCatalogue, collectionOf, searchEntries, filterEntries, sortEntries, validateCatalogue, requestCatalogue };
+  const api = { normalizeEntry, normalizeCatalogue, collectionOf, searchEntries, filterEntries, sortEntries, validateCatalogue, requestCatalogue, normalizeScenario, botFeedbackURL };
   root.AwesomeBotCatalog = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (!doc) return;
@@ -285,8 +336,8 @@
   const navigator = navigation && navigation.createNavigator({ location: root.location, history: root.history });
 
   function currentView() {
-    const { query, collection, category, sort, language, favoritesOnly, detailId } = state;
-    return { query, collection, category, sort, language, favoritesOnly, detailId };
+    const { query, collection, category, scenario, sort, language, favoritesOnly, detailId } = state;
+    return { query, collection, category, scenario, sort, language, favoritesOnly, detailId };
   }
 
   function syncView(replace) {
@@ -306,9 +357,12 @@
     if (state.catalogue && view.category !== 'all' && !state.catalogue.categories.some((item) => item.id === view.category)) {
       view.category = 'all'; canonicalize = true;
     }
-    const changed = ['query', 'collection', 'category', 'sort', 'language', 'favoritesOnly'].some((key) => state[key] !== view[key]);
+    if (state.catalogue && view.scenario !== 'all' && !state.catalogue.scenarios.some(item => item.id === view.scenario)) {
+      view.scenario = 'all'; state.routeNotice = 'missingScenario'; canonicalize = true;
+    }
+    const changed = ['query', 'collection', 'category', 'scenario', 'sort', 'language', 'favoritesOnly'].some((key) => state[key] !== view[key]);
     const desiredId = view.detailId;
-    for (const key of ['query', 'collection', 'category', 'sort', 'language', 'favoritesOnly']) state[key] = view[key];
+    for (const key of ['query', 'collection', 'category', 'scenario', 'sort', 'language', 'favoritesOnly']) state[key] = view[key];
     if (changed || force) {
       const input = doc.getElementById('search-input');
       const sort = doc.getElementById('sort-select');
@@ -545,7 +599,73 @@
     if (favoriteButton) favoriteButton.setAttribute('aria-pressed', state.favoritesOnly ? 'true' : 'false');
   }
 
+  function selectedScenario() {
+    return (state.catalogue && state.catalogue.scenarios || []).find(item => item.id === state.scenario);
+  }
+
+  function renderScenarios() {
+    const scenarios = state.catalogue && state.catalogue.scenarios || [];
+    const select = doc.getElementById('scenario-select');
+    if (select) {
+      select.replaceChildren(new Option(label('allScenarios'), 'all'));
+      scenarios.forEach(item => select.add(new Option(state.language === 'en' ? item.titleEn : item.title, item.id)));
+      select.value = scenarios.some(item => item.id === state.scenario) ? state.scenario : 'all';
+      select.disabled = state.loading || state.error || !scenarios.length;
+    }
+    const scenario = selectedScenario();
+    const panel = doc.getElementById('scenario-panel');
+    if (!panel) return;
+    panel.hidden = !scenario || state.error;
+    if (!scenario || state.error) { state.scenarioRenderKey = ''; return; }
+    const download = doc.getElementById('scenario-download');
+    if (download) {
+      download.href = scenario.downloadUrl;
+      download.setAttribute('download', '');
+      setText(download, `${label('downloadScenario')} · ${scenario.botIds.length} ${label('botsUnit')}`);
+    }
+    const key = `${scenario.id}:${state.language}`;
+    if (state.scenarioRenderKey === key) return;
+    state.scenarioRenderKey = key;
+    setText(doc.getElementById('scenario-title'), state.language === 'en' ? scenario.titleEn : scenario.title);
+    setText(doc.getElementById('scenario-summary'), scenario.summary);
+    const start = doc.getElementById('scenario-start');
+    const first = state.entries.find(entry => entry.id === scenario.steps[0].botId);
+    if (start && first) {
+      const button = make('button', 'text-button', first.name);
+      button.type = 'button';
+      button.setAttribute('aria-haspopup', 'dialog');
+      button.addEventListener('click', () => openDetail(first));
+      start.replaceChildren(doc.createTextNode(label('startWith')), button);
+    }
+    const status = doc.getElementById('scenario-copy-status');
+    setText(status, '');
+    const content = doc.getElementById('scenario-guide-content');
+    if (content) {
+      content.replaceChildren();
+      const materials = make('div', 'scenario-materials');
+      [[label('inputs'), scenario.inputs], [label('outputs'), scenario.outputs]].forEach(([title, items]) => {
+        const section = make('section');
+        section.append(make('h4', '', title));
+        const list = make('ul', 'detail-list');
+        items.forEach(item => list.append(make('li', '', item)));
+        section.append(list); materials.append(section);
+      });
+      const steps = make('ol', 'scenario-steps');
+      scenario.steps.forEach(step => {
+        const li = make('li');
+        const button = make('button', 'text-button', label('copyStep'));
+        button.type = 'button';
+        button.addEventListener('click', () => copyText(step.prompt, status, 'taskCopied'));
+        li.append(make('strong', '', step.botName), make('pre', 'prompt-text', step.prompt), make('p', '', step.handoff), button);
+        steps.append(li);
+      });
+      content.append(materials, make('h4', '', label('workflowSteps')), steps, make('p', 'scenario-note', label('scenarioNote')));
+    }
+  }
+
   function renderResults() {
+    renderScenarios();
+    const scenario = selectedScenario();
     const results = doc.getElementById('results');
     const empty = doc.getElementById('empty-state');
     const status = doc.getElementById('results-status');
@@ -553,7 +673,7 @@
     if (!results || !empty || !status) return;
     const filtered = filterEntries(state.entries, {
       query: state.query, collection: state.collection, category: state.category,
-      favoritesOnly: state.favoritesOnly, favorites: state.favorites, sort: state.sort
+      favoritesOnly: state.favoritesOnly, favorites: state.favorites, sort: state.sort, entryIds: scenario && scenario.botIds
     });
     results.replaceChildren();
     results.setAttribute('aria-busy', state.loading ? 'true' : 'false');
@@ -578,7 +698,7 @@
     empty.hidden = filtered.length !== 0 || state.entries.length === 0;
     setText(empty.querySelector('h3'), label('emptyTitle'));
     setText(empty.querySelector('p'), label('emptyBody'));
-    const statusText = state.loading ? label('loading') : (state.query || state.collection !== 'all' || state.category !== 'all' || state.favoritesOnly
+    const statusText = state.loading ? label('loading') : (state.query || state.collection !== 'all' || state.category !== 'all' || state.scenario !== 'all' || state.favoritesOnly
       ? formatLabel('filtered', { shown: filtered.length, total: state.entries.length })
       : (state.entries.length ? formatLabel('loaded', { shown: filtered.length, total: state.entries.length }) : label('loading')));
     setText(status, statusText);
@@ -765,16 +885,23 @@
     shell.append(header);
 
     const actions = make('div', 'detail-actions');
+    const copyStatus = make('p', 'copy-status');
+    copyStatus.id = 'detail-copy-status';
+    copyStatus.setAttribute('role', 'status');
     appendAction(actions, entry.downloadUrl, label('download'), true, true);
+    if (entry.starterPrompt) {
+      const task = make('button', 'detail-action secondary', label('copyFirstTask'));
+      task.type = 'button';
+      task.addEventListener('click', () => copyText(entry.starterPrompt, copyStatus, 'taskCopied'));
+      actions.append(task);
+    }
+    appendAction(actions, 'https://github.com/Harzva/awesome-bot/blob/main/START_HERE.md', label('importGuide'), false, false);
     appendAction(actions, entry.manifestUrl, label('manifest'), false, false);
     appendAction(actions, entry.originalUrl, label('original'), false, false);
     appendAction(actions, entry.editUrl, label('edit'), false, false);
     const share = make('button', 'detail-action secondary', label('copyDetail'));
     share.type = 'button';
     share.disabled = !navigation;
-    const copyStatus = make('p', 'copy-status');
-    copyStatus.id = 'detail-copy-status';
-    copyStatus.setAttribute('role', 'status');
     share.addEventListener('click', () => copyShare(copyStatus, true));
     actions.append(share);
     shell.append(actions, copyStatus);
@@ -800,6 +927,9 @@
     appendGuidance(shell, entry.guidance);
     appendPermissions(shell, entry.permissions);
     appendVerification(shell, entry);
+    const feedback = make('section', 'detail-section');
+    linkFor(feedback, botFeedbackURL(entry), label('feedbackBot'), { className: 'text-link' });
+    shell.append(feedback);
     content.replaceChildren(shell);
     if (!dialog.open) {
       if (typeof dialog.showModal === 'function') dialog.showModal(); else dialog.setAttribute('open', '');
@@ -811,6 +941,7 @@
     state.query = '';
     state.collection = 'all';
     state.category = 'all';
+    state.scenario = 'all';
     state.sort = 'name';
     state.favoritesOnly = false;
     syncView(false);
@@ -881,6 +1012,17 @@
       syncView(false);
       renderCategories();
       renderResults();
+    });
+    const scenarioSelect = doc.getElementById('scenario-select');
+    scenarioSelect && scenarioSelect.addEventListener('change', event => {
+      state.scenario = event.target.value;
+      syncView(false);
+      renderResults();
+    });
+    const copyScenario = doc.getElementById('copy-scenario');
+    copyScenario && copyScenario.addEventListener('click', () => {
+      const scenario = selectedScenario();
+      if (scenario) copyText(scenario.steps[0].prompt, doc.getElementById('scenario-copy-status'), 'taskCopied');
     });
     const sortSelect = doc.getElementById('sort-select');
     sortSelect && sortSelect.addEventListener('change', (event) => {

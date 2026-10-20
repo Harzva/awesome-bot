@@ -39,7 +39,11 @@ For an update, increase the entry's semantic version. The build keeps existing p
 
 ## Suggestions and problems
 
-Use the Bot submission or bug issue form. Keep account data, API keys, personal information and private task output out of public issues. Security concerns follow [SECURITY.md](SECURITY.md).
+Use the [Bot feedback form](https://github.com/Harzva/awesome-bot/issues/new?template=bot-feedback.yml) for a specific Bot's instructions or task result. The market can prefill its public ID, template version and source; check those fields, then describe short reproduction steps, the expected output and the actual result using synthetic input. Format checks do not certify real-task performance.
+
+针对某个 Bot 的指令或任务结果，请使用 [Bot 使用反馈表单](https://github.com/Harzva/awesome-bot/issues/new?template=bot-feedback.yml)。核对预填的公开条目 ID、模板版本与来源，再用虚构材料填写简短重现步骤、预期交付和实际结果。无需导出日志或粘贴完整对话。
+
+Use the submission form for new entries and the general bug form for website or export problems. Keep accounts, API keys, memory, conversation history and private screenshots out of public issues. Security concerns follow [SECURITY.md](SECURITY.md).
 
 ## 中文快速说明
 

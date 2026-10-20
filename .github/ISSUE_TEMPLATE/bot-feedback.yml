@@ -1,0 +1,58 @@
+name: Bot feedback / Bot 使用反馈
+description: Report a problem with one Bot's instructions or task result. / 反馈一个 Bot 的指令或任务结果问题。
+title: '[Bot feedback] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        格式检查通过不代表真实任务已认证。Passing format checks does not certify real-task performance.
+
+        请用虚构或已脱敏材料简要复现，不要贴账号、密钥、记忆、聊天记录或私人截图。Use synthetic or redacted material; omit accounts, keys, memory, conversation history and private screenshots.
+  - type: input
+    id: bot_id
+    attributes:
+      label: Bot ID / 条目 ID
+      description: Copied from the Bot details; correct it if needed. / 由 Bot 详情带入，可按实际情况更正。
+      placeholder: awesome/my-helper
+    validations:
+      required: true
+  - type: input
+    id: bot_version
+    attributes:
+      label: Template version / 模板版本
+      description: Use the version of the configuration you tried. / 填写实际使用的配置版本。
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Public source URL / 公开来源链接
+      description: A public reference for this Bot; leave blank if unknown. / 此 Bot 的公开来源，不确定时可留空。
+      placeholder: https://github.com/owner/repository
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and sample input / 步骤与示例输入
+      description: Give short reproduction steps with synthetic input. Include your OpenBot version if known. / 用虚构输入写出简短重现步骤，知道 OpenBot 版本时可一并填写。
+      placeholder: |
+        OpenBot version / OpenBot 版本（如知）：
+        1. Preparation / 准备：
+        2. Task with synthetic input / 虚构输入任务：
+        3. What to check / 检查位置：
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result / 预期结果
+      description: Describe the concrete output you expected. / 描述希望得到的具体交付。
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result / 实际结果
+      description: Summarize the mismatch or error; a full conversation is not needed. / 概述差异或错误，无需粘贴完整对话。
+    validations:
+      required: true

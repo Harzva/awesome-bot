@@ -24,3 +24,18 @@ The initial catalogue separately records 90 publicly listed Grok Bot roles and 5
 The executable market [DSH Market](https://github.com/dsh-market/dsh-market) is a second design reference for discoverability and source confirmation. Its runtime, Cordis plugin layers, and package installation behavior do not directly install OpenBot templates. The OpenBot engine retains ownership of identity, permissions, installation plans, and configuration generation.
 
 Website deployment, CI, and release publication must each be verified after a push. Real-account task execution is a further evidence level and remains separate from schema, source, and import-library checks. See [publishing.md](publishing.md) for the project gates and the distinction between configured and observed behavior.
+
+## Current iteration: first task and per-Bot feedback
+
+Version 0.3 implements the following two flows. Local browser checks, independent visual review, scenario-file download checks and the 47-test suite passed. CI, Pages and release publication remain separate remote checks for each published commit.
+
+| Flow | Reference mechanism | Awesome Bot implementation and local acceptance |
+| --- | --- | --- |
+| Choose a scenario, prepare inputs, download and start a first task | The reference [website](https://awesome-dsh-plugin.com/#installing) and [DSH Market installation guide](https://github.com/dsh-market/dsh-market#install) put the next installation step near discovery | Scenario sets reuse existing entries; users can find the required materials, download a small configuration set, copy a first task and see its expected output. Downloads remain declarative configurations. |
+| Report a problem with the exact Bot version | [DSH Market](https://github.com/dsh-market/dsh-market#what-you-get) provides per-entry discussions and diagnostic context | Bot details lead to the bilingual feedback form with only the public ID, template version and source prefilled. Users provide reproduction steps, expected output and actual behavior; no search, favorites, account or conversation data is included automatically. |
+
+GitHub documents form element `id` values as the canonical URL-prefill keys in its [form schema](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema). The feedback URL selects `template=bot-feedback.yml` and uses `bot_id`, `bot_version` and `source_url`. Opening the form does not submit an issue; users can edit these fields before posting.
+
+## Remaining contribution gap
+
+The reference [contribution guide](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md#adding-a-plugin--收录插件) accepts one entry file without requiring a local build; its main branch generates the derived documents after merge. Awesome Bot currently requires contributors to run validation and commit the generated templates, registry and catalogue documentation alongside their source entry. A true build-free, source-only PR flow still needs a reviewed generation and preview strategy. This iteration does not claim that automation exists.

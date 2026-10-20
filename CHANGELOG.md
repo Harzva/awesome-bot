@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-10-20
+
+- Add five task scenarios with 1–2 existing Bots each, required materials, expected outputs, first-task prompts and explicit user-reviewed handoffs.
+- Generate scenario configuration downloads and a first-use guide from one JSON file per scenario; keep the original 146 template versions unchanged.
+- Add goal filtering and shareable scenario URLs within the existing directory, including browser navigation, refresh and missing-scenario recovery.
+- Copy first-task examples directly from Bot details, and open a bilingual feedback form prefilled only with public identity, version and source fields.
+- Keep the four tested directory viewport targets and default search path, with scenario details shown only after selection.
+
 ## 0.2.0 — 2026-10-20
 
 - Share filtered searches and individual Bot details through bounded, canonical URLs; restore language and filters on refresh and browser navigation.

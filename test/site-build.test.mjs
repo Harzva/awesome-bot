@@ -9,6 +9,9 @@ import { root, readCatalogue } from '../scripts/engine.mjs';
 test('the static market offers complete, deterministic and unprivileged downloads', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'awesome-site-'));
   const output = join(directory, 'site');
+  const published = JSON.parse(await readFile(resolve(root, 'registry/index.json'), 'utf8'));
+  const protectedPaths = ['registry/index.json', ...published.entries.flatMap(entry => entry.versions.map(version => resolve(root, 'registry', version.url)))];
+  const protectedBefore = await Promise.all(protectedPaths.map(file => readFile(resolve(root, file))));
   const build = () => spawnSync(process.execPath, [resolve(root, 'scripts/build-site.mjs'), `--out=${output}`], { cwd: root, encoding: 'utf8' });
   try {
     const first = build();
@@ -24,6 +27,7 @@ test('the static market offers complete, deterministic and unprivileged download
       assert.match(entry.manifestUrl, /^templates\/[a-z0-9-]+\/\d+\.\d+\.\d+\.json$/);
       assert.match(entry.editUrl, /^https:\/\/github\.com\/Harzva\/awesome-bot\/edit\/main\/data\/entries\//);
       assert.equal(entry.verification.realTask, 'not-tested');
+      assert.equal(entry.starterPrompt, catalogue.bots.find(bot => bot.id === entry.id).example.prompt);
       const manifest = JSON.parse(await readFile(join(output, entry.manifestUrl), 'utf8'));
       assert.equal(manifest.id, entry.id);
       const fleet = JSON.parse(await readFile(join(output, entry.downloadUrl), 'utf8'));
@@ -41,9 +45,34 @@ test('the static market offers complete, deterministic and unprivileged download
       assert.equal(fleet.bots.length, expected);
       assert.equal(new Set(fleet.bots.map(bot => bot.id)).size, expected);
     }
+    assert.equal(site.scenarios.length, 5);
+    const scenarioBytes = new Map();
+    for (const scenario of site.scenarios) {
+      assert.deepEqual(scenario.botIds, scenario.steps.map(step => step.botId));
+      assert.ok(scenario.botIds.length >= 1 && scenario.botIds.length <= 3);
+      assert.equal(new Set(scenario.botIds).size, scenario.botIds.length);
+      assert.match(scenario.downloadUrl, /^exports\/scenario-[a-z0-9-]+\.fleet\.json$/);
+      const bytes = await readFile(join(output, scenario.downloadUrl), 'utf8');
+      scenarioBytes.set(scenario.downloadUrl, bytes);
+      const fleet = JSON.parse(bytes);
+      assert.deepEqual(fleet.bots.map(bot => bot.id), scenario.botIds.map(id => id.split('/')[1]));
+      assert.deepEqual(fleet.bots.map(bot => bot.name), scenario.steps.map(step => step.botName));
+      for (const bot of fleet.bots) {
+        assert.equal(bot.toolsEnabled, false);
+        assert.equal(bot.containerEnabled, false);
+        assert.equal(bot.model, '');
+        assert.deepEqual(bot.channels, {});
+        assert.deepEqual(bot.messages, []);
+        assert.deepEqual(bot.files, []);
+        assert.deepEqual(bot.memory, { profile: '', journal: [] });
+      }
+      assert.deepEqual(fleet.shared, { skills: [], files: [] });
+    }
     const second = build();
     assert.equal(second.status, 0, second.stderr);
     assert.equal(await readFile(join(output, 'catalogue.json'), 'utf8'), bytes);
+    for (const [file, before] of scenarioBytes) assert.equal(await readFile(join(output, file), 'utf8'), before);
+    for (const [index, file] of protectedPaths.entries()) assert.deepEqual(await readFile(resolve(root, file)), protectedBefore[index]);
     assert.ok(!bytes.includes('/Users/'));
   } finally { await rm(directory, { recursive: true, force: true }); }
 });

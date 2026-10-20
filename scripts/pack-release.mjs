@@ -7,9 +7,9 @@ import { execFileSync } from 'node:child_process';
 import { auditPublic, publicFiles } from './audit-public.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const ROOT_FILES = new Set(['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'CONTRIBUTING.md', 'INTEGRATION.md', 'LICENSE', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'CHANGELOG.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'AGENTS.md', 'PRODUCT.md', 'DESIGN.md', 'package.json', 'package-lock.json', 'catalogue.json', '.gitignore', '.gitattributes']);
+const ROOT_FILES = new Set(['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'START_HERE.md', 'CONTRIBUTING.md', 'INTEGRATION.md', 'LICENSE', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'CHANGELOG.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'AGENTS.md', 'PRODUCT.md', 'DESIGN.md', 'package.json', 'package-lock.json', 'catalogue.json', '.gitignore', '.gitattributes']);
 const SOURCE_DIRS = new Set(['data', 'engine', 'registry', 'templates', 'sources', 'scripts', 'test', 'site', 'docs', '.github']);
-const REQUIRED = ['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'CONTRIBUTING.md', 'LICENSE', 'SECURITY.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'catalogue.json', 'registry/index.json'];
+const REQUIRED = ['README.md', 'README.zh-CN.md', 'CATALOGUE.md', 'START_HERE.md', 'CONTRIBUTING.md', 'LICENSE', 'SECURITY.md', 'SOURCE.md', 'THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json', 'catalogue.json', 'registry/index.json'];
 const sha256 = data => createHash('sha256').update(data).digest('hex');
 
 export function releaseFileAllowed(file) {

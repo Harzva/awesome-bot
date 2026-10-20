@@ -5,7 +5,7 @@
   const DEFAULT_URL = 'https://harzva.github.io/awesome-bot/';
   const HISTORY_KEY = 'awesomeBotNavigation';
   const DEFAULT_VIEW = {
-    query: '', collection: 'all', category: 'all', sort: 'name',
+    query: '', collection: 'all', category: 'all', scenario: 'all', sort: 'name',
     language: 'zh', favoritesOnly: false, detailId: ''
   };
 
@@ -42,6 +42,7 @@
       query: cleanQuery(view.query),
       collection: ['roles', 'workflows'].includes(view.collection) ? view.collection : 'all',
       category: cleanCategory(view.category),
+      scenario: typeof view.scenario === 'string' && /^[a-z0-9][a-z0-9-]{0,63}$/.test(view.scenario) ? view.scenario : 'all',
       sort: view.sort === 'original-name' ? 'original-name' : 'name',
       language: view.language === 'en' ? 'en' : 'zh',
       favoritesOnly: view.favoritesOnly === true,
@@ -56,7 +57,7 @@
     const params = url.searchParams;
     return cleanView({
       query: params.get('q'), collection: params.get('collection'), category: params.get('category'),
-      sort: params.get('sort'), language: params.get('lang'), favoritesOnly: params.get('saved') === '1',
+      scenario: params.get('scenario'), sort: params.get('sort'), language: params.get('lang'), favoritesOnly: params.get('saved') === '1',
       detailId: params.get('bot')
     });
   }
@@ -71,6 +72,7 @@
     if (view.query) url.searchParams.set('q', view.query);
     if (view.collection !== 'all') url.searchParams.set('collection', view.collection);
     if (view.category !== 'all') url.searchParams.set('category', view.category);
+    if (view.scenario !== 'all') url.searchParams.set('scenario', view.scenario);
     if (view.sort !== 'name') url.searchParams.set('sort', view.sort);
     if (view.language !== 'zh') url.searchParams.set('lang', view.language);
     if (view.favoritesOnly) url.searchParams.set('saved', '1');

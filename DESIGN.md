@@ -82,3 +82,11 @@ The reference and acceptance screenshots are local evidence in the workspace's `
 Current-build screenshots at 1280 × 720, 1200 × 776, 390 × 844, and 375 × 812 passed independent visual review. The first result title and detail action are visible at every size; phone widths have no document-level horizontal overflow. Scoped final layout detection reported no findings.
 
 Browser checks covered search and Bot-link copy feedback, Escape and opener focus, Forward, refresh of a direct detail link, and closing without leaving the market. A separate 503 fixture recovered with Retry while preserving the English role search and its 9 matching entries. Evidence remains workspace-local outside the public repository, under `research/awesome-bot-20261020/v0.2.0/ui/`.
+
+## Version 0.3 scenario extension and acceptance
+
+The toolbar adds a task-scenario selector without adding a mobile control row. Selecting a goal reveals a thin-rule panel with its first Bot, a small configuration download, first-task copy, import guide and expandable materials, expected outputs and ordered handoffs. The default panel stays hidden. Scenario routes combine with existing filters and survive sharing, browser navigation and refresh. Bot details add first-task copy, the import guide and a public-ID/version feedback link.
+
+Independent review of current-build screenshots passed at all four acceptance viewports. The first title and detail action remain visible, document-level horizontal overflow is absent, and scenario and detail actions wrap without clipping at 375px. Long scenario instructions and detail content use normal vertical scrolling. The 1280 × 720 first-row summary extends below the initial viewport, while its title and action remain reachable.
+
+Browser checks confirmed scenario result counts, task-copy feedback, detail copy, Escape and opener focus, Back and refresh restoring the scenario and its download count. All five scene exports were downloaded over HTTP and matched their built files; each contains its expected one or two Bots. Scoped layout detection reported no findings. Evidence remains outside the public repository under `research/awesome-bot-20261020/v0.3.0/ui/`; it is local-preview evidence, not a deployed screenshot or real-account task certification.

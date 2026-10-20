@@ -6,7 +6,7 @@ import '../site/navigation.js';
 
 const { readView, viewURL, shareURL, createNavigator } = globalThis.AwesomeBotNavigation;
 const base = 'https://harzva.github.io/awesome-bot/';
-const defaults = { query: '', collection: 'all', category: 'all', sort: 'name', language: 'zh', favoritesOnly: false, detailId: '' };
+const defaults = { query: '', collection: 'all', category: 'all', scenario: 'all', sort: 'name', language: 'zh', favoritesOnly: false, detailId: '' };
 
 function browser(href = base, initialState = { scrollOwner: 'directory' }) {
   const location = { href };
@@ -37,7 +37,7 @@ function browser(href = base, initialState = { scrollOwner: 'directory' }) {
 }
 
 test('view links round-trip Chinese queries, filters, language and details without treating text as markup', () => {
-  const view = { query: '网站 & 产品 + <script> 🚀 #设计', collection: 'workflows', category: 'engineering', sort: 'original-name', language: 'en', favoritesOnly: true, detailId: 'awesome/chief-of-staff' };
+  const view = { query: '网站 & 产品 + <script> 🚀 #设计', collection: 'workflows', category: 'engineering', scenario: 'research-brief', sort: 'original-name', language: 'en', favoritesOnly: true, detailId: 'awesome/chief-of-staff' };
   const url = viewURL(view, base);
   assert.deepEqual(readView(url), view);
   assert.equal(new URL(url).pathname, '/awesome-bot/');
@@ -177,4 +177,19 @@ test('the standalone script exposes the same API to a browser global and CommonJ
   assert.equal(window.AwesomeBotNavigation, module.exports);
   assert.equal(typeof window.AwesomeBotNavigation.createNavigator, 'function');
   assert.equal(window.AwesomeBotNavigation.viewURL({ query: 'test' }, 'http://127.0.0.1:18766/awesome-bot/'), 'http://127.0.0.1:18766/awesome-bot/?q=test');
+});
+
+
+test('scenario links survive sharing, detail history and reload while invalid IDs normalize', () => {
+  const b = browser(`${base}?scenario=research-brief&saved=1`);
+  const nav = createNavigator({ ...b, sessionId: 'scenario' });
+  assert.equal(nav.read().scenario, 'research-brief');
+  nav.open(nav.read(), 'awesome/grok-researchy');
+  const share = shareURL(nav.read(), b.location.href);
+  assert.equal(readView(share).scenario, 'research-brief');
+  assert.equal(readView(share).favoritesOnly, false);
+  assert.equal(nav.close(nav.read()), 'back');
+  assert.equal(nav.read().scenario, 'research-brief');
+  assert.equal(readView(`${base}?scenario=../private`).scenario, 'all');
+  assert.equal(readView(`${base}?scenario=research-brief&scenario=ignored`).scenario, 'research-brief');
 });

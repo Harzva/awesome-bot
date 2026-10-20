@@ -2,12 +2,14 @@ import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve, relative } from 'node:path';
 import { engineModule, root, readCatalogue } from './engine.mjs';
 import { assertVersionImmutability } from './check-versions.mjs';
+import { loadScenarios, renderStartGuide } from './scenarios.mjs';
 
 const { validateManifest, integrityOf, REGISTRY_SCHEMA } = await engineModule('manifest');
 const { validateRegistry } = await engineModule('registry');
 const { compare: compareVersions } = await engineModule('semver');
 const check = process.argv.includes('--check');
 const catalogue = await readCatalogue();
+const scenarios = await loadScenarios(catalogue);
 const inventory = JSON.parse(await readFile(resolve(root, 'sources/grok-inventory.json'), 'utf8'));
 const errors = [];
 const expected = new Map();
@@ -179,6 +181,7 @@ lines.push('## 来源', '');
 for (const s of catalogue.sources) lines.push(`- [${s.name}](${s.url})，核验于 ${s.checkedAt.slice(0, 10)}。${s.note}`);
 lines.push('');
 expected.set('CATALOGUE.md', lines.join('\n'));
+expected.set('START_HERE.md', renderStartGuide(scenarios));
 
 if (errors.length) throw new Error(errors.join('\n'));
 
@@ -194,8 +197,8 @@ async function jsonFiles(dir) {
   }
   return paths;
 }
-// Check the prospective output against the prior Git snapshot and released
-// ancestors before writing any manifest or updating its integrity index.
+// Check the prospective output against the prior Git snapshot and available
+// release tags before writing any manifest or updating its integrity index.
 await assertVersionImmutability({ root, planned: expected });
 for (const [file, content] of expected) {
   const target = resolve(root, file);
