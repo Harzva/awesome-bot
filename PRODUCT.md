@@ -30,7 +30,7 @@ The repository must build after a clean clone without a sibling workspace. PR CI
 
 ## Brand Commitments
 
-The name is Awesome Bot. The user explicitly chose the successful Awesome DSH Plugin project as the reference for quality and project organization. The new project has its own identity and preserves source attribution. Its public voice is direct, useful and precise.
+The name is Awesome Bot. The user explicitly chose the successful Awesome DSH Plugin project as the reference for quality and project organization. The new project has its own identity and preserves source attribution. Its public voice is direct, useful and precise. The user chose the Grok Bot marketplace as the visual reference: neutral light surfaces, category navigation, clear role identity and concise card actions. Awesome Bot retains its own mark and original role artwork.
 
 ## Evidence on Hand
 

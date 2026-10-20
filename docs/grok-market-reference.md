@@ -32,3 +32,11 @@ English content is a localized projection of the same source role: translated na
 Public source references explain why a role exists. They do not certify that OpenBot, a chosen Agent or its host can perform every upstream task. Keep declared requirements and requested permissions distinct from granted access, and distinguish format/export checks from a real-account task result. The generated files, UI checks and deployed downloads require their own acceptance evidence; this comparison is not that evidence.
 
 The earlier 90-role inventory is a dated source snapshot. This review sampled the market and documentation for specific mechanisms; it did not repeat a complete census or test official imports, sign-in flows, copied templates or background execution. No upstream runtime or redistribution license is inferred from a public listing.
+
+## Version 0.5 visual direction
+
+The user selected the Grok Bot marketplace as the visual reference for this iteration. The marketplace and dr eggbot detail were revisited on 2026-10-20; workspace-local screenshots record the rendered reference separately from the authored site.
+
+Awesome Bot adopts its neutral light surfaces, desktop category navigation, role-led card browsing and concise action hierarchy. The search, role identity, creator attribution and download are kept close together. Its own circular mark and original per-role SVGs remain. On phones the categories become a horizontal strip and cards use one column.
+
+The reference has a Featured section; Awesome Bot does not have editorial selection or popularity evidence for such a section, so this iteration keeps the complete, filterable collection. Its primary action is labelled Download config because the website produces a file. In details, download, Agent-reading copy and first-task copy form the main action group; documentation, source, edit and sharing remain available as quieter resource links.

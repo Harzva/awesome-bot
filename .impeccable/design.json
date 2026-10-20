@@ -1,18 +1,29 @@
 {
   "schema": "impeccable.design/1",
   "product": "Awesome Bot",
-  "surface": "static catalogue",
+  "surface": "static Bot marketplace",
   "mode": "operate",
   "evidence": [
     {
-      "path": "research/awesome-bot-20261020/ui/dsh-reference.png",
-      "size": "1280x720",
+      "url": "https://x.ai/bot/marketplace",
+      "checkedAt": "2026-10-20",
+      "path": "research/awesome-bot-20261020/v0.4.0/ui/grok-marketplace-reference.png",
       "observations": [
-        "warm paper field",
-        "search-first directory hierarchy",
-        "large black and red heading",
-        "thin list-oriented rhythm",
-        "category chips below the source and index area"
+        "neutral light surfaces",
+        "compact category navigation",
+        "prominent role identity",
+        "responsive Bot cards",
+        "simple primary actions"
+      ]
+    },
+    {
+      "url": "https://x.ai/bot/marketplace/bots/dr-eggbot-v2",
+      "checkedAt": "2026-10-20",
+      "path": "research/awesome-bot-20261020/v0.4.0/ui/grok-bot-detail-reference.png",
+      "observations": [
+        "role identity and attribution",
+        "description and import action",
+        "content below the action hierarchy"
       ]
     }
   ],
@@ -24,14 +35,14 @@
   },
   "tokens": {
     "color": {
-      "paper": "#f5f0e8",
-      "surface": "#fffdf9",
-      "surfaceSoft": "#eee7dc",
-      "ink": "#201d1a",
-      "muted": "#5b554d",
-      "line": "#d7cec1",
-      "lineStrong": "#aaa095",
-      "accent": "#ad382b",
+      "paper": "#ffffff",
+      "surface": "#ffffff",
+      "surfaceSoft": "#f7f7f5",
+      "ink": "#101010",
+      "muted": "#6f6f6d",
+      "line": "#e3e3e0",
+      "lineStrong": "#cacac6",
+      "accent": "#c3443b",
       "focus": "#1d68ae"
     },
     "typography": {
@@ -42,16 +53,13 @@
     },
     "space": {
       "gutterDesktop": "24px",
-      "gutterMedium": "16px",
       "gutterMobile": "12px",
-      "rowPaddingDesktop": "19px 0 17px",
-      "rowPaddingMobile": "17px 0 15px",
-      "section": "36px"
+      "contentMax": "1180px"
     },
     "radii": {
-      "control": "4px",
-      "field": "10px",
-      "chip": "99px"
+      "control": "9px",
+      "card": "16px",
+      "pill": "999px"
     },
     "motion": {
       "standard": "120ms ease",
@@ -59,18 +67,17 @@
     }
   },
   "principles": [
-    "Search and inspect before downloading.",
-    "Use thin-rule rows for directory density instead of a card wall.",
-    "Keep source, version, license, and requested permissions visible.",
-    "Use a pressed button group for collection filtering and keep the result surface in place.",
-    "Draw external, download, and close marks with authored CSS shapes while keeping labels accessible.",
-    "Use a self-hosted OFL font plus platform Chinese fallbacks and relative assets so GitHub Pages stays portable.",
-    "Treat missing data, empty results, and untested real tasks as visible states."
+    "Follow the user-chosen Grok marketplace reference for hierarchy and browsing.",
+    "Use desktop category navigation and role-led cards; one card column on phones.",
+    "Retain original role marks and distinct source attribution.",
+    "Keep download, Agent reading and first-task copy primary; resource links secondary.",
+    "Keep language, scenarios, shareable views and native detail behavior.",
+    "Show configuration, source and verification truth without invented popularity metrics."
   ],
   "responsive": {
-    "wide": "header, search, filters, list, and utility rail fit within 1180px; default side gutters are 24px",
-    "medium": "at max-width 930px the utility rail moves below the list; at max-width 760px side gutters become 16px and the first result action stays beside its row content",
-    "small": "at max-width 760px navigation simplifies and rows keep the detail action beside the content; at max-width 480px side gutters become 12px and the dialog has an 8px outer margin"
+    "wide": "category navigation beside the responsive card grid within 1180px",
+    "medium": "two-card layout where space permits; supporting utilities below the grid",
+    "small": "horizontal category strip, one card column and near-fullscreen native detail dialog"
   },
   "safety": {
     "entryText": "textContent or text nodes only",
@@ -78,47 +85,33 @@
     "downloads": "static configuration files; counts are data-driven; null bulk URLs show a per-entry fallback without an href",
     "permissions": "requested capabilities are descriptive and never treated as granted",
     "provenance": "source authors and template authors retain distinct labels; format and import checks do not certify real task execution",
-    "icons": "authored CSS shapes; no Unicode icon glyphs for external, download, or close actions; the external-link diagonal uses a linear-gradient as icon geometry",
+    "icons": "original role SVGs and authored CSS action marks; labels provide accessible action names",
     "collectionControl": "role=group with button aria-pressed state",
     "focus": "visible outline plus soft focus-within shadow for the search field"
   },
   "qa": {
-    "status": "v0.2.0 current build passed four viewport screenshots, independent visual review, runtime checks and final scoped layout scan (no findings)",
+    "status": "v0.5.0 SHIP: independent Chinese/English four-viewport review, targeted fixes accepted, final scoped layout scan has no findings",
     "viewports": [
       "1280x720",
       "1200x776",
       "390x844",
       "375x812"
     ],
-    "capturedScenarios": [
-      "initial directory at all four viewports, including the first title and detail action",
-      "English retry success with preserved query, collection and language"
+    "languages": [
+      "zh",
+      "en"
     ],
-    "sourceReviewedStates": [
-      "loading",
-      "catalogue error",
-      "search results",
-      "zero results",
-      "detail dialog",
-      "saved filter",
-      "keyboard focus",
-      "reduced motion"
-    ],
-    "evidenceDirectory": "research/awesome-bot-20261020/v0.2.0/ui/",
-    "evidenceVisibility": "workspace local acceptance evidence outside this Git repository; not public site assets or deployed links",
-    "reviewFixEvidence": [
-      "market-1280x720.jpg",
-      "market-1200x776.jpg",
-      "market-390x844.jpg",
-      "market-375x812.jpg",
-      "awesome-bot-fault-en-retry-1280x720.jpg"
-    ],
+    "evidenceDirectory": "research/awesome-bot-20261020/v0.5.0/ui/",
+    "evidenceVisibility": "workspace-local evidence outside this public repository; remote delivery checked separately",
+    "acceptedCapturePrefix": "accepted-",
     "runtimeChecks": [
-      "search and detail link copied feedback",
-      "Escape closes and restores opener focus",
-      "Forward reopens detail",
-      "reload of a detail link restores the dialog; close remains in the market",
-      "503 retry preserves English role search and recovers 9 results"
+      "category/select synchronization",
+      "saved filter",
+      "English scene and card downloads",
+      "three primary detail actions and six resource actions",
+      "actual paste of English Bot Agent context",
+      "Escape and opener focus",
+      "refresh retains English scenario"
     ]
   }
 }

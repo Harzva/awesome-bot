@@ -45,3 +45,7 @@ The reference [contribution guide](https://github.com/awesome-dsh-plugin/awesome
 The [Grok market comparison](grok-market-reference.md) records current primary sources and distinguishes custom Bot avatars, creator images, App import and documentation reading. Awesome Bot now provides original per-role vector marks, complete English content and configuration projections, and a Copy for Agent reading path through llms.txt and individual Markdown/JSON files. See the [integration contract](agent-integration.md).
 
 All 146 initial roles and five scenarios have complete English overlays. Local generation, English-content and export checks passed, with independent Chinese/English visual review at four viewport sizes. Copy and paste were checked against the selected Bot's language-specific context link. No arbitrary-Agent automatic installation API or real-account certification is claimed.
+
+## Version 0.5: marketplace presentation
+
+The user chose the [Grok Bot market](https://x.ai/bot/marketplace) as the visual reference. The marketplace now uses neutral light surfaces, category navigation, a responsive role-card grid and direct configuration downloads. Details keep three main actions and quieter resource links. Original role artwork, source attribution, complete English content, scenarios, shareable URLs and Agent reading remain part of the same product. See the [Grok comparison](grok-market-reference.md) and [visual system](../DESIGN.md).

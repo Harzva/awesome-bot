@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 — 2026-10-20
+
+- Align marketplace browsing with the Grok Bot reference: a neutral light palette, desktop category navigation, prominent original role marks and responsive Bot cards.
+- Add direct configuration downloads to cards and simplify details into three main actions with quieter source and documentation links.
+- Preserve complete Chinese and English content, scenarios, saved filters, shareable details and Agent reading. Downloads remain configuration files rather than installation actions.
+- Retain all 146 published Chinese template versions and original source attribution.
+
 ## 0.4.0 — 2026-10-20
 
 - Give each Bot an original, stable vector role mark in the directory, details and machine-readable context.

@@ -1,102 +1,58 @@
 # Awesome Bot visual system
 
-This document records the visual decisions for the static catalogue in `site/`. It is a directory surface first: the visitor should be able to search, narrow, inspect, and download a Bot without mistaking a configuration download for an installation.
+The current visual direction follows the user's chosen [Grok Bot marketplace](https://x.ai/bot/marketplace) reference. Version 0.5 replaces the earlier warm-paper editorial directory with neutral light surfaces, desktop category navigation and role-led Bot cards. Awesome Bot keeps its own circular four-cell mark, original role artwork and source attribution.
 
-## Evidence and direction
+## Reference and boundaries
 
-The supplied reference screenshot is `research/awesome-bot-20261020/ui/dsh-reference.png` (1280 × 720). The implementation's reference review recorded these observations:
+The marketplace and a Bot detail page were revisited on 2026-10-20. Workspace-local reference screenshots show a restrained Marketplace heading, compact category navigation, search, prominent identity images, concise descriptions and simple next-step controls. The detail reference separates role identity, author, description and import action.
 
-- The reference uses a warm paper background, a restrained top navigation, and a large black-and-red heading.
-- Search is the first useful control. It is a wide white field with a dark outline and a visible result count.
-- Source and index information sit close to the search area before a long, horizontally flowing category row.
-- The page is a directory with a clear list rhythm rather than a dashboard of equal cards.
-- Rounded category chips are useful for scanning, while the primary content remains quiet and text-led.
-- The reference has a square grid texture and a black grid logo with a red tile. Awesome Bot uses a circular four-cell mark and a plain paper field so its identity is independent of that logo treatment.
+These patterns inform hierarchy and browsing. Awesome Bot's primary action says Download config, because it downloads a declarative file. Agent reading copies a loading prompt; it does not install or execute a Bot. Original role marks are not upstream creator portraits. The catalogue has no ratings or popularity evidence, so no such metrics or Featured claims are introduced.
 
-The screenshot does not expose the reference list rows, detail behavior, mobile layout, empty state, or permission semantics. Those parts are product requirements and implementation decisions rather than claims about the reference.
+## Structure
 
-## Surface structure
+- The compact header keeps Awesome Bot, the market, contribution, GitHub and language controls reachable.
+- A short market title and search lead into the catalogue. Roles and tasks remain distinct collections; category, scenario, sort and saved-only filters combine with search.
+- Desktop category navigation sits beside the result grid. Smaller screens use a horizontally scrollable category strip and a single column of cards.
+- Each card gives an original role mark, role name, source author where available, summary, work area and skill count. View details, save and direct configuration download remain explicit actions.
+- Bulk downloads, source guidance and Agent discovery are supporting utilities. They do not compete with the role grid as a second dashboard.
+- Native Bot details show identity and attribution, then three main actions: configuration download, Copy for Agent and first-task copy. Documentation, original manifest, source, editing and sharing form a quieter resource group. Complete responsibilities, materials, steps, skills, permission requests and verification remain available below.
 
-1. A compact header identifies Awesome Bot and keeps Directory, Submit, GitHub, and language controls reachable on wide screens; narrow navigation retains GitHub and language controls.
-2. The masthead explains the job of the directory in Chinese by default. Its red sentence fragment creates a memorable accent without introducing a promotional hero.
-3. A high-contrast search field accepts Chinese names, summaries, tags, source names, and IDs. The result count is inside the same control line.
-4. Collection controls divide `全部`, `角色`, and `任务` as a labelled button group with pressed state. Category, sort, and saved-only controls sit beside them on wide screens and wrap on narrow screens.
-5. Work-area chips provide a quick horizontal scan. The compact preamble keeps the first thin-rule result row within the initial viewport, with a source label, summary, a small amount of metadata, a saved toggle, and a detail action.
-6. The right rail carries bulk downloads, provenance guidance, and the machine-readable registry link. It collapses below the list on smaller widths.
-7. A native dialog gives each entry a reviewable detail surface: mission, style, inputs, outputs, steps, requirements, skills, guidance, requested permissions, verification status, and safe links to manifests and sources.
+## Typography and identity
 
-## Tokens
+Self-hosted IBM Plex Sans, licensed under SIL OFL 1.1 in `site/fonts/OFL-1.1.txt`, handles Latin text with platform Chinese sans fallbacks. The page makes no remote font request. Neutral text, light borders and generous separation provide hierarchy; the old red title emphasis is removed. The own-brand red cell and existing original role marks retain their identities.
 
-| Token | Value | Use |
+Each role mark is generated deterministically from a stable Bot ID. Ten work-area families give related roles a common visual vocabulary while individual geometry remains distinct. A language switch retains the same mark.
+
+## Core tokens
+
+| Token | Value | Purpose |
 | --- | --- | --- |
-| `paper` | `#f5f0e8` | Page background |
-| `surface` | `#fffdf9` | Search field and dialog |
-| `surface-soft` | `#eee7dc` | Secondary detail surfaces |
-| `ink` | `#201d1a` | Type, rules, primary controls |
-| `muted` | `#5b554d` | Supporting copy and metadata |
-| `line` | `#d7cec1` | Quiet dividers |
-| `line-strong` | `#aaa095` | Control borders and scroll affordances |
-| `accent` | `#ad382b` | Editorial emphasis and active details |
-| `focus` | `#1d68ae` | Keyboard focus ring |
-| `radius-sm` | `4px` | Controls and buttons |
-| `radius-md` | `10px` | Search and dialog |
-| `chip` | `99px` | Category capsules |
+| Page / surface | `#ffffff` | Neutral browsing canvas |
+| Soft surface | `#f7f7f5` | Search and supporting controls |
+| Ink | `#101010` | Text and primary actions |
+| Muted | `#6f6f6d` | Supporting copy |
+| Line | `#e3e3e0` | Quiet boundaries |
+| Focus | `#1d68ae` | Visible keyboard focus |
+| Card / control radius | `16px` / `9px` | Collection and control shapes |
+| Content maximum | `1180px` | Desktop reading width |
 
-Typography uses self-hosted IBM Plex Sans weights for Latin interface text, licensed under SIL OFL 1.1 in `site/fonts/OFL-1.1.txt`, followed by the platform's Chinese sans fallbacks for broad glyph coverage. Its measured, editorial forms suit a practical directory better than a default browser stack. The static site has no remote font dependency or tracking request. Headings use tight spacing and the body remains readable at 15px. The UI intentionally avoids decorative gradient surfaces, glass effects, oversized metric cards, and decorative texture that would compete with the directory content. The external-link icon uses a CSS linear-gradient to draw its diagonal; that is icon geometry rather than a gradient surface.
+## Interaction contracts
 
-## Interaction and state rules
+- Chinese and English cover interface, all 146 role bodies and configuration projections, and five scenarios. The URL records language. Original Chinese source manifests retain their published bytes and versions.
+- Search matches names, summaries, tags, source names and authors, IDs, missions, style, category and capabilities. Collection controls use button groups and `aria-pressed`.
+- Saved Bots remain in local browser storage. Storage failure leaves an in-memory state. Shared links omit saved-only state and unknown query data.
+- Search, filters, scenarios and detail routes survive refresh and browser navigation. Direct-detail closing stays in the market. Missing entries produce a notice.
+- The native dialog closes with its control, Escape or backdrop and restores opener focus. Copy feedback uses live status text. Long details scroll normally.
+- Loading is bounded. Error recovery retains filters, offers Retry and a GitHub fallback. Empty search results have a distinct clear-filter action.
+- Entry content uses text nodes; links allow HTTPS and site-relative paths. Download links point to static configurations. Permission requests are descriptions, not grants. Format checks are separate from real-task verification.
+- Reduced-motion settings remove smooth scrolling and reduce transitions.
 
-- The default language is Chinese. The language toggle switches the interface and complete authored role, scenario and configuration content to English. Public source names and attribution retain their original identities. Language is part of the URL; localized Fleet projections do not rewrite the published Chinese manifests.
-- Search, collection, category, sort, and saved-only filters can be combined. Search matching is case-insensitive and covers `name`, `summary`, `tags`, `sourceName`, `sourceAuthor`, `id`, mission, style, category, and capabilities.
-- Favorites are stored in `localStorage` under `awesome-bot:favorites:v1`. Storage failure leaves an in-memory session state and does not block browsing.
-- Detail views use a native `dialog`, close with the close control, backdrop click, or Escape, and return focus to the control that opened them.
-- The collection button group exposes `aria-pressed` state instead of tab semantics because it filters the directory in place.
-- External-link, download, and close marks are authored CSS shapes with decorative semantics; the accessible names remain in the surrounding text and button labels.
-- Decorative section eyebrows have been removed from the HTML; functional entry metadata remains.
-- “下载配置” links to a static fleet file. The page does not install, execute, or call a model.
-- Batch download labels read the computed catalogue counts. If a generator returns `null` for a bundle above the single-bundle limit, the row stays visible without an `href` and says “超过单包上限，请逐项下载”; individual entry downloads remain available.
-- Permission rows describe requested configuration capabilities only. They do not imply that tools, screen access, or a container have been granted.
-- Source authors and template authors retain distinct labels. Format and import checks do not certify real task execution.
-- All entry content is inserted with `textContent` or text nodes. Link targets accept `https:` or site-relative paths only; unsupported schemes are omitted.
-- Loading is bounded to 12 seconds. Failure shows a retry action and GitHub catalogue fallback while keeping the current filters. A zero-result search has its own clear-filters action.
-- Controlled URLs restore search, filters, language and Bot details through refresh and browser navigation. Shared links omit saved-only state and unknown query data; missing Bot links show a notice.
+## Acceptance
 
-## Responsive and accessibility notes
+The maintained viewport targets are 1280 × 720, 1200 × 776, 390 × 844 and 375 × 812, in Chinese and English. Acceptance checks search, role identity, visible first-card actions, category navigation, wrapping, document overflow, detail hierarchy, copy, localized downloads and route/focus behavior.
 
-- The content width is capped at 1180px. Side gutters are 24px by default, 16px at widths up to 760px, and 12px at widths up to 480px.
-- At widths up to 930px, the utility rail moves below the results. At widths up to 760px, navigation and toolbar controls simplify while result actions stay aligned beside each row's content so the first detail action remains reachable without an extra scroll. The detail dialog becomes a near-full-screen sheet at widths up to 480px.
-- The acceptance viewports are 1280 × 720, 1200 × 776, 390 × 844, and 375 × 812. Each initial view keeps the search field and the first result title plus detail action together; category chips remain a thin horizontal scan line.
-- Native buttons, labels, selects, and dialog semantics provide keyboard access. Focus rings use a blue outline or a soft blue focus-within shadow and remain visible on the paper palette.
-- `aria-live` announces result counts and copy status. The list exposes busy state while the catalogue loads.
-- `prefers-reduced-motion: reduce` removes smooth scrolling and reduces transition and animation duration to 0.01ms.
+Version-specific screenshots, independent visual review and browser evidence are kept in the parent workspace's `research/awesome-bot-20261020/v0.5.0/ui/`, outside this public repository. They are local-preview evidence; public deployment requires separate byte-parity and workflow checks. Earlier releases retain their own historical evidence directories.
 
-## Version 0.1 visual QA record
+Version 0.5 acceptance passed independent visual review in Chinese and English at all four target sizes. The accepted captures use the `accepted-` prefix. First-card detail and download actions are visible at every target; the final English desktop actions stay on one row, and phone sort values remain legible. Earlier captures and the first blocking review remain as evidence of the bounded fixes. The final scoped layout scan reported no findings.
 
-The implementation and visual review recorded completed local-preview checks at 1280 × 720, 390 × 844, and 375 × 812. The review-fix evidence set includes `awesome-bot-review-fix-1280x720.png`, `awesome-bot-review-fix-mobile-390x844.png`, `awesome-bot-review-fix-mobile-375x812.png`, `awesome-bot-review-fix-mobile-first-result.png`, `awesome-bot-review-fix-detail.png`, and `awesome-bot-review-fix-empty.png`.
-
-The reference and acceptance screenshots are local evidence in the workspace's `research/awesome-bot-20261020/ui/` directory, outside this Git repository. They are not public site assets or deployed links. The reference remains evidence only and is not copied into public assets. That version 0.1 documentation pass compared source text and existing review records.
-
-
-## Version 0.2 acceptance
-
-Current-build screenshots at 1280 × 720, 1200 × 776, 390 × 844, and 375 × 812 passed independent visual review. The first result title and detail action are visible at every size; phone widths have no document-level horizontal overflow. Scoped final layout detection reported no findings.
-
-Browser checks covered search and Bot-link copy feedback, Escape and opener focus, Forward, refresh of a direct detail link, and closing without leaving the market. A separate 503 fixture recovered with Retry while preserving the English role search and its 9 matching entries. Evidence remains workspace-local outside the public repository, under `research/awesome-bot-20261020/v0.2.0/ui/`.
-
-## Version 0.3 scenario extension and acceptance
-
-The toolbar adds a task-scenario selector without adding a mobile control row. Selecting a goal reveals a thin-rule panel with its first Bot, a small configuration download, first-task copy, import guide and expandable materials, expected outputs and ordered handoffs. The default panel stays hidden. Scenario routes combine with existing filters and survive sharing, browser navigation and refresh. Bot details add first-task copy, the import guide and a public-ID/version feedback link.
-
-Independent review of current-build screenshots passed at all four acceptance viewports. The first title and detail action remain visible, document-level horizontal overflow is absent, and scenario and detail actions wrap without clipping at 375px. Long scenario instructions and detail content use normal vertical scrolling. The 1280 × 720 first-row summary extends below the initial viewport, while its title and action remain reachable.
-
-Browser checks confirmed scenario result counts, task-copy feedback, detail copy, Escape and opener focus, Back and refresh restoring the scenario and its download count. All five scene exports were downloaded over HTTP and matched their built files; each contains its expected one or two Bots. Scoped layout detection reported no findings. Evidence remains outside the public repository under `research/awesome-bot-20261020/v0.3.0/ui/`; it is local-preview evidence, not a deployed screenshot or real-account task certification.
-
-## Version 0.4 role identity, English and Agent reading
-
-Each role has an original deterministic SVG mark, with ten geometric work-area families and individual details derived from its stable ID. The same mark appears at 40px in the directory and 64px in details; language changes do not change its identity. The marks use the existing paper and ink palette with restrained role colors. They do not reproduce upstream avatars or creator portraits.
-
-The English projection covers all 146 role names, missions, steps, prerequisites, skills, personas, examples and downloads, plus all five scenarios. Category labels, guidance links, fallback catalogue, accessibility labels and transient copy feedback follow the selected language. The 375px English preamble is slightly tighter so its first result action remains visible. Shrinkable toolbar tracks handle longer English labels without clipping the page.
-
-The directory rail and Bot details offer Copy for Agent. The success message reports copying, not installation. Per-Bot Markdown and JSON keep role context, language, source version, content revision, configuration digest and requested permissions together; a small llms.txt entry introduces the reading path without loading every persona at once.
-
-Independent visual review passed Chinese and English at all four acceptance sizes, including the corrected 1200 × 776 captures. Default first titles and detail actions remain visible, and document-level horizontal overflow is absent. English scenario and detail actions wrap without clipping. The local evidence set is `research/awesome-bot-20261020/v0.4.0/ui/`; the accepted 1200px images use the `recapture-` prefix. Other accepted images use `final-`. Browser checks confirmed full English content, English configuration links, real paste of the selected Bot's Agent-loading prompt, language-status cleanup, Escape and opener focus, and refresh preserving the English scenario. Scoped layout detection reported no findings. These checks do not certify every role's real-account execution.
+Actual browser checks confirmed category/select synchronization, saved filtering, English scene downloads, all three main detail actions, a real paste of the selected English Bot's Agent prompt, Escape focus restoration and refresh preserving the selected scenario. Public deployment and release package checks are recorded separately from these local UI results.

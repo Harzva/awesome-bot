@@ -6,8 +6,8 @@
     <link rel="alternate" href="./index.md" type="text/markdown" title="Awesome Bot for Agents" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Awesome Bot：可检索、可审阅、可下载的 OpenBot bot 目录。">
-    <meta name="theme-color" content="#f5f0e8">
-    <title>Awesome Bot · OpenBot 目录</title>
+    <meta name="theme-color" content="#ffffff">
+    <title>Awesome Bot · Bot 市场</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -32,7 +32,7 @@
     <main id="catalog">
       <section class="masthead" aria-labelledby="page-title">
         <div class="masthead-copy">
-          <h1 id="page-title" data-i18n="title">找到一个，<em>把事情推进下去。</em></h1>
+          <h1 id="page-title" data-i18n="title">Bot 市场</h1>
           <p id="page-lede" class="lede" data-i18n="lede">按角色和任务查找中文 Bot。看清职责、步骤和权限需求，再下载可复现的配置。</p>
         </div>
         <div class="masthead-note" aria-label="目录说明" data-i18n-aria-label="inventoryLabel">
@@ -82,16 +82,17 @@
         </div>
       </section>
 
-      <section class="category-strip" aria-labelledby="category-strip-title">
-        <div class="strip-heading">
-          <h2 id="category-strip-title" data-i18n="categoriesTitle">按工作场景</h2>
-          <span class="strip-line" aria-hidden="true"></span>
-        </div>
-        <div id="category-list" class="category-list" role="list"></div>
-      </section>
+      <div class="market-layout">
+        <aside class="category-strip category-nav" aria-labelledby="category-strip-title">
+          <div class="strip-heading">
+            <h2 id="category-strip-title" data-i18n="categoriesTitle">按领域浏览</h2>
+            <span class="strip-line" aria-hidden="true"></span>
+          </div>
+          <div id="category-list" class="category-list" role="list"></div>
+        </aside>
 
-      <div class="content-grid">
-        <section class="results-section" aria-labelledby="results-title">
+        <div class="content-grid">
+          <section class="results-section" aria-labelledby="results-title">
           <div class="results-heading">
             <div>
               <h2 id="results-title"><span data-i18n="resultsTitle">全部条目</span> <span id="results-total" class="heading-count">—</span></h2>
@@ -127,9 +128,9 @@
             <button id="retry-catalogue" class="text-button" type="button" data-i18n="retryCatalogue" hidden>重新加载目录</button>
             <a id="browse-github" class="text-button" href="https://github.com/Harzva/awesome-bot/blob/main/CATALOGUE.md" target="_blank" rel="noreferrer" data-i18n="browseGitHub" hidden>查看 GitHub 目录</a>
           </div>
-        </section>
+          </section>
 
-        <aside class="directory-aside" aria-label="目录工具" data-i18n-aria-label="asideLabel">
+          <aside class="directory-aside" aria-label="市场工具" data-i18n-aria-label="asideLabel">
           <section class="aside-block">
             <h2 data-i18n="downloadsTitle">带走一组配置</h2>
             <p class="aside-copy" data-i18n="downloadsBody">下载只是配置文件，不会在本页面安装或启动 Bot。</p>
@@ -159,7 +160,8 @@
             <button id="copy-index" class="copy-button" type="button" data-i18n="copyIndex">复制索引 URL</button>
             <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
           </section>
-        </aside>
+          </aside>
+        </div>
       </div>
     </main>
 

@@ -3,7 +3,7 @@
 [![CI](https://github.com/Harzva/awesome-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/Harzva/awesome-bot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-A source-backed directory of useful Bot roles and task workflows, with readable instructions and downloadable OpenBot configurations.
+A source-backed marketplace of useful Bot roles and task workflows, with readable instructions and downloadable OpenBot configurations.
 
 [Browse the market](https://harzva.github.io/awesome-bot/?lang=en) · [中文说明](README.zh-CN.md) · [Full catalogue](CATALOGUE.en.md) · [Contribute](CONTRIBUTING.md) · [Releases](https://github.com/Harzva/awesome-bot/releases)
 
@@ -22,8 +22,8 @@ Every Bot detail also offers its existing first-task example and a feedback form
 Use the [market](https://harzva.github.io/awesome-bot/?lang=en) to search English responsibilities, titles or sources, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.
 
 - [90 role configurations](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-roles.fleet.json)
-- [56 task workflows](https://harzva.github.io/awesome-bot/exports/awesome-bot-workflows.fleet.json)
-- [Complete configuration collection](https://harzva.github.io/awesome-bot/exports/awesome-bot-all.fleet.json)
+- [56 task workflows](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-workflows.fleet.json)
+- [Complete configuration collection](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-all.fleet.json)
 - [Machine-readable market index](https://harzva.github.io/awesome-bot/registry/index.json)
 
 Import a downloaded Fleet file through **OpenBot → Settings → Data & Sync → Import configuration** and review the summary. Model, tool and account connections need their own setup. New ordinary Bots receive no granted tool or container permissions. In an empty library, OpenBot selects its first Bot as the primary Bot, which carries management capabilities. Importing does not start tasks or environments.

@@ -7,15 +7,15 @@
 
   const copy = {
     zh: {
-      navCatalog: '目录', navSubmit: '投稿', kicker: '一份可审阅的 Bot 目录', languageToggle: '切换界面语言',
+      navCatalog: 'Bot 市场', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
       filterLabel: '目录筛选', botTypeLabel: 'Bot 类型', categoryFilter: '按分类筛选', sortControlLabel: '排序方式',
-      title: '找到一个，把事情推进下去。',
-      lede: '按角色和任务查找中文 Bot。看清职责、步骤和权限需求，再下载可复现的配置。',
+      title: 'Bot 市场',
+      lede: '探索角色与任务，找到适合你的 Bot。',
       botsLabel: '个 Bot 可查', updatedLabel: '目录更新时间：', searchLabel: '搜索 Bot',
       searchPlaceholder: '搜索名称、职责、标签或来源', searchHint: '支持中文名称、摘要、标签、来源名称和条目 ID',
       allLabel: '全部', rolesLabel: '角色', workflowsLabel: '任务', categoryLabel: '分类',
       sortLabel: '排序', favoritesLabel: '只看收藏', categoriesTitle: '按领域浏览',
-      resultsKicker: '目录结果', resultsTitle: '全部条目', emptyTitle: '没有匹配的 Bot',
+      resultsKicker: '市场结果', resultsTitle: '全部 Bot', emptyTitle: '没有匹配的 Bot',
       emptyBody: '换一个关键词，或清除筛选后再试。', clearFilters: '清除筛选',
       downloadsKicker: '批量下载', downloadsTitle: '带走一组配置',
       downloadsBody: '下载只是配置文件，不会在本页面安装或启动 Bot。',
@@ -40,19 +40,19 @@
       verification: '验收状态', format: '格式检查', realTask: '真实任务', passed: '已通过',
       copyResults: '分享当前筛选', copyDetail: '复制 Bot 链接', shareSuccess: '链接已复制', retryCatalogue: '重新加载', retrying: '正在重试…', browseGitHub: '在 GitHub 浏览', missingDetail: '链接中的 Bot 已不在目录中，可继续搜索。',
       scenarioLabel: '场景', scenarioFilter: '选择任务场景', allScenarios: '选择任务场景', downloadScenario: '下载此场景', copyFirstTask: '复制首个任务', copyStep: '复制这一步', taskCopied: '任务提示词已复制，请补充自己的材料后发送。', importGuide: '导入与首次使用', scenarioGuide: '准备材料与使用步骤', startWith: '先从这个 Bot 开始：', scenarioNote: '按步骤在对应 Bot 中开始，审阅产物后再交接。下载不会自动执行任务。', missingScenario: '链接中的场景已不在目录中，可继续浏览全部 Bot。', feedbackBot: '反馈这个 Bot', botsUnit: '个 Bot',
-      agentTitle: '交给 Agent 读取', agentBody: '复制加载指令，粘贴给能读取链接的 Agent。它可按需读取角色、步骤和配置；复制不会安装或启动 Bot。', copyAgent: '复制给 Agent', agentCopied: '加载指令已复制，粘贴到能读取链接的 Agent 中。', agentMarkdown: 'Markdown 说明', agentIndex: 'Agent 索引', asideLabel: '目录工具', pageTitle: 'Awesome Bot — 可审阅的 Bot 目录', homeLabel: 'Awesome Bot 首页', navigationLabel: '主导航', inventoryLabel: '目录说明',
+      agentTitle: '交给 Agent 读取', agentBody: '复制加载指令，粘贴给能读取链接的 Agent。它可按需读取角色、步骤和配置；复制不会安装或启动 Bot。', copyAgent: '复制给 Agent', agentCopied: '加载指令已复制，粘贴到能读取链接的 Agent 中。', agentMarkdown: 'Markdown 说明', agentIndex: 'Agent 索引', asideLabel: '市场工具', pageTitle: 'Awesome Bot — Bot 市场', homeLabel: 'Awesome Bot 首页', navigationLabel: '主导航', inventoryLabel: '市场说明',
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
-      navCatalog: 'Directory', navSubmit: 'Submit', kicker: 'A reviewable Bot directory', languageToggle: 'Switch interface language',
+      navCatalog: 'Marketplace', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
       filterLabel: 'Directory filters', botTypeLabel: 'Bot type', categoryFilter: 'Filter by category', sortControlLabel: 'Sort order',
-      title: 'Find one that moves work forward.',
-      lede: 'Find a Bot by role or task. Review its responsibilities, steps and permissions, then download an English configuration.',
+      title: 'Bot marketplace',
+      lede: 'Explore roles and tasks. Find a Bot for your work.',
       botsLabel: 'Bots to explore', updatedLabel: 'Updated: ', searchLabel: 'Search Bots',
       searchPlaceholder: 'Search names, missions, tags or sources', searchHint: 'Matches names, summaries, tags, source names and entry IDs',
       allLabel: 'All', rolesLabel: 'Roles', workflowsLabel: 'Tasks', categoryLabel: 'Category',
       sortLabel: 'Sort', favoritesLabel: 'Saved only', categoriesTitle: 'Browse by work area',
-      resultsKicker: 'Directory results', resultsTitle: 'All entries', emptyTitle: 'No matching Bots',
+      resultsKicker: 'Marketplace results', resultsTitle: 'All Bots', emptyTitle: 'No matching Bots',
       emptyBody: 'Try another search term or clear the filters.', clearFilters: 'Clear filters',
       downloadsKicker: 'Bulk downloads', downloadsTitle: 'Take a set with you',
       downloadsBody: 'Downloads are configuration files. This page does not install or start Bots.',
@@ -77,7 +77,7 @@
       verification: 'Verification', format: 'Format', realTask: 'Real task', passed: 'Passed',
       copyResults: 'Share this search', copyDetail: 'Copy Bot link', shareSuccess: 'Link copied', retryCatalogue: 'Retry loading', retrying: 'Retrying…', browseGitHub: 'Browse on GitHub', missingDetail: 'The linked Bot is no longer in the directory. You can keep searching.',
       scenarioLabel: 'Goal', scenarioFilter: 'Choose a task scenario', allScenarios: 'Choose a goal', downloadScenario: 'Download this scenario', copyFirstTask: 'Copy first task', copyStep: 'Copy this step', taskCopied: 'Task prompt copied. Add your own materials before sending.', importGuide: 'Import and get started', scenarioGuide: 'Materials and steps', startWith: 'Start with this Bot: ', scenarioNote: 'Start each step in its Bot, review the output, then hand it over. Downloading does not run the tasks.', missingScenario: 'The linked scenario is no longer in the directory. You can browse all Bots.', feedbackBot: 'Report a Bot issue', botsUnit: 'Bots',
-      agentTitle: 'Read with your Agent', agentBody: 'Copy the loading prompt into an Agent that can read links. It can fetch role context, steps and configuration on demand. Copying does not install or start a Bot.', copyAgent: 'Copy for Agent', agentCopied: 'Loading prompt copied. Paste it into an Agent that can read links.', agentMarkdown: 'Markdown context', agentIndex: 'Agent index', asideLabel: 'Directory tools', pageTitle: 'Awesome Bot — A source-backed Bot directory', homeLabel: 'Awesome Bot home', navigationLabel: 'Main navigation', inventoryLabel: 'Catalogue summary',
+      agentTitle: 'Read with your Agent', agentBody: 'Copy the loading prompt into an Agent that can read links. It can fetch role context, steps and configuration on demand. Copying does not install or start a Bot.', copyAgent: 'Copy for Agent', agentCopied: 'Loading prompt copied. Paste it into an Agent that can read links.', agentMarkdown: 'Markdown context', agentIndex: 'Agent index', asideLabel: 'Marketplace tools', pageTitle: 'Awesome Bot — Bot marketplace', homeLabel: 'Awesome Bot home', navigationLabel: 'Main navigation', inventoryLabel: 'Marketplace summary',
       notTestedValue: 'Not tested', noDetails: 'Not provided', copySuccess: 'Index URL copied', copyFailed: 'Copy failed. Copy it manually.'
     }
   };
@@ -462,18 +462,7 @@
     doc.documentElement.lang = state.language === 'zh' ? 'zh-CN' : 'en';
     doc.querySelectorAll('[data-i18n]').forEach((node) => {
       const key = node.getAttribute('data-i18n');
-      if (node.id === 'page-title') {
-        node.replaceChildren();
-        if (state.language === 'zh') {
-          node.append('找到一个，');
-          const emphasis = make('em', '', '把事情推进下去。');
-          node.append(emphasis);
-        } else {
-          node.textContent = label(key);
-        }
-      } else {
-        setText(node, label(key));
-      }
+      setText(node, label(key));
     });
     doc.querySelectorAll('[data-i18n-placeholder]').forEach((node) => {
       node.placeholder = label(node.getAttribute('data-i18n-placeholder'));
@@ -748,7 +737,8 @@
     const main = make('div', 'result-main');
     const kicker = make('div', 'entry-kicker');
     kicker.append(make('span', 'kind-tag', collectionLabel(collectionOf(entry))));
-    const sourceLabel = entry.sourceName ? `${label('sourcePrefix')}${entry.sourceName}` : label('community');
+    const sourceLabel = entry.sourceAuthor ? `${label('sourceAuthor')}${entry.sourceAuthor}`
+      : (entry.sourceName ? `${label('sourcePrefix')}${entry.sourceName}` : label('community'));
     kicker.append(make('span', 'source-label', sourceLabel));
     const title = make('h3');
     const titleButton = make('button', 'entry-title', entry.name);
@@ -779,6 +769,7 @@
     details.dataset.detailId = entry.id;
     details.addEventListener('click', () => openDetail(entry));
     actions.append(favorite, details);
+    linkFor(actions, entry.downloadUrl, label('download'), { className: 'card-download', download: true });
     const avatar = entryAvatar(entry, false);
     if (avatar) article.append(avatar);
     article.append(main, actions);
@@ -942,27 +933,28 @@
     copyStatus.id = 'detail-copy-status';
     copyStatus.setAttribute('role', 'status');
     appendAction(actions, entry.downloadUrl, label('download'), true, true);
+    const agent = make('button', 'detail-action secondary', label('copyAgent'));
+    agent.type = 'button';
+    agent.addEventListener('click', () => copyText(agentLoadText(entry, state.language), copyStatus, 'agentCopied'));
+    actions.append(agent);
     if (entry.starterPrompt) {
       const task = make('button', 'detail-action secondary', label('copyFirstTask'));
       task.type = 'button';
       task.addEventListener('click', () => copyText(entry.starterPrompt, copyStatus, 'taskCopied'));
       actions.append(task);
     }
-    const agent = make('button', 'detail-action secondary', label('copyAgent'));
-    agent.type = 'button';
-    agent.addEventListener('click', () => copyText(agentLoadText(entry, state.language), copyStatus, 'agentCopied'));
-    actions.append(agent);
-    appendAction(actions, `agents/${state.language}/${entry.id.split('/')[1]}.md`, label('agentMarkdown'), false, false);
-    appendAction(actions, `https://github.com/Harzva/awesome-bot/blob/main/START_HERE${state.language === 'en' ? '.en' : ''}.md`, label('importGuide'), false, false);
-    appendAction(actions, entry.manifestUrl, label('manifest'), false, false);
-    appendAction(actions, entry.originalUrl, label('original'), false, false);
-    appendAction(actions, entry.editUrl, label('edit'), false, false);
+    const resources = make('div', 'detail-resource-links');
+    appendAction(resources, `agents/${state.language}/${entry.id.split('/')[1]}.md`, label('agentMarkdown'), false, false);
+    appendAction(resources, `https://github.com/Harzva/awesome-bot/blob/main/START_HERE${state.language === 'en' ? '.en' : ''}.md`, label('importGuide'), false, false);
+    appendAction(resources, entry.manifestUrl, label('manifest'), false, false);
+    appendAction(resources, entry.originalUrl, label('original'), false, false);
+    appendAction(resources, entry.editUrl, label('edit'), false, false);
     const share = make('button', 'detail-action secondary', label('copyDetail'));
     share.type = 'button';
     share.disabled = !navigation;
     share.addEventListener('click', () => copyShare(copyStatus, true));
-    actions.append(share);
-    shell.append(actions, copyStatus);
+    resources.append(share);
+    shell.append(actions, resources, copyStatus);
 
     appendTextSection(shell, label('mission'), entry.mission);
     appendTextSection(shell, label('style'), entry.style);
