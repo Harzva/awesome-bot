@@ -3131,7 +3131,7 @@
       "id": "awesome/supervisor",
       "kind": "template",
       "name": "任务监督 BOT",
-      "summary": "把用户授权的原目标转成有限托管：跟随执行证据继续、返工、验收或交人处理。",
+      "summary": "长期工程任务负责人：依原目标自动验收、返工续派，重启恢复可确认的工作，主动停止后保持停止。",
       "tags": [
         "engineering",
         "supervision",
@@ -3142,6 +3142,12 @@
         "name": "OpenBot contributors"
       },
       "versions": [
+        {
+          "version": "1.1.0",
+          "url": "../templates/supervisor/1.1.0.json",
+          "integrity": "sha256-3s+BPyHnBJAuaZS9psV93yxMZ8OuvLcoD/Y3VwiBmY0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        },
         {
           "version": "1.0.0",
           "url": "../templates/supervisor/1.0.0.json",

@@ -1,6 +1,6 @@
 {
   "name": "awesome-bot-market",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "private": true,
   "type": "module",
   "description": "A source-backed Bot directory with original OpenBot roles, workflows and reproducible configuration downloads",

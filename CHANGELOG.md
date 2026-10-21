@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.2
+
+- Add supervisor role 1.1.0 for OpenBot 0.10.28: real Node checks, evidence-based rework, confirmed restart recovery and durable stop.
+- Preserve supervisor 1.0.0 bytes and clarify test permissions, verification scope and App lifecycle.
+
 ## 0.6.0 — 2026-10-21
 
 - Add the Task Supervisor BOT (`awesome/supervisor` 1.0.0), the first bot-role template for supervised task execution: turn an authorized objective into bounded supervision and decide each round from evidence — continue, rework, accept, or hand over to the user.

@@ -201,7 +201,7 @@
 | [软件交付与巡检员](templates/grok-seed-a91e4c/1.0.0.json) | 处理获准软件变更、问题分类与运行信息，提供经过验证的工程交付。 | [SWE](https://x.ai/bot/marketplace/bots/seed-a91e4c) |
 | [技术书签演示员](templates/grok-tech-demos/1.0.0.json) | 从获准技术书签和代码库中选择主题，规划并验证小型代码演示。 | [Tech Demos](https://x.ai/bot/marketplace/bots/tech-demos) |
 | [MCP工具封装工程师](templates/grok-tinkabot/1.0.0.json) | 把已有API设计成边界清晰的MCP工具与使用技能说明。 | [tinkabot](https://x.ai/bot/marketplace/bots/tinkabot) |
-| [任务监督 BOT](templates/supervisor/1.0.0.json) | 把用户授权的原目标转成有限托管：跟随执行证据继续、返工、验收或交人处理。 | [OpenBot 桌面项目（监督托管能力随 0.10.24 引入）](https://github.com/Harzva/openbot) |
+| [任务监督 BOT](templates/supervisor/1.1.0.json) | 长期工程任务负责人：依原目标自动验收、返工续派，重启恢复可确认的工作，主动停止后保持停止。 | [OpenBot 桌面项目（本角色需 0.10.28 或更高版本）](https://github.com/Harzva/openbot) |
 
 ### 设计与创作
 

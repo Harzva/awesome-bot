@@ -75,5 +75,5 @@
     }
   ],
   "entriesDir": "data/entries",
-  "targetOpenBotVersion": "0.10.24"
+  "targetOpenBotVersion": "0.10.28"
 }
