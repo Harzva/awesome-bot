@@ -1,6 +1,6 @@
 # Awesome Bot 目录
 
-核验日期：2026-10-20。90 个 OpenBot 兼容原创角色模板 + 56 个任务工作流，均有来源记录。模板尚未完成逐项真实账号任务验收。
+核验日期：2026-10-20。91 个 OpenBot 兼容原创角色模板 + 56 个任务工作流，均有来源记录。模板尚未完成逐项真实账号任务验收。
 
 已收录 Grok Marketplace 的 90 个公开条目（54 个带 Grok Bot Team 标签），以及 56 个任务场景。完整逐项来源、作者与适配状态见 [来源清单](sources/grok-inventory.json)。部分详情公开显示设置文本；本目录没有复制这些文本或导入其账号连接与运行环境。
 
@@ -201,6 +201,7 @@
 | [软件交付与巡检员](templates/grok-seed-a91e4c/1.0.0.json) | 处理获准软件变更、问题分类与运行信息，提供经过验证的工程交付。 | [SWE](https://x.ai/bot/marketplace/bots/seed-a91e4c) |
 | [技术书签演示员](templates/grok-tech-demos/1.0.0.json) | 从获准技术书签和代码库中选择主题，规划并验证小型代码演示。 | [Tech Demos](https://x.ai/bot/marketplace/bots/tech-demos) |
 | [MCP工具封装工程师](templates/grok-tinkabot/1.0.0.json) | 把已有API设计成边界清晰的MCP工具与使用技能说明。 | [tinkabot](https://x.ai/bot/marketplace/bots/tinkabot) |
+| [任务监督 BOT](templates/supervisor/1.0.0.json) | 把用户授权的原目标转成有限托管：跟随执行证据继续、返工、验收或交人处理。 | [OpenBot 桌面项目（监督托管能力随 0.10.24 引入）](https://github.com/Harzva/openbot) |
 
 ### 设计与创作
 

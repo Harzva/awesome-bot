@@ -3128,6 +3128,29 @@
       ]
     },
     {
+      "id": "awesome/supervisor",
+      "kind": "template",
+      "name": "任务监督 BOT",
+      "summary": "把用户授权的原目标转成有限托管：跟随执行证据继续、返工、验收或交人处理。",
+      "tags": [
+        "engineering",
+        "supervision",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/supervisor/1.0.0.json",
+          "integrity": "sha256-httpYKPX8M+aVAFyRcSOkkCgqBpFZ9Q5d8GYZnORg8A=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
       "id": "awesome/talent-scout",
       "kind": "template",
       "name": "人才搜寻员",

@@ -74,5 +74,6 @@
       "note": "社区插件市场，7,461 stars，MIT；参考市场组织，不作为OpenBot安装格式。"
     }
   ],
-  "entriesDir": "data/entries"
+  "entriesDir": "data/entries",
+  "targetOpenBotVersion": "0.10.24"
 }
