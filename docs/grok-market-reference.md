@@ -46,3 +46,8 @@ The reference has a Featured section; Awesome Bot does not have editorial select
 The public [marketplace](https://x.ai/bot/marketplace) and its linked [Guides](https://x.ai/bot/guides) were revisited for this bounded correction. The marketplace still presents creator/name search, category navigation, role summaries and separate detail links. The guides describe templates as starting recipes, which does not imply that each listing needs a unique picture.
 
 This text-level recheck does not establish what every creator image depicts or how the official App renders its avatars. An initially guessed documentation URL was not retrievable; that is a source-access limit, not evidence of a product failure. No reference artwork was copied. The implementation instead reuses the checked-in, MIT-licensed OpenBot App generators and existing assignments; [provenance and update procedure](app-avatars.md) record that separate source.
+
+
+## 2026-10-21 supervisor role update
+
+Rechecked https://docs.x.ai/grok-bot/bots (page updated October 12, 2026). Marketplace Add / Import creates a personal template copy; shared configuration does not transfer logins or conversation history. The supervisor role follows that boundary: installation creates configuration, while the local OpenBot host provides task approval, durable execution and verification. This content-only release makes no claim of Grok runtime compatibility or a verified Grok market installation API.

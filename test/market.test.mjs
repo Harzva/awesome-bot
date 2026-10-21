@@ -18,7 +18,7 @@ test('every published template loads, resolves and exports a new unprivileged Bo
   const loader = createLoader(registry);
   assert.equal(registry.entries.length, catalogue.bots.length);
   for (const entry of registry.entries) {
-    const plan = await buildPlan({ id: entry.id, entries: registry.entries, loadManifest: loader, openbotVersion: '0.9.9' });
+    const plan = await buildPlan({ id: entry.id, entries: registry.entries, loadManifest: loader, openbotVersion: catalogue.targetOpenBotVersion || '0.9.9' });
     assert.equal(plan.ok, true, `${entry.id}: ${plan.errors?.join('; ')}`);
     const result = materialize(plan, { now: 1792432800000 });
     assert.equal(result.ok, true, entry.id);
@@ -39,7 +39,7 @@ test('every published template loads, resolves and exports a new unprivileged Bo
 
 test('reinstall produces a separate Bot without replacing the existing identity', async () => {
   const entry = registry.entries[0];
-  const plan = await buildPlan({ id: entry.id, entries: registry.entries, loadManifest: createLoader(registry), openbotVersion: '0.9.9' });
+  const plan = await buildPlan({ id: entry.id, entries: registry.entries, loadManifest: createLoader(registry), openbotVersion: catalogue.targetOpenBotVersion || '0.9.9' });
   const first = materialize(plan);
   const existing = first.bundle.bots;
   const before = structuredClone(existing);

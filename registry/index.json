@@ -3128,6 +3128,35 @@
       ]
     },
     {
+      "id": "awesome/supervisor",
+      "kind": "template",
+      "name": "任务监督 BOT",
+      "summary": "长期工程任务负责人：依原目标自动验收、返工续派，重启恢复可确认的工作，主动停止后保持停止。",
+      "tags": [
+        "engineering",
+        "supervision",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.1.0",
+          "url": "../templates/supervisor/1.1.0.json",
+          "integrity": "sha256-3s+BPyHnBJAuaZS9psV93yxMZ8OuvLcoD/Y3VwiBmY0=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        },
+        {
+          "version": "1.0.0",
+          "url": "../templates/supervisor/1.0.0.json",
+          "integrity": "sha256-httpYKPX8M+aVAFyRcSOkkCgqBpFZ9Q5d8GYZnORg8A=",
+          "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
       "id": "awesome/talent-scout",
       "kind": "template",
       "name": "人才搜寻员",

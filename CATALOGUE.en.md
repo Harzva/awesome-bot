@@ -2,11 +2,11 @@
 
 <!-- Generated from canonical roles and data/locales/en; run npm run build. -->
 
-146 English role and task configurations. Public source roles are references; OpenBot personas, workflows and role marks are independently authored. Format checks do not certify real-account execution.
+147 English role and task configurations. Public source roles are references; OpenBot personas, workflows and role marks are independently authored. Format checks do not certify real-account execution.
 
 [English market](https://harzva.github.io/awesome-bot/?lang=en) · [First task](START_HERE.en.md) · [Agent integration](docs/agent-integration.md)
 
-## Bot roles (90)
+## Bot roles (91)
 
 | Bot | Work area | Responsibility | Source |
 | --- | --- | --- | --- |
@@ -100,6 +100,7 @@
 | [Writing Bot](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgrok-writing-bot) | Marketing and content | Improve the structure and expression of articles, emails and documents while preserving original meaning and facts. | [Public reference](https://x.ai/bot/marketplace/bots/writing-bot) |
 | [WTD](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgrok-wtd) | Marketing and content | Organize VIP events, tickets and nominations to maintain hosting plans and external status updates. | [Public reference](https://x.ai/bot/marketplace/bots/wtd) |
 | [X Brief](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgrok-x-brief) | Marketing and content | Summarize X topics and account updates within authorized scope, distinguishing original posts, secondary reports and commentary. | [Public reference](https://x.ai/bot/marketplace/bots/x-brief) |
+| [Task Supervisor BOT](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fsupervisor) | Engineering and development | Own long engineering tasks: verify evidence, dispatch rework, recover confirmed work after restart and honor a durable user stop. | [Public reference](https://github.com/Harzva/openbot) |
 
 ## Task workflows (56)
 
