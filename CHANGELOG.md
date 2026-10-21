@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0 — 2026-10-21
+
+- Add the Task Supervisor BOT (`awesome/supervisor` 1.0.0), the first bot-role template for supervised task execution: turn an authorized objective into bounded supervision and decide each round from evidence — continue, rework, accept, or hand over to the user.
+- Publish complete Chinese and English role content, onboarding guidance, a sample task, and explicit host requirements (local API model, local executor bot, tools plus bot-management permission, in-workdir artifact checks, per-task approval).
+- Declare `openbot >= 0.10.24` so older hosts refuse to plan the entry instead of installing a tool-less role; catalogue gains a `targetOpenBotVersion` used by export, site and tests.
+- Registry, templates, catalogue and site regenerate through the pinned engine; no existing entry bytes change. Downloads remain configuration files; installing grants no execution rights.
+
 ## 0.5.1 — 2026-10-21
 
 - Render the existing App character assigned to each Bot in marketplace cards and details, replacing the separate geometric marks. The 146 entries reuse 14 characters; names and identities remain distinct.
