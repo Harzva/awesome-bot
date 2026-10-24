@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.3 — 2026-10-24
+
+- Add `gitopsbot` 1.0.0 with complete Chinese and English onboarding, reusable skills and an operational playbook for event-driven GitHub-to-Feishu notifications.
+- Capture validated Webhook authentication, deterministic formatting, persistent deduplication, process recovery, delivery verification and explicit OpenBot/Grok sender routing.
+- Keep credentials, live account bindings and runtime processes outside the declarative template; preserve every previously published template version.
+
 ## 0.6.2
 
 - Add supervisor role 1.1.0 for OpenBot 0.10.28: real Node checks, evidence-based rework, confirmed restart recovery and durable stop.

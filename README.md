@@ -11,6 +11,12 @@ The initial collection contains **90 original role templates** corresponding to 
 
 The repository builds independently after a clean clone. One JSON file per entry generates the documentation, searchable website, manifests, index and configuration downloads. No account or backend is required to browse.
 
+## gitopsbot
+
+[Open gitopsbot in the market](https://harzva.github.io/awesome-bot/?bot=awesome%2Fgitopsbot) for a reusable GitHub-to-Feishu setup role. Its skills and bilingual playbook cover event routing, signed Webhooks, durable deduplication, real delivery verification, recovery and explicit OpenBot/Grok sender selection. Multiple Bots can remain online; the selected sender determines where each event goes.
+
+[Setup and operations playbook](docs/gitopsbot-playbook.en.md) · [中文手册](docs/gitopsbot-playbook.md). Installing the role grants no accounts or tools and starts no background listener.
+
 ## Start with a task
 
 Choose a scenario in the [market](https://harzva.github.io/awesome-bot/?lang=en) to get 1–2 relevant Bots, the materials to prepare, a first task you can copy, and a small configuration download. Begin with [a customer meeting](https://harzva.github.io/awesome-bot/?lang=en&scenario=customer-meeting), or read the generated [first-use guide](START_HERE.en.md). You review each output and pass it to the next Bot; the scenario download does not execute a workflow.
@@ -28,7 +34,7 @@ Use the [market](https://harzva.github.io/awesome-bot/?lang=en) to search Englis
 
 Import a downloaded Fleet file through **OpenBot → Settings → Data & Sync → Import configuration** and review the summary. Model, tool and account connections need their own setup. New ordinary Bots receive no granted tool or container permissions. In an empty library, OpenBot selects its first Bot as the primary Bot, which carries management capabilities. Importing does not start tasks or environments.
 
-English mode includes all 146 Bot names, responsibilities, skills, personas, examples and configuration downloads, plus five fully translated scenarios. Switch to Chinese for the original content. English configuration projections retain the source role identity and are labelled with a separate content revision; published Chinese manifests remain unchanged. Each role has its own independently authored vector mark.
+English mode includes all 148 Bot names, responsibilities, skills, personas, examples and configuration downloads, plus five fully translated scenarios. Switch to Chinese for the original content. English configuration projections retain the source role identity and are labelled with a separate content revision; published Chinese manifests remain unchanged. Each role has its own independently authored vector mark.
 
 Release collection files with `-en-` in their names contain English personas and skills. The complete source archive includes both languages and the static Agent context files.
 

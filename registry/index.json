@@ -1,7 +1,7 @@
 {
   "schema": "openbot.market.registry/1",
   "name": "Awesome Bot — OpenBot 原创模板（开发目录，未签名）",
-  "updatedAt": "2026-10-20T02:42:34+08:00",
+  "updatedAt": "2026-10-24T16:09:16+08:00",
   "entries": [
     {
       "id": "awesome/account-health",
@@ -528,6 +528,32 @@
           "url": "../templates/feature-request-tracker/1.0.0.json",
           "integrity": "sha256-SaSodPfz+IcIXrWi5KdrseHsUoD+WOqP1g1fZA1c2DQ=",
           "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/gitopsbot",
+      "kind": "template",
+      "name": "gitopsbot",
+      "summary": "把 GitHub 真实事件可靠送到飞书：按权限选择 Webhook 或 Actions，确定性摘要、持久去重、显式路由与回滚。",
+      "tags": [
+        "engineering",
+        "gitops",
+        "github",
+        "feishu",
+        "event-driven",
+        "role-template"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/gitopsbot/1.0.0.json",
+          "integrity": "sha256-rSTqkdYSe8nqortGAjXoprp3WiNy5FJbLs+55Yg29Jo=",
+          "publishedAt": "2026-10-24T16:09:16+08:00"
         }
       ]
     },

@@ -2,14 +2,15 @@
 
 <!-- Generated from canonical roles and data/locales/en; run npm run build. -->
 
-147 English role and task configurations. Public source roles are references; OpenBot personas, workflows and role marks are independently authored. Format checks do not certify real-account execution.
+148 English role and task configurations. Public source roles are references; OpenBot personas, workflows and role marks are independently authored. Format checks do not certify real-account execution.
 
 [English market](https://harzva.github.io/awesome-bot/?lang=en) · [First task](START_HERE.en.md) · [Agent integration](docs/agent-integration.md)
 
-## Bot roles (91)
+## Bot roles (92)
 
 | Bot | Work area | Responsibility | Source |
 | --- | --- | --- | --- |
+| [gitopsbot](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgitopsbot) | Engineering and development | Route real GitHub events to Feishu with permission-based ingress, deterministic text, durable deduplication, explicit providers and rollback. | [Public reference](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries) |
 | [Account Research Desk](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgrok-account-book) | Sales and outreach | Maintain customer-company research notes, separating new facts from existing hypotheses. | [Public reference](https://x.ai/bot/marketplace/bots/account-book) |
 | [GTM Account Research](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgrok-account-research) | Sales and outreach | Research a target company's business, organization and recent changes to prepare verifiable context for customer conversations. | [Public reference](https://x.ai/bot/marketplace/bots/account-research) |
 | [AI Search Visibility](https://harzva.github.io/awesome-bot/?lang=en&bot=awesome%2Fgrok-ai-search-visibility) | Marketing and content | Check how a brand appears in a specified set of AI search questions, recording citations and factual discrepancies. | [Public reference](https://x.ai/bot/marketplace/bots/ai-search-visibility) |
