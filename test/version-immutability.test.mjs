@@ -19,8 +19,10 @@ async function fixture({ git: withGit = true, release = true } = {}) {
     recursive: true,
     filter: file => !['.git', 'dist', 'out', '.cache', 'node_modules', 'site', '.impeccable'].some(name => file === resolve(root, name))
   });
-  const config = join(temporary, 'empty-git-config');
-  await writeFile(config, '');
+  const config = join(temporary, 'fixture-git-config');
+  // Large fixture commits must not spawn background maintenance that outlives
+  // Git and races cleanup. The private config also applies to the shallow clone.
+  await writeFile(config, '[maintenance]\n\tauto = false\n[gc]\n\tauto = 0\n');
   const env = { PATH: process.env.PATH, GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_GLOBAL: config };
   const git = (args, cwd = directory) => {
     const result = spawnSync('git', ['-C', cwd, ...args], { env, encoding: 'utf8' });
@@ -44,7 +46,7 @@ async function fixture({ git: withGit = true, release = true } = {}) {
     await writeFile(eventFile, json(payload));
     return { GITHUB_ACTIONS: 'true', GITHUB_EVENT_NAME: name, GITHUB_EVENT_PATH: eventFile, GITHUB_REF: ref };
   };
-  return { directory, temporary, base, git, commit, run, event, cleanup: () => rm(temporary, { recursive: true, force: true }) };
+  return { directory, temporary, base, git, commit, run, event, cleanup: () => rm(temporary, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 }) };
 }
 
 function succeeds(result) {
