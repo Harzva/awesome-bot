@@ -8,6 +8,10 @@
 
 网站支持中英文名称搜索、分类、角色/工作流切换、职责详情、浏览器收藏、单项或批量下载。可分享当前筛选或单个 Bot 链接，刷新及浏览器返回会恢复筛选和界面语言；收藏只保存在本机，分享链接不携带收藏筛选。加载失败可保留筛选重试，或转到 GitHub 目录。英文模式已完整覆盖148个Bot的职责、人设、技能、示例、配置下载和5个场景；可直接打开[英文市场](https://harzva.github.io/awesome-bot/?lang=en)。每个Bot配有原创稳定的角色标识。内容由同一组条目生成，独立克隆即可构建。
 
+## 开源与参考
+
+市场新增[开源与参考](https://harzva.github.io/awesome-bot/resources.html)：收录 7 个已核查来源的团队模板、网关、协作工具、架构资料与独立运行平台。6 个有已核查的开源许可证；Grok Factory 未找到许可证，只保留参考链接。每项均注明固定 README、许可证和 OpenBot 适配限制，与现有 148 个可导入配置模板分开；不会自动安装或执行外部代码。查看[项目数据](data/external-projects.json)与[来源核查](sources/external-project-review-20261024.md)。
+
 ## gitopsbot
 
 [在市场打开 gitopsbot](https://harzva.github.io/awesome-bot/?bot=awesome%2Fgitopsbot)：复用 GitHub 到飞书的事件接入、签名 Webhook、持久去重、真实送达验收与故障恢复经验。多个 BOT 可以同时在线，发送方选择决定每条事件交给谁。

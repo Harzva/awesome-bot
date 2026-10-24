@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 — 2026-10-24
+
+- Add a bilingual, searchable external-project reference collection with seven verified public repositories, pinned README/license evidence and explicit OpenBot compatibility limits.
+- Preserve the distinction between six licensed open-source projects and Grok Factory as a link-only reference with no license found. Record five unavailable submitted URLs separately from the discovered related repositories.
+- Expose HTML, Markdown and JSON from the market navigation and Agent discovery; include current project references in scheduled link checks.
+- Keep all 148 existing template registry entries and published manifest bytes unchanged.
+
 ## 0.6.3 — 2026-10-24
 
 - Add `gitopsbot` 1.0.0 with complete Chinese and English onboarding, reusable skills and an operational playbook for event-driven GitHub-to-Feishu notifications.

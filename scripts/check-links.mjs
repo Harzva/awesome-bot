@@ -54,6 +54,8 @@ export async function catalogueUrls(root = ROOT) {
     const authored = await readCatalogue();
     urls.push(...authored.bots.flatMap(bot => (bot.references || []).map(ref => ref.url)));
   }
+  const external = JSON.parse(await readFile(resolve(root, 'data/external-projects.json'), 'utf8'));
+  urls.push(...external.projects.flatMap(project => [project.url, project.readmeUrl, project.licenseUrl].filter(Boolean)));
   return [...new Set(urls)].sort();
 }
 
