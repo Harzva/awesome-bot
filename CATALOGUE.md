@@ -1,6 +1,6 @@
 # Awesome Bot 目录
 
-核验日期：2026-10-20。91 个 OpenBot 兼容原创角色模板 + 56 个任务工作流，均有来源记录。模板尚未完成逐项真实账号任务验收。
+核验日期：2026-10-24。92 个 OpenBot 兼容原创角色模板 + 56 个任务工作流，均有来源记录。模板尚未完成逐项真实账号任务验收。
 
 已收录 Grok Marketplace 的 90 个公开条目（54 个带 Grok Bot Team 标签），以及 56 个任务场景。完整逐项来源、作者与适配状态见 [来源清单](sources/grok-inventory.json)。部分详情公开显示设置文本；本目录没有复制这些文本或导入其账号连接与运行环境。
 
@@ -192,6 +192,7 @@
 
 | Bot | 能做什么 | 公开参考 |
 | --- | --- | --- |
+| [gitopsbot](templates/gitopsbot/1.0.0.json) | 把 GitHub 真实事件可靠送到飞书：按权限选择 Webhook 或 Actions，确定性摘要、持久去重、显式路由与回滚。 | [GitHub：Webhook raw-body 签名](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries) |
 | [工程代理监督员](templates/grok-engineer-bot/1.0.0.json) | 组织代码仓库任务并监督已授权云端执行器和拉取请求的进展。 | [Lingxi's Engineer Bot](https://x.ai/bot/marketplace/bots/engineer-bot) |
 | [工程负责人助理](templates/grok-engineering-lead/1.0.0.json) | 协调工程设计、实现边界、评审和交付风险，让团队依据证据推进。 | [Engineering Lead](https://x.ai/bot/marketplace/bots/engineering-lead) |
 | [夜间代码审计员](templates/grok-nightly-audit-engineer/1.0.0.json) | 按约定周期审视完整代码仓库，按领域准备可检查的清理变更方案。 | [Nightly Audit Engineer](https://x.ai/bot/marketplace/bots/nightly-audit-engineer) |
