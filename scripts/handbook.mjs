@@ -1,0 +1,118 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { root } from './engine.mjs';
+
+const BASE = 'https://harzva.github.io/awesome-bot/';
+const IDS = ['start', 'concepts', 'choose-import', 'instructions', 'team', 'scenarios', 'agents', 'contribute', 'troubleshooting', 'reference'];
+const COUNT_KEYS = ['templates', 'roles', 'workflows', 'adapted', 'shared', 'scenarios'];
+const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const md = value => String(value).replace(/[\\`*_[\]<>|]/g, '\\$&');
+const page = (id, locale, ext = 'html') => `handbook${id ? `-${id}` : ''}${locale === 'en' ? '.en' : ''}.${ext}`;
+const words = { zh: { home: '手册首页', market: '模板市场', shared: '共享 Bot', resources: '外部资源', handbook: '使用手册', search: '搜索整本手册', go: '搜索', loading: '正在搜索…', empty: '没有匹配内容', failed: '搜索加载失败', retry: '重试', paths: '按你的目标阅读', chapters: '全部章节', full: '下载完整手册 Markdown', json: '下载双语 JSON', chapter: '下载本章 Markdown', print: '打印本章', sources: '参考来源', checked: '来源核对日期', inputs: '准备材料', outputs: '预期交付', handoff: '交接', download: '下载场景配置', view: '在市场中查看', previous: '上一章', next: '下一章', contents: '本章内容' }, en: { home: 'Handbook home', market: 'Template market', shared: 'Shared Bots', resources: 'External resources', handbook: 'Handbook', search: 'Search the whole handbook', go: 'Search', loading: 'Searching…', empty: 'No matching content', failed: 'Search could not load', retry: 'Retry', paths: 'Read for your goal', chapters: 'All chapters', full: 'Download complete Markdown handbook', json: 'Download bilingual JSON', chapter: 'Download chapter Markdown', print: 'Print chapter', sources: 'Sources', checked: 'Sources checked', inputs: 'Inputs', outputs: 'Expected outputs', handoff: 'Handoff', download: 'Download scenario configuration', view: 'View in market', previous: 'Previous chapter', next: 'Next chapter', contents: 'On this page' } };
+function demand(ok, detail) { if (!ok) throw new Error(`Invalid handbook: ${detail}`); }
+export function validHandbookUrl(value) {
+  if (typeof value !== 'string' || /[\s\\<>"'\x00-\x1f]/.test(value)) return false;
+  if (value.startsWith('./')) {
+    try { const decoded = decodeURIComponent(value.split(/[?#]/)[0]); return (decoded === './' || !decoded.slice(2).split('/').some(p => p === '..' || p === '.' || !p)) && !decoded.includes('\\') && new URL(value, BASE).href.startsWith(BASE); } catch { return false; }
+  }
+  try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password; } catch { return false; }
+}
+function bilingual(value, label) {
+  demand(value && typeof value === 'object' && Object.keys(value).length === 2 && ['zh', 'en'].every(k => typeof value[k] === 'string' && value[k].trim()), `${label} needs zh/en text`);
+  demand(!/\p{Script=Han}/u.test(value.en), `${label} English contains Han characters`);
+  for (const locale of ['zh', 'en']) for (const match of value[locale].matchAll(/{{(.*?)}}/g)) demand(COUNT_KEYS.includes(match[1]), `unknown count placeholder ${match[1]}`);
+}
+export function validateHandbook(data) {
+  demand(data?.schema === 'awesome.bot.handbook/1' && /^\d{4}-\d{2}-\d{2}$/.test(data.checkedAt), 'schema/date');
+  bilingual(data.title, 'title'); bilingual(data.intro, 'intro');
+  demand(Array.isArray(data.chapters) && data.chapters.length === IDS.length && IDS.every(id => data.chapters.some(c => c.id === id)), 'chapter coverage');
+  const ids = new Set(); let scenarioBlocks = 0;
+  for (const chapter of data.chapters) {
+    demand(!ids.has(chapter.id), 'duplicate chapter'); ids.add(chapter.id);
+    bilingual(chapter.title, 'chapter title'); bilingual(chapter.summary, 'chapter summary');
+    demand(Array.isArray(chapter.audiences) && chapter.audiences.length && chapter.audiences.every(a => ['start', 'team', 'developer'].includes(a)), 'audiences');
+    demand(Array.isArray(chapter.sections) && chapter.sections.length, 'sections'); const sections = new Set();
+    for (const section of chapter.sections) {
+      demand(/^[a-z][a-z0-9-]*$/.test(section.id) && !sections.has(section.id), 'section ID'); sections.add(section.id); bilingual(section.title, 'section title');
+      demand(Array.isArray(section.blocks) && section.blocks.length, 'blocks');
+      for (const block of section.blocks) {
+        const fields = { paragraph: ['type', 'text'], list: ['type', 'items'], steps: ['type', 'items'], code: ['type', 'language', 'text'], table: ['type', 'headers', 'rows'], links: ['type', 'items'], scenarios: ['type'] }[block.type];
+        demand(fields && Object.keys(block).every(key => fields.includes(key)), 'unknown block or field');
+        if (['paragraph', 'code'].includes(block.type)) bilingual(block.text, 'block text');
+        if (block.type === 'code') demand(['text', 'sh', 'js', 'json'].includes(block.language), 'code language');
+        if (['list', 'steps'].includes(block.type)) { demand(Array.isArray(block.items) && block.items.length, 'list'); block.items.forEach(item => bilingual(item, 'list item')); }
+        if (block.type === 'links') { demand(Array.isArray(block.items) && block.items.length, 'links'); for (const item of block.items) { bilingual(item.label, 'link label'); bilingual(item.url, 'link URL'); demand(['zh', 'en'].every(l => validHandbookUrl(item.url[l])), 'unsafe URL'); } }
+        if (block.type === 'table') { demand(Array.isArray(block.headers) && block.headers.length && Array.isArray(block.rows) && block.rows.length, 'table'); block.headers.forEach(v => bilingual(v, 'header')); for (const row of block.rows) { demand(Array.isArray(row) && row.length === block.headers.length, 'table width'); row.forEach(v => bilingual(v, 'cell')); } }
+        if (block.type === 'scenarios') scenarioBlocks++;
+      }
+    }
+    demand(Array.isArray(chapter.sources) && chapter.sources.length, 'sources');
+    for (const source of chapter.sources) { bilingual(source.label, 'source label'); demand(validHandbookUrl(source.url) && source.url.startsWith('https://'), 'source URL'); }
+  }
+  demand(scenarioBlocks === 1, 'exactly one scenario block');
+  demand(Array.isArray(data.paths) && data.paths.length === 3 && new Set(data.paths.map(p => p.id)).size === 3, 'three paths');
+  for (const path of data.paths) { demand(['start', 'team', 'developer'].includes(path.id), 'path ID'); bilingual(path.title, 'path title'); bilingual(path.summary, 'path summary'); demand(Array.isArray(path.chapters) && path.chapters.length && new Set(path.chapters).size === path.chapters.length && path.chapters.every(id => ids.has(id)), 'path chapters'); }
+  return data;
+}
+function fence(text, language = 'text') { const length = Math.max(3, ...(text.match(/`+/g) || []).map(run => run.length + 1)); const marker = '`'.repeat(length); return `${marker}${language}\n${text}\n${marker}`; }
+function scenarioBlocks(catalogue, locale) {
+  const w = words[locale];
+  return catalogue.scenarios.map(s => {
+    const market = `./${locale === 'en' ? '?lang=en&' : '?'}scenario=${encodeURIComponent(s.id)}`;
+    const download = `./${s.downloadUrl.replace(/^\.\//, '')}`;
+    demand(validHandbookUrl(download), 'scenario download URL');
+    return { html: `<section class="handbook-scenario" id="scenario-${esc(s.id)}"><h3>${esc(s.title)}</h3><p>${esc(s.summary)}</p><h4>${w.inputs}</h4><ul>${s.inputs.map(x => `<li>${esc(x)}</li>`).join('')}</ul><h4>${w.outputs}</h4><ul>${s.outputs.map(x => `<li>${esc(x)}</li>`).join('')}</ul><ol>${s.steps.map(step => `<li><h4><a href="${esc(`${market}&bot=${encodeURIComponent(step.botId)}`)}">${esc(step.botName)}</a></h4><pre><code>${esc(step.prompt)}</code></pre><p>${w.handoff}: ${esc(step.handoff)}</p></li>`).join('')}</ol><p><a href="${esc(market)}">${w.view}</a> · <a href="${esc(download)}" download>${w.download}</a></p></section>`, markdown: `### ${md(s.title)}\n\n${md(s.summary)}\n\n#### ${w.inputs}\n\n${s.inputs.map(x => `- ${md(x)}`).join('\n')}\n\n#### ${w.outputs}\n\n${s.outputs.map(x => `- ${md(x)}`).join('\n')}\n\n${s.steps.map((step, i) => `#### ${i + 1}. [${md(step.botName)}](${market}&bot=${encodeURIComponent(step.botId)})\n\n${fence(step.prompt)}\n\n${w.handoff}: ${md(step.handoff)}`).join('\n\n')}\n\n[${w.view}](${market}) · [${w.download}](${download})`, text: [s.title, s.summary, ...s.inputs, ...s.outputs, ...s.steps.flatMap(step => [step.botName, step.prompt, step.handoff])].join('\n') };
+  });
+}
+function renderBlock(block, locale, catalogue) {
+  const t = v => v[locale];
+  if (block.type === 'paragraph') return { html: `<p>${esc(t(block.text))}</p>`, markdown: md(t(block.text)), text: t(block.text) };
+  if (block.type === 'code') return { html: `<pre><code class="language-${block.language}">${esc(t(block.text))}</code></pre>`, markdown: fence(t(block.text), block.language), text: t(block.text) };
+  if (['list', 'steps'].includes(block.type)) { const tag = block.type === 'steps' ? 'ol' : 'ul'; return { html: `<${tag}>${block.items.map(v => `<li>${esc(t(v))}</li>`).join('')}</${tag}>`, markdown: block.items.map((v, i) => `${tag === 'ol' ? `${i + 1}.` : '-'} ${md(t(v))}`).join('\n'), text: block.items.map(t).join('\n') }; }
+  if (block.type === 'links') return { html: `<ul>${block.items.map(v => `<li><a href="${esc(t(v.url))}">${esc(t(v.label))}</a></li>`).join('')}</ul>`, markdown: block.items.map(v => `- [${md(t(v.label))}](${t(v.url)})`).join('\n'), text: block.items.map(v => t(v.label)).join('\n') };
+  if (block.type === 'table') return { html: `<div class="handbook-table" tabindex="0"><table><thead><tr>${block.headers.map(v => `<th scope="col">${esc(t(v))}</th>`).join('')}</tr></thead><tbody>${block.rows.map(row => `<tr>${row.map(v => `<td>${esc(t(v))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`, markdown: [block.headers.map(v => md(t(v))).join(' | '), block.headers.map(() => '---').join(' | '), ...block.rows.map(row => row.map(v => md(t(v))).join(' | '))].map(row => `| ${row} |`).join('\n'), text: [...block.headers, ...block.rows.flat()].map(t).join('\n') };
+  const blocks = scenarioBlocks(catalogue, locale); return Object.fromEntries(['html', 'markdown', 'text'].map(key => [key, blocks.map(b => b[key]).join('\n\n')]));
+}
+export async function writeHandbook({ output, version, catalogues, shared, source }) {
+  const raw = validateHandbook(source || JSON.parse(await readFile(resolve(root, 'data/handbook.json'), 'utf8')));
+  const catalogue = catalogues.zh;
+  const counts = { templates: catalogue.entries.length, roles: catalogue.counts.roles, workflows: catalogue.counts.workflows, adapted: catalogue.entries.filter(e => e.implementation === 'third-party-adaptation').length, shared: shared.entries.length, scenarios: catalogue.scenarios.length };
+  // Counts are resolved in strings only, preserving JSON structure and escaping.
+  const replace = value => typeof value === 'string' ? value.replace(/{{(.*?)}}/g, (_, key) => String(counts[key])) : Array.isArray(value) ? value.map(replace) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value).map(([key, v]) => [key, replace(v)])) : value;
+  const data = { ...replace(raw), contentRevision: version, counts, scenarios: { zh: catalogues.zh.scenarios, en: catalogues.en.scenarios } };
+  const shell = await readFile(resolve(root, 'scripts/templates/handbook.html'), 'utf8'); const pages = [];
+  await writeFile(resolve(output, 'handbook.json'), JSON.stringify(data, null, 2) + '\n');
+  for (const locale of ['zh', 'en']) {
+    const w = words[locale], t = v => v[locale], entries = [], rendered = new Map();
+    for (const chapter of data.chapters) {
+      const sections = chapter.sections.map(section => {
+        const blocks = section.blocks.map(block => renderBlock(block, locale, catalogues[locale]));
+        entries.push({ id: `${chapter.id}#${section.id}`, chapter: t(chapter.title), title: t(section.title), summary: t(chapter.summary), text: blocks.map(b => b.text).join('\n'), url: `./${page(chapter.id, locale)}#${section.id}` });
+        return { html: `<section class="handbook-section" id="${esc(section.id)}"><h2>${esc(t(section.title))}</h2>${blocks.map(b => b.html).join('\n')}</section>`, markdown: `## ${md(t(section.title))}\n\n${blocks.map(b => b.markdown).join('\n\n')}` };
+      });
+      const sourcesHTML = `<section class="handbook-section"><h2>${w.sources}</h2><p>${w.checked}: <time datetime="${data.checkedAt}">${data.checkedAt}</time></p><ul>${chapter.sources.map(s => `<li><a href="${esc(s.url)}">${esc(t(s.label))}</a></li>`).join('')}</ul></section>`;
+      const markdown = `# ${md(t(chapter.title))}\n\n${md(t(chapter.summary))}\n\n${sections.map(s => s.markdown).join('\n\n')}\n\n## ${w.sources}\n\n${w.checked}: ${data.checkedAt}\n\n${chapter.sources.map(s => `- [${md(t(s.label))}](${s.url})`).join('\n')}\n`;
+      rendered.set(chapter.id, { html: sections.map(s => s.html).join('\n') + sourcesHTML, markdown });
+      await writeFile(resolve(output, page(chapter.id, locale, 'md')), markdown);
+    }
+    // Make links portable when the complete handbook is read away from the site.
+    const complete = [`# ${md(t(data.title))}`, md(t(data.intro)), ...data.chapters.map(c => rendered.get(c.id).markdown.trim().replace(/^(#{1,5}) /gm, '$1# '))].join('\n\n').replace(/\]\(\.\/([^)]*)\)/g, (_, path) => `](${BASE}${path})`) + '\n';
+    await writeFile(resolve(output, page('', locale, 'md')), complete);
+    await writeFile(resolve(output, `handbook-search.${locale}.json`), JSON.stringify({ schema: 'awesome.bot.handbook-search/1', locale, contentRevision: version, entries }, null, 2) + '\n');
+    for (const chapter of [null, ...data.chapters]) {
+      const id = chapter?.id || '', index = data.chapters.indexOf(chapter);
+      const language = `<a data-handbook-language href="./${page(id, locale === 'zh' ? 'en' : 'zh')}" lang="${locale === 'zh' ? 'en' : 'zh'}">${locale === 'zh' ? 'English' : '中文'}</a>`;
+      const header = `<header class="site-header"><a class="brandmark" href="./${locale === 'en' ? '?lang=en' : ''}" aria-label="Awesome Bot">Awesome Bot</a><nav class="site-nav" aria-label="${w.handbook}"><a href="./${locale === 'en' ? '?lang=en' : ''}">${w.market}</a><a href="./shared-bots.html${locale === 'en' ? '?lang=en' : ''}">${w.shared}</a><a href="./resources${locale === 'en' ? '.en' : ''}.html">${w.resources}</a><a href="./${page('', locale)}"${!chapter ? ' aria-current="page"' : ''}>${w.handbook}</a>${language}</nav></header>`;
+      const sidebar = `<nav aria-label="${w.chapters}"><ul><li><a href="./${page('', locale)}"${!chapter ? ' aria-current="page"' : ''}>${w.home}</a></li>${data.chapters.map(c => `<li><a href="./${page(c.id, locale)}"${c.id === id ? ' aria-current="page"' : ''}>${esc(t(c.title))}</a></li>`).join('')}</ul></nav>`;
+      const search = `<form class="handbook-search" role="search" data-locale="${locale}" data-index="./handbook-search.${locale}.json?v=${esc(version)}" data-loading="${esc(w.loading)}" data-empty="${esc(w.empty)}" data-failed="${esc(w.failed)}" data-retry="${esc(w.retry)}"><label for="handbook-search">${w.search}</label><input id="handbook-search" name="q" type="search"><button type="submit">${w.go}</button></form><section id="handbook-results" aria-live="polite" data-loading="${esc(w.loading)}" data-empty="${esc(w.empty)}" data-failed="${esc(w.failed)}" data-retry="${esc(w.retry)}" hidden></section>`;
+      const actions = `<div class="handbook-actions"><a href="./${page(id, locale, 'md')}" download>${chapter ? w.chapter : w.full}</a>${chapter ? `<button type="button" data-handbook-print>${w.print}</button>` : `<a href="./handbook.json" download>${w.json}</a>`}</div>`;
+      const home = `<section class="handbook-paths"><h2>${w.paths}</h2>${data.paths.map(p => `<section><h3>${esc(t(p.title))}</h3><p>${esc(t(p.summary))}</p><ol>${p.chapters.map(cid => `<li><a href="./${page(cid, locale)}">${esc(t(data.chapters.find(c => c.id === cid).title))}</a></li>`).join('')}</ol></section>`).join('')}</section><section class="handbook-chapters"><h2>${w.chapters}</h2><ol>${data.chapters.map(c => `<li><h3><a href="./${page(c.id, locale)}">${esc(t(c.title))}</a></h3><p>${esc(t(c.summary))}</p></li>`).join('')}</ol></section>`;
+      const localContents = chapter ? `<nav class="handbook-on-this-page" aria-label="${w.contents}"><ul>${chapter.sections.map(s => `<li><a href="#${esc(s.id)}">${esc(t(s.title))}</a></li>`).join('')}</ul></nav>` : '';
+      const pager = chapter ? `<nav class="handbook-pager" aria-label="${w.chapters}">${index > 0 ? `<a rel="prev" href="./${page(data.chapters[index - 1].id, locale)}">${w.previous}: ${esc(t(data.chapters[index - 1].title))}</a>` : ''}${index < data.chapters.length - 1 ? `<a rel="next" href="./${page(data.chapters[index + 1].id, locale)}">${w.next}: ${esc(t(data.chapters[index + 1].title))}</a>` : ''}</nav>` : '';
+      const values = { lang: locale === 'zh' ? 'zh-CN' : 'en', title: esc(`${t(chapter?.title || data.title)} · Awesome Bot`), description: esc(t(chapter?.summary || data.intro)), version: esc(version), header, sidebar, content: `<article><h1>${esc(t(chapter?.title || data.title))}</h1><p class="lede handbook-lede">${esc(t(chapter?.summary || data.intro))}</p>${search}${actions}${localContents}${chapter ? rendered.get(id).html : home}${pager}</article>`, footer: `<footer class="handbook-footer"><p>Awesome Bot · ${esc(version)} · ${w.checked}: ${data.checkedAt}</p></footer>` };
+      const html = shell.replace(/{{(\w+)}}/g, (_, key) => { demand(Object.hasOwn(values, key), `unknown shell token ${key}`); return values[key]; });
+      await writeFile(resolve(output, page(id, locale)), html); pages.push(page(id, locale));
+    }
+  }
+  return { pages, counts };
+}

@@ -1,0 +1,2232 @@
+{
+  "schema": "awesome.bot.handbook/1",
+  "checkedAt": "2026-10-25",
+  "title": {
+    "zh": "Awesome Bot 使用手册",
+    "en": "Awesome Bot Handbook"
+  },
+  "intro": {
+    "zh": "为新手、团队与开发者提供从第一件小事到角色交接和版本发布的操作指南。先读懂配置，再用材料和验收把任务做实。",
+    "en": "A practical guide for beginners, teams, and developers, from a first small task to role handoffs and versioned releases. Understand the configuration, then ground each task in materials and acceptance criteria."
+  },
+  "paths": [
+    {
+      "id": "start",
+      "title": {
+        "zh": "新手：先交付一个结果",
+        "en": "Beginner: deliver one result"
+      },
+      "summary": {
+        "zh": "理解入口，完成虚构练习，再选择配置。",
+        "en": "Understand entry points, finish a fictional exercise, then choose a configuration."
+      },
+      "chapters": [
+        "start",
+        "concepts",
+        "choose-import",
+        "instructions",
+        "scenarios",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "team",
+      "title": {
+        "zh": "团队：明确职责与交接",
+        "en": "Team: define ownership and handoffs"
+      },
+      "summary": {
+        "zh": "用角色分工、任务卡和审阅人组织协作。",
+        "en": "Coordinate with role ownership, task cards, and named reviewers."
+      },
+      "chapters": [
+        "concepts",
+        "team",
+        "instructions",
+        "scenarios",
+        "agents",
+        "troubleshooting"
+      ]
+    },
+    {
+      "id": "developer",
+      "title": {
+        "zh": "开发者：读取、校验和贡献",
+        "en": "Developer: read, verify, and contribute"
+      },
+      "summary": {
+        "zh": "了解格式与 SHA-256，使用 CLI 导出，维护版本与发布。",
+        "en": "Learn formats and SHA-256, export through the CLI, and maintain versions and releases."
+      },
+      "chapters": [
+        "concepts",
+        "agents",
+        "contribute",
+        "reference"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "start",
+      "title": {
+        "zh": "完成第一件小事",
+        "en": "Finish your first small task"
+      },
+      "summary": {
+        "zh": "用虚构材料交付一份可检查的短报告。",
+        "en": "Use fictional materials to deliver a checkable short report."
+      },
+      "audiences": [
+        "start"
+      ],
+      "sections": [
+        {
+          "id": "route",
+          "title": {
+            "zh": "选择学习路径",
+            "en": "Choose a learning path"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "新手先做本章练习；团队读完基础概念后安排交接；开发者可从 Agent 读取和贡献章节开始。无需下载整个目录。",
+                "en": "Beginners can start with this exercise. Teams can learn the concepts and arrange handoffs. Developers can start with Agent access and contribution. There is no need to download the whole catalogue."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "团队协作",
+                    "en": "Team collaboration"
+                  },
+                  "url": {
+                    "zh": "./handbook-team.html",
+                    "en": "./handbook-team.en.html"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "开发与贡献",
+                    "en": "Development and contribution"
+                  },
+                  "url": {
+                    "zh": "./handbook-contribute.html",
+                    "en": "./handbook-contribute.en.html"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exercise",
+          "title": {
+            "zh": "用虚构材料写一次周报",
+            "en": "Write a fictional weekly report"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "选择“进度报告编辑”，或者把任务交给当前能处理文本的 Agent。练习不需要连接真实邮箱或项目账号；角色资料仍服从 Agent 的原有指令。",
+                "en": "Choose Status Report Writer, or give this task to an Agent that handles text. The exercise needs no real mailbox or project account. Role context remains subject to the Agent's existing instructions."
+              }
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "请根据虚构材料写一份不超过180字的周报草稿。\n目标：周五交付报名页。\n记录A（周三）：表单页面已完成，尚未测试。\n记录B（周四）：桌面测试通过；手机测试未开始。\n记录C（周四）：文案等待小林确认，预计周五上午回复。\n产物：目标、已验证进展、待验收、阻塞、下一步五项。\n验收：引用A/B/C；不把页面完成写成全部验收；缺负责人时标待确认。\n边界：只出草稿，不发布、不联系任何人。",
+                "en": "Write a weekly status draft of no more than 120 words from these fictional records.\nGoal: deliver a registration page on Friday.\nRecord A (Wednesday): form page complete; not tested.\nRecord B (Thursday): desktop tests passed; mobile tests not started.\nRecord C (Thursday): copy awaits Alex's approval, expected Friday morning.\nOutput: goal, verified progress, pending acceptance, blockers, next steps.\nAcceptance: cite A/B/C; do not equate page completion with full acceptance; mark missing owners as unconfirmed.\nBoundary: draft only. Do not publish or contact anyone."
+              }
+            }
+          ]
+        },
+        {
+          "id": "accept",
+          "title": {
+            "zh": "检查结果并修订",
+            "en": "Check and revise the result"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "核对五项是否齐全，桌面和手机测试是否分开。",
+                  "en": "Check all five sections and distinguish desktop from mobile testing."
+                },
+                {
+                  "zh": "每个完成声明都要有记录；删除无依据的句子或标为未知。",
+                  "en": "Match completion claims to records; remove unsupported sentences or mark them unknown."
+                },
+                {
+                  "zh": "只指出具体缺口，让 Agent 修订这份草稿，再保存任务和结果。",
+                  "en": "Name precise gaps, ask the Agent to revise the draft, and save both the task and result."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "next",
+          "title": {
+            "zh": "换成自己的材料",
+            "en": "Use your own materials"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "替换目标、记录与验收条件，再用少量脱敏材料试一次。读取真实文件或账号前，在宿主中确认工具与本次任务授权。一次练习成功不代表所有账号任务都已认证。",
+                "en": "Replace the goal, records, and acceptance criteria, then try a small sanitized sample. Before reading real files or accounts, confirm tools and task authorization in the host. One successful exercise does not certify every account task."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "找进度报告编辑",
+                    "en": "Find Status Report Writer"
+                  },
+                  "url": {
+                    "zh": "./?bot=awesome%2Fstatus-report-writer",
+                    "en": "./?lang=en&bot=awesome%2Fstatus-report-writer"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "选择与导入",
+                    "en": "Choose and import"
+                  },
+                  "url": {
+                    "zh": "./handbook-choose-import.html",
+                    "en": "./handbook-choose-import.en.html"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "首次使用指南",
+            "en": "First-use guide"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/START_HERE.en.md"
+        },
+        {
+          "label": {
+            "zh": "练习角色来源",
+            "en": "Exercise role source"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/data/entries/status-report-writer.json"
+        }
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": {
+        "zh": "分清角色、任务和权限",
+        "en": "Understand roles, tasks, and permissions"
+      },
+      "summary": {
+        "zh": "认清入口和文件，才能选择正确的下一步。",
+        "en": "Recognize entry points and files to choose the right next step."
+      },
+      "audiences": [
+        "start",
+        "team",
+        "developer"
+      ],
+      "sections": [
+        {
+          "id": "resources",
+          "title": {
+            "zh": "本站有哪些资源",
+            "en": "What the site contains"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "目录含 {{templates}} 个配置：{{roles}} 个角色与 {{workflows}} 个任务流程；另有 {{shared}} 条 Shared Bots 来源链接。数量表示覆盖范围，不是安装数量或任务成功率。",
+                "en": "The catalogue contains {{templates}} configurations: {{roles}} roles and {{workflows}} task workflows, plus {{shared}} Shared Bots source links. These are coverage counts, not installations or task success rates."
+              }
+            },
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "资源",
+                  "en": "Resource"
+                },
+                {
+                  "zh": "用途",
+                  "en": "Purpose"
+                },
+                {
+                  "zh": "下一步",
+                  "en": "Next step"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "角色配置",
+                    "en": "Role configuration"
+                  },
+                  {
+                    "zh": "长期职责与方法",
+                    "en": "Ongoing responsibility and method"
+                  },
+                  {
+                    "zh": "按职责选择",
+                    "en": "Choose by responsibility"
+                  }
+                ],
+                [
+                  {
+                    "zh": "任务流程",
+                    "en": "Task workflow"
+                  },
+                  {
+                    "zh": "围绕产物的步骤",
+                    "en": "Steps toward an output"
+                  },
+                  {
+                    "zh": "提供材料发起任务",
+                    "en": "Supply materials and start a task"
+                  }
+                ],
+                [
+                  {
+                    "zh": "Shared Bots",
+                    "en": "Shared Bots"
+                  },
+                  {
+                    "zh": "原站或来源文件链接",
+                    "en": "Original-site or source-file links"
+                  },
+                  {
+                    "zh": "到来源查看条件",
+                    "en": "Read requirements at the source"
+                  }
+                ],
+                [
+                  {
+                    "zh": "项目参考",
+                    "en": "Project reference"
+                  },
+                  {
+                    "zh": "外部软件和架构资料",
+                    "en": "External software and architecture"
+                  },
+                  {
+                    "zh": "独立评估接入方式",
+                    "en": "Evaluate integration separately"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "layers",
+          "title": {
+            "zh": "文字不等于运行能力",
+            "en": "Instructions and runtime capabilities"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "配置描述角色与需求；模型负责生成和推理；宿主提供环境、工具和账号授权。“读取邮件”是资料需求，不会自动连接邮箱。",
+                "en": "Configurations describe roles and needs. Models handle generation and reasoning. Hosts provide environments, tools, and account authorization. Reading email is an input need, not an automatic mailbox connection."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "查看输入、产物和前提。",
+                  "en": "Read inputs, outputs, and prerequisites."
+                },
+                {
+                  "zh": "核对宿主实际模型、工具及账号。",
+                  "en": "Check actual host models, tools, and accounts."
+                },
+                {
+                  "zh": "缺少能力时提供可用材料或列出缺口。",
+                  "en": "If capabilities are missing, supply available materials or list the gaps."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "state",
+          "title": {
+            "zh": "配置不会迁移私有状态",
+            "en": "Configurations do not transfer private state"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "配置不包含聊天、已学记忆、模型密钥、真实账号连接或运行中的任务。普通导出关闭工具和容器标志；空库首个 Bot 可能被宿主选为主 Bot，按宿主规则具有管理能力。导入前应核对预览中的主身份与权限表现。",
+                "en": "Configurations exclude conversations, learned memory, model keys, live account connections, and running tasks. Ordinary exports disable tools and containers. In an empty library, the host may select the first Bot as primary with management capabilities under its rules. Check primary identity and permission behavior in the import preview."
+              }
+            }
+          ]
+        },
+        {
+          "id": "evidence",
+          "title": {
+            "zh": "如何理解验证说明",
+            "en": "Read verification claims"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "来源核查回答内容从哪里来；格式与导出测试检查本仓契约；真实账号任务则需要单独的输入、执行与结果证据。本站没有逐项认证所有角色的账号任务。",
+                "en": "Source review establishes provenance. Format and export tests check repository contracts. Real-account tasks need separate evidence of inputs, execution, and results. The site has not individually certified every role's account tasks."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "接入契约",
+                    "en": "Integration contract"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "项目说明",
+            "en": "Project overview"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/README.md"
+        },
+        {
+          "label": {
+            "zh": "宿主接入契约",
+            "en": "Host integration contract"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md"
+        },
+        {
+          "label": {
+            "zh": "市场整合说明",
+            "en": "Market aggregation guide"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/market-aggregation.md"
+        }
+      ]
+    },
+    {
+      "id": "choose-import",
+      "title": {
+        "zh": "选择、下载与导入",
+        "en": "Choose, download, and import"
+      },
+      "summary": {
+        "zh": "先检查职责、来源和配置，再经过宿主预览与确认。",
+        "en": "Check responsibilities, sources, and configuration before host preview and confirmation."
+      },
+      "audiences": [
+        "start",
+        "team"
+      ],
+      "sections": [
+        {
+          "id": "select",
+          "title": {
+            "zh": "从需要的产物开始",
+            "en": "Start with the output you need"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "搜索会议准备、缺陷复测或周报等目标。",
+                  "en": "Search for a goal such as meeting preparation, bug retesting, or a weekly report."
+                },
+                {
+                  "zh": "打开详情，比较职责、输入、产物、技能、来源与权限需求。",
+                  "en": "Open details and compare responsibility, inputs, outputs, skills, sources, and permission needs."
+                },
+                {
+                  "zh": "先选一个角色，需要第二个时再明确交接。",
+                  "en": "Start with one role and define a handoff before adding another."
+                },
+                {
+                  "zh": "检查正文语言与平台前提，尤其是英文来源适配。",
+                  "en": "Check body language and platform assumptions, especially in English source adaptations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "download",
+          "title": {
+            "zh": "选对下载形式",
+            "en": "Choose the download type"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "情况",
+                  "en": "Situation"
+                },
+                {
+                  "zh": "建议",
+                  "en": "Recommendation"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "初次使用",
+                    "en": "First use"
+                  },
+                  {
+                    "zh": "单角色或小场景下载",
+                    "en": "One role or a small scenario download"
+                  }
+                ],
+                [
+                  {
+                    "zh": "需要英文内容",
+                    "en": "Need English content"
+                  },
+                  {
+                    "zh": "在英文模式选择对应配置",
+                    "en": "Choose its configuration in English mode"
+                  }
+                ],
+                [
+                  {
+                    "zh": "大型合集",
+                    "en": "Large collection"
+                  },
+                  {
+                    "zh": "用发布分片，每个 Fleet 文件最多200个 Bot",
+                    "en": "Use release parts with at most 200 Bots per Fleet file"
+                  }
+                ],
+                [
+                  {
+                    "zh": "只让 Agent 参考方法",
+                    "en": "Only need Agent context"
+                  },
+                  {
+                    "zh": "使用 Copy for Agent 或单角色资料",
+                    "en": "Use Copy for Agent or one role context file"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "Shared Bots 是来源链接，不是本站可安装配置。名称相同不能证明同一身份，应核对作者、平台和地址。",
+                "en": "Shared Bots are source links, not installable configurations from this site. Identical names do not prove identity; compare author, platform, and URL."
+              }
+            }
+          ]
+        },
+        {
+          "id": "preview",
+          "title": {
+            "zh": "在宿主预览与确认",
+            "en": "Preview and confirm in the host"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "保存文件和角色 ID、版本、语言、配置摘要。",
+                  "en": "Keep the file with its role ID, version, language, and digest."
+                },
+                {
+                  "zh": "使用宿主当前配置导入入口，选择 Fleet 文件并阅读预览与确认。",
+                  "en": "Use the host's current configuration import entry, select the Fleet file, and read the preview and confirmation."
+                },
+                {
+                  "zh": "核对新增名称、重名处理和现有主 Bot 状态。",
+                  "en": "Check new names, collision handling, and existing primary Bot state."
+                },
+                {
+                  "zh": "确认后另行设置模型、工具和账号，再发起明确任务。",
+                  "en": "After confirmation, separately configure models, tools, and accounts, then start an explicit task."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "本仓 README 记录过 Settings → Data & Sync → Import configuration 示例；入口以当前宿主版本为准。下载和导入本身都不启动任务或环境。",
+                "en": "The repository README documents a Settings → Data & Sync → Import configuration example. Follow the entry in your current host version. Downloading and importing do not themselves start tasks or environments."
+              }
+            }
+          ]
+        },
+        {
+          "id": "compare",
+          "title": {
+            "zh": "导入后再核对",
+            "en": "Check after import"
+          },
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                {
+                  "zh": "按 ID 对照职责，不能仅凭同名确认。",
+                  "en": "Compare responsibility by ID rather than name alone."
+                },
+                {
+                  "zh": "记录宿主实际返回的 Bot ID，为后续升级对账。",
+                  "en": "Record actual host-returned Bot IDs for later upgrade reconciliation."
+                },
+                {
+                  "zh": "先用虚构短任务验收，再提供真实材料。",
+                  "en": "Accept a fictional short task before supplying real materials."
+                }
+              ]
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "配置市场",
+                    "en": "Configuration market"
+                  },
+                  "url": {
+                    "zh": "./",
+                    "en": "./?lang=en"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "排错",
+                    "en": "Troubleshooting"
+                  },
+                  "url": {
+                    "zh": "./handbook-troubleshooting.html",
+                    "en": "./handbook-troubleshooting.en.html"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "导入示例",
+            "en": "Import examples"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/README.md"
+        },
+        {
+          "label": {
+            "zh": "导入与身份对账",
+            "en": "Import and identity reconciliation"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md"
+        },
+        {
+          "label": {
+            "zh": "分片和发布校验",
+            "en": "Release parts and checksums"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/publishing.md"
+        }
+      ]
+    },
+    {
+      "id": "instructions",
+      "title": {
+        "zh": "把需求写成可验收任务",
+        "en": "Write a checkable task brief"
+      },
+      "summary": {
+        "zh": "明确输入、产物、边界和完成条件。",
+        "en": "Specify inputs, outputs, boundaries, and completion criteria."
+      },
+      "audiences": [
+        "start",
+        "team"
+      ],
+      "sections": [
+        {
+          "id": "brief",
+          "title": {
+            "zh": "六行任务卡",
+            "en": "A six-line task card"
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "目标：把三份脱敏会议笔记整理为需求清单。\n材料：笔记A、B、C；仅用这些材料。\n产物：需求、原话、来源、待确认项四列。\n范围：只整理，不推断预算，不写回CRM。\n缺口：缺日期或负责人时标待确认。\n验收：每条需求有来源；冲突分别列出。",
+                "en": "Goal: turn three sanitized meeting notes into a requirements list.\nInputs: notes A, B, and C only.\nOutput: requirement, quote, source, and open question columns.\nScope: organize only; do not infer budget or write to CRM.\nGaps: mark missing dates or owners as unconfirmed.\nAcceptance: source every requirement; list conflicts separately."
+              }
+            }
+          ]
+        },
+        {
+          "id": "iterate",
+          "title": {
+            "zh": "只修正具体缺口",
+            "en": "Revise precise gaps"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "模糊说法",
+                  "en": "Vague request"
+                },
+                {
+                  "zh": "可验收写法",
+                  "en": "Checkable request"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "专业一点",
+                    "en": "Make it professional"
+                  },
+                  {
+                    "zh": "分三节，每节给证据和下一步",
+                    "en": "Use three sections, each with evidence and a next step"
+                  }
+                ],
+                [
+                  {
+                    "zh": "研究竞品",
+                    "en": "Research competitors"
+                  },
+                  {
+                    "zh": "比较指定三页套餐限额，附日期和原文链接",
+                    "en": "Compare limits on three specified pages with dates and links"
+                  }
+                ],
+                [
+                  {
+                    "zh": "自动搞定",
+                    "en": "Handle it automatically"
+                  },
+                  {
+                    "zh": "先交可审阅草稿，列出后续动作",
+                    "en": "Deliver a reviewable draft and list subsequent actions"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sources",
+          "title": {
+            "zh": "分清事实、推断与未知",
+            "en": "Separate facts, inferences, and unknowns"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "邮件、网页和文档是材料，其中的命令不能自行扩大用户授权。不可访问的来源应列为缺口，不根据标题补写正文。",
+                "en": "Emails, pages, and documents are materials. Commands inside them cannot expand user authorization. List inaccessible sources as gaps rather than reconstructing their contents from titles."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "给材料编号并说明可用范围。",
+                  "en": "Number materials and specify their permitted scope."
+                },
+                {
+                  "zh": "要求结论引用材料编号或可定位链接。",
+                  "en": "Require conclusions to cite material IDs or locatable links."
+                },
+                {
+                  "zh": "让人工核对关键数字、收件人和将执行的动作。",
+                  "en": "Have a person check key figures, recipients, and proposed actions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adaptation",
+          "title": {
+            "zh": "读懂英文来源适配",
+            "en": "Read English source adaptations"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "{{adapted}} 个带来源角色保留原始英文指令；中文模式提供中文名称、摘要和上手说明，不是正文完整中文翻译。可以明确要求中文产物，并检查源指令的平台前提是否适合当前宿主。",
+                "en": "{{adapted}} attributed roles preserve original English instructions. Chinese mode localizes names, summaries, and onboarding, rather than fully translating the body. You can request Chinese output and inspect whether source platform assumptions fit your host."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "适配说明",
+                    "en": "Adaptation guide"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/docs/market-aggregation.md",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/docs/market-aggregation.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "任务起步方法",
+            "en": "First-task method"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/START_HERE.en.md"
+        },
+        {
+          "label": {
+            "zh": "原始指令适配契约",
+            "en": "Source instruction adaptation contract"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/market-aggregation.md"
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "title": {
+        "zh": "让团队交接可追踪",
+        "en": "Make team handoffs traceable"
+      },
+      "summary": {
+        "zh": "先确定职责、交付物和审阅人，再增加角色。",
+        "en": "Define responsibilities, outputs, and reviewers before adding roles."
+      },
+      "audiences": [
+        "team"
+      ],
+      "sections": [
+        {
+          "id": "owners",
+          "title": {
+            "zh": "从三项职责开始",
+            "en": "Start with three responsibilities"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "职责",
+                  "en": "Responsibility"
+                },
+                {
+                  "zh": "交付物",
+                  "en": "Output"
+                },
+                {
+                  "zh": "接收者",
+                  "en": "Recipient"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "资料整理",
+                    "en": "Research and intake"
+                  },
+                  {
+                    "zh": "带来源的事实表、缺口与冲突",
+                    "en": "Sourced facts, gaps, and conflicts"
+                  },
+                  {
+                    "zh": "写作角色",
+                    "en": "Writing role"
+                  }
+                ],
+                [
+                  {
+                    "zh": "产物撰写",
+                    "en": "Drafting"
+                  },
+                  {
+                    "zh": "符合验收条件的草稿",
+                    "en": "Draft matching acceptance criteria"
+                  },
+                  {
+                    "zh": "人工审阅者",
+                    "en": "Human reviewer"
+                  }
+                ],
+                [
+                  {
+                    "zh": "审阅与决定",
+                    "en": "Review and decision"
+                  },
+                  {
+                    "zh": "来源检查和后续动作决定",
+                    "en": "Source checks and decisions on subsequent actions"
+                  },
+                  {
+                    "zh": "明确的执行负责人",
+                    "en": "Named execution owner"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "这些是工作分工，不是自动编排或权限隔离的证明。先验证一次交接；没有明确产物的角色先不要增加。",
+                "en": "These are assignments, not proof of automatic orchestration or permission isolation. Test one handoff before adding roles without clear outputs."
+              }
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "title": {
+            "zh": "复制一张交接卡",
+            "en": "Copy a handoff card"
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "任务：客户会议准备 / 草稿第2版\n当前负责人：资料整理\n下一负责人：会议准备\n输入：事实表v2、来源清单v1（已脱敏）\n已验证：三条需求有原话和日期\n未验证：预算、决策人；不要补猜\n下一产物：一页简报和五个问题\n验收人：项目负责人\n允许动作：读这些文件、写草稿；不联系客户\n停止条件：来源缺失或冲突无法解释",
+                "en": "Task: customer meeting preparation / draft v2\nCurrent owner: research and intake\nNext owner: meeting preparation\nInputs: fact table v2, source list v1 (sanitized)\nVerified: three needs have quotes and dates\nUnverified: budget and decision maker; do not guess\nNext output: one-page brief and five questions\nReviewer: project owner\nAllowed actions: read these files, write a draft; no customer contact\nStop condition: missing sources or unexplained conflicts"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sharing",
+          "title": {
+            "zh": "共享配置不等于共享记忆",
+            "en": "Shared configuration is not shared memory"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "共享配置只传递角色定义和方法，不携带创作者的聊天、学习记忆、账号或密钥。项目背景使用有明确版本的脱敏资料包，注明可分享范围，由接收者在自己的授权环境中使用。",
+                "en": "Shared configurations transfer definitions and methods, without the creator's conversations, learned memory, accounts, or keys. Supply project context in a versioned sanitized packet with an explicit sharing scope, for use in the recipient's authorized environment."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "把稳定方法放入配置，项目事实放入资料包。",
+                  "en": "Keep stable methods in configuration and project facts in a packet."
+                },
+                {
+                  "zh": "列出具体文件与版本，不假定对方已知背景。",
+                  "en": "List exact files and versions rather than assuming shared background."
+                },
+                {
+                  "zh": "确认材料可读，审阅输出后再推进。",
+                  "en": "Confirm materials are readable and review the output before proceeding."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gitopsbot",
+          "title": {
+            "zh": "以 gitopsbot 为协作案例",
+            "en": "Use gitopsbot as a coordination example"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "gitopsbot 的双语手册讨论 GitHub 到飞书的路由、签名、去重、回执和恢复。先整理仓库、事件、目标群、发送方与权限缺口表。下载角色不会建立监听器、接入账号或授予群发送权。",
+                "en": "The bilingual gitopsbot playbook covers GitHub-to-Feishu routing, signatures, deduplication, receipts, and recovery. Start with a table of repositories, events, destination groups, sender, and access gaps. Downloading the role does not create a listener, connect accounts, or grant group-send permission."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "打开 gitopsbot",
+                    "en": "Open gitopsbot"
+                  },
+                  "url": {
+                    "zh": "./?bot=awesome%2Fgitopsbot",
+                    "en": "./?lang=en&bot=awesome%2Fgitopsbot"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "部署与运维手册",
+                    "en": "Setup and operations playbook"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/docs/gitopsbot-playbook.md",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/docs/gitopsbot-playbook.en.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "场景与人工交接",
+            "en": "Scenarios and human handoffs"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/README.md"
+        },
+        {
+          "label": {
+            "zh": "状态与权限契约",
+            "en": "State and permission contract"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md"
+        },
+        {
+          "label": {
+            "zh": "gitopsbot 运维方法",
+            "en": "gitopsbot operations method"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/gitopsbot-playbook.en.md"
+        }
+      ]
+    },
+    {
+      "id": "scenarios",
+      "title": {
+        "zh": "按场景完成一件事",
+        "en": "Complete a task through a scenario"
+      },
+      "summary": {
+        "zh": "用材料、步骤、产物和验收组织一次任务。",
+        "en": "Organize one task around materials, steps, outputs, and acceptance."
+      },
+      "audiences": [
+        "start",
+        "team"
+      ],
+      "sections": [
+        {
+          "id": "choose",
+          "title": {
+            "zh": "按产物选择场景",
+            "en": "Choose a scenario by its output"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "本站有 {{scenarios}} 个中英对齐场景：客户会议、周报、缺陷复测、反馈转需求和产品发布。每个场景提供少量相关角色和可复制的首任务。",
+                "en": "The site offers {{scenarios}} bilingual scenarios: customer meetings, weekly reports, bug retesting, feedback-to-requirements, and product launches. Each provides a small set of relevant roles and a first task to copy."
+              }
+            }
+          ]
+        },
+        {
+          "id": "cards",
+          "title": {
+            "zh": "场景材料与任务卡",
+            "en": "Scenario materials and task cards"
+          },
+          "blocks": [
+            {
+              "type": "scenarios"
+            }
+          ]
+        },
+        {
+          "id": "accept",
+          "title": {
+            "zh": "完成一次场景验收",
+            "en": "Accept one scenario result"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "准备场景列出的最小材料，先用脱敏样例。",
+                  "en": "Prepare the minimum materials listed in the scenario, starting with sanitized samples."
+                },
+                {
+                  "zh": "把第一项任务交给对应角色，按场景条件验收。",
+                  "en": "Give the first task to its role and check scenario acceptance criteria."
+                },
+                {
+                  "zh": "补齐缺口，把产物、来源和未知项连同交接卡传给下一位。",
+                  "en": "Resolve gaps and pass outputs, sources, and unknowns with a handoff card to the next owner."
+                },
+                {
+                  "zh": "保存最终产物与失败原因；场景下载不会自动执行流程。",
+                  "en": "Save final outputs and failure causes. A scenario download does not execute the workflow."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "场景源数据",
+            "en": "Scenario source data"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/tree/main/data/scenarios"
+        },
+        {
+          "label": {
+            "zh": "场景起步说明",
+            "en": "Scenario first-use guide"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/START_HERE.en.md"
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "title": {
+        "zh": "让 Agent 按需读取角色",
+        "en": "Let an Agent read the role it needs"
+      },
+      "summary": {
+        "zh": "读取小索引和单角色资料，核对版本、语言和 SHA-256。",
+        "en": "Read a small index and one role, checking version, language, and SHA-256."
+      },
+      "audiences": [
+        "developer",
+        "team"
+      ],
+      "sections": [
+        {
+          "id": "discovery",
+          "title": {
+            "zh": "从小索引开始",
+            "en": "Start with a small index"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "读取 llms.txt，选择 zh 或 en 索引。",
+                  "en": "Read llms.txt and choose the zh or en index."
+                },
+                {
+                  "zh": "按当前任务选择一个 ID，再读取其 JSON 或 Markdown。",
+                  "en": "Choose one ID for the task, then read its JSON or Markdown."
+                },
+                {
+                  "zh": "说明输入、输出、前提和需求，在 Agent 自身规则下处理任务。",
+                  "en": "Explain inputs, outputs, prerequisites, and needs, then work under the Agent's own rules."
+                }
+              ]
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "读取指南",
+                    "en": "Reading guide"
+                  },
+                  "url": {
+                    "zh": "./llms.txt",
+                    "en": "./llms.txt"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "中文索引",
+                    "en": "Chinese index"
+                  },
+                  "url": {
+                    "zh": "./agents/zh/index.json",
+                    "en": "./agents/zh/index.json"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "英文索引",
+                    "en": "English index"
+                  },
+                  "url": {
+                    "zh": "./agents/en/index.json",
+                    "en": "./agents/en/index.json"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "schemas",
+          "title": {
+            "zh": "四种机器文件",
+            "en": "Four machine-readable formats"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "schema",
+                  "en": "schema"
+                },
+                {
+                  "zh": "实际用途",
+                  "en": "Actual purpose"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "openbot.market.registry/1",
+                    "en": "openbot.market.registry/1"
+                  },
+                  {
+                    "zh": "发现版本、清单 URL 和完整性摘要",
+                    "en": "Discover versions, manifest URLs, and integrity hashes"
+                  }
+                ],
+                [
+                  {
+                    "zh": "openbot.market/1",
+                    "en": "openbot.market/1"
+                  },
+                  {
+                    "zh": "规范角色清单：persona、技能和声明需求",
+                    "en": "Canonical role manifest: persona, skills, and declared needs"
+                  }
+                ],
+                [
+                  {
+                    "zh": "openbot.fleet/1",
+                    "en": "openbot.fleet/1"
+                  },
+                  {
+                    "zh": "供宿主预览与确认的配置",
+                    "en": "Configuration for host preview and confirmation"
+                  }
+                ],
+                [
+                  {
+                    "zh": "awesome.bot.agent/1",
+                    "en": "awesome.bot.agent/1"
+                  },
+                  {
+                    "zh": "语言化角色上下文、来源和 configuration 字段",
+                    "en": "Localized role context, provenance, and configuration fields"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "id、templateVersion、locale、contentRevision 定位上下文；configuration.bytes 和 configuration.sha256 定位下载字节。语言投影与规范清单可能字节不同，不可用中文清单摘要核对英文 Fleet。",
+                "en": "id, templateVersion, locale, and contentRevision identify context. configuration.bytes and configuration.sha256 identify download bytes. Localized projections can differ from canonical manifests; do not check an English Fleet against a Chinese manifest digest."
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "下面是现有进度报告角色 Agent 卡的字段节选，不是可直接导入的完整文件。清单中的声明需求也不是已授予权限；以 Fleet 导出和宿主确认中的实际设置为准。",
+                "en": "The following excerpt shows fields from the existing Status Report Writer Agent card; it is not a complete importable file. Declared manifest needs are not granted permissions. Check actual settings in the Fleet export and host confirmation."
+              }
+            },
+            {
+              "type": "code",
+              "language": "json",
+              "text": {
+                "zh": "{\n  \"schema\": \"awesome.bot.agent/1\",\n  \"id\": \"awesome/status-report-writer\",\n  \"templateVersion\": \"1.0.0\",\n  \"locale\": \"en\"\n}",
+                "en": "{\n  \"schema\": \"awesome.bot.agent/1\",\n  \"id\": \"awesome/status-report-writer\",\n  \"templateVersion\": \"1.0.0\",\n  \"locale\": \"en\"\n}"
+              }
+            }
+          ]
+        },
+        {
+          "id": "digest",
+          "title": {
+            "zh": "读取并核对 SHA-256",
+            "en": "Read and verify SHA-256"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "以下 Node.js 22+ 示例只读取和校验，不导入或执行配置。摘要不一致时停止，重新获取一致版本或带校验文件的发布快照。",
+                "en": "This Node.js 22+ example only reads and verifies; it does not import or execute configuration. Stop on a mismatch and retrieve a consistent version or a release snapshot with checksums."
+              }
+            },
+            {
+              "type": "code",
+              "language": "js",
+              "text": {
+                "zh": "import assert from 'node:assert/strict';\nimport { createHash } from 'node:crypto';\nconst base = 'https://harzva.github.io/awesome-bot/';\nasync function read(url) {\n  const r = await fetch(url, { signal: AbortSignal.timeout(10000) });\n  assert.equal(r.status, 200);\n  return r;\n}\nconst card = await (await read(base + 'agents/en/status-report-writer.json')).json();\nassert.equal(card.schema, 'awesome.bot.agent/1');\nassert.equal(card.id, 'awesome/status-report-writer');\nassert.equal(card.locale, 'en');\nconst bytes = Buffer.from(await (await read(card.configuration.url)).arrayBuffer());\nassert.equal(bytes.length, card.configuration.bytes);\nassert.equal(createHash('sha256').update(bytes).digest('hex'), card.configuration.sha256);\nconsole.log(card.id, card.templateVersion, card.locale, card.contentRevision);",
+                "en": "import assert from 'node:assert/strict';\nimport { createHash } from 'node:crypto';\nconst base = 'https://harzva.github.io/awesome-bot/';\nasync function read(url) {\n  const r = await fetch(url, { signal: AbortSignal.timeout(10000) });\n  assert.equal(r.status, 200);\n  return r;\n}\nconst card = await (await read(base + 'agents/en/status-report-writer.json')).json();\nassert.equal(card.schema, 'awesome.bot.agent/1');\nassert.equal(card.id, 'awesome/status-report-writer');\nassert.equal(card.locale, 'en');\nconst bytes = Buffer.from(await (await read(card.configuration.url)).arrayBuffer());\nassert.equal(bytes.length, card.configuration.bytes);\nassert.equal(createHash('sha256').update(bytes).digest('hex'), card.configuration.sha256);\nconsole.log(card.id, card.templateVersion, card.locale, card.contentRevision);"
+              }
+            }
+          ]
+        },
+        {
+          "id": "trust",
+          "title": {
+            "zh": "读取与信任的边界",
+            "en": "Reading and trust boundaries"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "Copy for Agent 只复制提示，网站不会联系 Agent。无法读链接时，经 Agent 正常粘贴或附件入口提供对应 Markdown，并说明限制。SHA-256 匹配说明与元数据一致，不证明发布者身份；当前目录未签名。",
+                "en": "Copy for Agent copies a prompt; the site does not contact an Agent. If links are inaccessible, provide the relevant Markdown through normal paste or attachment and state the limitation. A SHA-256 match proves agreement with metadata, not publisher identity. The current catalogue is unsigned."
+              }
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "Agent 读取与校验",
+            "en": "Agent reading and verification"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/agent-integration.md"
+        },
+        {
+          "label": {
+            "zh": "格式契约",
+            "en": "Format contract"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md"
+        }
+      ]
+    },
+    {
+      "id": "contribute",
+      "title": {
+        "zh": "贡献、构建与发布",
+        "en": "Contribute, build, and publish"
+      },
+      "summary": {
+        "zh": "修改声明式源条目，让下载、索引和网页保持一致。",
+        "en": "Edit declarative source entries and keep downloads, indexes, and pages consistent."
+      },
+      "audiences": [
+        "developer"
+      ],
+      "sections": [
+        {
+          "id": "entry",
+          "title": {
+            "zh": "修改正确的源文件",
+            "en": "Edit the correct source file"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "每个条目在 data/entries/ 中有一个 JSON 文件。选择 bot-role 或 task-workflow，填写任务、输入、输出、步骤、前提、来源和许可。不放入脚本、凭据、聊天或私有记忆。",
+                "en": "Each entry has one JSON file in data/entries/. Choose bot-role or task-workflow and describe mission, inputs, outputs, steps, prerequisites, sources, and license. Exclude scripts, credentials, conversations, and private memory."
+              }
+            },
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "源字段",
+                  "en": "Source field"
+                },
+                {
+                  "zh": "含义",
+                  "en": "Meaning"
+                },
+                {
+                  "zh": "检查重点",
+                  "en": "Check"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "id / version",
+                    "en": "id / version"
+                  },
+                  {
+                    "zh": "稳定身份与模板版本",
+                    "en": "Stable identity and template version"
+                  },
+                  {
+                    "zh": "保留已发布版本字节",
+                    "en": "Preserve published version bytes"
+                  }
+                ],
+                [
+                  {
+                    "zh": "collection",
+                    "en": "collection"
+                  },
+                  {
+                    "zh": "bot-role 或 task-workflow",
+                    "en": "bot-role or task-workflow"
+                  },
+                  {
+                    "zh": "按职责或产物分类",
+                    "en": "Classify by responsibility or output"
+                  }
+                ],
+                [
+                  {
+                    "zh": "inputs / outputs / workflow",
+                    "en": "inputs / outputs / workflow"
+                  },
+                  {
+                    "zh": "材料、产物与步骤",
+                    "en": "Materials, outputs, and steps"
+                  },
+                  {
+                    "zh": "能否写出可验收首任务",
+                    "en": "Can a checkable first task be written?"
+                  }
+                ],
+                [
+                  {
+                    "zh": "requirements / references / license",
+                    "en": "requirements / references / license"
+                  },
+                  {
+                    "zh": "前提、来源和许可",
+                    "en": "Prerequisites, sources, and license"
+                  },
+                  {
+                    "zh": "不宣称未验证能力或官方身份",
+                    "en": "Avoid unsupported capabilities or official status"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cli",
+          "title": {
+            "zh": "CLI 只规划或导出",
+            "en": "The CLI plans or exports"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "scripts/market.mjs 支持 help、list、info、plan、install。install 实际生成文件，必须给出 --out 和目标宿主版本，不会安装到运行中的 App。社区与未固定信任锚的接受标志由使用者明确选择。",
+                "en": "scripts/market.mjs supports help, list, info, plan, and install. install generates a file and requires --out and a target host version; it does not install into a running App. Users explicitly choose whether to accept community content and an unpinned trust source."
+              }
+            },
+            {
+              "type": "code",
+              "language": "sh",
+              "text": {
+                "zh": "npm run market -- help\nnpm run market -- list --query=research\nnpm run market -- info awesome/grok-researchy\n# Replace 0.9.9 with the actual target host version.\nnpm run market -- plan awesome/grok-researchy --openbot=0.9.9 --allow-community --allow-unpinned\nnpm run market -- install awesome/grok-researchy --openbot=0.9.9 --allow-community --allow-unpinned --out=./researchy.fleet.json",
+                "en": "npm run market -- help\nnpm run market -- list --query=research\nnpm run market -- info awesome/grok-researchy\n# Replace 0.9.9 with the actual target host version.\nnpm run market -- plan awesome/grok-researchy --openbot=0.9.9 --allow-community --allow-unpinned\nnpm run market -- install awesome/grok-researchy --openbot=0.9.9 --allow-community --allow-unpinned --out=./researchy.fleet.json"
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "独立 CLI 不提供升级或回滚补丁。Fleet 导入可能改名，必须由宿主先对账实际 Bot ID，再处理保留用户修改的升级。",
+                "en": "The standalone CLI exposes no upgrade or rollback patches. Fleet imports can rename IDs; host reconciliation of actual Bot IDs must precede upgrades that preserve user edits."
+              }
+            }
+          ]
+        },
+        {
+          "id": "checks",
+          "title": {
+            "zh": "核对生成的双语产物",
+            "en": "Check generated bilingual output"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "使用 Node.js 22+，先读贡献规范，再修改声明式条目。",
+                  "en": "Use Node.js 22+, read the contribution guide, then edit a declarative entry."
+                },
+                {
+                  "zh": "维护完整英文内容，中文回退不能当成翻译。",
+                  "en": "Maintain complete English content; Chinese fallback is not a translation."
+                },
+                {
+                  "zh": "运行生成与检查，审阅生成差异和单角色下载。",
+                  "en": "Generate and check, then inspect generated diffs and individual downloads."
+                },
+                {
+                  "zh": "只暂存准备公开的文件，再运行公共内容审计。",
+                  "en": "Stage only intended public files before the public-content audit."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "sh",
+              "text": {
+                "zh": "npm ci --ignore-scripts\nnpm run build\nnpm run check\nnpm run check:versions\nnpm test\nnpm run build:site\nnpm run audit:public",
+                "en": "npm ci --ignore-scripts\nnpm run build\nnpm run check\nnpm run check:versions\nnpm test\nnpm run build:site\nnpm run audit:public"
+              }
+            }
+          ]
+        },
+        {
+          "id": "release",
+          "title": {
+            "zh": "发布不可变版本",
+            "en": "Publish immutable versions"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "已发布模板版本和发布资产不能改写。指令修正使用新版本，并保留许可与历史摘要。CI 检查目录、导出和站点；Pages 工作流构建静态站点；版本标签须匹配 package.json。工作流存在不等于线上部署成功，发布后还需核对部署结果和页面。",
+                "en": "Published template versions and release assets are immutable. Correct instructions in a new version while retaining licenses and historical digests. CI checks the catalogue, exports, and site. The Pages workflow builds the static site, and version tags must match package.json. A workflow file does not prove deployment; check deployment results and pages afterward."
+              }
+            },
+            {
+              "type": "code",
+              "language": "sh",
+              "text": {
+                "zh": "npm run pack:release\n# From the release download directory on macOS:\nshasum -a 256 -c SHA256SUMS",
+                "en": "npm run pack:release\n# From the release download directory on macOS:\nshasum -a 256 -c SHA256SUMS"
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "贡献规范",
+                    "en": "Contribution guide"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/CONTRIBUTING.md",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/CONTRIBUTING.md"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "发布细则",
+                    "en": "Publishing details"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/docs/publishing.md",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/docs/publishing.md"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "贡献规范",
+            "en": "Contribution guide"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/CONTRIBUTING.md"
+        },
+        {
+          "label": {
+            "zh": "实际 CLI 包装器",
+            "en": "Actual CLI wrapper"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/scripts/market.mjs"
+        },
+        {
+          "label": {
+            "zh": "CI 与发布规则",
+            "en": "CI and publishing rules"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/publishing.md"
+        },
+        {
+          "label": {
+            "zh": "完整条目实例",
+            "en": "Complete entry example"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/data/entries/status-report-writer.json"
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "title": {
+        "zh": "先定位问题在哪一层",
+        "en": "Locate the failing layer first"
+      },
+      "summary": {
+        "zh": "保留材料和错误证据，选择低风险、可逆的排查动作。",
+        "en": "Preserve materials and error evidence, then choose low-risk reversible checks."
+      },
+      "audiences": [
+        "start",
+        "team",
+        "developer"
+      ],
+      "sections": [
+        {
+          "id": "triage",
+          "title": {
+            "zh": "常见问题速查",
+            "en": "Quick troubleshooting table"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "现象",
+                  "en": "Symptom"
+                },
+                {
+                  "zh": "先检查",
+                  "en": "Check first"
+                },
+                {
+                  "zh": "下一步",
+                  "en": "Next step"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "网站加载失败",
+                    "en": "Site fails to load"
+                  },
+                  {
+                    "zh": "网络与目录加载状态",
+                    "en": "Network and catalogue load status"
+                  },
+                  {
+                    "zh": "重试相同筛选或读 GitHub 目录",
+                    "en": "Retry the same filters or read the GitHub catalogue"
+                  }
+                ],
+                [
+                  {
+                    "zh": "下载后没有 Bot",
+                    "en": "No Bot after download"
+                  },
+                  {
+                    "zh": "是否只完成网站下载",
+                    "en": "Whether only a download occurred"
+                  },
+                  {
+                    "zh": "在宿主当前配置导入入口预览与确认",
+                    "en": "Use the current host import preview and confirmation"
+                  }
+                ],
+                [
+                  {
+                    "zh": "合集无法导入",
+                    "en": "Collection cannot import"
+                  },
+                  {
+                    "zh": "单文件是否超过200个 Bot",
+                    "en": "Whether a file exceeds 200 Bots"
+                  },
+                  {
+                    "zh": "选单角色或发布分片，并查宿主总量限制",
+                    "en": "Choose one role or release parts and check host total limits"
+                  }
+                ],
+                [
+                  {
+                    "zh": "读不到邮件或文件",
+                    "en": "Cannot read mail or files"
+                  },
+                  {
+                    "zh": "工具、账号授权与材料可读性",
+                    "en": "Tools, account authorization, and readable materials"
+                  },
+                  {
+                    "zh": "提供脱敏材料或补齐任务所需授权",
+                    "en": "Provide sanitized materials or obtain required task access"
+                  }
+                ],
+                [
+                  {
+                    "zh": "中文模式有英文指令",
+                    "en": "English instructions in Chinese mode"
+                  },
+                  {
+                    "zh": "是否为带来源适配",
+                    "en": "Whether it is an attributed adaptation"
+                  },
+                  {
+                    "zh": "阅读适配说明，指定产物语言",
+                    "en": "Read adaptation notes and specify output language"
+                  }
+                ],
+                [
+                  {
+                    "zh": "SHA-256 不匹配",
+                    "en": "SHA-256 mismatch"
+                  },
+                  {
+                    "zh": "卡片与下载是否同一发布",
+                    "en": "Whether card and download share a publication"
+                  },
+                  {
+                    "zh": "停止导入，获取一致版本或发布快照",
+                    "en": "Stop import and retrieve a consistent version or release snapshot"
+                  }
+                ],
+                [
+                  {
+                    "zh": "产物完整但缺少证据",
+                    "en": "Complete-looking output lacks evidence"
+                  },
+                  {
+                    "zh": "来源和验收条件是否齐全",
+                    "en": "Whether sources and criteria are present"
+                  },
+                  {
+                    "zh": "补材料并列出未知、冲突",
+                    "en": "Add materials and list unknowns and conflicts"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "report",
+          "title": {
+            "zh": "提交可复现反馈",
+            "en": "Submit reproducible feedback"
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "公开反馈（请脱敏）\n页面或公开Bot ID：\n模板版本 / 语言 / 内容修订：\n宿主版本（涉及导入时）：\n时间与最小步骤：\n预期结果：\n实际结果和错误码：\n可公开小样例：\n不包含：账号、密钥、私有对话、客户材料",
+                "en": "Public feedback (sanitize first)\nPage or public Bot ID:\nTemplate version / language / content revision:\nHost version (for import issues):\nTime and minimal steps:\nExpected result:\nActual result and error code:\nSmall public sample:\nExclude accounts, keys, private conversations, and customer materials."
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "角色详情反馈入口会预填公开 Bot ID、模板版本和来源。提交前仍需检查自己添加的材料，不公开完整私有日志。",
+                "en": "Role detail feedback links prefill the public Bot ID, template version, and source. Review your additions before submission and keep complete private logs out of public feedback."
+              }
+            }
+          ]
+        },
+        {
+          "id": "recover",
+          "title": {
+            "zh": "保留工作后再恢复",
+            "en": "Preserve work before recovery"
+          },
+          "blocks": [
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "保存草稿、下载文件和必要的脱敏错误信息。",
+                  "en": "Save drafts, downloads, and necessary sanitized error details."
+                },
+                {
+                  "zh": "区分网站、格式、宿主导入、模型和账号问题。",
+                  "en": "Separate site, format, host-import, model, and account problems."
+                },
+                {
+                  "zh": "先重试读取或用小样例复现，避免用重置替代定位。",
+                  "en": "Retry reading or reproduce with a small sample before considering a reset."
+                },
+                {
+                  "zh": "运行实例按宿主当前文档处理，记录实际结果。",
+                  "en": "Follow current host documentation for running instances and record actual results."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "faq",
+          "title": {
+            "zh": "三个容易误解的问题",
+            "en": "Three common misunderstandings"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "问题",
+                  "en": "Question"
+                },
+                {
+                  "zh": "回答",
+                  "en": "Answer"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "打开来源链接会安装吗？",
+                    "en": "Does opening a source link install a Bot?"
+                  },
+                  {
+                    "zh": "不会，原站条件与操作另行适用。",
+                    "en": "No. Original-site conditions and actions apply separately."
+                  }
+                ],
+                [
+                  {
+                    "zh": "能运行就代表账号任务认证吗？",
+                    "en": "Does a working role certify account tasks?"
+                  },
+                  {
+                    "zh": "不能，格式检查与真实账号验收不同。",
+                    "en": "No. Format checks differ from real-account acceptance."
+                  }
+                ],
+                [
+                  {
+                    "zh": "Bot 自动共享私有记忆吗？",
+                    "en": "Do Bots automatically share private memory?"
+                  },
+                  {
+                    "zh": "配置不传记忆，使用明确授权资料包交接。",
+                    "en": "Configurations do not transfer memory; hand off explicitly authorized packets."
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "公开问题列表",
+                    "en": "Public issue tracker"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/issues",
+                    "en": "https://github.com/Harzva/awesome-bot/issues"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "网站与反馈说明",
+            "en": "Site and feedback notes"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/README.md"
+        },
+        {
+          "label": {
+            "zh": "导入与验证范围",
+            "en": "Import and verification scope"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/INTEGRATION.md"
+        },
+        {
+          "label": {
+            "zh": "摘要不一致处理",
+            "en": "Digest mismatch handling"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/agent-integration.md"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": {
+        "zh": "术语、许可与来源",
+        "en": "Terms, licenses, and sources"
+      },
+      "summary": {
+        "zh": "查清字段和来源，区分原创、英文适配与外部参考。",
+        "en": "Look up fields and provenance, distinguishing originals, English adaptations, and external references."
+      },
+      "audiences": [
+        "start",
+        "team",
+        "developer"
+      ],
+      "sections": [
+        {
+          "id": "terms",
+          "title": {
+            "zh": "术语表",
+            "en": "Glossary"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "术语",
+                  "en": "Term"
+                },
+                {
+                  "zh": "本手册中的含义",
+                  "en": "Meaning in this handbook"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "Bot 角色",
+                    "en": "Bot role"
+                  },
+                  {
+                    "zh": "职责、方法和前提的配置",
+                    "en": "Configuration of responsibilities, methods, and prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "zh": "任务流程",
+                    "en": "Task workflow"
+                  },
+                  {
+                    "zh": "围绕特定产物组织的步骤",
+                    "en": "Steps organized around a specific output"
+                  }
+                ],
+                [
+                  {
+                    "zh": "Fleet",
+                    "en": "Fleet"
+                  },
+                  {
+                    "zh": "供宿主导入审阅的配置文件",
+                    "en": "Configuration file for host import review"
+                  }
+                ],
+                [
+                  {
+                    "zh": "规范清单",
+                    "en": "Canonical manifest"
+                  },
+                  {
+                    "zh": "保留已发布版本字节的角色清单",
+                    "en": "Role manifest preserving published version bytes"
+                  }
+                ],
+                [
+                  {
+                    "zh": "语言投影",
+                    "en": "Localized projection"
+                  },
+                  {
+                    "zh": "同一源角色的语言化内容与下载",
+                    "en": "Localized content and download of the same source role"
+                  }
+                ],
+                [
+                  {
+                    "zh": "配置摘要",
+                    "en": "Configuration digest"
+                  },
+                  {
+                    "zh": "识别具体下载字节的 SHA-256",
+                    "en": "SHA-256 identifying exact download bytes"
+                  }
+                ],
+                [
+                  {
+                    "zh": "信任锚",
+                    "en": "Trust anchor"
+                  },
+                  {
+                    "zh": "独立固定的发布者验证依据，本目录未捆绑",
+                    "en": "Independently pinned publisher-verification basis, not bundled here"
+                  }
+                ],
+                [
+                  {
+                    "zh": "验收",
+                    "en": "Acceptance"
+                  },
+                  {
+                    "zh": "按明确条件检查具体任务产物",
+                    "en": "Checking a task output against explicit criteria"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "license",
+          "title": {
+            "zh": "查看许可与署名",
+            "en": "Find licenses and attribution"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "本站原创内容和代码使用 MIT。{{adapted}} 个带来源角色中，mergisi/awesome-grokbot 使用 CC0-1.0，cobusgreyling/grok-bot-templates 和 PramodDutta/botskills 使用 MIT。适配保留原始指令、来源、摘要与适用许可；上游名称和品牌权利归各自所有者。",
+                "en": "Original site content and code use MIT. Among {{adapted}} attributed roles, mergisi/awesome-grokbot uses CC0-1.0; cobusgreyling/grok-bot-templates and PramodDutta/botskills use MIT. Adaptations retain original instructions, provenance, digests, and applicable notices. Upstream names and brands remain their owners' property."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "在详情查看作者、源地址和模板版本。",
+                  "en": "Read author, source URL, and template version in details."
+                },
+                {
+                  "zh": "再分发前打开适用许可与第三方说明，保留要求的署名。",
+                  "en": "Before redistribution, read applicable licenses and third-party notices and retain required attribution."
+                },
+                {
+                  "zh": "外部项目逐项看许可；链接参考不代表获准复制软件或资产。",
+                  "en": "Check each external project's license; a reference link does not grant permission to copy software or assets."
+                }
+              ]
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "项目许可",
+                    "en": "Project license"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/LICENSE",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/LICENSE"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "第三方说明",
+                    "en": "Third-party notices"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/THIRD_PARTY_NOTICES.md",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/THIRD_PARTY_NOTICES.md"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "适配来源清单",
+                    "en": "Adaptation source inventory"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/blob/main/data/imported-role-sources.json",
+                    "en": "https://github.com/Harzva/awesome-bot/blob/main/data/imported-role-sources.json"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "links",
+          "title": {
+            "zh": "继续阅读",
+            "en": "Further reading"
+          },
+          "blocks": [
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "市场首页",
+                    "en": "Market home"
+                  },
+                  "url": {
+                    "zh": "./",
+                    "en": "./?lang=en"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "手册首页",
+                    "en": "Handbook home"
+                  },
+                  "url": {
+                    "zh": "./handbook.html",
+                    "en": "./handbook.en.html"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "Shared Bots 来源目录",
+                    "en": "Shared Bots source directory"
+                  },
+                  "url": {
+                    "zh": "./shared-bots.html",
+                    "en": "./shared-bots.html?lang=en"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "项目与参考",
+                    "en": "Projects and references"
+                  },
+                  "url": {
+                    "zh": "./resources.html",
+                    "en": "./resources.en.html"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "机器索引",
+                    "en": "Machine-readable registry"
+                  },
+                  "url": {
+                    "zh": "./registry/index.json",
+                    "en": "./registry/index.json"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "发布与校验文件",
+                    "en": "Releases and checksums"
+                  },
+                  "url": {
+                    "zh": "https://github.com/Harzva/awesome-bot/releases",
+                    "en": "https://github.com/Harzva/awesome-bot/releases"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "method",
+          "title": {
+            "zh": "本手册如何使用来源",
+            "en": "How this handbook uses sources"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "本手册借鉴 grokbot-guide 的学习路径、场景验收和分层排错结构，正文与练习为本站原创。Grok 的云电脑、例程、连接应用和审批菜单是其平台专属说明，不在这里作为 OpenBot 已接通功能介绍。本手册功能事实依据本仓文档与数据契约，具体账号任务仍需单独验收。",
+                "en": "This handbook learns from grokbot-guide's learning paths, scenario acceptance, and layered troubleshooting. Its text and exercises are original. Grok cloud computers, routines, app connections, and approval menus are platform-specific and are not presented as connected OpenBot capabilities. Feature facts rely on this repository's documentation and data contracts; account tasks still need separate acceptance."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "固定版本结构参考",
+                    "en": "Structural reference at a fixed revision"
+                  },
+                  "url": {
+                    "zh": "https://github.com/anightmonarch/grokbot-guide/tree/65688ac52e2a14b160393688bdfb2734ecc6dcc7",
+                    "en": "https://github.com/anightmonarch/grokbot-guide/tree/65688ac52e2a14b160393688bdfb2734ecc6dcc7"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": {
+            "zh": "本站许可",
+            "en": "Site license"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/LICENSE"
+        },
+        {
+          "label": {
+            "zh": "第三方署名和许可",
+            "en": "Third-party attribution and licenses"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/THIRD_PARTY_NOTICES.md"
+        },
+        {
+          "label": {
+            "zh": "适配与索引边界",
+            "en": "Adaptation and indexing boundaries"
+          },
+          "url": "https://github.com/Harzva/awesome-bot/blob/main/docs/market-aggregation.md"
+        },
+        {
+          "label": {
+            "zh": "学习路径结构参考",
+            "en": "Learning-path structural reference"
+          },
+          "url": "https://github.com/anightmonarch/grokbot-guide/tree/65688ac52e2a14b160393688bdfb2734ecc6dcc7"
+        }
+      ]
+    }
+  ]
+}

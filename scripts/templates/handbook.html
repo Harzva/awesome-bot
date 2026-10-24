@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{description}}">
+    <meta name="theme-color" content="#ffffff">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./styles.css?v={{version}}">
+    <link rel="stylesheet" href="./handbook.css?v={{version}}">
+  </head>
+  <body class="handbook-page">
+    <a class="handbook-skip-link" href="#handbook-content">
+      <span class="handbook-only-zh">跳到正文</span>
+      <span class="handbook-only-en">Skip to content</span>
+    </a>
+
+    {{header}}
+
+    <div class="handbook-layout">
+      <aside class="handbook-sidebar" aria-labelledby="handbook-directory-title">
+        <details id="handbook-directory" class="handbook-directory" open>
+          <summary id="handbook-directory-title" class="handbook-directory-summary">
+            <span class="handbook-only-zh">章节目录</span>
+            <span class="handbook-only-en">Contents</span>
+          </summary>
+          {{sidebar}}
+        </details>
+      </aside>
+
+      <main id="handbook-content" class="handbook-content">
+        {{content}}
+      </main>
+    </div>
+
+    {{footer}}
+
+    <script src="./handbook.js?v={{version}}" defer></script>
+  </body>
+</html>

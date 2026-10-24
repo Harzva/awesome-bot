@@ -1,0 +1,574 @@
+.handbook-page {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.handbook-page ::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.handbook-page * {
+  scrollbar-color: var(--line-strong) var(--surface-soft);
+  scrollbar-width: thin;
+}
+
+.handbook-page *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.handbook-page *::-webkit-scrollbar-track {
+  background: var(--surface-soft);
+}
+
+.handbook-page *::-webkit-scrollbar-thumb {
+  border: 2px solid var(--surface-soft);
+  border-radius: 7px;
+  background: var(--line-strong);
+}
+
+.handbook-page input {
+  caret-color: var(--accent);
+}
+
+.handbook-page .handbook-only-en {
+  display: none;
+}
+
+html[lang^="en"] .handbook-page .handbook-only-zh {
+  display: none;
+}
+
+html[lang^="en"] .handbook-page .handbook-only-en {
+  display: inline;
+}
+
+.handbook-page .handbook-skip-link {
+  position: absolute;
+  z-index: 10;
+  top: -100px;
+  left: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.handbook-page .handbook-skip-link:focus {
+  top: 10px;
+}
+
+.handbook-page .handbook-layout {
+  display: grid;
+  width: min(var(--content), calc(100% - 48px));
+  grid-template-columns: minmax(180px, 210px) minmax(0, 760px);
+  justify-content: center;
+  align-items: start;
+  gap: 42px;
+  margin-inline: auto;
+  padding: 32px 0 56px;
+}
+
+.handbook-page .handbook-sidebar {
+  position: sticky;
+  top: 20px;
+  min-width: 0;
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+}
+
+.handbook-page .handbook-directory {
+  min-width: 0;
+}
+
+.handbook-page .handbook-directory-summary {
+  min-height: 44px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.handbook-page .handbook-directory nav {
+  margin-top: 8px;
+}
+
+.handbook-page .handbook-directory nav ul {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.handbook-page .handbook-directory nav li {
+  min-width: 0;
+}
+
+.handbook-page .handbook-directory nav a {
+  display: block;
+  min-height: 36px;
+  padding: 7px 8px;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.handbook-page .handbook-directory nav a:hover,
+.handbook-page .handbook-directory nav a:focus-visible {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.handbook-page .handbook-directory nav a[aria-current="location"],
+.handbook-page .handbook-directory nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.handbook-page .handbook-content {
+  min-width: 0;
+  max-width: 760px;
+  line-height: 1.65;
+}
+
+.handbook-page .handbook-content > article {
+  min-width: 0;
+  max-width: 760px;
+  margin: 0;
+}
+
+.handbook-page .handbook-content article h1 {
+  max-width: 740px;
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 3.3vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.handbook-page .handbook-content article > .handbook-lede {
+  max-width: 70ch;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.handbook-page .handbook-content article h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+.handbook-page .handbook-content article h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.handbook-page .handbook-content article p,
+.handbook-page .handbook-content article li,
+.handbook-page .handbook-content article dd {
+  max-width: 72ch;
+}
+
+.handbook-page .handbook-content article p {
+  margin: 0 0 14px;
+}
+
+.handbook-page .handbook-content article ol,
+.handbook-page .handbook-content article ul {
+  padding-inline-start: 1.35em;
+}
+
+.handbook-page .handbook-content article li + li {
+  margin-top: 5px;
+}
+
+.handbook-page .handbook-content article a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.handbook-page .handbook-content article a:hover {
+  color: var(--accent);
+}
+
+.handbook-page .handbook-section {
+  min-width: 0;
+  margin-top: 38px;
+  scroll-margin-top: 24px;
+}
+
+.handbook-page .handbook-section > h2 {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.handbook-page .handbook-chapters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  margin: 24px 0 30px;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.handbook-page .handbook-chapters li {
+  min-width: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.handbook-page .handbook-chapters a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 8px 4px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.handbook-page .handbook-chapters a:hover {
+  text-decoration: underline;
+}
+
+.handbook-page .handbook-paths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 20px;
+  margin: 24px 0 32px;
+}
+
+.handbook-page .handbook-paths > section {
+  min-width: 0;
+  padding: 13px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.handbook-page .handbook-paths > section h2,
+.handbook-page .handbook-paths > section h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.handbook-page .handbook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin: 18px 0 24px;
+}
+
+.handbook-page .handbook-actions a,
+.handbook-page .handbook-actions button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.handbook-page .handbook-search {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.handbook-page .handbook-search label {
+  grid-column: 1 / -1;
+}
+
+.handbook-page .handbook-search input,
+.handbook-page .handbook-search button {
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.handbook-page .handbook-search input {
+  width: 100%;
+}
+
+.handbook-page .handbook-search input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.handbook-page .handbook-search button {
+  padding-inline: 15px;
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 500;
+}
+
+.handbook-page .handbook-search button:hover {
+  background: #333331;
+}
+
+.handbook-page #handbook-results {
+  grid-column: 1 / -1;
+  min-width: 0;
+  color: var(--muted);
+}
+
+.handbook-page #handbook-results:empty {
+  display: none;
+}
+
+.handbook-page #handbook-results a {
+  display: block;
+  min-height: 40px;
+  padding: 8px 0;
+}
+
+.handbook-page .handbook-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 34px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.handbook-page .handbook-pager a,
+.handbook-page .handbook-pager button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.handbook-page .handbook-table {
+  max-width: 100%;
+  margin: 18px 0 24px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  overscroll-behavior-inline: contain;
+}
+
+.handbook-page .handbook-table table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.handbook-page .handbook-table th,
+.handbook-page .handbook-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+
+.handbook-page .handbook-table th {
+  background: var(--surface-soft);
+  font-weight: 600;
+}
+
+.handbook-page .handbook-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.handbook-page .handbook-content article pre {
+  max-width: 100%;
+  margin: 16px 0 22px;
+  padding: 13px 14px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.6;
+  tab-size: 2;
+  white-space: pre;
+}
+
+.handbook-page .handbook-content article pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.handbook-page .handbook-content article :not(pre) > code {
+  padding: 1px 4px;
+  background: var(--surface-soft);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+}
+
+.handbook-page .handbook-content article dl {
+  display: grid;
+  grid-template-columns: minmax(110px, 180px) minmax(0, 1fr);
+  gap: 8px 20px;
+  margin: 18px 0 24px;
+}
+
+.handbook-page .handbook-content article dt {
+  font-weight: 600;
+}
+
+.handbook-page .handbook-content article dd {
+  min-width: 0;
+  margin: 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .handbook-page .handbook-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .handbook-page .handbook-sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .handbook-page .handbook-content,
+  .handbook-page .handbook-content > article {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 760px) {
+  .handbook-page .handbook-layout {
+    width: min(var(--content), calc(100% - 32px));
+    padding: 24px 0 40px;
+  }
+
+  .handbook-page .handbook-directory-summary {
+    display: list-item;
+    min-height: 44px;
+    padding: 9px 0;
+  }
+
+  .handbook-page .handbook-directory nav {
+    margin: 8px 0 0;
+    padding-bottom: 8px;
+  }
+
+  .handbook-page .handbook-directory nav a {
+    min-height: 44px;
+    padding-block: 10px;
+  }
+
+  .handbook-page .handbook-chapters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .handbook-page .handbook-paths {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .handbook-page .handbook-content article h1 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .handbook-page .handbook-content article > .handbook-lede {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .handbook-page .handbook-layout {
+    width: min(var(--content), calc(100% - 24px));
+    padding-top: 20px;
+  }
+
+  .handbook-page .handbook-content article h2 {
+    font-size: 22px;
+  }
+
+  .handbook-page .handbook-content article dl {
+    grid-template-columns: minmax(90px, 120px) minmax(0, 1fr);
+    gap: 7px 12px;
+  }
+
+  .handbook-page .handbook-search {
+    gap: 7px;
+  }
+
+  .handbook-page .handbook-search button {
+    padding-inline: 12px;
+  }
+
+  .handbook-page .handbook-table table {
+    min-width: 560px;
+  }
+
+  .handbook-page .handbook-pager {
+    gap: 8px;
+  }
+}
+
+@media print {
+  .handbook-page .site-header,
+  .handbook-page .handbook-skip-link,
+  .handbook-page .handbook-sidebar,
+  .handbook-page .handbook-search,
+  .handbook-page .handbook-actions,
+  .handbook-page .handbook-pager,
+  .handbook-page .site-footer {
+    display: none !important;
+  }
+
+  .handbook-page .handbook-layout {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .handbook-page .handbook-content,
+  .handbook-page .handbook-content > article {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .handbook-page .handbook-table {
+    overflow: visible;
+    border: 0;
+  }
+
+  .handbook-page .handbook-table table {
+    min-width: 0;
+    font-size: 10pt;
+  }
+
+  .handbook-page .handbook-content article pre {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .handbook-page .handbook-section {
+    break-inside: avoid;
+  }
+}

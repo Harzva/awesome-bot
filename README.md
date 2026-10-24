@@ -11,6 +11,13 @@ The initial collection contains **90 original role templates** corresponding to 
 
 The repository builds independently after a clean clone. One JSON file per entry generates the documentation, searchable website, manifests, index and configuration downloads. No account or backend is required to browse.
 
+## Handbook
+
+Read the [handbook](https://harzva.github.io/awesome-bot/handbook.en.html) through three paths: **first task**, **team use**, and **developer reference**. Ten chapters cover concepts, choosing and importing a configuration, writing tasks, handoffs, the existing five scenarios, Agent integration, contribution, troubleshooting and reference terms. Chapters are searchable, printable and available as Markdown; the same content is available in [Chinese](https://harzva.github.io/awesome-bot/handbook.html).
+
+The handbook follows this project's actual configuration and website contracts. Its structure learns from GrokBot Guide without presenting Grok-only controls as OpenBot features. See the [dated source review](docs/handbook-sources-20261025.md).
+
+
 ## gitopsbot
 
 [Open gitopsbot in the market](https://harzva.github.io/awesome-bot/?bot=awesome%2Fgitopsbot) for a reusable GitHub-to-Feishu setup role. Its skills and bilingual playbook cover event routing, signed Webhooks, durable deduplication, real delivery verification, recovery and explicit OpenBot/Grok sender selection. Multiple Bots can remain online; the selected sender determines where each event goes.
