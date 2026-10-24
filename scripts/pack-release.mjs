@@ -180,7 +180,7 @@ export async function packRelease({ root = ROOT, outDir = resolve(ROOT, 'dist/re
       sourceDateEpoch: epoch, counts, collections, localized, targetOpenBotVersion, signed: false,
       contents: payload.map(f => ({ path: f.path, bytes: f.data.length, sha256: sha256(f.data) })).sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0),
       artifacts: assets.map(a => ({ file: a.name, bytes: a.data.length, sha256: sha256(a.data) })),
-      scope: 'Original declarative templates. Schema and export checks do not certify real-account task execution.'
+      scope: 'Declarative templates, including original work and attributed source adaptations. Schema and export checks do not certify real-account task execution.'
     };
     assets.push({ name: 'release-manifest.json', data: Buffer.from(`${JSON.stringify(manifest, null, 2)}\n`) });
     const changelog = await readFile(resolve(root, 'CHANGELOG.md'), 'utf8');
