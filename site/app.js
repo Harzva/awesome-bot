@@ -7,7 +7,7 @@
 
   const copy = {
     zh: {
-      navCatalog: 'Bot 市场', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
+      navCatalog: 'Bot 市场', navResources: '开源与参考', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
       filterLabel: '目录筛选', botTypeLabel: 'Bot 类型', categoryFilter: '按分类筛选', sortControlLabel: '排序方式',
       title: 'Bot 市场',
       lede: '探索角色与任务，找到适合你的 Bot。',
@@ -44,7 +44,7 @@
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
-      navCatalog: 'Marketplace', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
+      navCatalog: 'Marketplace', navResources: 'Projects & references', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
       filterLabel: 'Directory filters', botTypeLabel: 'Bot type', categoryFilter: 'Filter by category', sortControlLabel: 'Sort order',
       title: 'Bot marketplace',
       lede: 'Explore roles and tasks. Find a Bot for your work.',
@@ -477,6 +477,8 @@
       sortSelect.options[0].textContent = label('nameSort');
       sortSelect.options[1].textContent = label('originalNameSort');
     }
+    const resources = doc.getElementById('resources-link');
+    if (resources) resources.href = state.language === 'en' ? './resources.en.html' : './resources.html';
     const language = doc.getElementById('language-toggle');
     if (language) language.textContent = state.language === 'zh' ? 'EN' : '中';
     const home = doc.querySelector('.brand');

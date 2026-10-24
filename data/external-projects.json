@@ -1,0 +1,202 @@
+{
+  "schema": "awesome.bot.external-projects/1",
+  "checkedAt": "2026-10-24",
+  "projects": [
+    {
+      "id": "agent-org-chart",
+      "name": "Agent Org Chart",
+      "repository": "serenakeyitan/agent-org-chart",
+      "url": "https://github.com/serenakeyitan/agent-org-chart",
+      "category": "team-templates",
+      "summary": {
+        "zh": "团队组织图与可携带角色模板",
+        "en": "Portable team org charts and role templates"
+      },
+      "license": "MIT",
+      "licenseUrl": "https://github.com/serenakeyitan/agent-org-chart/blob/8ea9049959a485eece0b20ecb14b3f3ac98500fd/LICENSE",
+      "openSource": true,
+      "revision": "8ea9049959a485eece0b20ecb14b3f3ac98500fd",
+      "readmeUrl": "https://github.com/serenakeyitan/agent-org-chart/blob/8ea9049959a485eece0b20ecb14b3f3ac98500fd/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/serenakeyitan/agent-org-chart",
+      "submittedStatus": 200,
+      "matchStatus": "exact_public",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "模板需映射 OpenBot 的代理创建与团队协议；未做导入验证。",
+          "en": "Team templates need mapping to OpenBot agent creation and team protocols; imports are untested."
+        }
+      }
+    },
+    {
+      "id": "grok-bot-gateway",
+      "name": "Grok Bot Gateway",
+      "repository": "dimpurr/grok-bot-gateway",
+      "url": "https://github.com/dimpurr/grok-bot-gateway",
+      "category": "gateway",
+      "summary": {
+        "zh": "通过 Grok Bot webhook 列出、读取与消息交接",
+        "en": "Webhook gateway for listing, reading and messaging Grok Bots"
+      },
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/dimpurr/grok-bot-gateway/blob/94b7894bf2802c0fcebeb23035dc1ad6b1286e48/LICENSE",
+      "openSource": true,
+      "revision": "94b7894bf2802c0fcebeb23035dc1ad6b1286e48",
+      "readmeUrl": "https://github.com/dimpurr/grok-bot-gateway/blob/94b7894bf2802c0fcebeb23035dc1ad6b1286e48/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/dinpurr/grok-bot-gateway",
+      "submittedStatus": 404,
+      "matchStatus": "original_404_candidate",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "依赖 Grok Bot webhook 与回传渠道；未接入 OpenBot 网关。",
+          "en": "Requires Grok Bot webhooks and a return channel; not connected to the OpenBot gateway."
+        }
+      }
+    },
+    {
+      "id": "grok-factory",
+      "name": "Grok Factory",
+      "repository": "jaredtrichard/grok-factory",
+      "url": "https://github.com/jaredtrichard/grok-factory",
+      "category": "workflow-reference",
+      "summary": {
+        "zh": "面向软件、研究与通用任务的团队工作包",
+        "en": "Team workflow pack for software, research and general tasks"
+      },
+      "license": null,
+      "licenseUrl": null,
+      "openSource": false,
+      "revision": "2e9f8e55935e9ec3cb8c1fa823c64bd043c4351b",
+      "readmeUrl": "https://github.com/jaredtrichard/grok-factory/blob/2e9f8e55935e9ec3cb8c1fa823c64bd043c4351b/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/jaretrichand/grok-factory",
+      "submittedStatus": 404,
+      "matchStatus": "original_404_candidate",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "依赖 Grok Bot 与 Cursor cloud；未找到许可证，仅收录链接，不复制正文。",
+          "en": "Uses Grok Bot and Cursor cloud workflows. No license found; link reference only, with no template text copied."
+        }
+      }
+    },
+    {
+      "id": "multibot",
+      "name": "multiBot",
+      "repository": "simo255/multiBot",
+      "url": "https://github.com/simo255/multiBot",
+      "category": "cli-orchestration",
+      "summary": {
+        "zh": "创建并委派多种 CLI 工作者的团队模板",
+        "en": "Team template delegating work to multiple CLI agents"
+      },
+      "license": "MIT",
+      "licenseUrl": "https://github.com/simo255/multiBot/blob/ad5a480cdd275fdb896ed9a0aff9dfd2484985db/LICENSE",
+      "openSource": true,
+      "revision": "ad5a480cdd275fdb896ed9a0aff9dfd2484985db",
+      "readmeUrl": "https://github.com/simo255/multiBot/blob/ad5a480cdd275fdb896ed9a0aff9dfd2484985db/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/simo255/multibot",
+      "submittedStatus": 200,
+      "matchStatus": "case_normalized_public",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "依赖 Grok Bot CreateAgent 与外部 CLI；未接通 OpenBot 安装或运行契约。",
+          "en": "Uses Grok Bot CreateAgent and external CLIs; not connected to OpenBot installation or execution."
+        }
+      }
+    },
+    {
+      "id": "thin-grok-bot-deep-work-on-cli",
+      "name": "Thin Grok Bot",
+      "repository": "Luca-Blight/thin-grok-bot-deep-work-on-cli",
+      "url": "https://github.com/Luca-Blight/thin-grok-bot-deep-work-on-cli",
+      "category": "delegation-skill",
+      "summary": {
+        "zh": "轻量协调并将深入工作交给 CLI 的技能",
+        "en": "Thin orchestration skill handing deep work to CLIs"
+      },
+      "license": "MIT",
+      "licenseUrl": "https://github.com/Luca-Blight/thin-grok-bot-deep-work-on-cli/blob/dfccb0f3c62b716760f517ded9a53a57af2f26b5/LICENSE",
+      "openSource": true,
+      "revision": "dfccb0f3c62b716760f517ded9a53a57af2f26b5",
+      "readmeUrl": "https://github.com/Luca-Blight/thin-grok-bot-deep-work-on-cli/blob/dfccb0f3c62b716760f517ded9a53a57af2f26b5/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/luca-bright/thin-grok-bot",
+      "submittedStatus": 404,
+      "matchStatus": "original_404_candidate",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "Grok Bot/Cursor 技能格式；需人工适配 OpenBot 路由，未安装。",
+          "en": "Grok Bot/Cursor skill format; OpenBot routing needs adaptation and has not been installed."
+        }
+      }
+    },
+    {
+      "id": "grok-bot-architecture",
+      "name": "Grok Bot Architecture",
+      "repository": "tiagovilasboas/grok-bot-architecture",
+      "url": "https://github.com/tiagovilasboas/grok-bot-architecture",
+      "category": "architecture-reference",
+      "summary": {
+        "zh": "多代理交接、人工审批与共享电脑架构参考",
+        "en": "Multi-agent handoff, approval and shared-computer reference"
+      },
+      "license": "MIT",
+      "licenseUrl": "https://github.com/tiagovilasboas/grok-bot-architecture/blob/818b56088de3f29d5e94116e21f9c846a9fb4fdf/LICENSE",
+      "openSource": true,
+      "revision": "818b56088de3f29d5e94116e21f9c846a9fb4fdf",
+      "readmeUrl": "https://github.com/tiagovilasboas/grok-bot-architecture/blob/818b56088de3f29d5e94116e21f9c846a9fb4fdf/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/tiagolabs/grok-bot-architecture",
+      "submittedStatus": 404,
+      "matchStatus": "original_404_candidate",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "架构文档与验证器，非产品 CLI；可供设计参考，无 OpenBot 插件适配。",
+          "en": "Architecture documentation and validators, not a product CLI; no OpenBot plugin adapter."
+        }
+      }
+    },
+    {
+      "id": "botroster",
+      "name": "BotRoster",
+      "repository": "mandarwagh9/botroster",
+      "url": "https://github.com/mandarwagh9/botroster",
+      "category": "alternative-runtime",
+      "summary": {
+        "zh": "具有持久团队、共享电脑与审批的独立运行时",
+        "en": "Independent persistent-team runtime with shared computer and approvals"
+      },
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/mandarwagh9/botroster/blob/5357d28f3d7cbde43188a2cde442ae629ecb07ec/LICENSE",
+      "openSource": true,
+      "revision": "5357d28f3d7cbde43188a2cde442ae629ecb07ec",
+      "readmeUrl": "https://github.com/mandarwagh9/botroster/blob/5357d28f3d7cbde43188a2cde442ae629ecb07ec/README.md",
+      "checkedAt": "2026-10-24",
+      "submittedUrl": "https://github.com/mandarwag/botroster",
+      "submittedStatus": 404,
+      "matchStatus": "original_404_candidate",
+      "openbot": {
+        "installable": false,
+        "status": "external-reference",
+        "note": {
+          "zh": "独立 Rust/Tauri 产品；作为外部替代品参考，非 OpenBot 插件。",
+          "en": "Independent Rust/Tauri product; an alternative runtime, not an OpenBot plugin."
+        }
+      }
+    }
+  ]
+}

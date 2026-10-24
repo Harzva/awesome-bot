@@ -67,6 +67,8 @@ export async function writeAgentSurface({ output, catalogues, contentRevision })
     '## Discover', '', ...languageIndexes.map(item => `- [${item.locale === 'en' ? 'English' : 'Chinese'} Bot index](${item.url}): ${item.count} names, summaries and links to per-Bot Markdown and JSON. Follow only the relevant entry.`),
     `- [Language discovery](${url('agents/index.json')}): Machine-readable entry points.`,
     `- [Directory in Markdown](${url('index.md')}): English Bot names and individual context links.`, '',
+    `- [External projects and references](${url('resources.en.md')}): Public repositories, pinned source and license checks. These are not installable OpenBot templates.`,
+    `- [External project metadata](${url('resources.json')}): Separate reference collection; never use as a Fleet import or template registry.`,
     '## Start and verify', '',
     `- [English first-task guide](https://github.com/Harzva/awesome-bot/blob/main/START_HERE.en.md): Materials, task prompts and manual handoffs.`,
     `- [Chinese first-task guide](https://github.com/Harzva/awesome-bot/blob/main/START_HERE.md): The same five scenarios.`,

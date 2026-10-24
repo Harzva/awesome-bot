@@ -50,3 +50,7 @@ Use the submission form for new entries and the general bug form for website or 
 一个 PR 修改一个或少量相关的 `data/entries/*.json`。角色与工作流分开声明；社区原创无需 Grok 来源映射。写清职责、材料、步骤、交付、边界和示例，保留作者、版本与许可。执行上面的构建和检查命令，连同生成物一并提交。不要提交账号、记忆、聊天、凭据、未授权复制内容或虚构的验收结果。
 
 Published `templates/<slug>/<version>.json` bytes are immutable. Changes to a role require a new entry version; retain the older manifest. The local generator checks prospective output against Git history (or existing manifests in a source archive), and CI also checks the PR base or push-before snapshot and all available release tags. A synchronized manifest/index edit does not bypass this check. A source archive can compare its supplied snapshot with the build plan; external history verification requires Git history.
+
+## External projects and references
+
+External software is listed in `data/external-projects.json`, separately from `data/entries/` and the App template registry. Include Chinese and English summaries/compatibility notes, a public repository, a fixed 40-character revision, the README and any license at that revision, and a dated source check. Keep unavailable submitted URLs separate from related search results; do not claim a redirect without evidence. A missing license requires `license: null`, `licenseUrl: null`, `openSource: false` and link-only treatment. Do not copy unlicensed instructions or bundle third-party software. All current references have `openbot.installable: false`; actual adapters require their own implementation and acceptance. Run the normal build, tests, site build and public audit.

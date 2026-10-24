@@ -23,6 +23,10 @@ Choose a scenario in the [market](https://harzva.github.io/awesome-bot/?lang=en)
 
 Every Bot detail also offers its existing first-task example and a feedback form prefilled with the public Bot ID, template version and source. Supply your own materials when starting a task; keep private account or task data out of public feedback.
 
+## Explore external projects
+
+The [Projects & references collection](https://harzva.github.io/awesome-bot/resources.en.html) lists seven source-checked team templates, gateways, delegation tools, architecture references and independent runtimes. Six have verified open-source licenses; Grok Factory is a link-only reference because no license was found. Each listing includes a pinned README, license evidence and OpenBot compatibility limits. They are separate from the 148 installable configuration templates; no external code or prompt pack is imported or executed. [Metadata](data/external-projects.json) · [Source review](sources/external-project-review-20261024.md).
+
 ## Find a Bot
 
 Use the [market](https://harzva.github.io/awesome-bot/?lang=en) to search English responsibilities, titles or sources, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.
