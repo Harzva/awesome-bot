@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0 — 2026-10-24
+
+- Import 223 attributed Bot role instructions from three licensed, fixed-revision sources, with Chinese/English metadata and original English prompt bodies retained. Keep complete MIT notices inside both exported personas.
+- Increase the installable configuration catalogue from 148 to 371 while preserving all old entry/version bytes. Add offline synchronization, source-hash checks and safe repeat-sync behavior.
+- Add a separate searchable Shared Bots directory with canonical URL deduplication, multi-source provenance, platform filters and 50-row pagination. Source links are not OpenBot installers and are not individually certified as available.
+- Keep project references, imported roles, shared-site Bots and task workflows distinct.
+
 ## 0.7.0 — 2026-10-24
 
 - Add a bilingual, searchable external-project reference collection with seven verified public repositories, pinned README/license evidence and explicit OpenBot compatibility limits.

@@ -7,6 +7,7 @@ import { loadEnglish, localizePlan, englishPersona } from './locales.mjs';
 import { avatarPath, avatarSVG } from './avatars.mjs';
 import { writeAgentSurface } from './agent-surface.mjs';
 import { writeExternalProjects } from './external-projects.mjs';
+import { writeSharedBots } from './shared-bots.mjs';
 
 const args = process.argv.slice(2);
 if (args.some(arg => !arg.startsWith('--out='))) throw new Error('Usage: node scripts/build-site.mjs [--out=<directory>]');
@@ -78,7 +79,8 @@ for (const bot of metadata.bots) {
   fleetList.push(...plan.bots);
   fleets.set(collection, fleetList);
   const entry = {
-    id: bot.id, name: bot.name, sourceName: source?.name || '', sourceAuthor: source?.author || '',
+    id: bot.id, name: bot.name, sourceName: source?.name || bot.provenance?.upstreamName || '', sourceAuthor: source?.author || bot.sourceContext?.source.author || '',
+    implementation: bot.implementation, ...(bot.provenance ? { provenance: bot.provenance, sourceMarket: bot.provenance.sourceName, promptLocale: 'en', sourcePrompt: bot.sourceContext.body } : {}),
     author: typeof bot.author === 'string' ? bot.author : bot.author?.name || 'OpenBot contributors',
     collection, category: bot.category, summary: bot.summary, mission: bot.mission, style: bot.style,
     inputs: bot.inputs, outputs: bot.outputs, workflow: bot.workflow,
@@ -165,6 +167,7 @@ await writeFile(resolve(output, 'catalogue.json'), json(data));
 await writeFile(resolve(output, 'catalogue.en.json'), json(englishData));
 const agents = await writeAgentSurface({ output, catalogues: { zh: data, en: englishData }, contentRevision: packageMetadata.version });
 await writeExternalProjects({ output, version: packageMetadata.version });
+await writeSharedBots({ output, version: packageMetadata.version });
 await writeFile(resolve(output, 'robots.txt'), 'User-agent: *\nAllow: /\n');
-await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url></urlset>\n');
+await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/shared-bots.html</loc></url></urlset>\n');
 console.log(JSON.stringify({ ok: true, output, ...counts, individualDownloads: entries.length, scenarioDownloads: scenarios.length, englishEntries: englishEntries.length, agentCards: agents.cards }));

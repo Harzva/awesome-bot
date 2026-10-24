@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="原站 Bot 分享与来源链接目录。">
+    <meta name="theme-color" content="#ffffff">
+    <title data-copy="docTitle">Awesome Bot · 原站 Bot</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./shared-bots.css">
+  </head>
+  <body class="shared-page">
+    <a class="shared-skip-link" href="#shared-main" data-copy="skipMain">跳至目录内容</a>
+    <header class="site-header shared-header">
+      <a class="brand" href="./" aria-label="Awesome Bot 首页" data-copy-aria-label="homeLabel">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Awesome Bot</strong>
+          <small>OpenBot directory</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航" data-copy-aria-label="navigationLabel">
+        <a href="./" data-copy="navMarket">Bot 市场</a>
+        <a href="./resources.html" data-copy="navResources">开源与参考</a>
+        <a href="https://github.com/Harzva/awesome-bot" target="_blank" rel="noreferrer">GitHub</a>
+        <button id="shared-language" class="language-toggle" type="button" aria-label="切换界面语言" data-copy-aria-label="languageLabel" data-copy="languageSwitch">EN</button>
+      </nav>
+    </header>
+
+    <main id="shared-main" class="shared-main" aria-labelledby="shared-title">
+      <section class="shared-heading">
+        <h1 id="shared-title" data-copy="pageTitle">原站 Bot</h1>
+        <p id="shared-intro" class="shared-intro" data-copy="intro">浏览原站公开分享的 Bot 及其来源链接。</p>
+        <p id="shared-boundary" class="shared-boundary" data-copy="boundary">这里仅提供原站来源入口，不是 OpenBot 可导入模板；条目尚未适配 OpenBot，链接未逐一核验是否可用。</p>
+      </section>
+
+      <form id="shared-form" class="shared-form" action="./shared-bots.html" method="get" role="search" aria-label="搜索原站 Bot" data-copy-aria-label="searchRegionLabel">
+        <label class="shared-field shared-field-search" for="shared-search">
+          <span data-copy="searchLabel">搜索</span>
+          <input id="shared-search" name="q" type="search" maxlength="240" autocomplete="off" spellcheck="false" placeholder="按 Bot 名称、作者或来源搜索" data-copy-placeholder="searchPlaceholder">
+        </label>
+        <label class="shared-field" for="shared-source">
+          <span data-copy="sourceLabel">来源市场</span>
+          <select id="shared-source" name="source" aria-label="按来源市场筛选" data-copy-aria-label="sourceFilterLabel">
+            <option value="all" data-copy="sourceAll">全部来源</option>
+          </select>
+        </label>
+        <label class="shared-field" for="shared-platform">
+          <span data-copy="platformLabel">平台</span>
+          <select id="shared-platform" name="platform" aria-label="按平台筛选" data-copy-aria-label="platformFilterLabel">
+            <option value="all" data-copy="platformAll">全部平台</option>
+            <option value="xai" data-copy="platformXai">x.ai</option>
+            <option value="templates" data-copy="platformTemplates">Templates</option>
+            <option value="github" data-copy="platformGitHub">GitHub</option>
+          </select>
+        </label>
+        <button class="shared-submit" type="submit" data-copy="searchSubmit">搜索</button>
+      </form>
+
+      <section class="shared-results" aria-labelledby="shared-count">
+        <p id="shared-count" class="shared-count" role="status" aria-live="polite" aria-atomic="true" data-copy="countLoading">正在加载原站 Bot…</p>
+        <div id="shared-list" class="shared-list" aria-live="polite" aria-busy="true">
+          <p class="shared-loading" data-copy="listLoading">正在读取目录…</p>
+        </div>
+        <div id="shared-empty" class="shared-state" hidden>
+          <h2 data-copy="emptyTitle">没有匹配的 Bot</h2>
+          <p data-copy="emptyBody">试试其他名称、作者或来源，或调整筛选条件。</p>
+        </div>
+        <div id="shared-error" class="shared-state shared-error" role="alert" hidden>
+          <h2 data-copy="errorTitle">暂时无法加载目录</h2>
+          <p data-copy="errorBody">请稍后重试，也可查看原始 JSON 索引。</p>
+          <button id="shared-retry" class="shared-secondary-button" type="button" data-copy="retry">重试</button>
+        </div>
+      </section>
+
+      <nav class="shared-pagination" aria-label="目录分页" data-copy-aria-label="paginationLabel">
+        <button id="shared-prev" class="shared-secondary-button" type="button" disabled data-copy="previousPage">上一页</button>
+        <span id="shared-page" class="shared-page-number" aria-live="polite" aria-atomic="true" data-copy="pageInitial">正在载入页码…</span>
+        <button id="shared-next" class="shared-secondary-button" type="button" disabled data-copy="nextPage">下一页</button>
+      </nav>
+
+      <section id="shared-sources" class="shared-sources" aria-labelledby="shared-sources-title">
+        <h2 id="shared-sources-title" data-copy="sourcesTitle">来源与作者</h2>
+        <p data-copy="sourcesBody">目录链接来自 xAI、Templates 与 GitHub 的原站分享页；作者信息按来源页展示，未标注的信息不补写。</p>
+        <p data-copy="sourcesNote">收录仅提供来源入口，不代表 OpenBot 兼容性或链接当前可用；具体内容以原站为准。</p>
+      </section>
+
+      <noscript>
+        <p class="shared-noscript" data-copy="noScript">启用 JavaScript 可搜索和分页；也可以查看 <a href="./shared-bots.json" data-copy="jsonIndex">JSON 原始索引</a>。</p>
+      </noscript>
+    </main>
+
+    <footer class="site-footer shared-footer">
+      <p>Awesome Bot · <span data-copy="footerText">原站 Bot 来源目录。</span></p>
+      <a href="https://github.com/Harzva/awesome-bot" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+
+    <script src="./shared-bots.js" defer></script>
+  </body>
+</html>

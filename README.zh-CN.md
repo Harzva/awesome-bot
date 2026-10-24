@@ -6,11 +6,18 @@
 
 首批包含 **90 个原创角色模板和 56 个任务工作流**，分别对应公开 Grok Marketplace 角色与用例。全部保留原作者和来源；本地人设、技能、流程与示例由 OpenBot 独立编写。实际执行取决于模型、工具、账号和用户授权。
 
-网站支持中英文名称搜索、分类、角色/工作流切换、职责详情、浏览器收藏、单项或批量下载。可分享当前筛选或单个 Bot 链接，刷新及浏览器返回会恢复筛选和界面语言；收藏只保存在本机，分享链接不携带收藏筛选。加载失败可保留筛选重试，或转到 GitHub 目录。英文模式已完整覆盖148个Bot的职责、人设、技能、示例、配置下载和5个场景；可直接打开[英文市场](https://harzva.github.io/awesome-bot/?lang=en)。每个Bot配有原创稳定的角色标识。内容由同一组条目生成，独立克隆即可构建。
+网站支持中英文名称搜索、分类、角色/工作流切换、职责详情、浏览器收藏、单项或批量下载。可分享当前筛选或单个 Bot 链接，刷新及浏览器返回会恢复筛选和界面语言；收藏只保存在本机，分享链接不携带收藏筛选。加载失败可保留筛选重试，或转到 GitHub 目录。英文模式覆盖371个Bot的职责、人设、技能、示例、配置下载和5个场景；223个来源适配角色在两种语言下均保留原始英文指令；可直接打开[英文市场](https://harzva.github.io/awesome-bot/?lang=en)。每个Bot配有原创稳定的角色标识。内容由同一组条目生成，独立克隆即可构建。
+
+
+## 其他市场的 Bot
+
+市场现有 **371 个 OpenBot 配置模板**，包含从 Awesome Grokbot、Grok Bot Templates 和 BotSkills 适配的 **223 个具体角色**。保留原始英文指令与适用许可通知，同时提供中英文名称、摘要和使用说明；原有 148 条配置保持不变。在市场搜索 Bot 或来源名称，查看原始指令与来源后下载配置。
+
+[原站 Bot 目录](https://harzva.github.io/awesome-bot/shared-bots.html)另行汇总其他市场的具体 Bot 来源入口，支持搜索、来源/平台筛选和分页。它们不是可直接导入 OpenBot 的配置。详见[整合说明](docs/market-aggregation.md)和[来源清单](sources/bot-markets-20261024.md)。
 
 ## 开源与参考
 
-市场新增[开源与参考](https://harzva.github.io/awesome-bot/resources.html)：收录 7 个已核查来源的团队模板、网关、协作工具、架构资料与独立运行平台。6 个有已核查的开源许可证；Grok Factory 未找到许可证，只保留参考链接。每项均注明固定 README、许可证和 OpenBot 适配限制，与现有 148 个可导入配置模板分开；不会自动安装或执行外部代码。查看[项目数据](data/external-projects.json)与[来源核查](sources/external-project-review-20261024.md)。
+市场新增[开源与参考](https://harzva.github.io/awesome-bot/resources.html)：收录 7 个已核查来源的团队模板、网关、协作工具、架构资料与独立运行平台。6 个有已核查的开源许可证；Grok Factory 未找到许可证，只保留参考链接。每项均注明固定 README、许可证和 OpenBot 适配限制，与可导入配置模板分开；不会自动安装或执行外部代码。查看[项目数据](data/external-projects.json)与[来源核查](sources/external-project-review-20261024.md)。
 
 ## gitopsbot
 
@@ -32,9 +39,9 @@
 
 ## 下载与使用
 
-- [90 个角色配置包](https://harzva.github.io/awesome-bot/exports/awesome-bot-roles.fleet.json)
+- [315 个角色配置，支持单项下载](https://harzva.github.io/awesome-bot/?collection=roles)
 - [56 个任务工作流](https://harzva.github.io/awesome-bot/exports/awesome-bot-workflows.fleet.json)
-- [全部配置](https://harzva.github.io/awesome-bot/exports/awesome-bot-all.fleet.json)
+- [全部 371 个配置](https://harzva.github.io/awesome-bot/)（超过 200 个的集合可用 `npm run pack:release` 导出分包）
 - [市场索引](https://harzva.github.io/awesome-bot/registry/index.json)
 
 在 OpenBot **设置 → 数据与同步 → 导入配置**选择下载文件，检查摘要后确认。导入以新增方式保留已有 Bot；模型、账号、工具另行配置。已有主 Bot 时，新增普通 Bot 未获工具/容器权限；空资料库会由宿主把首个 Bot 设为主 Bot，该角色具有组织管理能力。导入本身不会启动环境或任务。

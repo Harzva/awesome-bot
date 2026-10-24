@@ -23,22 +23,29 @@ Choose a scenario in the [market](https://harzva.github.io/awesome-bot/?lang=en)
 
 Every Bot detail also offers its existing first-task example and a feedback form prefilled with the public Bot ID, template version and source. Supply your own materials when starting a task; keep private account or task data out of public feedback.
 
+
+## Bots from other markets
+
+The market now offers **371 OpenBot configuration templates**, including **223 attributed roles** from Awesome Grokbot, Grok Bot Templates and BotSkills. Their actual English instructions and applicable license notices are preserved, with localized Chinese/English metadata. Search a source name or Bot name in the [market](https://harzva.github.io/awesome-bot/?lang=en), inspect the source and instructions, then download an individual configuration. Existing 148 entries remain unchanged.
+
+The [Shared Bots directory](https://harzva.github.io/awesome-bot/shared-bots.html?lang=en) indexes original-site Bots separately, with search, source/platform filters and pagination. These are source links, not importable OpenBot configurations. Read the [coverage and adaptation guide](docs/market-aggregation.md) and [source inventory](sources/bot-markets-20261024.md).
+
 ## Explore external projects
 
-The [Projects & references collection](https://harzva.github.io/awesome-bot/resources.en.html) lists seven source-checked team templates, gateways, delegation tools, architecture references and independent runtimes. Six have verified open-source licenses; Grok Factory is a link-only reference because no license was found. Each listing includes a pinned README, license evidence and OpenBot compatibility limits. They are separate from the 148 installable configuration templates; no external code or prompt pack is imported or executed. [Metadata](data/external-projects.json) · [Source review](sources/external-project-review-20261024.md).
+The [Projects & references collection](https://harzva.github.io/awesome-bot/resources.en.html) lists seven source-checked team templates, gateways, delegation tools, architecture references and independent runtimes. Six have verified open-source licenses; Grok Factory is a link-only reference because no license was found. Each listing includes a pinned README, license evidence and OpenBot compatibility limits. They are separate from installable configuration templates; those seven project listings do not import or execute external code or prompt packs. [Metadata](data/external-projects.json) · [Source review](sources/external-project-review-20261024.md).
 
 ## Find a Bot
 
 Use the [market](https://harzva.github.io/awesome-bot/?lang=en) to search English responsibilities, titles or sources, filter categories and collections, inspect skills and permission needs, and save favorites in your browser. Share the current search or a Bot detail link; filters and language return on refresh and browser navigation. Favorites stay in your browser and are omitted from shared links. If loading fails, retry with the same filters or browse the GitHub catalogue. Downloads are configuration files; the website does not install into your App or connect your accounts.
 
-- [90 role configurations](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-roles.fleet.json)
+- [315 role configurations with individual downloads](https://harzva.github.io/awesome-bot/?lang=en&collection=roles)
 - [56 task workflows](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-workflows.fleet.json)
-- [Complete configuration collection](https://harzva.github.io/awesome-bot/exports/en/awesome-bot-all.fleet.json)
+- [Complete configuration catalogue](https://harzva.github.io/awesome-bot/?lang=en) (371 entries; collections above 200 require split files via `npm run pack:release`)
 - [Machine-readable market index](https://harzva.github.io/awesome-bot/registry/index.json)
 
 Import a downloaded Fleet file through **OpenBot → Settings → Data & Sync → Import configuration** and review the summary. Model, tool and account connections need their own setup. New ordinary Bots receive no granted tool or container permissions. In an empty library, OpenBot selects its first Bot as the primary Bot, which carries management capabilities. Importing does not start tasks or environments.
 
-English mode includes all 148 Bot names, responsibilities, skills, personas, examples and configuration downloads, plus five fully translated scenarios. Switch to Chinese for the original content. English configuration projections retain the source role identity and are labelled with a separate content revision; published Chinese manifests remain unchanged. Each role has its own independently authored vector mark.
+English mode includes all 371 Bot names, responsibilities, skills, personas, examples and configuration downloads, plus five fully translated scenarios. Chinese mode uses Chinese metadata; the 223 source adaptations retain their original English instruction bodies in both modes. English configuration projections retain the source role identity and are labelled with a separate content revision; published Chinese manifests remain unchanged. Each role has its own independently authored vector mark.
 
 Release collection files with `-en-` in their names contain English personas and skills. The complete source archive includes both languages and the static Agent context files.
 

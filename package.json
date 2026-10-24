@@ -1,6 +1,6 @@
 {
   "name": "awesome-bot-market",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "type": "module",
   "description": "A source-backed Bot directory with original OpenBot roles, workflows and reproducible configuration downloads",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node scripts/build.mjs --check",
+    "check": "node scripts/sync-imported-roles.mjs --check && node scripts/build.mjs --check",
     "build:site": "node scripts/build-site.mjs",
     "serve": "node scripts/serve-site.mjs",
     "audit:public": "node scripts/audit-public.mjs",
@@ -27,6 +27,8 @@
     "export-all": "node scripts/export-all.mjs",
     "test": "node --test test/*.test.mjs",
     "market": "node scripts/market.mjs",
-    "check:versions": "node scripts/check-versions.mjs"
+    "check:versions": "node scripts/check-versions.mjs",
+    "sync:imports": "node scripts/sync-imported-roles.mjs",
+    "check:imports": "node scripts/sync-imported-roles.mjs --check"
   }
 }

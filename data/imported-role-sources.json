@@ -1,0 +1,3142 @@
+{
+  "schema": "awesome.bot.imported-role-sources/1",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "id": "mergisi",
+      "name": "Awesome Grokbot",
+      "repository": "mergisi/awesome-grokbot",
+      "revision": "6210f2034c5737d1be100e227c8d308d9757ecf4",
+      "license": "CC0-1.0",
+      "licensePath": "sources/imported/mergisi/LICENSE.txt",
+      "licenseSha256": "de2e84a7937f504dd8172f8868889365f64a37839f076b6928f6ba86ee2fa1f1",
+      "licenseUrl": "https://github.com/mergisi/awesome-grokbot/blob/6210f2034c5737d1be100e227c8d308d9757ecf4/LICENSE",
+      "author": "Mergisi",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "cobus",
+      "name": "Grok Bot Templates",
+      "repository": "cobusgreyling/grok-bot-templates",
+      "revision": "4f3f28b4e6578cd227ff7f4b78ec91d15fd091b5",
+      "license": "MIT",
+      "licensePath": "sources/imported/cobus/LICENSE.txt",
+      "licenseSha256": "5b66aa3c7375535b01276d33b7ecbbdd3f140e78af151517488f01490f6609c6",
+      "licenseUrl": "https://github.com/cobusgreyling/grok-bot-templates/blob/4f3f28b4e6578cd227ff7f4b78ec91d15fd091b5/LICENSE",
+      "author": "Cobus Greyling",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "id": "botskills",
+      "name": "BotSkills",
+      "repository": "PramodDutta/botskills",
+      "revision": "ed17ebcead177b91dfca57d5df3d7c9872cb77fd",
+      "license": "MIT",
+      "licensePath": "sources/imported/botskills/LICENSE.txt",
+      "licenseSha256": "35c53c09b506e8c8935a7c84c654d0797244059aef3ce65be47e45f9164644cd",
+      "licenseUrl": "https://github.com/PramodDutta/botskills/blob/ed17ebcead177b91dfca57d5df3d7c9872cb77fd/LICENSE",
+      "author": "Pramod Dutta / botskills.sh",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "roles": [
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "bug-reproduction",
+      "upstreamName": "Bug Reproduction",
+      "summary": "staging repro packs",
+      "category": "development",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
+      "upstreamPath": "bots/development/bug-reproduction/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/bug-reproduction.md",
+      "sha256": "47591d2ee35e50f41253224e8f19c3d49b02f637200cad95b6684e97ee5db43d"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "changelog-bot",
+      "upstreamName": "Changelog Bot",
+      "summary": "release notes from merged PRs",
+      "category": "development",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "bots/development/changelog-bot/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/changelog-bot.md",
+      "sha256": "1b97c9dce8b43ff67fd2b1d1d7e5065d2cc9186adebbc0630241b72ff09c1170"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "deploy-watch",
+      "upstreamName": "Deploy Watch",
+      "summary": "CI and deploy status from GitHub and Slack",
+      "category": "development",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
+      "upstreamPath": "bots/development/deploy-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/deploy-watch.md",
+      "sha256": "7c6eedd8798e02dc353c74b91f5270be144f5ebfe78b8e76f5e25eafcc0f24c6"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "docs-writer",
+      "upstreamName": "Docs Writer",
+      "summary": "README / API docs from the repo",
+      "category": "development",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "bots/development/docs-writer/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/docs-writer.md",
+      "sha256": "a826ae5ba893dc55a853cf468171e8a00af392d8f78fa13b67749d673b22c5f9"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "issue-drafter",
+      "upstreamName": "Issue Drafter",
+      "summary": "Slack/thread to GitHub issue",
+      "category": "development",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
+      "upstreamPath": "bots/development/issue-drafter/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/issue-drafter.md",
+      "sha256": "a546754923a28eea028b97c752271d947332c56e62f55c874c88c52042d7f123"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "pr-reviewer",
+      "upstreamName": "PR Reviewer",
+      "summary": "PR risk/tests/context review",
+      "category": "development",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "bots/development/pr-reviewer/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/pr-reviewer.md",
+      "sha256": "a0878f3271c78418e34843a3598cd27089cbf2f2869afb970be970a5863aca02"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "query-helper",
+      "upstreamName": "Query Helper",
+      "summary": "explain or write SQL from a schema or pasted query",
+      "category": "development",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "bots/development/query-helper/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/query-helper.md",
+      "sha256": "19f3caa1df24444a71091237f115f39f24bb7ff7f72e5adfa60afd566b39ea37"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "repo-hardener",
+      "upstreamName": "Repo Hardener",
+      "summary": "GitHub security and hygiene review",
+      "category": "development",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "bots/development/repo-hardener/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/repo-hardener.md",
+      "sha256": "b802cb6c41bbef84b4e8e745d9243e8f68e07658bac92da2ed92dabdb4615734"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "brand-watch",
+      "upstreamName": "Brand Watch",
+      "summary": "brand mention digest from Slack and X",
+      "category": "marketing",
+      "integrations": [
+        "Slack",
+        "X"
+      ],
+      "upstreamPath": "bots/marketing/brand-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/brand-watch.md",
+      "sha256": "e00343d9d6cf97c85160dbf9a5e47fac14857324724c326092f6b583cbe3b4d3"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "competitor-watch",
+      "upstreamName": "Competitor Watch",
+      "summary": "competitor site/pricing/changelog digest",
+      "category": "marketing",
+      "integrations": [
+        "Slack"
+      ],
+      "upstreamPath": "bots/marketing/competitor-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/competitor-watch.md",
+      "sha256": "da9851a78576c86853b53793c3225bef275f4529c053ee68bb76100b7f44648e"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "content-remix",
+      "upstreamName": "Content Remix",
+      "summary": "turn one draft into social and email variants",
+      "category": "marketing",
+      "integrations": [
+        "Notion"
+      ],
+      "upstreamPath": "bots/marketing/content-remix/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/content-remix.md",
+      "sha256": "d8625b3d2d111aac8e9cd52ce5dfdff7af80517618a20724c523d76516b23423"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "newsletter-desk",
+      "upstreamName": "Newsletter Desk",
+      "summary": "weekly newsletter from links + notes",
+      "category": "marketing",
+      "integrations": [
+        "Gmail",
+        "Google Docs"
+      ],
+      "upstreamPath": "bots/marketing/newsletter-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/newsletter-desk.md",
+      "sha256": "fc5e58018e38399fdc6a0f03e7cc437a6a7c13ef764a79dccf3c0dfe2f768777"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "paid-media",
+      "upstreamName": "Paid Media",
+      "summary": "campaign spend and realloc recommendations",
+      "category": "marketing",
+      "integrations": [
+        "Slack",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/marketing/paid-media/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/paid-media.md",
+      "sha256": "d3445baa760e3fd6da0af2cccb1670fa530fc079150af8cfcfb2bdf0d131f72c"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "profile-review",
+      "upstreamName": "Profile Review",
+      "summary": "LinkedIn profile audit and suggested edits",
+      "category": "marketing",
+      "integrations": [
+        "LinkedIn"
+      ],
+      "upstreamPath": "bots/marketing/profile-review/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/profile-review.md",
+      "sha256": "103a9303f7629cdf6ec9f11d0805fd925f69cd9d30990f53fd7b813379fdd9ac"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "reddit-comment-finder",
+      "upstreamName": "Reddit Comment Finder",
+      "summary": "relevant Reddit threads",
+      "category": "marketing",
+      "integrations": [
+        "Reddit"
+      ],
+      "upstreamPath": "bots/marketing/reddit-comment-finder/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/reddit-comment-finder.md",
+      "sha256": "23a8e7d452997c6a983fc8772baea246dcd36a3d18cc19ac09fd37d3efbffe29"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "seo-pages",
+      "upstreamName": "SEO Pages",
+      "summary": "titles, meta, internal links",
+      "category": "marketing",
+      "integrations": [
+        "Google Search Console",
+        "GitHub"
+      ],
+      "upstreamPath": "bots/marketing/seo-pages/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/seo-pages.md",
+      "sha256": "647566da7ef1bd3129e0e4b0bf5575ca8690ee53bd39c2aa000ec8d8c675390e"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "social-queue",
+      "upstreamName": "Social Queue",
+      "summary": "draft and queue social posts",
+      "category": "marketing",
+      "integrations": [
+        "Notion",
+        "X",
+        "LinkedIn"
+      ],
+      "upstreamPath": "bots/marketing/social-queue/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/social-queue.md",
+      "sha256": "12774c33ea722a7f0a64ac378abad90675e0c48499b5e7ea1aaf6fb1727a83bf"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "viral-tweet-scout",
+      "upstreamName": "Viral Tweet Scout",
+      "summary": "high-engagement tweet craft",
+      "category": "marketing",
+      "integrations": [
+        "X"
+      ],
+      "upstreamPath": "bots/marketing/viral-tweet-scout/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/viral-tweet-scout.md",
+      "sha256": "1fdd928a1877e800991f72c698fa11dfd83309f0c9ca8b8c4c2d4a21489208de"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "account-desk",
+      "upstreamName": "Account Desk",
+      "summary": "strategic account brain from Slack + Gmail",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Gmail"
+      ],
+      "upstreamPath": "bots/ops/account-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/account-desk.md",
+      "sha256": "e61e5353ba1992f81cc9afa8114d18b9c59adb149da1370acc89476424a42996"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "account-health",
+      "upstreamName": "Account Health",
+      "summary": "ranked customer watch list",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Notion",
+        "Gmail"
+      ],
+      "upstreamPath": "bots/ops/account-health/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/account-health.md",
+      "sha256": "9caef609d120df833606eb706e5b9832f44917b5081e27e4d0639af4fc70c503"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "chief-of-staff",
+      "upstreamName": "Chief of Staff",
+      "summary": "daily ops digest",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Google Calendar",
+        "Notion"
+      ],
+      "upstreamPath": "bots/ops/chief-of-staff/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/chief-of-staff.md",
+      "sha256": "f3d15e4b5135e63327d37b0a93fd1b608fac6f81d6e6d159a53efb36d42290fa"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "churn-watch",
+      "upstreamName": "Churn Watch",
+      "summary": "ranked at-risk accounts from Slack, Notion, and Gmail",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Notion",
+        "Gmail"
+      ],
+      "upstreamPath": "bots/ops/churn-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/churn-watch.md",
+      "sha256": "983d2d28b8244f69825b4a839af8e6652444d1d21f4b4c07f638bd0ef54a3276"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "cloud-spend",
+      "upstreamName": "Cloud Spend",
+      "summary": "cloud bill notes from Gmail and Drive",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/ops/cloud-spend/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/cloud-spend.md",
+      "sha256": "be7b61cbdd9bc6c27a765b91d4b04ee3de84a291c63034dfe8b49dc656fd6d9c"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "expense-manager",
+      "upstreamName": "Expense Manager",
+      "summary": "weekly expense reconciliation",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/ops/expense-manager/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/expense-manager.md",
+      "sha256": "af1bbea303d21bd129bf261261bbbe8b643ad601246ea42775a09b8902ed5fe7"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "feature-ask-finder",
+      "upstreamName": "Feature Ask Finder",
+      "summary": "repeated Slack feature asks",
+      "category": "ops",
+      "integrations": [
+        "Slack"
+      ],
+      "upstreamPath": "bots/ops/feature-ask-finder/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/feature-ask-finder.md",
+      "sha256": "723590e510e5e43e709a110202c859a1471ce1db25c9dd857f19fe92090e7130"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "incident-desk",
+      "upstreamName": "Incident Desk",
+      "summary": "triage an incident from Slack and GitHub into a timeline",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "GitHub"
+      ],
+      "upstreamPath": "bots/ops/incident-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/incident-desk.md",
+      "sha256": "cbb1138bc88294ca1091e4da71717752e6ac98ed6d45fac2263ae85daeb1c128"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "new-hire-ramp",
+      "upstreamName": "New Hire Ramp",
+      "summary": "first-week new-hire plan",
+      "category": "ops",
+      "integrations": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "bots/ops/new-hire-ramp/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/new-hire-ramp.md",
+      "sha256": "1dfb4d49a1aa37bea019fd7baacdcd244ee2f768d24a899b9c5293389d7e95a7"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "product-performance",
+      "upstreamName": "Product Performance",
+      "summary": "sourced performance investigations",
+      "category": "ops",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
+      "upstreamPath": "bots/ops/product-performance/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/product-performance.md",
+      "sha256": "d114558c32aa12b477341eae61e995f0a1be35018d519c46dc1ca7dd97a637e6"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "qbr-pack-builder",
+      "upstreamName": "QBR Pack Builder",
+      "summary": "QBR pack from notes",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/ops/qbr-pack-builder/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/qbr-pack-builder.md",
+      "sha256": "47c6cc2d5b4ef20a411ce53dfcf14965718cffe8311d612c61dceb5515d37269"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "resume-screen",
+      "upstreamName": "Resume Screen",
+      "summary": "score resumes from Gmail and Drive",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/ops/resume-screen/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/resume-screen.md",
+      "sha256": "eae60cff7233e6ee76558994744e75eddf3d0bf326825abdd5a273567070b453"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "saas-finance",
+      "upstreamName": "SaaS Finance",
+      "summary": "weekly collected revenue, renewals, and past-due",
+      "category": "ops",
+      "integrations": [
+        "Stripe",
+        "Gmail"
+      ],
+      "upstreamPath": "bots/ops/saas-finance/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/saas-finance.md",
+      "sha256": "0ffadc441b8b6a7785a2b5b5db1b8b9ff51286475795b700180a7fb4c06cef6c"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "security-questionnaire",
+      "upstreamName": "Security Questionnaire",
+      "summary": "draft security questionnaire answers",
+      "category": "ops",
+      "integrations": [
+        "Google Drive",
+        "Notion"
+      ],
+      "upstreamPath": "bots/ops/security-questionnaire/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/security-questionnaire.md",
+      "sha256": "f32b0077864a6a5d9b6bcebd52350500aa970578200da1cb0fe4ac199d8691df"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "support-replies",
+      "upstreamName": "Support Replies",
+      "summary": "draft support replies",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Notion"
+      ],
+      "upstreamPath": "bots/ops/support-replies/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/support-replies.md",
+      "sha256": "a669bed076e2190386071d14ae6acbd5d9d7053b7b2c38b53df1b7bc8d6be209"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "vendor-inbox",
+      "upstreamName": "Vendor Inbox",
+      "summary": "invoices, renewals, vendor follow-ups",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/ops/vendor-inbox/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/vendor-inbox.md",
+      "sha256": "556151c8ecd6b52c01c41d2d506943b324d528641237dadfefdd2a58e2fbbede"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "what-did-we-promise",
+      "upstreamName": "What Did We Promise",
+      "summary": "customer commitments",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Google Drive"
+      ],
+      "upstreamPath": "bots/ops/what-did-we-promise/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/what-did-we-promise.md",
+      "sha256": "10545dae72bfcd5e4c2fc7d7b1fb81ca4274416b1d906771f4692c75a2fcf370"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "charge-dispute-draft",
+      "upstreamName": "Charge Dispute Draft",
+      "summary": "Gmail receipts to a card-dispute letter draft",
+      "category": "personal",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "bots/personal/charge-dispute-draft/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/charge-dispute-draft.md",
+      "sha256": "0d03db2104059661f4201ba7ab9ccaf78086a36e860dfd609fbd9432dd0f1105"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "household-ops",
+      "upstreamName": "Household Ops",
+      "summary": "shared calendar, chores, errands",
+      "category": "personal",
+      "integrations": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "bots/personal/household-ops/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/household-ops.md",
+      "sha256": "01b2d572b8439de3cbaf6538f313ded89ced7392a080d75c6b0297da2fd7b732"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "reading-digest",
+      "upstreamName": "Reading Digest",
+      "summary": "weekly article pack",
+      "category": "personal",
+      "integrations": [
+        "Notion"
+      ],
+      "upstreamPath": "bots/personal/reading-digest/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/reading-digest.md",
+      "sha256": "0aaddb4604e6e03762ce72a2a9ffdd36c7cda53ee1992ed27594eeeca445c7ca"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "subscription-pruner",
+      "upstreamName": "Subscription Pruner",
+      "summary": "find unused subscriptions in mail",
+      "category": "personal",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "bots/personal/subscription-pruner/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/subscription-pruner.md",
+      "sha256": "304cbb3e667483401d3d57cc7f009e0c02960971ac22b82ebc39c9f299ca6b8f"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "trip-concierge",
+      "upstreamName": "Trip Concierge",
+      "summary": "flights, hotels, itinerary sanity",
+      "category": "personal",
+      "integrations": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "upstreamPath": "bots/personal/trip-concierge/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/trip-concierge.md",
+      "sha256": "112a87e59fd6ebf12bd190d37b2829f4f0aaf6421f8b34691a81f6117e3877a2"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "bot-team-coach",
+      "upstreamName": "Bot Team Coach",
+      "summary": "help a new Grok Bot user name roles and pick plugins",
+      "category": "productivity",
+      "integrations": [],
+      "upstreamPath": "bots/productivity/bot-team-coach/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/bot-team-coach.md",
+      "sha256": "f0322432999509aba1b5465dc82d30d356e7ffc1c9f37b57458f135ccfcdf385"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "daily-brief",
+      "upstreamName": "Daily Brief",
+      "summary": "morning briefing from calendar + inbox",
+      "category": "productivity",
+      "integrations": [
+        "Google Calendar",
+        "Gmail",
+        "Slack"
+      ],
+      "upstreamPath": "bots/productivity/daily-brief/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/daily-brief.md",
+      "sha256": "b4ebab6f76d3ca4f1c4f06e2d0a2084f3e70b97a4b68e4d31d34a41bf2960520"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "focus-defender",
+      "upstreamName": "Focus Defender",
+      "summary": "protect deep-work blocks",
+      "category": "productivity",
+      "integrations": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "bots/productivity/focus-defender/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/focus-defender.md",
+      "sha256": "74a579a9fab5b7395e62c3c19dd7da33ed9c61cc5bf44d15ce731100161c2f58"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "inbox-triage",
+      "upstreamName": "Inbox Triage",
+      "summary": "email triage and reply drafts",
+      "category": "productivity",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "bots/productivity/inbox-triage/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/inbox-triage.md",
+      "sha256": "3014327b23eb081cb34ef3ebe48ab9241d8be61b5c2b6a00094b9ae253220237"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "meeting-notes",
+      "upstreamName": "Meeting Notes",
+      "summary": "meeting summaries and action items",
+      "category": "productivity",
+      "integrations": [
+        "Google Docs",
+        "Slack"
+      ],
+      "upstreamPath": "bots/productivity/meeting-notes/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/meeting-notes.md",
+      "sha256": "6b3b7085bafc280f3ecbaacaba88aa4c7f31abeb389a29f04a8dbec96f419667"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "one-to-one-brief",
+      "upstreamName": "One to One Brief",
+      "summary": "prep a 1:1 from calendar and notes",
+      "category": "productivity",
+      "integrations": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "bots/productivity/one-to-one-brief/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/one-to-one-brief.md",
+      "sha256": "07ac0047a4ab8eba51fbe6f336d48d21a426b38620b2ac546474ecf20e1ac742"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "slack-noise-filter",
+      "upstreamName": "Slack Noise Filter",
+      "summary": "mute Slack noise, surface replies",
+      "category": "productivity",
+      "integrations": [
+        "Slack"
+      ],
+      "upstreamPath": "bots/productivity/slack-noise-filter/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/slack-noise-filter.md",
+      "sha256": "f7b8b129bfa7e13688b7b99d6b4a9e93f4c46d2c4cffc64e046cbb8121c9a858"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "standup-desk",
+      "upstreamName": "Standup Desk",
+      "summary": "collect async standup notes from Slack",
+      "category": "productivity",
+      "integrations": [
+        "Slack"
+      ],
+      "upstreamPath": "bots/productivity/standup-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/standup-desk.md",
+      "sha256": "b4940ba8091994d2a1c8795c6e6eec799362e2abd21a62858db735d5ee62d5ca"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "call-followup",
+      "upstreamName": "Call Followup",
+      "summary": "draft follow-up emails after calls",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "upstreamPath": "bots/sales/call-followup/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/call-followup.md",
+      "sha256": "701834e663262a9a620cce833dffec4cac6bc58dcc4f9198cacc73f7caefa309"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "contact-crm",
+      "upstreamName": "Contact CRM",
+      "summary": "follow-up list from Gmail and Calendar",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "upstreamPath": "bots/sales/contact-crm/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/contact-crm.md",
+      "sha256": "c8af7a52988cbb4eca62e97e3c95ff2377f60a2742df71c8ac45040fd74689fc"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "linkedin-signal-watch",
+      "upstreamName": "LinkedIn Signal Watch",
+      "summary": "ICP signals on LinkedIn",
+      "category": "sales",
+      "integrations": [
+        "LinkedIn"
+      ],
+      "upstreamPath": "bots/sales/linkedin-signal-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/linkedin-signal-watch.md",
+      "sha256": "691486f1b9202582ddd3781e2c474f9ba372ac8e311d2fd540c284e3146e57ed"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "meeting-prep",
+      "upstreamName": "Meeting Prep",
+      "summary": "pre-call brief",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "bots/sales/meeting-prep/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/meeting-prep.md",
+      "sha256": "8bf73904c07375c3a1a5c1f5ea504eedd6382431a8caf69d9920b28f210c9872"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "outbound-voice",
+      "upstreamName": "Outbound Voice",
+      "summary": "personalized outbound in the user's voice",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "LinkedIn"
+      ],
+      "upstreamPath": "bots/sales/outbound-voice/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/outbound-voice.md",
+      "sha256": "9ddfd903885ab8feb32921c379c892d4fd409a13a5255508691208cc42aabafb"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "proposal-desk",
+      "upstreamName": "Proposal Desk",
+      "summary": "draft a freelance or sales proposal from notes",
+      "category": "sales",
+      "integrations": [
+        "Google Docs",
+        "Slack"
+      ],
+      "upstreamPath": "bots/sales/proposal-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/proposal-desk.md",
+      "sha256": "c18ac962d1617e18c70fb099af906a153cc3a284dfae58d280041ad9ffaad67f"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "talent-scout",
+      "upstreamName": "Talent Scout",
+      "summary": "sourcing and outreach drafts",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar",
+        "LinkedIn"
+      ],
+      "upstreamPath": "bots/sales/talent-scout/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/talent-scout.md",
+      "sha256": "af855ede958c830c7ecdfe033c7d241447c233c258d2dcc9aa14c2051239e149"
+    },
+    {
+      "sourceId": "mergisi",
+      "upstreamId": "win-loss",
+      "upstreamName": "Win Loss",
+      "summary": "win/loss memos",
+      "category": "sales",
+      "integrations": [
+        "Notion",
+        "Slack"
+      ],
+      "upstreamPath": "bots/sales/win-loss/PROFILE.md",
+      "snapshotPath": "sources/imported/mergisi/profiles/win-loss.md",
+      "sha256": "cb698371141f354ba8874aab0a1626fb43ed21ea5d5474c4d2651fd805d5c5a8"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "social-queue",
+      "upstreamName": "Social Queue",
+      "summary": "Seven drafts from one idea. Nothing hits the network.",
+      "category": "creator",
+      "integrations": [
+        "Notion",
+        "X"
+      ],
+      "upstreamPath": "templates/creator/social-queue/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/social-queue.md",
+      "sha256": "bc64f741498c704a4225efe97573ceeb59a34a4a63868db1881ae8ad8d042232"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "thread-scout",
+      "upstreamName": "Thread Scout",
+      "summary": "Steal the structure. Never steal the post. Never post.",
+      "category": "creator",
+      "integrations": [
+        "X"
+      ],
+      "upstreamPath": "templates/creator/thread-scout/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/thread-scout.md",
+      "sha256": "5428aa46ee2bac928e1dda837e12ed3134f0c4f8392fc194ff14d1952c010552"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "bug-reproduction",
+      "upstreamName": "Bug Reproduction",
+      "summary": "Staging repro packs with evidence — never production customer data.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/bug-reproduction/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/bug-reproduction.md",
+      "sha256": "52a39635c7b95422948dd7707e1db4f2f8a924d3ba4f256851a7773dbedaa693"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "changelog",
+      "upstreamName": "Changelog",
+      "summary": "Draft notes from merged PRs — never tag, never publish.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/changelog/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/changelog.md",
+      "sha256": "0cec37dc50c856e38d7c4005d00c2728c48c179a67e9cff5d5e568dfddcf53f4"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "ci-sweeper",
+      "upstreamName": "CI Sweeper",
+      "summary": "Report failures and flakes — never merge, never hide with reruns.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/ci-sweeper/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/ci-sweeper.md",
+      "sha256": "f5559e41e1581baa101f03911c66cc9712dc34dd36adf749d66241756d72a416"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "docs-drift",
+      "upstreamName": "Docs Drift",
+      "summary": "Draft the doc diff — never commit, never rewrite code to match.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/docs-drift/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/docs-drift.md",
+      "sha256": "cf02615c75ac36f92df6257f90441e4d0ebcba0bbe77e580467eb50dd71a909e"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "issue-drafter",
+      "upstreamName": "Issue Drafter",
+      "summary": "Slack and repro packs become unsent issues — never auto-filed.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
+      "upstreamPath": "templates/engineering/issue-drafter/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/issue-drafter.md",
+      "sha256": "7dd5d4dd3926ec7bf3ff40a7393c35f347fcbb8ac858ea574c02c3c3e3550e9c"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "pr-reviewer",
+      "upstreamName": "PR Reviewer",
+      "summary": "Review starts at the scary diff, not the title.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/pr-reviewer/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/pr-reviewer.md",
+      "sha256": "264859b265e44bb8b06f5adc726ea5cbf5345403c3c5c2ae47e09d576c6a6047"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "query-helper",
+      "upstreamName": "Query Helper",
+      "summary": "Draft SQL from the schema — never run writes on a live database.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/query-helper/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/query-helper.md",
+      "sha256": "5d8ffa35df40cc99635bfe3eeb06a5aa0e06c78b4b84ecfc2d36d613c9de8022"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "repo-hardener",
+      "upstreamName": "Repo Hardener",
+      "summary": "Recommend issues and PRs — never push main, never edit protection.",
+      "category": "engineering",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/engineering/repo-hardener/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/repo-hardener.md",
+      "sha256": "21c55968eb3683f63bc94ed56fd6f6625c0e34a833630b5cdad5e58324be5347"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "saas-finance",
+      "upstreamName": "SaaS Finance",
+      "summary": "Collected, renewing, past-due — a memo, not a collections bot.",
+      "category": "finance",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "templates/finance/saas-finance/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/saas-finance.md",
+      "sha256": "c99e664bb7753cafb4076437b6a429d622d40e24b1a1fc605018d9275d0cfd34"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "security-questionnaire",
+      "upstreamName": "Security Questionnaire",
+      "summary": "Cited drafts from the pack — the Submit button stays human.",
+      "category": "legal",
+      "integrations": [
+        "Google Drive",
+        "Notion"
+      ],
+      "upstreamPath": "templates/legal/security-questionnaire/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/security-questionnaire.md",
+      "sha256": "03ac344d00ea3a4f68fe272ed6684b9a211159bc15396f1efc2cb67d6bf1c537"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "aeo-watch",
+      "upstreamName": "AEO Watch",
+      "summary": "A query set on a cadence — not \"hey ChatGPT, do we show up\".",
+      "category": "marketing",
+      "integrations": [],
+      "upstreamPath": "templates/marketing/aeo-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/aeo-watch.md",
+      "sha256": "573f9530ebf2bfdbf7fadb810dc28e7f32c76c71bd1190bb6f301d4c06033f59"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "brand-watch",
+      "upstreamName": "Brand Watch",
+      "summary": "A reading pile, not a reply thread.",
+      "category": "marketing",
+      "integrations": [
+        "Slack",
+        "X"
+      ],
+      "upstreamPath": "templates/marketing/brand-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/brand-watch.md",
+      "sha256": "6d9cf01599cfae5310473f26281001be8629ff08992ede500ccec0756fa2843b"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "competitor-watch",
+      "upstreamName": "Competitor Watch",
+      "summary": "Alert only when the page actually changed. Silence is a result.",
+      "category": "marketing",
+      "integrations": [
+        "Slack"
+      ],
+      "upstreamPath": "templates/marketing/competitor-watch/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/competitor-watch.md",
+      "sha256": "625801655dd1eb8cfd26d91006894456fac19c381aa28390a9f5b92d08819610"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "content-remix",
+      "upstreamName": "Content Remix",
+      "summary": "One draft in. A set of variants out. Nothing ships.",
+      "category": "marketing",
+      "integrations": [
+        "Notion"
+      ],
+      "upstreamPath": "templates/marketing/content-remix/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/content-remix.md",
+      "sha256": "9b26a3604e808b2bc6ee76417ebe468bfbde735ba94869ea667f1d1b888057dd"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "newsletter-desk",
+      "upstreamName": "Newsletter Desk",
+      "summary": "The issue is written. The send button stays with the owner.",
+      "category": "marketing",
+      "integrations": [
+        "Gmail",
+        "Google Docs"
+      ],
+      "upstreamPath": "templates/marketing/newsletter-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/newsletter-desk.md",
+      "sha256": "dead9c5d466751a8c608f291708b61c4cebb5f910f122fa7334b19d8e08677af"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "paid-media",
+      "upstreamName": "Paid Media",
+      "summary": "Numbers and a Slack draft. The budget does not move itself.",
+      "category": "marketing",
+      "integrations": [
+        "Slack",
+        "Google Drive"
+      ],
+      "upstreamPath": "templates/marketing/paid-media/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/paid-media.md",
+      "sha256": "426fad1d4dd0ace68716eb03e9c30c4a1725a6dbbbcbd6ddb6c85aef265b62ef"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "foundry",
+      "upstreamName": "Foundry",
+      "summary": "One job in, a shippable Bot recipe out — not a cute persona.",
+      "category": "meta",
+      "integrations": [],
+      "upstreamPath": "templates/meta/foundry/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/foundry.md",
+      "sha256": "f005e1bd9ec61cede71c35f4c308650d1d9abc70de40d949e536536add2707ac"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "gardener",
+      "upstreamName": "Memory Gardener",
+      "summary": "Correct stale memory against a source — do not wipe the role.",
+      "category": "meta",
+      "integrations": [],
+      "upstreamPath": "templates/meta/gardener/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/gardener.md",
+      "sha256": "f1f55e6715343f30b1f2fe1df03a4eb82c9c105bcc8a502edcc08f379b76b6f2"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "installer",
+      "upstreamName": "Setup",
+      "summary": "Paste START.md, tap a team, get a roster — not a catalog dump.",
+      "category": "meta",
+      "integrations": [],
+      "upstreamPath": "templates/meta/installer/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/installer.md",
+      "sha256": "cd76dca6c9b1fffacae22cd2a6c49db8193d83f6c74d07c6e239552befd91f56"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "roster",
+      "upstreamName": "Roster Coach",
+      "summary": "Cut and merge first — never grow the fleet past the ask.",
+      "category": "meta",
+      "integrations": [],
+      "upstreamPath": "templates/meta/roster/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/roster.md",
+      "sha256": "7597cf819477784463e667450f3b8e488174f148b31a7c21b757e7af96ed7d04"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "router",
+      "upstreamName": "Fleet Router",
+      "summary": "Pick one owner, hand off, go silent — never do the work.",
+      "category": "meta",
+      "integrations": [],
+      "upstreamPath": "templates/meta/router/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/router.md",
+      "sha256": "5e2742a7769474958d13a35c860fb0e77a13ae9f732db2d02af6831e11bdae85"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "sanitizer",
+      "upstreamName": "Share Sanitizer",
+      "summary": "Redact first — the share link must not carry secrets or customers.",
+      "category": "meta",
+      "integrations": [],
+      "upstreamPath": "templates/meta/sanitizer/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/sanitizer.md",
+      "sha256": "60fce15f02a3efc69040e164eed3cdc5acc948ba2136c5673cad74fe946b1cff"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "chief-of-staff",
+      "upstreamName": "Chief of Staff",
+      "summary": "Only items that map to the priority list — with a decision flag.",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "Gmail",
+        "Google Calendar"
+      ],
+      "upstreamPath": "templates/ops/chief-of-staff/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/chief-of-staff.md",
+      "sha256": "00b7b3f024fd0452db0d9b6c6656177a6860e0e38f4684d161e5e10d024b587e"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "cloud-spend",
+      "upstreamName": "Cloud Spend",
+      "summary": "Movers and recommendations — the console stays closed.",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "templates/ops/cloud-spend/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/cloud-spend.md",
+      "sha256": "3876fef7fd94d8331ba28acfa617f1b8a49af2e3ac2143b3ac40fcc883f5023c"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "expense-manager",
+      "upstreamName": "Expense Manager",
+      "summary": "Totals that reconcile — exceptions that cite the signed policy.",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "templates/ops/expense-manager/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/expense-manager.md",
+      "sha256": "4c6ed0e184767d9a4cc64bb10bcc603c37f7fdef425b88ce2df73299c6fbcbea"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "incident-desk",
+      "upstreamName": "Incident Desk",
+      "summary": "A timeline a skeptic can audit — not a production console.",
+      "category": "ops",
+      "integrations": [
+        "Slack",
+        "GitHub"
+      ],
+      "upstreamPath": "templates/ops/incident-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/incident-desk.md",
+      "sha256": "41828a4d0836ac04fff8dd38c7e1d9490b26f0a21fac2906c50687b0aaa9ab86"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "new-hire-ramp",
+      "upstreamName": "New Hire Ramp",
+      "summary": "A week-one plan a manager can edit — invites stay in draft.",
+      "category": "ops",
+      "integrations": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "templates/ops/new-hire-ramp/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/new-hire-ramp.md",
+      "sha256": "ce5ba2dea45ab602fc58eb1123d1c16c73d735a5a9803dd876b93ba2f737ac3a"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "vendor-inbox",
+      "upstreamName": "Vendor Inbox",
+      "summary": "A vendor work list, not a chase bot.",
+      "category": "ops",
+      "integrations": [
+        "Gmail",
+        "Google Drive"
+      ],
+      "upstreamPath": "templates/ops/vendor-inbox/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/vendor-inbox.md",
+      "sha256": "e8e2a49c9a5e670953c3e8b3324fc94fcd33aae9f3f473c9e7d9b66df8a344e3"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "calendar-defender",
+      "upstreamName": "Calendar Defender",
+      "summary": "Draft the decline. Never move the meeting yourself.",
+      "category": "personal",
+      "integrations": [
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "templates/personal/calendar-defender/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/calendar-defender.md",
+      "sha256": "10aa9aa3ebdd8a962de9c42d197d124f7bf9e47c1ecbf66511617bc6f7fc94ef"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "inbox-triage",
+      "upstreamName": "Inbox Triage",
+      "summary": "Buckets and drafts — never send, never delete, never unsubscribe.",
+      "category": "personal",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "templates/personal/inbox-triage/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/inbox-triage.md",
+      "sha256": "de8f9d749826ecf9ad6c6432336e80238a75f7cbccbc05f909ae5072f83e2cb1"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "subscription-audit",
+      "upstreamName": "Subscription Audit",
+      "summary": "Evidence of last use, then a list — you click cancel.",
+      "category": "personal",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "templates/personal/subscription-audit/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/subscription-audit.md",
+      "sha256": "3789b3b4d528f642dff99df7d96581a3f7223fb3228b4f88174c043e17e11504"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "travel-desk",
+      "upstreamName": "Travel Desk",
+      "summary": "Sanity-check the trip. Never book. Never pay.",
+      "category": "personal",
+      "integrations": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "upstreamPath": "templates/personal/travel-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/travel-desk.md",
+      "sha256": "09fb9e679a8f7674ec14764dfb6d452020381b2c1dd658a8b5f71a20b6c5b310"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "evidence-packager",
+      "upstreamName": "Evidence Packager",
+      "summary": "Package what was verified — never issue the ship or block.",
+      "category": "product",
+      "integrations": [
+        "GitHub"
+      ],
+      "upstreamPath": "templates/product/evidence-packager/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/evidence-packager.md",
+      "sha256": "a122171a7bed3c25ab0e00eea9b32af19275e10e2111c0310f7576f2df0a15cf"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "feature-ask-collator",
+      "upstreamName": "Feature Ask Collator",
+      "summary": "Quotes and counts. You do not ship the roadmap.",
+      "category": "product",
+      "integrations": [
+        "Slack"
+      ],
+      "upstreamPath": "templates/product/feature-ask-collator/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/feature-ask-collator.md",
+      "sha256": "b6e05193d14aec27b485b025b29cd5ea1512cc1b019dd1a1c0c60d045bc2e949"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "launch-coordinator",
+      "upstreamName": "Launch Coordinator",
+      "summary": "One owner per role. The human issues the ship verdict.",
+      "category": "product",
+      "integrations": [
+        "Slack",
+        "GitHub"
+      ],
+      "upstreamPath": "templates/product/launch-coordinator/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/launch-coordinator.md",
+      "sha256": "3d3c51c4fbafb5ea4b6ac0fa2be72b6fd104fcc1eeaa9583215c7600cdcec9d4"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "product-performance",
+      "upstreamName": "Product Performance",
+      "summary": "Hotspot, links, facts vs hypotheses — never touch production.",
+      "category": "product",
+      "integrations": [
+        "GitHub",
+        "Slack"
+      ],
+      "upstreamPath": "templates/product/product-performance/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/product-performance.md",
+      "sha256": "e3a5f3c4467452c1c109655f9a02dca19b91fc28f02f5dd3744424c22baaecca"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "cited-brief",
+      "upstreamName": "Cited Brief",
+      "summary": "One question, three minutes, every claim has a URL.",
+      "category": "research",
+      "integrations": [],
+      "upstreamPath": "templates/research/cited-brief/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/cited-brief.md",
+      "sha256": "99a2e853932f4bdb77a05a6912ea1bebe4646ba3843a993722c4c9e8af1e5c60"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "research-desk",
+      "upstreamName": "Research Desk",
+      "summary": "Claims, evidence, disagreements, not-found — then a next read.",
+      "category": "research",
+      "integrations": [],
+      "upstreamPath": "templates/research/research-desk/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/research-desk.md",
+      "sha256": "ebb4c058fa051ccd44f34e7865124f2bb30144960f5faba076698ddffc1a0b85"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "source-interrogator",
+      "upstreamName": "Source Interrogator",
+      "summary": "Find the load-bearing claim that never had a source.",
+      "category": "research",
+      "integrations": [],
+      "upstreamPath": "templates/research/source-interrogator/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/source-interrogator.md",
+      "sha256": "be838cf8e0d64101210fdf215254f23ad9a330f7ffd095e00db80b882abf16fa"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "call-followup",
+      "upstreamName": "Call Follow-up",
+      "summary": "Recap and tasks, still in the building. Sending is a later named L2.",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar"
+      ],
+      "upstreamPath": "templates/sales/call-followup/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/call-followup.md",
+      "sha256": "34bdad482f7dc02543299a27bcd9a763d6a517c293ccbd8ebad9b0e0152897e5"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "meeting-prep",
+      "upstreamName": "Meeting Prep",
+      "summary": "Walk in knowing the last promise — the customer already lived the rest.",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar",
+        "Slack"
+      ],
+      "upstreamPath": "templates/sales/meeting-prep/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/meeting-prep.md",
+      "sha256": "4a97f09b5c03fcc6037ac9a45763491ea4341014cd5e2c08f4b88cb63ca3cc4c"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "sales-outbound",
+      "upstreamName": "Outbound",
+      "summary": "Volume without sounding like a sequence tool — and without sending.",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "LinkedIn"
+      ],
+      "upstreamPath": "templates/sales/sales-outbound/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/sales-outbound.md",
+      "sha256": "f9b7ba3a88c9481ddda0b994c7d56d662258ae82dbfa6bfaff71ff80a52df86a"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "talent-scout",
+      "upstreamName": "Talent Scout",
+      "summary": "Twenty names with evidence. Outreach stays in the draft folder.",
+      "category": "sales",
+      "integrations": [
+        "Gmail",
+        "Google Calendar",
+        "LinkedIn"
+      ],
+      "upstreamPath": "templates/sales/talent-scout/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/talent-scout.md",
+      "sha256": "f06df953121395d8551ebed3938c8a6b06539a27798e50ca23996570d7691179"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "win-loss",
+      "upstreamName": "Win Loss",
+      "summary": "Pattern with evidence. Not \"they just weren't ready\".",
+      "category": "sales",
+      "integrations": [
+        "Slack",
+        "Notion"
+      ],
+      "upstreamPath": "templates/sales/win-loss/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/win-loss.md",
+      "sha256": "359f20c90f3b846de9f65fe855a2f3b2cc6caa58030305b5ce1fc24aceb7e1e3"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "account-health",
+      "upstreamName": "Account Health",
+      "summary": "Evidence-ranked watch list — no customer mail, no CRM edits.",
+      "category": "support",
+      "integrations": [
+        "Slack",
+        "Gmail"
+      ],
+      "upstreamPath": "templates/support/account-health/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/account-health.md",
+      "sha256": "b13401223fecff8884bf3372e20011da67d635d9693757e7ffe47f2deb190a00"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "promise-log",
+      "upstreamName": "Promise Log",
+      "summary": "Quotes and dates — not a customer recap email.",
+      "category": "support",
+      "integrations": [
+        "Slack",
+        "Google Drive"
+      ],
+      "upstreamPath": "templates/support/promise-log/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/promise-log.md",
+      "sha256": "ce65bad1af2a4cc26f616bf2d251b6f50695916dcf36f84aca18bfd9e2e4bde0"
+    },
+    {
+      "sourceId": "cobus",
+      "upstreamId": "support-replies",
+      "upstreamName": "Support Replies",
+      "summary": "A DRAFT reply with a policy cite — the Send button stays yours.",
+      "category": "support",
+      "integrations": [
+        "Gmail"
+      ],
+      "upstreamPath": "templates/support/support-replies/PROFILE.md",
+      "snapshotPath": "sources/imported/cobus/profiles/support-replies.md",
+      "sha256": "248cc0e502653da8c952bffa20446548969b0706afda1f143400229b1feb51ae"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "account-expert",
+      "upstreamName": "Account Expert",
+      "summary": "Keeps one strategic account loaded in memory and hands you a sourced pre-call brief covering people, spend, breakage, and open asks.",
+      "category": "success",
+      "integrations": [
+        "slack",
+        "gmail",
+        "gong",
+        "granola"
+      ],
+      "upstreamPath": "seed-bots/account-expert/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/account-expert.md",
+      "sha256": "76f9c9bb4d7d7e4067bf1656a1f2f267ebf0edeedf6e28ea0bcbffb007505eef"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "account-growth-coach",
+      "upstreamName": "Account Growth Coach",
+      "summary": "Reviews what you actually posted on X last week, grades the moves against your own numbers, and assigns three changes for the coming week.",
+      "category": "marketing",
+      "integrations": [
+        "x"
+      ],
+      "upstreamPath": "seed-bots/account-growth-coach/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/account-growth-coach.md",
+      "sha256": "901a54f882a7f4f6e036de8b19764bc2e3ccd26285fab5737c39da78c1d4fc15"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "account-growth-planner",
+      "upstreamName": "Account Growth Planner",
+      "summary": "Writes the next quarter for one X account, with a stated growth thesis, dated milestones, a weekly cadence, and the risks that would break it.",
+      "category": "marketing",
+      "integrations": [
+        "x"
+      ],
+      "upstreamPath": "seed-bots/account-growth-planner/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/account-growth-planner.md",
+      "sha256": "23e04a3cda9a383ad0d63c4cc303e35d086712f9773cc1b6ec3f6b478a787eab"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "account-health-ranker",
+      "upstreamName": "Account Health Ranker",
+      "summary": "Ranks the book by risk and by expansion potential in one view, with the signal behind each score shown. It never contacts a customer and never edits the CRM.",
+      "category": "success",
+      "integrations": [
+        "salesforce",
+        "intercom",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/account-health-ranker/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/account-health-ranker.md",
+      "sha256": "70059bbc47fffb60437ab79ae495eeeaef072411f585bf44849e93a297300f91"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "account-media-rundown",
+      "upstreamName": "Account Media Rundown",
+      "summary": "Sweeps public sources every week for what the outside world said about one strategic account and sends you a ranked, fully linked rundown.",
+      "category": "sales",
+      "integrations": [
+        "x",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/account-media-rundown/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/account-media-rundown.md",
+      "sha256": "ff90785673a0c95534df2b6de10a66d7f13d709539c341c49c57505b839f133c"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "account-tiering",
+      "upstreamName": "Account Tiering",
+      "summary": "Re-segments the book of business every week on real usage and revenue signals, and proposes the tier moves with the arithmetic behind each one.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "stripe",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/account-tiering/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/account-tiering.md",
+      "sha256": "3a4ea086379bd2809742f1f76fd553f4e3705dd28066c2d4e14163f152c8d2d4"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "ad-creative-generator",
+      "upstreamName": "Ad Creative Generator",
+      "summary": "Turns one confirmed brief into six labelled ad variants as drafts, each carrying its angle, its tested hypothesis, and the source of every claim.",
+      "category": "marketing",
+      "integrations": [
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/ad-creative-generator/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/ad-creative-generator.md",
+      "sha256": "d9ee2f258a91d581bae08622ef515c417e09a03252ef85a00b04d4d28878bd1b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "agent-inbox",
+      "upstreamName": "Agent Inbox",
+      "summary": "Runs work from a dedicated bot mailbox so your personal Gmail stays out of the session, and every send waits for you.",
+      "category": "productivity",
+      "integrations": [
+        "agentmail"
+      ],
+      "upstreamPath": "seed-bots/agent-inbox/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/agent-inbox.md",
+      "sha256": "240e09f70c4ca5e1bb0ed0477c5edcdb5dde3acd756e55df1e23b6c26ec0c07e"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "amazon-cart-builder",
+      "upstreamName": "Amazon Cart Builder",
+      "summary": "Rebuilds a cart from Buy Again and recent orders, then stops before checkout so you review every line and pay yourself.",
+      "category": "personal",
+      "integrations": [
+        "amazon"
+      ],
+      "upstreamPath": "seed-bots/amazon-cart-builder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/amazon-cart-builder.md",
+      "sha256": "91c140e2db5ac3df9b46390a01b8ba3e69695dea094dfb36e24d28c4491bd6c2"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "argue-the-other-side",
+      "upstreamName": "Argue The Other Side",
+      "summary": "Takes a decision you have already made and builds the strongest case against it, then tells you what evidence would actually change your mind.",
+      "category": "fun",
+      "integrations": [
+        "notion",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/argue-the-other-side/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/argue-the-other-side.md",
+      "sha256": "3dfbf5b768088ab4991144528450c8ae2cbf97ca086305802bc83a69333a92bc"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "bargain-scout",
+      "upstreamName": "Bargain Scout",
+      "summary": "Watches listings against written specs and a max price, then flags matches with links and never bids, buys, or pays.",
+      "category": "personal",
+      "integrations": [
+        "amazon"
+      ],
+      "upstreamPath": "seed-bots/bargain-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/bargain-scout.md",
+      "sha256": "38718c0b97393ccedfc27e595b6d6a77e67de7443b775200064808581a277e7c"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "booking-pipeline-runner",
+      "upstreamName": "Booking Pipeline Runner",
+      "summary": "Finds every call that was agreed to but never booked, plus no-shows and stalled reschedules, and hands you one ordered work list with quotes.",
+      "category": "sales",
+      "integrations": [
+        "hubspot",
+        "google-calendar",
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/booking-pipeline-runner/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/booking-pipeline-runner.md",
+      "sha256": "1773bd5fc5a6ab8ea54d750d2d4cf2d8462aad2063cf4dcb0bdeee29469572d8"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "bookkeeping-auditor",
+      "upstreamName": "Bookkeeping Auditor",
+      "summary": "Reviews a closed accounting period and returns a ranked exceptions list with transaction IDs and correcting actions, touching nothing in your books.",
+      "category": "finance",
+      "integrations": [
+        "quickbooks"
+      ],
+      "upstreamPath": "seed-bots/bookkeeping-auditor/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/bookkeeping-auditor.md",
+      "sha256": "f8efd32a458b98f3e0dbfa051b9d9de16a84fceca4b07408459da04ab4483792"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "bookmark-skill-grader",
+      "upstreamName": "Bookmark Skill Grader",
+      "summary": "Grades a month of bookmarks into keep, maybe, and noise, then turns keepers into spoken skill triggers you can paste.",
+      "category": "personal",
+      "integrations": [
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/bookmark-skill-grader/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/bookmark-skill-grader.md",
+      "sha256": "be005bc23388fc483b35c1684e7bed60574e5e4f6b6301cb5031e478ec60dcfb"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "bot-advisor",
+      "upstreamName": "Bot Advisor",
+      "summary": "Reviews your whole bot roster weekly and returns a five item memo on what overlaps, what went silent, and what to retire, with the exact edit to paste.",
+      "category": "productivity",
+      "integrations": [
+        "grok-bot"
+      ],
+      "upstreamPath": "seed-bots/bot-advisor/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/bot-advisor.md",
+      "sha256": "248104ce516ea9a0d62533c54e415db9feea4636922e62738880c54d307fac4e"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "brand-deck-keeper",
+      "upstreamName": "Brand Deck Keeper",
+      "summary": "Audits every customer-facing deck against the live price book and changelog, then hands you paste-ready fixes for each stale slide it found.",
+      "category": "sales",
+      "integrations": [
+        "figma",
+        "notion",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/brand-deck-keeper/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/brand-deck-keeper.md",
+      "sha256": "eb2978f538054083472f870a122d8dee1d72f89c7e29fe92fedc5449451bebdf"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "bug-repro-pack-builder",
+      "upstreamName": "Bug Repro Pack Builder",
+      "summary": "Turns a vague bug report into a reproduction pack with exact steps, environment, and evidence, built only on staging. It never touches production customer data.",
+      "category": "engineering",
+      "integrations": [
+        "jira",
+        "github",
+        "sentry"
+      ],
+      "upstreamPath": "seed-bots/bug-repro-pack-builder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/bug-repro-pack-builder.md",
+      "sha256": "5c2915b6533e5c35a35c613232ad2e6d7f20d2ffc5b97e9f655e19a3a4186fed"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "call-coach",
+      "upstreamName": "Call Coach",
+      "summary": "Scores your own recorded calls against your named rubric and returns a one-page critique where every point is a timestamped quote from you.",
+      "category": "sales",
+      "integrations": [
+        "gong",
+        "notion",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/call-coach/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/call-coach.md",
+      "sha256": "bfa0046ac24ce3da30c87f0dccd88383e37da6614888709513f88830d8c0c9f0"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "call-follow-up-drafter",
+      "upstreamName": "Call Follow-Up Drafter",
+      "summary": "Turns each call transcript into a short follow-up email and a structured CRM note, both grounded in quotes, and leaves the two of them in draft.",
+      "category": "sales",
+      "integrations": [
+        "granola",
+        "gong",
+        "google-calendar",
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/call-follow-up-drafter/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/call-follow-up-drafter.md",
+      "sha256": "48e39161b31516ebb6a89af920f74b55afc919fbb2ecc3191baa539120f136c6"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "chief-of-staff",
+      "upstreamName": "Chief Of Staff",
+      "summary": "Always on coordinator that maps every recurring commitment to one owner, then flags what is uncovered, what is doubled up, and what has gone stale.",
+      "category": "ops",
+      "integrations": [
+        "slack",
+        "notion",
+        "linear"
+      ],
+      "upstreamPath": "seed-bots/chief-of-staff/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/chief-of-staff.md",
+      "sha256": "dc2361d8549b39e332496477c9a640360407c4188228f11a3a08672445802134"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "chief-of-staff-briefing",
+      "upstreamName": "Chief of Staff Briefing",
+      "summary": "A weekday morning brief in its own chat covering today's calendar, the replies you owe, who owes you, and what changed overnight, every line linked.",
+      "category": "ops",
+      "integrations": [
+        "gmail",
+        "google-calendar",
+        "slack",
+        "discord"
+      ],
+      "upstreamPath": "seed-bots/chief-of-staff-briefing/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/chief-of-staff-briefing.md",
+      "sha256": "e7f6dfffdd69e8770a3997a15f5569eac5099bbad17942041647a611e9be2c50"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "chief-of-staff-router",
+      "upstreamName": "Chief of Staff Router",
+      "summary": "The one bot you talk to. It routes every request to the bot that owns that lane, keeps a living TEAM.md, and scores who actually shipped once a week.",
+      "category": "ops",
+      "integrations": [
+        "slack",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/chief-of-staff-router/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/chief-of-staff-router.md",
+      "sha256": "6797041151feb8efb765bc28de9353f541395463999e0b6f8e8682ce699588bc"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "churn-early-warning",
+      "upstreamName": "Churn Early Warning",
+      "summary": "Catches accounts whose usage is decaying weeks before any billing signal exists, and hands you a ranked watchlist with the numbers behind every call.",
+      "category": "success",
+      "integrations": [
+        "posthog",
+        "salesforce",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/churn-early-warning/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/churn-early-warning.md",
+      "sha256": "849c0bcbd2d3d5e982370883e13fab5f2724523671a97c429d28c3694dbffb21"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "churn-watch",
+      "upstreamName": "Churn Watch",
+      "summary": "Flags at-risk accounts each morning with the evidence trail that says why, so success gets ahead of cancellations without guesswork.",
+      "category": "success",
+      "integrations": [
+        "stripe",
+        "intercom"
+      ],
+      "upstreamPath": "seed-bots/churn-watch/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/churn-watch.md",
+      "sha256": "e94806b864adb41b31c7a4d26d0b81daf86e500d874e3cf096d7933449a737dd"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "churn-win-back-loop",
+      "upstreamName": "Churn Win-Back Loop",
+      "summary": "Works the accounts that already cancelled, sorts them by why they left, and leaves a ready win-back sequence sitting in drafts for you to approve.",
+      "category": "success",
+      "integrations": [
+        "stripe",
+        "gmail",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/churn-win-back-loop/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/churn-win-back-loop.md",
+      "sha256": "c2b6e46ee9d9423b0ad984017878816bfac609729e8b885da96cb23678b646ca"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "citation-checker",
+      "upstreamName": "Citation Checker",
+      "summary": "Opens every link and checks every quote in a draft before it goes out, reporting dead links, moved pages, and quotes that do not match the source.",
+      "category": "writing",
+      "integrations": [
+        "google-drive",
+        "notion",
+        "google-search"
+      ],
+      "upstreamPath": "seed-bots/citation-checker/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/citation-checker.md",
+      "sha256": "2827dd72bcf70b081417c898f19cb9c1f6cfbd08f465540e87755e7eb91b7170"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "claim-provenance-tracker",
+      "upstreamName": "Claim Provenance Tracker",
+      "summary": "Traces every number in a deck or doc back to where it came from, and flags the ones whose only source is an older deck.",
+      "category": "research",
+      "integrations": [
+        "google-slides",
+        "google-drive",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/claim-provenance-tracker/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/claim-provenance-tracker.md",
+      "sha256": "5cb2aaacf37a3576b538dcb9b3ae212491dc1ef6cc091996967dc90c66834a46"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "codebase-hardening-auditor",
+      "upstreamName": "Codebase Hardening Auditor",
+      "summary": "Audits a repo that shipped fast and returns ranked findings with file paths, line ranges, snippets, and a commit SHA, without touching a single branch.",
+      "category": "engineering",
+      "integrations": [
+        "github"
+      ],
+      "upstreamPath": "seed-bots/codebase-hardening-auditor/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/codebase-hardening-auditor.md",
+      "sha256": "baad931c04d26c17a0606ffb87c6fd43ef7b3b5f0e1de04eb9ac61a0df571abd"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "competitor-ad-watch",
+      "upstreamName": "Competitor Ad Watch",
+      "summary": "Reads the public ad libraries each week and reports which competitor creative is new, which is scaling, and which long-runner quietly died.",
+      "category": "marketing",
+      "integrations": [
+        "slack",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/competitor-ad-watch/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/competitor-ad-watch.md",
+      "sha256": "5bdca34d9734a9e8e8411299fe991e4b26b1bfced7ac0af04f2273da15930b5f"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "competitor-pricing-watch",
+      "upstreamName": "Competitor Pricing Watch",
+      "summary": "Checks published pricing pages four times a day and reports real plan and limit changes with the old and new values side by side.",
+      "category": "marketing",
+      "integrations": [
+        "slack",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/competitor-pricing-watch/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/competitor-pricing-watch.md",
+      "sha256": "0884ec8aee8ef2c05e669ae2f06792d85c46491d4b8c3bd7a920d7737b89252b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "competitor-switch-scout",
+      "upstreamName": "Competitor Switch Scout",
+      "summary": "Finds public posts where people ask for alternatives to a named competitor, enriches the thread, and drafts outreach you send yourself.",
+      "category": "sales",
+      "integrations": [
+        "x"
+      ],
+      "upstreamPath": "seed-bots/competitor-switch-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/competitor-switch-scout.md",
+      "sha256": "338352efb7d9a71eecf5331c47d9951fff55d967095fc58764b7142368d5ebe0"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "competitor-website-watch",
+      "upstreamName": "Competitor Website Watch",
+      "summary": "Watches everything on a competitor site except pricing, and tells you when the positioning, the changelog, or the open roles actually move.",
+      "category": "marketing",
+      "integrations": [
+        "screenshotone",
+        "slack",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/competitor-website-watch/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/competitor-website-watch.md",
+      "sha256": "4fc58ca64b73651cf6c74883d867d3f1f437338386fabaaffeb90b693496733b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "content-idea-generator",
+      "upstreamName": "Content Idea Generator",
+      "summary": "Mines your own analytics and rising search demand to hand you a ranked list of content ideas, each with a dated reason it matters now.",
+      "category": "marketing",
+      "integrations": [
+        "youtube",
+        "google-trends"
+      ],
+      "upstreamPath": "seed-bots/content-idea-generator/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/content-idea-generator.md",
+      "sha256": "b21ddace890fddc3dac3951985dc32e63cc248c168280902c1cf70ee62c99391"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "content-planner-manager",
+      "upstreamName": "Content Planner Manager",
+      "summary": "Keeps one editorial calendar honest by tracking what is committed, what slipped, and what has no owner, with a source cited on every row.",
+      "category": "marketing",
+      "integrations": [
+        "webflow"
+      ],
+      "upstreamPath": "seed-bots/content-planner-manager/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/content-planner-manager.md",
+      "sha256": "3336b73644c00200a920d116fff9350d187f879c22066504bb64c08e61a0eae8"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "crm-from-your-phone",
+      "upstreamName": "CRM From Your Phone",
+      "summary": "Turns the messy voice note you record walking out of a meeting into clean CRM fields, quoting the exact words behind every single value it proposes.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/crm-from-your-phone/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/crm-from-your-phone.md",
+      "sha256": "ebfde3a2830fe03a91a86be56e6a398551475ed38288489db655de918ce210d1"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "deal-desk-autopilot",
+      "upstreamName": "Deal Desk Autopilot",
+      "summary": "Assembles the one-page approval packet a deal needs, discount rationale, term exceptions and gating reviews, each line carrying the source it came from.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "gmail",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/deal-desk-autopilot/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/deal-desk-autopilot.md",
+      "sha256": "0d1b219df1533bc5b70e29458e24d3a0a0e6d1ead047de577104a555ebc8745b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "deck-localizer",
+      "upstreamName": "Deck Localizer",
+      "summary": "Rebuilds one sales deck for one target market, language, currency and local proof, plus a register of every claim that market will not let you say.",
+      "category": "sales",
+      "integrations": [
+        "google-slides",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/deck-localizer/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/deck-localizer.md",
+      "sha256": "546afa53ed2cc4144b7c079f1de1595f7292ff5baeb2c90bd62e8da542c5583e"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "deck-updater",
+      "upstreamName": "Deck Updater",
+      "summary": "Checks one sales deck against what actually shipped and lists every slide that has gone wrong, stale, or missing, with the change that broke it.",
+      "category": "sales",
+      "integrations": [
+        "google-slides",
+        "granola",
+        "linear"
+      ],
+      "upstreamPath": "seed-bots/deck-updater/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/deck-updater.md",
+      "sha256": "5bba35856802dd697631cf5ee5a23907699e0a3ecca2c777f5c6202b9155679b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "demo-clip-library",
+      "upstreamName": "Demo Clip Library",
+      "summary": "Indexes every recorded demo by objection, feature and proof so you can find the ninety seconds that answers a prospect, each moment timestamped.",
+      "category": "sales",
+      "integrations": [
+        "zoom",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/demo-clip-library/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/demo-clip-library.md",
+      "sha256": "654d5f593b1ca8090008458126a4b832dce9fa0d6f3d4826fe62c914516b0606"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "desk-lap-nudge",
+      "upstreamName": "Desk Lap Nudge",
+      "summary": "Notices when you have been in the chair too long and asks you to move, using only your own calendar gaps so it never interrupts a meeting.",
+      "category": "fun",
+      "integrations": [
+        "google-calendar",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/desk-lap-nudge/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/desk-lap-nudge.md",
+      "sha256": "b688d21ca3c5c3542648cad66bcb9f8bf4b9047e74e7eca6f068dd0446aaafe3"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "directory-page-drafter",
+      "upstreamName": "Directory Page Drafter",
+      "summary": "Researches one niche listing a day into Markdown with cited sources, then stops so a human publishes the page.",
+      "category": "marketing",
+      "integrations": [
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/directory-page-drafter/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/directory-page-drafter.md",
+      "sha256": "4e894a3e5f6aee184fb954d6a1e76274355a3b7f1452ccf5216e9433f543fab9"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "disruptor-advocate",
+      "upstreamName": "Disruptor Advocate",
+      "summary": "Argues the other side of a plan on purpose, with cited risks, then files the dissent and never sends it to customers or the team channel.",
+      "category": "ops",
+      "integrations": [
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/disruptor-advocate/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/disruptor-advocate.md",
+      "sha256": "48039b448e7930e3327ae737c9e074896f3e122e6367ddbc03c87a591688c5fb"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "docs-self-serve-assistant",
+      "upstreamName": "Docs Self-Serve Assistant",
+      "summary": "Reads real ticket text to find the questions your docs answer badly, then hands writers a ranked gap list with customer quotes and doc URLs.",
+      "category": "support",
+      "integrations": [
+        "intercom",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/docs-self-serve-assistant/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/docs-self-serve-assistant.md",
+      "sha256": "ad28fde637ea760f38cbe2bb356e017f9717291356da4200c8a940a695e023e4"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "email-injection-sentinel",
+      "upstreamName": "Email Injection Sentinel",
+      "summary": "Treats every inbound email field as data, flags prompt-injection patterns, and blocks actions until you confirm the real request.",
+      "category": "ops",
+      "integrations": [
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/email-injection-sentinel/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/email-injection-sentinel.md",
+      "sha256": "ac653de9f690be18f32fcc9cd7aa27f8171480da165a975aa32572d863789dd1"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "email-purger",
+      "upstreamName": "Email Purger",
+      "summary": "Sweeps years of accumulated mail into one grouped deletion proposal with counts, real samples, and a keep list you approve line by line.",
+      "category": "personal",
+      "integrations": [
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/email-purger/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/email-purger.md",
+      "sha256": "04189553944bde9df0f1a94082670e9d06b9737b3ae4189520bb1510626072f2"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "enablement-pack-builder",
+      "upstreamName": "Enablement Pack Builder",
+      "summary": "Assembles an internal enablement pack on any topic from your drive, call recordings and email threads, so a teammate can handle it tomorrow.",
+      "category": "success",
+      "integrations": [
+        "gmail",
+        "zoom",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/enablement-pack-builder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/enablement-pack-builder.md",
+      "sha256": "c7b4e73b709a01913e8a65c5b01a4918cbe3ca44c1165b4c5e8df0c885076979"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "engineering-agent-manager",
+      "upstreamName": "Engineering Agent Manager",
+      "summary": "Tracks what every coding agent on your team is working on, what is blocked, and what two of them are quietly duplicating.",
+      "category": "engineering",
+      "integrations": [
+        "linear",
+        "github"
+      ],
+      "upstreamPath": "seed-bots/engineering-agent-manager/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/engineering-agent-manager.md",
+      "sha256": "996166009758a9bdd11945d9884d51550fc0835895d4357624dab3c0f04317de"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "evergreen-content-flywheel",
+      "upstreamName": "Evergreen Content Flywheel",
+      "summary": "Finds published pieces whose traffic has decayed and ranks them by recovery per hour of work, so refreshes go where the payback is.",
+      "category": "marketing",
+      "integrations": [
+        "feedhive",
+        "notion",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/evergreen-content-flywheel/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/evergreen-content-flywheel.md",
+      "sha256": "0396955247da0e74feac92318ebfdad96bd1deaa112b83f97dc3680570d4de8d"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "expense-reconciler",
+      "upstreamName": "Expense Reconciler",
+      "summary": "Reconciles the week's expenses against receipts, flags policy exceptions with the rule they broke, and drafts the chase. It changes no reimbursement and sends no message.",
+      "category": "finance",
+      "integrations": [
+        "gmail",
+        "google-drive",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/expense-reconciler/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/expense-reconciler.md",
+      "sha256": "4fab575577668859c2b453ed2fe70921b29ba184e21359c3902809cb65af8734"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "expert-call-prep",
+      "upstreamName": "Expert Call Prep",
+      "summary": "Builds the question list for an expert call from what you already know and what previous calls left open, so you stop paying to re-ask answered questions.",
+      "category": "research",
+      "integrations": [
+        "granola",
+        "notion",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/expert-call-prep/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/expert-call-prep.md",
+      "sha256": "ab45edeafd39cf0b035619408469c2d96f9b3d3e78f2ef58b72a5c977215679f"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "first-draft-from-outline",
+      "upstreamName": "First Draft From Outline",
+      "summary": "Turns an outline you already approved into a first draft that follows it exactly, and flags every place the outline was too thin to write from.",
+      "category": "writing",
+      "integrations": [
+        "google-drive",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/first-draft-from-outline/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/first-draft-from-outline.md",
+      "sha256": "4f6d50722e5fb6020af049fd73c145e57a6160c606f065c56566a7656ebb0347"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "firstmate-router",
+      "upstreamName": "Firstmate Router",
+      "summary": "Turns a messy ask into a plain-language brief, routes it to the named specialist bot, and brings the result back without sending it onward.",
+      "category": "ops",
+      "integrations": [
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/firstmate-router/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/firstmate-router.md",
+      "sha256": "83d8200e2e3a35b5a00d9f3ac84a5cd6258b9fe6400a4bae745ab2ad1da0645a"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "fleet-chief-of-staff",
+      "upstreamName": "Fleet Chief Of Staff",
+      "summary": "Single point of contact for a fleet of bots. Routes every request to the bot that owns it, keeps a living TEAM.md of who does what, and asks before anything you cannot undo.",
+      "category": "ops",
+      "integrations": [
+        "notion",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/fleet-chief-of-staff/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/fleet-chief-of-staff.md",
+      "sha256": "dfbc53906c19cdab519fed44839fe823a515df9bc4922d4368fc1ae1abb8dd38"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "flight-check-in",
+      "upstreamName": "Flight Check-In",
+      "summary": "Watches the inbox for flight confirmations, then builds a per-flight check-in prep pack and reminds you the moment the window opens.",
+      "category": "personal",
+      "integrations": [
+        "gmail",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/flight-check-in/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/flight-check-in.md",
+      "sha256": "d639b63fdadee59e8f8290cb4040afb981ffd0ae9b50ac81dc0a67caf251c0f7"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "forecast-notes-updater",
+      "upstreamName": "Forecast Notes Updater",
+      "summary": "Reads calls and threads against every open deal, then flags the ones sliding without a stage change and the ones with no next step recorded.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "granola",
+        "gong",
+        "slack",
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/forecast-notes-updater/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/forecast-notes-updater.md",
+      "sha256": "8f2d22774dc0c5008b793ed0d2498f0555ffd97b46478719546d37907527df93"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "grocery-autopilot",
+      "upstreamName": "Grocery Autopilot",
+      "summary": "Predicts the weekly restock from real order history and your calendar, then builds a priced basket and hands checkout back to you.",
+      "category": "personal",
+      "integrations": [
+        "amazon",
+        "costco",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/grocery-autopilot/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/grocery-autopilot.md",
+      "sha256": "939af232e4dccb684aa65c7ddfebb3f79205690ea62e588e3ebc0984b410b58b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "grok-imagine-storyboard",
+      "upstreamName": "Grok Imagine Storyboard",
+      "summary": "Researches a story, plans scenes, and generates Grok Imagine shots into a private folder you review before anything goes public.",
+      "category": "marketing",
+      "integrations": [
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/grok-imagine-storyboard/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/grok-imagine-storyboard.md",
+      "sha256": "18c13df9328e7398499cb5bbf2f6e293fa816869a9fdfcdef4f172df1cc61746"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "gtm-chief-of-staff",
+      "upstreamName": "GTM Chief Of Staff",
+      "summary": "Works the seams of the go to market motion, campaign leads nobody touched, deals blocked on another team, and promises with no internal owner.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "gmail",
+        "google-calendar",
+        "slack",
+        "granola"
+      ],
+      "upstreamPath": "seed-bots/gtm-chief-of-staff/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/gtm-chief-of-staff.md",
+      "sha256": "c22347fd30d516a041295a3d52d519e5c8f59d6d0ee7a050d7bc38af4c912465"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "headline-variant-desk",
+      "upstreamName": "Headline Variant Desk",
+      "summary": "Produces headline options for one finished piece, each labelled with the angle it takes and the promise it makes, so you pick deliberately rather than by feel.",
+      "category": "writing",
+      "integrations": [
+        "google-drive",
+        "notion",
+        "x"
+      ],
+      "upstreamPath": "seed-bots/headline-variant-desk/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/headline-variant-desk.md",
+      "sha256": "bbe1de06cf4b049642874485f376288a94df988011f1311e436870291dd6394b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "help-center-updater",
+      "upstreamName": "Help Center Updater",
+      "summary": "Watches merged pull requests for customer-visible changes and proposes help article edits, showing the current published text beside the rewrite.",
+      "category": "support",
+      "integrations": [
+        "intercom",
+        "github"
+      ],
+      "upstreamPath": "seed-bots/help-center-updater/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/help-center-updater.md",
+      "sha256": "ee40312b2c7f0ac1814ec8b9b8d9e015aae1ee7e34161681864f8b44fce38b74"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "icp-scored-outbound-list",
+      "upstreamName": "ICP Scored Outbound List",
+      "summary": "Researches accounts, scores each against your written ICP, finds the contact, and returns a review list. It never sends and never enrolls anyone in a sequence.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "gmail",
+        "linkedin",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/icp-scored-outbound-list/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/icp-scored-outbound-list.md",
+      "sha256": "1b6968635cd5591a9cd2962f1dfd821b18aece988646fd4dc3d54d4ef0574f85"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "inbox-reply-digest",
+      "upstreamName": "Inbox Reply Digest",
+      "summary": "Summarises the replies that landed overnight on live deals and outbound threads, what each one signals, and the single thing it needs from you today.",
+      "category": "sales",
+      "integrations": [
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/inbox-reply-digest/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/inbox-reply-digest.md",
+      "sha256": "bbf150633435ec99c47b10b4ea3f177a0815b53cd93ffb325104204c1a0cb638"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "inbox-triage",
+      "upstreamName": "Inbox Triage",
+      "summary": "Sorts and labels your inbox every morning and drafts replies for the three threads that actually need you, each waiting for approval.",
+      "category": "productivity",
+      "integrations": [
+        "gmail",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/inbox-triage/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/inbox-triage.md",
+      "sha256": "8068e4202e0039ced6403471467d94a39f783f601c8b0fdca0e271ba216d7a92"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "jargon-stripper",
+      "upstreamName": "Jargon Stripper",
+      "summary": "Rewrites a draft for one named reader, listing every term it replaced and why, so you can put back the ones that were load bearing.",
+      "category": "writing",
+      "integrations": [
+        "google-drive",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/jargon-stripper/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/jargon-stripper.md",
+      "sha256": "1cef37dff055174fb7d41945c404521ca8cce21bedd5f206f6704c9993e48f97"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "latency-investigator",
+      "upstreamName": "Latency Investigator",
+      "summary": "Investigates a latency or error regression with evidence, narrows it to hotspots and a suspect change window, and writes the case. It touches no alert and no production setting.",
+      "category": "engineering",
+      "integrations": [
+        "sentry",
+        "github",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/latency-investigator/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/latency-investigator.md",
+      "sha256": "d9bbff7f33904e35829bb509a6e014c6afbb8800b3927128e4f3acac6f461a69"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "lead-scout",
+      "upstreamName": "Lead Scout",
+      "summary": "Finds and ranks warm leads overnight from public signals and hands you a scored sheet with evidence links, never touching a single prospect.",
+      "category": "sales",
+      "integrations": [
+        "x",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/lead-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/lead-scout.md",
+      "sha256": "c84cf212a64468dfff942ac8fac453fe73d4b92404e37c2cf5e4831353ef10c6"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "linkedin-icp-prospect-tracker",
+      "upstreamName": "LinkedIn ICP Prospect Tracker",
+      "summary": "Maintains one living roster of the accounts and people who match your ICP, re-verified weekly, with a profile link and a fit score on every row.",
+      "category": "sales",
+      "integrations": [
+        "linkedin",
+        "google-search",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/linkedin-icp-prospect-tracker/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/linkedin-icp-prospect-tracker.md",
+      "sha256": "f267aa40e37a16f4a1851999ef34efeb1da6543fb5f9f905c71c1eba48ca56d1"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "linkedin-signal-watch",
+      "upstreamName": "LinkedIn Signal Watch",
+      "summary": "Watches your pipeline accounts for role changes, funding, and hiring spikes, then hands you a ranked weekday digest with a link behind every alert.",
+      "category": "sales",
+      "integrations": [
+        "linkedin",
+        "sales-navigator",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/linkedin-signal-watch/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/linkedin-signal-watch.md",
+      "sha256": "ff423c9cc915734934aaab7e54484632ee3e1f84af6130bd85beac24e5d05338"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "literature-scan",
+      "upstreamName": "Literature Scan",
+      "summary": "Surveys the published work on one written question, groups findings by what they actually agree on, and names the disagreements instead of averaging them away.",
+      "category": "research",
+      "integrations": [
+        "google-search",
+        "notion",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/literature-scan/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/literature-scan.md",
+      "sha256": "63f243dbbbd1204ce3214258cc4af743e4c418faadc460306cfce17d36889893"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "live-discovery-slide",
+      "upstreamName": "Live Discovery Slide",
+      "summary": "Builds one discovery slide mid call from what the prospect actually said, quotes and timestamps included, with the unanswered boxes left visibly empty.",
+      "category": "sales",
+      "integrations": [
+        "granola",
+        "figma"
+      ],
+      "upstreamPath": "seed-bots/live-discovery-slide/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/live-discovery-slide.md",
+      "sha256": "6d76b373276eed0bcdcec184e668e3193ca9d154efaa047930304ed6e96b5ead"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "mail-cleanup-assistant",
+      "upstreamName": "Mail Cleanup Assistant",
+      "summary": "Keeps the inbox tidy day to day, proposing labels, archiving, and paste-ready filter rules for new mail with the signal behind every call.",
+      "category": "personal",
+      "integrations": [
+        "gmail",
+        "outlook"
+      ],
+      "upstreamPath": "seed-bots/mail-cleanup-assistant/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/mail-cleanup-assistant.md",
+      "sha256": "3b1e5ea22b55f488b3b9e55490f880e5ad900ff76dfa95c82fee66f0012b1ea5"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "market-sizing-worksheet",
+      "upstreamName": "Market Sizing Worksheet",
+      "summary": "Builds a sizing model where every assumption is a named, sourced line you can change, so the number is auditable rather than asserted.",
+      "category": "research",
+      "integrations": [
+        "sheets",
+        "google-search",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/market-sizing-worksheet/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/market-sizing-worksheet.md",
+      "sha256": "507cf479c7517cad78d992561d8fe228b779452ec8f9afcecd25f142790fdfff"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "marketing-calendar-sync",
+      "upstreamName": "Marketing Calendar Sync",
+      "summary": "Reconciles your marketing calendar against the events database every day and reports the drift, with both record IDs on every line.",
+      "category": "marketing",
+      "integrations": [
+        "notion",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/marketing-calendar-sync/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/marketing-calendar-sync.md",
+      "sha256": "b2b50ac3f4ed74931809fc95a3524d5b4b8d78d4203b73bfb4ad4fd4e8636cd4"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "marketing-os-auditor",
+      "upstreamName": "Marketing OS Auditor",
+      "summary": "Scores a marketing system against a fixed rubric, drafts the next experiment, and never publishes, spends, or launches an ad.",
+      "category": "marketing",
+      "integrations": [
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/marketing-os-auditor/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/marketing-os-auditor.md",
+      "sha256": "7dd214ba6168ddd92a566ddf732111478654d9d0fb9dd998d5a3a6c3163e089f"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "marketplace-listing-scout",
+      "upstreamName": "Marketplace Listing Scout",
+      "summary": "Flags public marketplace listings that look underpriced versus a stated median, using photos not titles, and never messages the seller.",
+      "category": "personal",
+      "integrations": [
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/marketplace-listing-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/marketplace-listing-scout.md",
+      "sha256": "c48030c3c67b9633ae41b48a2511ace48c34eb494c95fc50284ca1613b9a5b1c"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "meeting-double",
+      "upstreamName": "Meeting Double",
+      "summary": "Writes your pre-meeting brief an hour ahead, then turns the transcript you bring back into owned actions. It never joins the call.",
+      "category": "productivity",
+      "integrations": [
+        "google-calendar",
+        "zoom"
+      ],
+      "upstreamPath": "seed-bots/meeting-double/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/meeting-double.md",
+      "sha256": "c310ee4cd033e7024e40e75b2be1cf8c47514366a9df4f377007a5ae3208f766"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "meeting-prep-brief",
+      "upstreamName": "Meeting Prep Brief",
+      "summary": "Briefs every external meeting on today's calendar before the first one starts, with stage, attendees, last touch, and the questions you still owe them.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "gmail",
+        "slack",
+        "granola",
+        "gong",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/meeting-prep-brief/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/meeting-prep-brief.md",
+      "sha256": "0134ecefd5430ceea3798e3d03e1fbf801c7733bcbce8fadbec0411a18e76411"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "motivated-seller-finder",
+      "upstreamName": "Motivated Seller Finder",
+      "summary": "Scans public listing activity in your market for price cuts, stale days on market, and relistings, then hands you a scored shortlist with sources.",
+      "category": "sales",
+      "integrations": [
+        "google-search",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/motivated-seller-finder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/motivated-seller-finder.md",
+      "sha256": "2a9e00f629a273b77469e281146500d7fe1e8a450a56c850fa57582f940eca01"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "one-line-standup",
+      "upstreamName": "One Line Standup",
+      "summary": "Turns your day into a single honest sentence you actually keep, written from what changed rather than from what you meant to do.",
+      "category": "fun",
+      "integrations": [
+        "github",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/one-line-standup/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/one-line-standup.md",
+      "sha256": "c7584e10226ad835a977e63d2c5c728f607a65b8984aa131d74e8370a0c0fbfa"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "org-chart-keeper",
+      "upstreamName": "Org Chart Keeper",
+      "summary": "Rebuilds the buying unit at each target account every week from public and CRM sources, and shows you which branch has no relationship at all.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "linkedin"
+      ],
+      "upstreamPath": "seed-bots/org-chart-keeper/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/org-chart-keeper.md",
+      "sha256": "45bd76d36e439fc1b0a2dcd6930b32e222beec93a77cf5122e9093da70b5476b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "outbound-in-your-voice",
+      "upstreamName": "Outbound In Your Voice",
+      "summary": "Learns how you actually write from your own sent mail, then drafts outbound that sounds like you instead of a template, and stops at drafts.",
+      "category": "sales",
+      "integrations": [
+        "gmail",
+        "linkedin"
+      ],
+      "upstreamPath": "seed-bots/outbound-in-your-voice/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/outbound-in-your-voice.md",
+      "sha256": "6e7dcf57a51f5d911fed4171df2cf4977e77f38d6194b21174d608ac6cc222cf"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "paid-media-budget-review",
+      "upstreamName": "Paid Media Budget Review",
+      "summary": "Watches campaign performance against the plan and proposes budget moves with the sample size attached. It never changes a budget and never sends the recommendation on.",
+      "category": "marketing",
+      "integrations": [
+        "slack",
+        "sheets",
+        "x"
+      ],
+      "upstreamPath": "seed-bots/paid-media-budget-review/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/paid-media-budget-review.md",
+      "sha256": "0bef85da7c18caf5deb062decce74c90e9b5c5be579ca8953aa13d8c05aae1ad"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "paper-trading-desk",
+      "upstreamName": "Paper Trading Desk",
+      "summary": "Logs paper trades from a stated thesis and a written stop, with fills marked simulated, and never places a live order.",
+      "category": "personal",
+      "integrations": [
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/paper-trading-desk/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/paper-trading-desk.md",
+      "sha256": "1fd7875b4873d9286e83b06788800d6b8ee38225b2fe3c1652d881911b7319f4"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "persistent-bot-memory",
+      "upstreamName": "Persistent Bot Memory",
+      "summary": "Keeps one durable context file your other bots reread, admits only what belongs in it, and shows you every line before removing one.",
+      "category": "productivity",
+      "integrations": [
+        "github"
+      ],
+      "upstreamPath": "seed-bots/persistent-bot-memory/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/persistent-bot-memory.md",
+      "sha256": "fd36b34b5a219b9b6e2d8e399565dd190a9883d7aaeffd5fe35824fe104255d6"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "personal-cfo",
+      "upstreamName": "Personal CFO",
+      "summary": "Runs a weekday money briefing covering cash runway, unusual transactions, portfolio drift, and fees, with a source line under every figure.",
+      "category": "finance",
+      "integrations": [
+        "plaid",
+        "yahoo-finance",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/personal-cfo/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/personal-cfo.md",
+      "sha256": "1fd7b04e8361a3728cb1b18ffa248c157a54cc728de590ea6426a248bb1a7827"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "podcast-clip-desk",
+      "upstreamName": "Podcast Clip Desk",
+      "summary": "Cuts a timestamped YouTube or podcast span, pulls quotes, and drafts caption copy that waits for you to publish.",
+      "category": "marketing",
+      "integrations": [
+        "youtube",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/podcast-clip-desk/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/podcast-clip-desk.md",
+      "sha256": "0077d816ce19598f6c6437d777c64a35fa08fe0b4d77882c4045b20fb56efbea"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "podcast-summarizer",
+      "upstreamName": "Podcast Summarizer",
+      "summary": "Turns an episode transcript into claims, numbers, and usable ideas with a timestamp on every line, and says when an episode holds nothing.",
+      "category": "research",
+      "integrations": [
+        "podcast-rss-feeds",
+        "youtube"
+      ],
+      "upstreamPath": "seed-bots/podcast-summarizer/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/podcast-summarizer.md",
+      "sha256": "9b853ad245f62b826c11dcea159ced1d0e2fe1679782cc28d4558d335208fd4b"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "pr-review-sentinel",
+      "upstreamName": "PR Review Sentinel",
+      "summary": "First-pass review on every new pull request with severity-tagged findings and a summary comment, before a human reviewer spends a minute.",
+      "category": "engineering",
+      "integrations": [
+        "github",
+        "linear"
+      ],
+      "upstreamPath": "seed-bots/pr-review-sentinel/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/pr-review-sentinel.md",
+      "sha256": "d9f899a71f9598ec5f4e0dfefbbcb7ce0a8f1ecaedf9e52a4b07e4446a67a270"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "product-expert",
+      "upstreamName": "Product Expert",
+      "summary": "Answers internal questions about how the product behaves today, with the doc, changelog entry, or merged pull request that proves it attached.",
+      "category": "sales",
+      "integrations": [
+        "github",
+        "glean",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/product-expert/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/product-expert.md",
+      "sha256": "cf8b1b08c867a3cc0a7161e86d1cbddae67a35032f0e26cff4c79017ec0c7d1c"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "prospect-meeting-booker",
+      "upstreamName": "Prospect Meeting Booker",
+      "summary": "Prepares the whole booking, real open times, the right attendees, the context, and the drafted reply, then stops so you send it yourself.",
+      "category": "sales",
+      "integrations": [
+        "gmail",
+        "google-calendar",
+        "salesforce"
+      ],
+      "upstreamPath": "seed-bots/prospect-meeting-booker/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/prospect-meeting-booker.md",
+      "sha256": "bd5cfb0d7ab14b6b758d588caaecf6891ba173e66e4a9c2e597d4077b4743bce"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "prospecting-sheet-builder",
+      "upstreamName": "Prospecting Sheet Builder",
+      "summary": "Builds an overnight prospecting sheet with one row per prospect, a source link behind every cell, and anything unverified left visibly empty.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "gmail",
+        "sheets",
+        "linkedin"
+      ],
+      "upstreamPath": "seed-bots/prospecting-sheet-builder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/prospecting-sheet-builder.md",
+      "sha256": "2e16968e3652770be1de99493261754d9e12d8c8d7fa300c1e3f6794050db5eb"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "qbr-pack-builder",
+      "upstreamName": "QBR Pack Builder",
+      "summary": "Builds the quarterly business review pack for one account, with every number carrying the field and report it came from, as a private internal draft.",
+      "category": "success",
+      "integrations": [
+        "salesforce",
+        "zendesk",
+        "google-slides"
+      ],
+      "upstreamPath": "seed-bots/qbr-pack-builder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/qbr-pack-builder.md",
+      "sha256": "a5e8fb4ac882e210af32b65fe0c246521fa836f4a23442ef6a92bd5e5b159b9d"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "sales-play-autopilot",
+      "upstreamName": "Sales Play Autopilot",
+      "summary": "Runs one defined play across many accounts, tracks the step each account sits on, and leaves the next step drafted for a human to execute.",
+      "category": "sales",
+      "integrations": [
+        "snowflake",
+        "salesforce",
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/sales-play-autopilot/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/sales-play-autopilot.md",
+      "sha256": "76c2cba938a44a3a99a74ff95759bdc416d771a8e01161da7d03c8d9617e00a4"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "salesforce-report-builder",
+      "upstreamName": "Salesforce Report Builder",
+      "summary": "Turns a pipeline question into a saved report and a plain answer, with the filter set, the run time, and the record IDs behind every figure.",
+      "category": "sales",
+      "integrations": [
+        "salesforce",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/salesforce-report-builder/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/salesforce-report-builder.md",
+      "sha256": "5989235dadd19da10be88d232ab19574d1e1efc4d9662ecb8ddb62b79f840ec3"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "source-verifier",
+      "upstreamName": "Source Verifier",
+      "summary": "Takes a list of claims and checks each against a primary source, returning verified, contradicted, or unverifiable with the link and date. It never edits the document.",
+      "category": "research",
+      "integrations": [
+        "google-drive",
+        "notion",
+        "google-search"
+      ],
+      "upstreamPath": "seed-bots/source-verifier/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/source-verifier.md",
+      "sha256": "a157da2b2fe345945970be2b5041c555786b9a80f9513b65b9bf38172d602d00"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "sponsor-inbound-scout",
+      "upstreamName": "Sponsor Inbound Scout",
+      "summary": "Sweeps the inbox for real sponsorship enquiries, checks whether a budget and a brand fit actually exist, and hands you a ranked, sourced shortlist.",
+      "category": "sales",
+      "integrations": [
+        "gmail",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/sponsor-inbound-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/sponsor-inbound-scout.md",
+      "sha256": "0e84e5c1f21aa85af73484d719d55d2751ed750a1131364c0e56932754b74fb9"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "sponsorship-negotiator",
+      "upstreamName": "Sponsorship Negotiator",
+      "summary": "Works one live sponsorship thread and builds your counter position, a rate rationale drawn from your own past deals, and the order to concede in.",
+      "category": "sales",
+      "integrations": [
+        "gmail",
+        "sheets"
+      ],
+      "upstreamPath": "seed-bots/sponsorship-negotiator/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/sponsorship-negotiator.md",
+      "sha256": "fc8d83d0f7c96943405854546d6b670d5b6e2c4847f8a8c9e9df83ccd5518e50"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "standup-scribe",
+      "upstreamName": "Standup Scribe",
+      "summary": "Drafts your daily standup from yesterday's commits, merged PRs, and calendar, delivered to your DM before the meeting.",
+      "category": "ops",
+      "integrations": [
+        "github",
+        "slack",
+        "google-calendar"
+      ],
+      "upstreamPath": "seed-bots/standup-scribe/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/standup-scribe.md",
+      "sha256": "eae3e842a11cfb89e4aef2f5e921ecca9583e6d6e6ff7f626a31c864893a81ee"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "stuck-bot-foreman",
+      "upstreamName": "Stuck Bot Foreman",
+      "summary": "Scans sibling bots for stalled runs, nags a stuck one once, and pings you only when a human actually has to step in.",
+      "category": "ops",
+      "integrations": [
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/stuck-bot-foreman/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/stuck-bot-foreman.md",
+      "sha256": "1cc0acbd222e875577b698bde0157ba0f07cb86f6c0196556d12802e86cf4afa"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "style-guide-enforcer",
+      "upstreamName": "Style Guide Enforcer",
+      "summary": "Checks a draft against your written style guide and reports each departure with the rule it breaks and the line it happened on. It never rewrites the draft.",
+      "category": "writing",
+      "integrations": [
+        "google-drive",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/style-guide-enforcer/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/style-guide-enforcer.md",
+      "sha256": "8e15d72b55e0c6a2cc0b3a25fe6897597556a63d05d39d6f1f4eb8c67f2c7559"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "subscription-cancellation-advisor",
+      "upstreamName": "Subscription Cancellation Advisor",
+      "summary": "Takes one subscription and tells you the exact cancel path, what you lose, whether your price is grandfathered, and the date to do it.",
+      "category": "personal",
+      "integrations": [
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/subscription-cancellation-advisor/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/subscription-cancellation-advisor.md",
+      "sha256": "a0c0c5d682e715c317a71e10a401a1e2d26c45ec2a6fabe099b680ce001cf62c"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "subscription-pruner",
+      "upstreamName": "Subscription Pruner",
+      "summary": "Finds every recurring charge sitting in your receipts and ranks them by annual cost against the last sign you actually used them.",
+      "category": "finance",
+      "integrations": [
+        "gmail"
+      ],
+      "upstreamPath": "seed-bots/subscription-pruner/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/subscription-pruner.md",
+      "sha256": "9c821840afe3b74d0e5a7bfd8a3ff695fd2bd5207ae09a01c980f3c2fc2d73c8"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "support-autopilot",
+      "upstreamName": "Support Autopilot",
+      "summary": "Works the live support queue every ten minutes, leaving evidence-backed draft replies on answerable conversations and a shift summary of what needs a human.",
+      "category": "support",
+      "integrations": [
+        "intercom",
+        "help-scout",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/support-autopilot/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/support-autopilot.md",
+      "sha256": "4be8d67a84f81853c9c2a0dc5a61a55a11245205dafbf22a9b0e1ad461976560"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "support-queue-pass",
+      "upstreamName": "Support Queue Pass",
+      "summary": "Re-reads every open ticket each hour and reports what went stale, got mis-sorted, or quietly missed an SLA, each flag showing the number behind it.",
+      "category": "support",
+      "integrations": [
+        "zendesk",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/support-queue-pass/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/support-queue-pass.md",
+      "sha256": "4d36b882310e96191d5ac75b71fee379bf421b1ab35be7faff9817cdc84ae476"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "support-reply-drafter",
+      "upstreamName": "Support Reply Drafter",
+      "summary": "Writes the reply to every waiting support ticket in your voice, cites the source behind each claim, and leaves all of them unsent.",
+      "category": "support",
+      "integrations": [
+        "gmail",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/support-reply-drafter/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/support-reply-drafter.md",
+      "sha256": "1754ae005fe553d618b1790aa426743b05e88ba21b8bb003cfd9f769f74aa3bb"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "support-resolution-agent",
+      "upstreamName": "Support Resolution Agent",
+      "summary": "Works out what is actually broken behind a support ticket using logs, past tickets, and the changelog, then hands the diagnosis to a human.",
+      "category": "support",
+      "integrations": [
+        "intercom",
+        "sentry",
+        "github"
+      ],
+      "upstreamPath": "seed-bots/support-resolution-agent/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/support-resolution-agent.md",
+      "sha256": "6d787d4f223531104b891cdc1e11aa93b45d9179e81f8fcdc24d598c54621623"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "support-ticket-fixer",
+      "upstreamName": "Support Ticket Fixer",
+      "summary": "Cleans the record around every arriving ticket, the type, the labels, the empty required fields, the wrong queue, the duplicates, and never the conversation.",
+      "category": "support",
+      "integrations": [
+        "zendesk",
+        "linear",
+        "github"
+      ],
+      "upstreamPath": "seed-bots/support-ticket-fixer/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/support-ticket-fixer.md",
+      "sha256": "b3f5a74f3e97611bb5ea6b7d98533a5a8575ecf1370b06ff5312b470f3fdc518"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "talent-scout",
+      "upstreamName": "Talent Scout",
+      "summary": "Sources candidates against a written role definition, researches fit with dated sources, and prepares outreach drafts. It contacts nobody and respects regional privacy rules.",
+      "category": "ops",
+      "integrations": [
+        "linkedin",
+        "gmail",
+        "google-calendar",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/talent-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/talent-scout.md",
+      "sha256": "c722d60cd209745d758cd6b3f057497eb4c9a1ce3c233cfef6e51d3d4b7849bf"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "telegram-fleet-door",
+      "upstreamName": "Telegram Fleet Door",
+      "summary": "Lets you drive an allowlisted bot fleet from a private Telegram thread, and never messages a stranger or joins a public group as you.",
+      "category": "ops",
+      "integrations": [
+        "telegram"
+      ],
+      "upstreamPath": "seed-bots/telegram-fleet-door/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/telegram-fleet-door.md",
+      "sha256": "1b7887b6313ab9b6a726084bc6f4a876407e2e3f451af1e22aa9cc244455b689"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "tickets-to-changelog",
+      "upstreamName": "Tickets To Changelog",
+      "summary": "Turns the week's shipped fixes into changelog entries in customer language, each one evidenced by the ticket IDs that asked for it.",
+      "category": "success",
+      "integrations": [
+        "zendesk",
+        "linear",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/tickets-to-changelog/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/tickets-to-changelog.md",
+      "sha256": "57973c3a0b26f4ef531861cacc20e06299301187c553152df121c0c0e9dd7625"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "trust-center-deal-desk",
+      "upstreamName": "Trust Center Deal Desk",
+      "summary": "Turns an enterprise security questionnaire into a sourced draft from your approved answer bank and escalates every question the bank cannot cover.",
+      "category": "sales",
+      "integrations": [
+        "notion",
+        "slack"
+      ],
+      "upstreamPath": "seed-bots/trust-center-deal-desk/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/trust-center-deal-desk.md",
+      "sha256": "941deba4d2e996bd92946ba8de977fd7053b9fc2f79d977f07c786ebe7216c84"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "viral-tweet-scout",
+      "upstreamName": "Viral Tweet Scout",
+      "summary": "Reads X for what is actually spreading in your topics and explains the mechanism behind each one, with links and timestamps. Read only.",
+      "category": "marketing",
+      "integrations": [
+        "x"
+      ],
+      "upstreamPath": "seed-bots/viral-tweet-scout/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/viral-tweet-scout.md",
+      "sha256": "889f3ac59749c703808eaf129b2e3d1739feb23d3e63bc9739824aacf5994403"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "vm-overwatch",
+      "upstreamName": "VM Overwatch",
+      "summary": "Housekeeps the shared Grok Bot computer, backs non-secret files on a weekday cadence, and files a weekly org review.",
+      "category": "ops",
+      "integrations": [
+        "github"
+      ],
+      "upstreamPath": "seed-bots/vm-overwatch/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/vm-overwatch.md",
+      "sha256": "406d3975b7895e28db48eedc73c818965adb3f0ab4f636d6452b96f58a86bf06"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "what-did-we-promise",
+      "upstreamName": "What Did We Promise",
+      "summary": "Finds the commitments your team made to an account and nobody tracked, quotes each one word for word with a link, and flags the ones now overdue.",
+      "category": "success",
+      "integrations": [
+        "slack",
+        "gmail",
+        "salesforce",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/what-did-we-promise/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/what-did-we-promise.md",
+      "sha256": "041c9004cf3625b5cd7ae5f8961c497248d2f5751916ac4ce35593e164dc3611"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "what-should-i-cook",
+      "upstreamName": "What Should I Cook",
+      "summary": "Picks tonight's dinner from what is actually in your kitchen, ranked by what expires first, and never sends you shopping for one missing herb.",
+      "category": "fun",
+      "integrations": [
+        "notion",
+        "google-drive"
+      ],
+      "upstreamPath": "seed-bots/what-should-i-cook/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/what-should-i-cook.md",
+      "sha256": "1a3778250ccb4cc5b06e3a70e3d9abc5276b1ada7d651745ed5e3d36e2364ad0"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "win-loss-memo",
+      "upstreamName": "Win/Loss Memo",
+      "summary": "Writes the honest post mortem on every closed deal straight from the record, ranking what the buyer actually said above what the rep concluded.",
+      "category": "sales",
+      "integrations": [
+        "gong",
+        "notion"
+      ],
+      "upstreamPath": "seed-bots/win-loss-memo/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/win-loss-memo.md",
+      "sha256": "703914ccb6862f89072e96e00b93b0afdaea479ea088348bdc7e694c76f37fde"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "x-account-crew",
+      "upstreamName": "X Account Crew",
+      "summary": "A four-role crew that scouts, drafts, fact checks, and queues posts for one X account, and hands you a queue you release by hand.",
+      "category": "marketing",
+      "integrations": [
+        "x",
+        "hacker-news",
+        "github",
+        "reddit"
+      ],
+      "upstreamPath": "seed-bots/x-account-crew/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/x-account-crew.md",
+      "sha256": "4ea83f7bdebcf2a8e8da42291ac5c375bf88e2f3d700429c1477c1e62726046a"
+    },
+    {
+      "sourceId": "botskills",
+      "upstreamId": "youtube-transcript-desk",
+      "upstreamName": "YouTube Transcript Desk",
+      "summary": "Pulls timestamped transcripts through a transcript plugin instead of driving YouTube in the browser, then files a cited summary.",
+      "category": "productivity",
+      "integrations": [
+        "youtube"
+      ],
+      "upstreamPath": "seed-bots/youtube-transcript-desk/BOT.md",
+      "snapshotPath": "sources/imported/botskills/profiles/youtube-transcript-desk.md",
+      "sha256": "5bdb1350a5aadf8b5d5ec69d7a6f8631b9b6db09dcb1a7dd2ee1aa6210deeaf6"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schema": "openbot.market.registry/1",
-  "name": "Awesome Bot — OpenBot 原创模板（开发目录，未签名）",
-  "updatedAt": "2026-10-24T16:09:16+08:00",
+  "name": "Awesome Bot — OpenBot 模板（原创与来源适配，未签名）",
+  "updatedAt": "2026-10-24T23:19:04+08:00",
   "entries": [
     {
       "id": "awesome/account-health",
@@ -114,6 +114,2838 @@
       ]
     },
     {
+      "id": "awesome/botskills-account-expert",
+      "kind": "template",
+      "name": "客户专家",
+      "summary": "记住一个战略客户，提供有来源的通话前简报，涵盖人员、支出、故障和未解决需求。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-account-expert/1.0.0.json",
+          "integrity": "sha256-jPU9JQsjU63MJ9LXTNR0LajXI5w9W7jbTmPK/43F7eI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-account-growth-coach",
+      "kind": "template",
+      "name": "账号增长教练",
+      "summary": "回顾上周 X 发帖，依据账号数据评分，并提出下周的三项改进。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-account-growth-coach/1.0.0.json",
+          "integrity": "sha256-TGW0s7PAvFSpzkmp7/UjXMJExMb3F40b+hZt4mQNEc4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-account-growth-planner",
+      "kind": "template",
+      "name": "账号增长规划",
+      "summary": "为一个 X 账号规划下一季度，明确增长假设、里程碑、每周节奏及风险。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-account-growth-planner/1.0.0.json",
+          "integrity": "sha256-W62GxaJrzLA4OmKXts9wNtVA1immOCAS2nd2YO3ys54=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-account-health-ranker",
+      "kind": "template",
+      "name": "客户健康度排序",
+      "summary": "在同一视图按风险和增购潜力给客户排序并展示评分信号，不联系客户、不编辑 CRM。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-account-health-ranker/1.0.0.json",
+          "integrity": "sha256-8U05ulCnjx3JRFFrco3ttVqFCOi2djyn6AKEZAagy2E=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-account-media-rundown",
+      "kind": "template",
+      "name": "客户媒体摘要",
+      "summary": "每周扫描公开来源，向你发送关于一个战略客户的排序摘要，并附完整链接。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-account-media-rundown/1.0.0.json",
+          "integrity": "sha256-q7tiNmk8R+7ptR6+VIY2ZnWhZh8mtoQMUPpWEQKqiGY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-account-tiering",
+      "kind": "template",
+      "name": "客户分层",
+      "summary": "每周依据实际使用和收入信号重新划分客户层级，说明调整建议及计算过程。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-account-tiering/1.0.0.json",
+          "integrity": "sha256-L1KHaSM48PKcT8LPBk/yo2TyHXDpmLT1uzWRsidBbnw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-ad-creative-generator",
+      "kind": "template",
+      "name": "广告创意生成",
+      "summary": "将已确认简报转为六份带标签的广告草稿，标注角度、测试假设及每项主张的来源。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-ad-creative-generator/1.0.0.json",
+          "integrity": "sha256-vWFO1tvpfi/Ao/Vp3xWcMO22XRehFKMD63ATqbJgkX4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-agent-inbox",
+      "kind": "template",
+      "name": "智能体收件箱",
+      "summary": "通过专用 Bot 邮箱处理工作，个人 Gmail 不进入会话，每次发送均等待你确认。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-agent-inbox/1.0.0.json",
+          "integrity": "sha256-uhAmtTCIuujxnQwBq6BZPdtCVRU0Dv2wAhOarQ1xNVI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-amazon-cart-builder",
+      "kind": "template",
+      "name": "Amazon 购物车助手",
+      "summary": "根据再次购买和近期订单重建购物车，结账前停下，由你逐项审核并付款。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-amazon-cart-builder/1.0.0.json",
+          "integrity": "sha256-n2EfooAS5lF4wJeMeV+D30dPHBEBUupyzRliTcUGirU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-argue-the-other-side",
+      "kind": "template",
+      "name": "反方论证",
+      "summary": "针对已作出的决定构建最有力的反方论点，并说明什么证据足以改变判断。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "fun"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-argue-the-other-side/1.0.0.json",
+          "integrity": "sha256-UdN9zCJ3qm/Vy0S3Wu6ZaoJ85Cv6h2+yPrU4p2abbOw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-bargain-scout",
+      "kind": "template",
+      "name": "优惠探寻",
+      "summary": "按书面规格和最高价格观察商品，附链接标记匹配项，不竞价、购买或付款。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-bargain-scout/1.0.0.json",
+          "integrity": "sha256-abbLZL7R2/E26AZdnNUqXiNRYVw42wIHCFZUmuO4iSg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-booking-pipeline-runner",
+      "kind": "template",
+      "name": "预约流程跟进",
+      "summary": "找出已同意却未预约的通话、爽约及停滞的改期，整理为附原话的有序工作清单。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-booking-pipeline-runner/1.0.0.json",
+          "integrity": "sha256-7Y6VT0SELTYOfxT+MUdx2b+rtjJjxuO73I8KpfQyXCo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-bookkeeping-auditor",
+      "kind": "template",
+      "name": "账务审计",
+      "summary": "审查已结账期间，按优先级列出异常、交易编号和纠正措施，不修改账簿。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "finance"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-bookkeeping-auditor/1.0.0.json",
+          "integrity": "sha256-htJFKUicnhEocp/hyDsx1jmNgspeQ/koandocKHm0m0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-bookmark-skill-grader",
+      "kind": "template",
+      "name": "书签技能评估",
+      "summary": "将一个月的书签评为保留、待定和噪声，并把保留项转为可粘贴的口语技能触发语。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-bookmark-skill-grader/1.0.0.json",
+          "integrity": "sha256-ExThFEcsQvVLxdhvEASS772zeH0B51zwB/E5O+p4+yU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-bot-advisor",
+      "kind": "template",
+      "name": "Bot 顾问",
+      "summary": "每周检查 Bot 名单，用五项备忘录说明重复、沉默和应停用的角色，并提供可粘贴修改。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-bot-advisor/1.0.0.json",
+          "integrity": "sha256-YaBqOMM/+43U6e7P8UPJWl6POujXmk+I4ssF/TGQGjE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-brand-deck-keeper",
+      "kind": "template",
+      "name": "品牌演示文稿维护",
+      "summary": "对照现行价目表和更新日志审查客户演示文稿，为过时幻灯片提供可直接粘贴的修正。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-brand-deck-keeper/1.0.0.json",
+          "integrity": "sha256-eZ+Ub2goSGqO09Bktvl9/847TIDGvN7L3osGWwp8+uE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-bug-repro-pack-builder",
+      "kind": "template",
+      "name": "缺陷复现资料包",
+      "summary": "仅在预发布环境把模糊缺陷报告转为含精确步骤、环境和证据的资料包，不接触生产客户数据。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "botskills",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-bug-repro-pack-builder/1.0.0.json",
+          "integrity": "sha256-KZk4pAAOxe+CqrLgyajAORrlDqPne45VqAEQOZk3Jsw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-call-coach",
+      "kind": "template",
+      "name": "通话教练",
+      "summary": "按指定标准评估你录制的通话，生成一页点评，每项均引用你带时间戳的原话。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-call-coach/1.0.0.json",
+          "integrity": "sha256-E2QutRMlCVfpWWf3ngpOhqrfNFgehmI3iWhUWQnudqE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-call-follow-up-drafter",
+      "kind": "template",
+      "name": "通话跟进草拟",
+      "summary": "将每次通话转录整理为简短跟进邮件和结构化 CRM 笔记，以原话为依据并保留为草稿。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-call-follow-up-drafter/1.0.0.json",
+          "integrity": "sha256-QJ8qJGFKxWE/fq9f2y3Wdnbzk1OB94vR0w4IdU3PBr4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-chief-of-staff-briefing",
+      "kind": "template",
+      "name": "幕僚长简报",
+      "summary": "工作日早晨在专属聊天提供日历、待回复、待对方回复及隔夜变化的简报，逐条附链接。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-chief-of-staff-briefing/1.0.0.json",
+          "integrity": "sha256-KAqCWUpbsZ3A4+u62jRn4Ngdmgi5syrYLE88T2lEkAU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-chief-of-staff-router",
+      "kind": "template",
+      "name": "幕僚长路由",
+      "summary": "作为统一入口分派请求给对应 Bot，维护 TEAM.md，并每周评估实际交付。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-chief-of-staff-router/1.0.0.json",
+          "integrity": "sha256-3ezp/tZon+QFsNDwkb2yjA4ee5JU9gEkjgbY9B9b0cI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-chief-of-staff",
+      "kind": "template",
+      "name": "幕僚长",
+      "summary": "持续协调重复承诺，为每项指定一名负责人，并标记无人负责、重复分工和过时事项。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-chief-of-staff/1.0.0.json",
+          "integrity": "sha256-f0ps+5woSuN2OuqhIuq1Fk52k6i/x+FXvmypzaCQ7F4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-churn-early-warning",
+      "kind": "template",
+      "name": "流失早期预警",
+      "summary": "在账单出现信号前数周识别使用量下降的客户，提供附数据的风险排序名单。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-churn-early-warning/1.0.0.json",
+          "integrity": "sha256-0wkmrb6ywHhQId35yCmVHd/tQSBnaoXjZXVU8kZcmpw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-churn-watch",
+      "kind": "template",
+      "name": "客户流失观察",
+      "summary": "每天早晨依据证据链标记高风险客户，帮助客户成功团队提前应对取消。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-churn-watch/1.0.0.json",
+          "integrity": "sha256-6e3InKcY2dUrU2rcNQNE+TmdwVhLgza3GkNuiTPXUoU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-churn-win-back-loop",
+      "kind": "template",
+      "name": "流失客户挽回",
+      "summary": "按流失原因整理已取消客户，准备待你批准的挽回序列草稿。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-churn-win-back-loop/1.0.0.json",
+          "integrity": "sha256-mLdYVrwU9V/XDUmhivWoOipYb6gwAPS4ktiOhVEaA94=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-citation-checker",
+      "kind": "template",
+      "name": "引用检查",
+      "summary": "逐一打开草稿链接并核对引文，报告死链、迁移页面及与来源不符的引文。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "writing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-citation-checker/1.0.0.json",
+          "integrity": "sha256-bwNdESpNiZohegHLlrVbiu7nDNC03m+37CHsQiqo47o=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-claim-provenance-tracker",
+      "kind": "template",
+      "name": "主张来源追踪",
+      "summary": "追溯演示文稿或文档中每个数字的来源，标记仅有旧演示文稿作依据的数字。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-claim-provenance-tracker/1.0.0.json",
+          "integrity": "sha256-85f7oKQpb4y8re9FKimYorrl8445RjQvCGB6pVoFO54=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-codebase-hardening-auditor",
+      "kind": "template",
+      "name": "代码库加固审计",
+      "summary": "审计快速交付的仓库，按优先级报告发现，附路径、行范围、代码片段和提交 SHA，不修改分支。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "botskills",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-codebase-hardening-auditor/1.0.0.json",
+          "integrity": "sha256-BeVq1PGr15PciuNjZf5DaG174BGkkPDOyQwT7froD8g=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-competitor-ad-watch",
+      "kind": "template",
+      "name": "竞品广告观察",
+      "summary": "每周查看公开广告资料库，报告竞品新增、扩量及停投的广告创意。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-competitor-ad-watch/1.0.0.json",
+          "integrity": "sha256-2dOlf+yt26xBj/e8aU4ImQe4dII2Wh7hEodxsXGfgcA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-competitor-pricing-watch",
+      "kind": "template",
+      "name": "竞品定价观察",
+      "summary": "每天四次检查公开定价页，并排展示套餐和限额的真实变化。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-competitor-pricing-watch/1.0.0.json",
+          "integrity": "sha256-6vlqdGo/rhxG1+AG3yh6ktXvKfol+iKUSyjgCM/I9jY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-competitor-switch-scout",
+      "kind": "template",
+      "name": "竞品替代需求探寻",
+      "summary": "寻找公开求助替代指定竞品的帖子，补充讨论背景并草拟由你发送的外联内容。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-competitor-switch-scout/1.0.0.json",
+          "integrity": "sha256-TRMZ5HmuF6JCmnqulbzyyqqqTE2aYdd6v0KTCj/gEGI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-competitor-website-watch",
+      "kind": "template",
+      "name": "竞品网站观察",
+      "summary": "观察竞品网站除定价外的内容，报告定位、更新日志和招聘岗位的实际变化。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-competitor-website-watch/1.0.0.json",
+          "integrity": "sha256-KQLenYcFSiSoue5TGxnPhQvbBNVNjWMN39/ksWrAHi8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-content-idea-generator",
+      "kind": "template",
+      "name": "内容创意生成",
+      "summary": "结合自身分析数据和上升的搜索需求，按优先级给出创意，并附带日期的当下价值依据。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-content-idea-generator/1.0.0.json",
+          "integrity": "sha256-FpkCfsdapwVzAOaw2L1mVv+GK5PfXVD5ihoRCGOdjcE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-content-planner-manager",
+      "kind": "template",
+      "name": "内容计划管理",
+      "summary": "跟踪编辑日历中的承诺、延期和无人负责事项，每行注明来源。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-content-planner-manager/1.0.0.json",
+          "integrity": "sha256-DM1yY3kNHLZdc+Z/OEe0i4uqr9qGe1BPVhalVeBQ4yo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-crm-from-your-phone",
+      "kind": "template",
+      "name": "手机语音转 CRM",
+      "summary": "将会后随口录制的语音笔记整理为 CRM 字段，每个建议值均引用对应原话。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-crm-from-your-phone/1.0.0.json",
+          "integrity": "sha256-CXmxu3LR1DMHIghRSj3V+J/u3/+WNtcH8NjpclzUp/g=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-deal-desk-autopilot",
+      "kind": "template",
+      "name": "交易审批工作台",
+      "summary": "整理一页交易审批材料，涵盖折扣理由、条款例外和必要审查，每项附来源。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-deal-desk-autopilot/1.0.0.json",
+          "integrity": "sha256-toXYbmTmuL9C+qfiz4hivoT16y4aprRdI9TxYn3eQ2U=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-deck-localizer",
+      "kind": "template",
+      "name": "演示文稿本地化",
+      "summary": "为目标市场重构销售演示文稿，适配语言、货币和本地证据，并列出当地不能使用的主张。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-deck-localizer/1.0.0.json",
+          "integrity": "sha256-vuz4dIjUQc2BU+Ep3v1pR5a88na8tDDNorUkGhCbvbg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-deck-updater",
+      "kind": "template",
+      "name": "演示文稿更新",
+      "summary": "对照实际交付检查销售演示文稿，列出错误、过时或缺失的页面及导致问题的变更。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-deck-updater/1.0.0.json",
+          "integrity": "sha256-kM0GID/uPxpuR0oXIluAmvIiLmMHX7No/RGeOsD2FjU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-demo-clip-library",
+      "kind": "template",
+      "name": "演示片段资料库",
+      "summary": "按异议、功能和证据索引录制的演示，附时间戳，便于找到回答潜客问题的九十秒片段。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-demo-clip-library/1.0.0.json",
+          "integrity": "sha256-d6bGkyoDtnLKTgFNyoL9ygiVWknTPT+e7s40LFR6puo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-desk-lap-nudge",
+      "kind": "template",
+      "name": "久坐活动提醒",
+      "summary": "发现久坐后利用你日历中的空隙提醒活动，避免打断会议。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "fun"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-desk-lap-nudge/1.0.0.json",
+          "integrity": "sha256-p4PS4pRo3oej7BikBPaR22bk7PqC2PrfmWf0NPrO0KI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-directory-page-drafter",
+      "kind": "template",
+      "name": "目录页面草拟",
+      "summary": "每天研究一个细分领域条目，写成附来源的 Markdown，由人工发布。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-directory-page-drafter/1.0.0.json",
+          "integrity": "sha256-UwmtNP91xytRCJOJBXPuzdEZTxrJ4tO/5j0D9JaRPaA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-disruptor-advocate",
+      "kind": "template",
+      "name": "反方倡议者",
+      "summary": "有意从反方审视计划，引用风险并归档异议，不发送给客户或团队频道。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-disruptor-advocate/1.0.0.json",
+          "integrity": "sha256-5P/MCgk2Gm4DtR8jC/yO9b5uQpeAWEfEHjb4Ly1tZUo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-docs-self-serve-assistant",
+      "kind": "template",
+      "name": "文档自助助手",
+      "summary": "从真实工单找出文档解答不足的问题，为作者提供按优先级排序的缺口、客户原话和文档网址。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-docs-self-serve-assistant/1.0.0.json",
+          "integrity": "sha256-v7RSnJgoDG8fjO7hYxMSjulbLbFIQsyQL4O9qxf1v3w=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-email-injection-sentinel",
+      "kind": "template",
+      "name": "邮件注入哨兵",
+      "summary": "将来信各字段视为数据，标记提示注入模式，在你确认真实请求前阻止行动。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-email-injection-sentinel/1.0.0.json",
+          "integrity": "sha256-K+z0CVn9UNYrMAbgF4R9LT2a120VLrH54fbjQ8K1+7c=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-email-purger",
+      "kind": "template",
+      "name": "邮件清理规划",
+      "summary": "将多年积累的邮件整理为分组删除建议，含数量、真实样例和供你逐项批准的保留清单。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-email-purger/1.0.0.json",
+          "integrity": "sha256-guTIqLgvntDTyJ546ZrokRC/+aUCkpkD0+ai6bL3ibk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-enablement-pack-builder",
+      "kind": "template",
+      "name": "内部赋能资料包",
+      "summary": "从云盘、通话录音和邮件讨论整理任意主题的内部资料包，帮助同事接手。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-enablement-pack-builder/1.0.0.json",
+          "integrity": "sha256-xFE5jOLUSks73v9/dWZRejjO/YtCbL179ZmIx4xIvcc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-engineering-agent-manager",
+      "kind": "template",
+      "name": "工程智能体管理",
+      "summary": "跟踪各编程智能体的工作、阻碍以及彼此重复的任务。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "botskills",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-engineering-agent-manager/1.0.0.json",
+          "integrity": "sha256-dJiKpJF2DEoHM9BmzdMpcigp60Hik587K0DWJxmRMjE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-evergreen-content-flywheel",
+      "kind": "template",
+      "name": "长青内容更新",
+      "summary": "找出流量衰减的已发布内容，按每小时工作可恢复的流量排序，安排更新优先级。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-evergreen-content-flywheel/1.0.0.json",
+          "integrity": "sha256-B+IRNaU1P5v1Ui1mOI1Y5WRbpdyWDcqW4NfBd/o5D+s=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-expense-reconciler",
+      "kind": "template",
+      "name": "费用核对",
+      "summary": "按收据核对每周费用，引用政策标记例外并草拟催办内容，不修改报销、不发送消息。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "finance"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-expense-reconciler/1.0.0.json",
+          "integrity": "sha256-wrsbbXYcgUXEq2BKYww1s3EB+IB+ZWzHpgpNUqj3N9w=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-expert-call-prep",
+      "kind": "template",
+      "name": "专家通话准备",
+      "summary": "根据已知信息和以往通话未解问题准备提问清单，避免重复询问已有答案的问题。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-expert-call-prep/1.0.0.json",
+          "integrity": "sha256-pdP9NX6Ytbw6az+XK2jgUmMRlcS3vGdgvAEIeZiTRbQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-first-draft-from-outline",
+      "kind": "template",
+      "name": "大纲转初稿",
+      "summary": "严格按已批准大纲生成初稿，并标记大纲信息不足、无法据此撰写的位置。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "writing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-first-draft-from-outline/1.0.0.json",
+          "integrity": "sha256-ViLqey+I3lYPd8W3Oatxh0gpryrFAxXEY987m12ZIjY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-firstmate-router",
+      "kind": "template",
+      "name": "大副路由",
+      "summary": "将杂乱请求整理为通俗简报，分派给指定专业 Bot，带回结果且不继续转发。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-firstmate-router/1.0.0.json",
+          "integrity": "sha256-z6cyG+n+05cxk9yI5Qw9jYGRD3qvo9ljA3M8AyP6SAA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-fleet-chief-of-staff",
+      "kind": "template",
+      "name": "Bot 团队幕僚长",
+      "summary": "作为 Bot 团队统一入口分派请求，维护职责 TEAM.md，并在不可撤销操作前询问。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-fleet-chief-of-staff/1.0.0.json",
+          "integrity": "sha256-pBrHr++ITEIcHYcWMZpotjzM71V+rB463rdbHgFaRyg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-flight-check-in",
+      "kind": "template",
+      "name": "航班值机",
+      "summary": "从收件箱关注航班确认，为每趟航班准备值机资料，并在开放时提醒。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-flight-check-in/1.0.0.json",
+          "integrity": "sha256-UONtBkuwN1+fc7lbC9dExh7qSqtheElvNyiDBgh8CwU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-forecast-notes-updater",
+      "kind": "template",
+      "name": "预测备注更新",
+      "summary": "结合通话和讨论检查未结交易，标记阶段未变但进展下滑、或未记录下一步的交易。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-forecast-notes-updater/1.0.0.json",
+          "integrity": "sha256-jlLMhotWL1N558lCD88GhaRdIESd+ldZuXEj/ycwrPk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-grocery-autopilot",
+      "kind": "template",
+      "name": "杂货补货助手",
+      "summary": "根据真实订单历史和日历预测每周补货，生成标价购物篮，由你结账。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-grocery-autopilot/1.0.0.json",
+          "integrity": "sha256-x98tnRcjFhB+AbMS96NQmd+IRtf0O9XWaCEYWtwMKaM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-grok-imagine-storyboard",
+      "kind": "template",
+      "name": "Grok Imagine 分镜",
+      "summary": "研究故事、规划场景并用 Grok Imagine 生成镜头，存入私有文件夹供你公开前审阅。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-grok-imagine-storyboard/1.0.0.json",
+          "integrity": "sha256-AnvP1gYrClEdQeCDzjVo0hQBZTk7ZI1HZsnLf6OgfAA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-gtm-chief-of-staff",
+      "kind": "template",
+      "name": "GTM 幕僚长",
+      "summary": "处理市场拓展衔接缺口，包括无人跟进的营销线索、被跨团队事项阻塞的交易和无人负责的承诺。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-gtm-chief-of-staff/1.0.0.json",
+          "integrity": "sha256-CBTGS+eqxaGfzG2JYW4OYfzxeNq2fxzDZWqYh8BgeWU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-headline-variant-desk",
+      "kind": "template",
+      "name": "标题变体工作台",
+      "summary": "为已完成内容提供标题选项，逐项标明切入角度和作出的承诺，便于有依据地选择。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "writing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-headline-variant-desk/1.0.0.json",
+          "integrity": "sha256-E4Uz2iVtDOBrTEiqB9ZUo/SOnZW7/OybPjDDbKfqKWc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-help-center-updater",
+      "kind": "template",
+      "name": "帮助中心更新",
+      "summary": "关注已合并 PR 中面向客户的变更，建议修改帮助文章，并排展示已发布原文与改写。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-help-center-updater/1.0.0.json",
+          "integrity": "sha256-9pPZ+uQaZNNqg38TgVRQRu9lfyOsAWs/G65rEQccfkQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-icp-scored-outbound-list",
+      "kind": "template",
+      "name": "理想客户评分外联名单",
+      "summary": "研究客户，按书面理想客户画像评分并寻找联系人，返回审核名单，不发送、不加入外联序列。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-icp-scored-outbound-list/1.0.0.json",
+          "integrity": "sha256-sX5q5+PmJOJ7X+yJAQcozE5lr288SvimVqFLywgEW/M=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-inbox-reply-digest",
+      "kind": "template",
+      "name": "收件箱回复摘要",
+      "summary": "汇总交易与外联讨论的隔夜回复，说明信号及今天需要你处理的一项事项。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-inbox-reply-digest/1.0.0.json",
+          "integrity": "sha256-P+6CPcygTR38QuAkqw7I7EI6SvDNrRrVPU8JvclIR/w=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-inbox-triage",
+      "kind": "template",
+      "name": "收件箱分流",
+      "summary": "每天早晨分类并标记邮件，为三个确实需要你的讨论串草拟回复，逐项等待批准。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-inbox-triage/1.0.0.json",
+          "integrity": "sha256-eBxeiGsEAS80PdKTCeqorjWt1hPAzK45fo3HwyOrwmM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-jargon-stripper",
+      "kind": "template",
+      "name": "术语精简",
+      "summary": "为指定读者改写草稿，列出替换的术语及理由，便于恢复必要术语。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "writing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-jargon-stripper/1.0.0.json",
+          "integrity": "sha256-Lvs439jDJLKftPnJV8CCrhNzGHIFP3ydAHA0OjKTHEg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-latency-investigator",
+      "kind": "template",
+      "name": "延迟调查",
+      "summary": "依据证据调查延迟或错误回归，定位热点和可疑变更时段并撰写报告，不修改告警或生产配置。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "botskills",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-latency-investigator/1.0.0.json",
+          "integrity": "sha256-BWucBd9T8s5jqufkB/f3Jxy9cWtPucri0+b8BwiWnYg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-lead-scout",
+      "kind": "template",
+      "name": "销售线索探寻",
+      "summary": "夜间依据公开信号寻找并排列意向线索，提供附证据链接的评分表，不接触潜客。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-lead-scout/1.0.0.json",
+          "integrity": "sha256-7vQtmcREhLvc3ly6QuQwzrazuG9HsOGPFYRtvhfux0M=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-linkedin-icp-prospect-tracker",
+      "kind": "template",
+      "name": "LinkedIn 理想客户追踪",
+      "summary": "维护符合理想客户画像的公司和人员名单，每周复核，每行附资料链接和匹配评分。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-linkedin-icp-prospect-tracker/1.0.0.json",
+          "integrity": "sha256-SXFBm54V8N/+zcenmY3rxnSwhupP9uCSIxaQGJnGA7s=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-linkedin-signal-watch",
+      "kind": "template",
+      "name": "LinkedIn 信号观察",
+      "summary": "关注销售管道客户的职位变更、融资和招聘激增，工作日提供排序摘要，每条提醒附链接。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-linkedin-signal-watch/1.0.0.json",
+          "integrity": "sha256-ZHzlQVLypLLr/bFNRJA+SscqHQDBWL9PAbcc6FxEN1I=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-literature-scan",
+      "kind": "template",
+      "name": "文献扫描",
+      "summary": "围绕书面问题调查已发表研究，按实际共识归类发现，并明确列出分歧。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-literature-scan/1.0.0.json",
+          "integrity": "sha256-o4MbELDAfRbkI/TSu4KCNSgIcZlqs9ySOHrf5vwxTWg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-live-discovery-slide",
+      "kind": "template",
+      "name": "实时需求探索页",
+      "summary": "通话中根据潜客原话构建一页需求探索幻灯片，含引文和时间戳，未解答处明确留空。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-live-discovery-slide/1.0.0.json",
+          "integrity": "sha256-N7Nbe7wbzT0tqWFsv4MnnriQGtoWsb9OoSkTBjBsDW4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-mail-cleanup-assistant",
+      "kind": "template",
+      "name": "邮件整理助手",
+      "summary": "日常建议邮件标签、归档和可粘贴筛选规则，并说明每项判断依据。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-mail-cleanup-assistant/1.0.0.json",
+          "integrity": "sha256-oRmgR2DqAXIKBaumv2eclAi/dCltGKPka0m+2Qj8zFg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-market-sizing-worksheet",
+      "kind": "template",
+      "name": "市场规模工作表",
+      "summary": "建立可审计的规模模型，每个假设均单独命名、注明来源且可修改。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-market-sizing-worksheet/1.0.0.json",
+          "integrity": "sha256-HUkbWhd6/RMpjANk9ZreGRt9rFMsRPib6qpiedNmloA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-marketing-calendar-sync",
+      "kind": "template",
+      "name": "营销日历同步",
+      "summary": "每天核对营销日历与活动数据库的差异，逐行附上双方记录编号。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-marketing-calendar-sync/1.0.0.json",
+          "integrity": "sha256-aYrGSiLNptrEi7BJeo+ZUzNwKE0UTlkBz0WQkWVPsWc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-marketing-os-auditor",
+      "kind": "template",
+      "name": "营销系统审计",
+      "summary": "按固定标准给营销系统评分并草拟下一项实验，不发布、不花费、不启动广告。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-marketing-os-auditor/1.0.0.json",
+          "integrity": "sha256-4pd7tXme2cX2oR0LKVH4mYaqVjICA52wOvCRppMw+3Q=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-marketplace-listing-scout",
+      "kind": "template",
+      "name": "市场低价商品探寻",
+      "summary": "依据照片识别公开市场上相对指定中位价偏低的商品，不给卖家发消息。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-marketplace-listing-scout/1.0.0.json",
+          "integrity": "sha256-O43XkWpaEID/XJ0buHkC0yy3CqtGjQnapMB5x9xKTlE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-meeting-double",
+      "kind": "template",
+      "name": "会议分身",
+      "summary": "提前一小时写好会前简报，再将你带回的转录整理为有负责人的行动项，不加入通话。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-meeting-double/1.0.0.json",
+          "integrity": "sha256-wZC5F6HMy7UmfqzxIEju3ZUYBQME7xY3xmEBQnRppBs=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-meeting-prep-brief",
+      "kind": "template",
+      "name": "会前简报",
+      "summary": "在今日首场外部会议前准备全部外部会议简报，涵盖阶段、参会人、最近联系和欠对方的答案。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-meeting-prep-brief/1.0.0.json",
+          "integrity": "sha256-fGij3lsQJMqTFAzKDQD5j7DOtiSdEb+3hG2tIGEDPXs=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-motivated-seller-finder",
+      "kind": "template",
+      "name": "急售卖家探寻",
+      "summary": "扫描当地公开挂牌中的降价、滞销天数和重新挂牌，提供附来源的评分短名单。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-motivated-seller-finder/1.0.0.json",
+          "integrity": "sha256-OPA2fYQf/fJWpMtXDuZoxsU4wu7x5xV6Kh9zR3j6+sM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-one-line-standup",
+      "kind": "template",
+      "name": "一句话站会",
+      "summary": "根据当天实际变化，将一天整理为一句真实、值得保留的话。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "fun"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-one-line-standup/1.0.0.json",
+          "integrity": "sha256-Tyw6Ra2wrjEfj5Dq9QonScbo+RFmhh65bbrlVkSCztE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-org-chart-keeper",
+      "kind": "template",
+      "name": "客户组织图维护",
+      "summary": "每周依据公开和 CRM 来源重建目标客户采购组织，指出尚未建立关系的分支。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-org-chart-keeper/1.0.0.json",
+          "integrity": "sha256-Gh3w02hxqEn0AtQG+2jCferQ0hDbmQZlMUpaYvq9XIY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-outbound-in-your-voice",
+      "kind": "template",
+      "name": "个人语气外联",
+      "summary": "从你已发送邮件学习写作方式，草拟符合你语气的外联内容，止于草稿。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-outbound-in-your-voice/1.0.0.json",
+          "integrity": "sha256-hRsbvs1uhk25yQdQukEr6nVjVhu7G/m3EDIUr/i+3VU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-paid-media-budget-review",
+      "kind": "template",
+      "name": "付费媒体预算审查",
+      "summary": "对照计划观察广告表现，附样本量提出预算调整建议，不改预算、不转发建议。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-paid-media-budget-review/1.0.0.json",
+          "integrity": "sha256-Cqtx/e27sYMEdUHuLrcrccjnYUwTSaDy5Rpu8wE01L4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-paper-trading-desk",
+      "kind": "template",
+      "name": "模拟交易工作台",
+      "summary": "依据明确交易论点和书面止损记录模拟交易，标明模拟成交，不下实盘订单。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-paper-trading-desk/1.0.0.json",
+          "integrity": "sha256-EmEYVTj+b6YgcG/nqjHY9eqjKVpYOi76+98vUmkZObw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-persistent-bot-memory",
+      "kind": "template",
+      "name": "Bot 持久记忆",
+      "summary": "维护供其他 Bot 重读的持久上下文文件，仅收纳适合内容，删除前逐行展示。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-persistent-bot-memory/1.0.0.json",
+          "integrity": "sha256-PIdUsr7nV5eNR3oQ8D/rjWvQN4gyl4IHMS+BZy4mcTM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-personal-cfo",
+      "kind": "template",
+      "name": "个人财务主管",
+      "summary": "工作日提供资金可维持时间、异常交易、投资组合偏差和费用简报，每个数字附来源。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "finance"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-personal-cfo/1.0.0.json",
+          "integrity": "sha256-ilAErf23jITwp6wlZdzEEqGAxGTzn/BzzCH63TQS+ZA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-podcast-clip-desk",
+      "kind": "template",
+      "name": "播客片段工作台",
+      "summary": "剪出带时间戳的 YouTube 或播客片段、提取引文并草拟配文，由你发布。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-podcast-clip-desk/1.0.0.json",
+          "integrity": "sha256-c2RP+awLsoG5rGIlheHu5f67lksXQ9P1ohGlriU+3lM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-podcast-summarizer",
+      "kind": "template",
+      "name": "播客摘要",
+      "summary": "将单集转录整理为主张、数字和可用想法，逐项附时间戳；没有实质内容时明确说明。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-podcast-summarizer/1.0.0.json",
+          "integrity": "sha256-JZdjOmPz3p8PiGBiruRhoWdPzl7ZaNkMbd5h/DNRx0Y=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-pr-review-sentinel",
+      "kind": "template",
+      "name": "PR 审查哨兵",
+      "summary": "对每个新 PR 做初审，提供按严重程度标记的发现和摘要评论，供人工审查前参考。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "botskills",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-pr-review-sentinel/1.0.0.json",
+          "integrity": "sha256-gboT76a+aYR2BBPJSvEi+jxTAezVK6tisJ9xqnTakS0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-product-expert",
+      "kind": "template",
+      "name": "产品专家",
+      "summary": "回答当前产品行为的内部问题，并附证明答案的文档、更新日志或已合并 PR。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-product-expert/1.0.0.json",
+          "integrity": "sha256-ABaeGeXXcHXtQVa0QmLsqsZ0ubIz/S2+p7TY7zrllc8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-prospect-meeting-booker",
+      "kind": "template",
+      "name": "潜客会议预约",
+      "summary": "准备真实空闲时段、合适参会人、背景及回复草稿，由你发送完成预约。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-prospect-meeting-booker/1.0.0.json",
+          "integrity": "sha256-j8p00C5hrmYb2NZ+rn034gH0t4/ijufj6DUYUbbiw1w=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-prospecting-sheet-builder",
+      "kind": "template",
+      "name": "潜客开发表格",
+      "summary": "夜间构建每名潜客一行的开发表格，每个单元格附来源链接，未经验证的信息明确留空。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-prospecting-sheet-builder/1.0.0.json",
+          "integrity": "sha256-PSvp/D/BRZPoPuRpVuQW/yLdoaO3JDLt09ZO+smmhto=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-qbr-pack-builder",
+      "kind": "template",
+      "name": "季度业务回顾资料",
+      "summary": "为一个客户整理私有内部季度回顾草稿，每个数字注明来源字段和报告。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-qbr-pack-builder/1.0.0.json",
+          "integrity": "sha256-1qinCIS0CTqK6PBqd4gkpuFABeYsG++tojj71neYjLE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-sales-play-autopilot",
+      "kind": "template",
+      "name": "销售策略助手",
+      "summary": "跨多个客户执行已定义策略，跟踪各客户所处步骤，草拟下一步由人工执行。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-sales-play-autopilot/1.0.0.json",
+          "integrity": "sha256-hJXhOI52YPOXG+OvLtBF/XKxfMrb9aTkRV3eCbrMGpU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-salesforce-report-builder",
+      "kind": "template",
+      "name": "Salesforce 报告生成",
+      "summary": "将销售管道问题转为已保存报告和通俗答案，附筛选条件、运行时间及各数字对应记录编号。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-salesforce-report-builder/1.0.0.json",
+          "integrity": "sha256-6ZWVypJ4MCNUAAYG1fNZPlV0gga+KIdTkLpgJ41uX3k=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-source-verifier",
+      "kind": "template",
+      "name": "来源核验",
+      "summary": "逐项对照一手来源核查主张，附链接和日期标为已证实、相矛盾或无法核实，不编辑文档。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-source-verifier/1.0.0.json",
+          "integrity": "sha256-eAfAn/CWiqSquhTNGtiZAYBu4kzKR0sHrTUSkSBHfP0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-sponsor-inbound-scout",
+      "kind": "template",
+      "name": "赞助来信探寻",
+      "summary": "从收件箱找出真实赞助询问，核实预算与品牌匹配度，提供按优先级排序且附来源的短名单。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-sponsor-inbound-scout/1.0.0.json",
+          "integrity": "sha256-p3pok5k03DgQlTR/ER53jbLzljqQQEuzMtfeDzN5/C4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-sponsorship-negotiator",
+      "kind": "template",
+      "name": "赞助谈判",
+      "summary": "围绕正在进行的赞助讨论，基于你过往交易准备还价立场、报价理由和让步顺序。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-sponsorship-negotiator/1.0.0.json",
+          "integrity": "sha256-d7d+mIXpnW06k3FYu890n7sxKtElc94m81R7uOrMkBU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-standup-scribe",
+      "kind": "template",
+      "name": "站会记录员",
+      "summary": "根据昨日提交、已合并 PR 和日历草拟每日站会内容，会前私信发给你。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-standup-scribe/1.0.0.json",
+          "integrity": "sha256-CZqfPF0GJAxbufZDkiZ4+6dqU7pSyj8ltu+QQgKbEqI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-stuck-bot-foreman",
+      "kind": "template",
+      "name": "卡住的 Bot 督工",
+      "summary": "检查同级 Bot 是否停滞，对卡住者提醒一次，仅在确需人工介入时通知你。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-stuck-bot-foreman/1.0.0.json",
+          "integrity": "sha256-h3fUatNu7N0B4LgfhVkkC6j2h/n/CwOSDasJOQsFeXk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-style-guide-enforcer",
+      "kind": "template",
+      "name": "风格指南检查",
+      "summary": "按书面风格指南检查草稿，列出每处偏差、违反规则及所在行，不改写草稿。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "writing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-style-guide-enforcer/1.0.0.json",
+          "integrity": "sha256-7r8mWsPL15ipcYUCrcVaQjCPU2CPeoNNgOilxxpB5Yk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-subscription-cancellation-advisor",
+      "kind": "template",
+      "name": "订阅取消顾问",
+      "summary": "说明一项订阅的具体取消路径、损失、是否享有旧价及适合操作的日期。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-subscription-cancellation-advisor/1.0.0.json",
+          "integrity": "sha256-NFoZTrPbDXoys5Mu8plAWCifk5bFvUzedaakWRCh3sU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-subscription-pruner",
+      "kind": "template",
+      "name": "订阅精简",
+      "summary": "从收据找出所有重复扣费，结合年费和最近实际使用迹象排序。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "finance"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-subscription-pruner/1.0.0.json",
+          "integrity": "sha256-Sh/8HGDxGEwzNhqlc8ZC+GZBjZin37fHSVpmnXNgkeQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-support-autopilot",
+      "kind": "template",
+      "name": "客服队列助手",
+      "summary": "每十分钟处理在线客服队列，为可回答对话留下有证据的回复草稿，并汇总需人工处理的事项。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-support-autopilot/1.0.0.json",
+          "integrity": "sha256-C0GQwtRze8pi/Lfuc9V+zDp1ixN5lM/DJemOImNz4zE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-support-queue-pass",
+      "kind": "template",
+      "name": "客服队列巡检",
+      "summary": "每小时重读所有未结工单，报告过时、错分或违反服务时限的事项，每个标记附数据。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-support-queue-pass/1.0.0.json",
+          "integrity": "sha256-1Hr3AALvqt4eUhY4V3Gv4dhnwxo6n/lRvFrS7rH9PNI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-support-reply-drafter",
+      "kind": "template",
+      "name": "客服回复草拟",
+      "summary": "以你的语气为待处理工单撰写回复，每项主张附来源，全部保留为未发送草稿。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-support-reply-drafter/1.0.0.json",
+          "integrity": "sha256-BxfH3jA83AaTZXvJuhVosDQXBSO0vB0Mix6uq2pJ338=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-support-resolution-agent",
+      "kind": "template",
+      "name": "客服问题诊断",
+      "summary": "结合日志、历史工单和更新日志查明工单背后的实际故障，将诊断交给人工。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-support-resolution-agent/1.0.0.json",
+          "integrity": "sha256-Gt/G2vSGh4oJFy5Og8Vtr/DaZmftchd02JXf98J0i74=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-support-ticket-fixer",
+      "kind": "template",
+      "name": "客服工单整理",
+      "summary": "整理新工单的类型、标签、缺失必填项、错误队列和重复记录，不修改对话。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-support-ticket-fixer/1.0.0.json",
+          "integrity": "sha256-9SHuQYPcpsLFsTkbtgjMapCfk80EgJ7x1mfEFuTBjhU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-talent-scout",
+      "kind": "template",
+      "name": "人才探寻",
+      "summary": "按书面职位要求寻找候选人，用带日期的来源研究匹配度并准备外联草稿，不联系任何人且遵守地区隐私规则。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-talent-scout/1.0.0.json",
+          "integrity": "sha256-+rYBFFCSVq3x+7JGNifPyMMMi2uN4dDyIFkpsUKNjL4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-telegram-fleet-door",
+      "kind": "template",
+      "name": "Telegram 团队入口",
+      "summary": "通过私密 Telegram 讨论控制许可名单内的 Bot 团队，不以你名义联系陌生人或加入公开群。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-telegram-fleet-door/1.0.0.json",
+          "integrity": "sha256-LH4UcjLJRGAj3RYvz10tdYRXHWxc7IPhmW9kf80ofHc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-tickets-to-changelog",
+      "kind": "template",
+      "name": "工单转更新日志",
+      "summary": "将本周已交付修复写成客户能理解的更新日志，每项附提出需求的工单编号。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-tickets-to-changelog/1.0.0.json",
+          "integrity": "sha256-wVWHeWeyEeEnJxDllJk/1tN2T0EaZbsrnQRjgpFGjKs=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-trust-center-deal-desk",
+      "kind": "template",
+      "name": "信任中心交易工作台",
+      "summary": "从已批准答案库为企业安全问卷生成有来源的草稿，并上报答案库未覆盖的问题。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-trust-center-deal-desk/1.0.0.json",
+          "integrity": "sha256-ghXql8YLwX1dlAXiMntwiGGWwJZJeVHvoBfqFY28+Y4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-viral-tweet-scout",
+      "kind": "template",
+      "name": "热门推文探寻",
+      "summary": "只读查看 X 中主题下实际传播的内容，解释各自传播机制，并附链接和时间戳。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-viral-tweet-scout/1.0.0.json",
+          "integrity": "sha256-9QgSreAfSeV5rVHYhwSeZtu7jAaPF8gqUyEyseJZ8vY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-vm-overwatch",
+      "kind": "template",
+      "name": "虚拟机守护",
+      "summary": "维护共享 Grok Bot 电脑，在工作日备份非机密文件，并提交每周组织回顾。",
+      "tags": [
+        "operations",
+        "community-import",
+        "botskills",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-vm-overwatch/1.0.0.json",
+          "integrity": "sha256-c7Kb7ouPbz+YDicy3nkTEEpIOM3aahQPz7UO78yr6mQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-what-did-we-promise",
+      "kind": "template",
+      "name": "客户承诺追踪",
+      "summary": "找出团队向客户作出却无人跟踪的承诺，逐字引用并附链接，标记已逾期事项。",
+      "tags": [
+        "support",
+        "community-import",
+        "botskills",
+        "success"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-what-did-we-promise/1.0.0.json",
+          "integrity": "sha256-z9EFazeP8UM0G2XgKhkxrRfxgvf7M2FsT4DTwNVYjpo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-what-should-i-cook",
+      "kind": "template",
+      "name": "今晚吃什么",
+      "summary": "根据厨房现有食材选择晚餐，优先使用即将过期的食材，不因缺一种香草让你去采购。",
+      "tags": [
+        "personal",
+        "community-import",
+        "botskills",
+        "fun"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-what-should-i-cook/1.0.0.json",
+          "integrity": "sha256-7pizBk5ometVU8Wq6Vy6GScoWnbF10MvEGPc7qmKS0E=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-win-loss-memo",
+      "kind": "template",
+      "name": "赢单输单备忘录",
+      "summary": "直接依据记录诚实复盘已结交易，优先采用买方原话，而非销售人员的推断。",
+      "tags": [
+        "sales",
+        "community-import",
+        "botskills",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-win-loss-memo/1.0.0.json",
+          "integrity": "sha256-Rb01+vwC/QMuohT9TWmYiJ3tq3NALNOHfk0bcVCAOGw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-x-account-crew",
+      "kind": "template",
+      "name": "X 账号团队",
+      "summary": "四个角色为一个 X 账号探寻、草拟、核实并排队帖子，交给你手动发布。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "botskills",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-x-account-crew/1.0.0.json",
+          "integrity": "sha256-2711mX9TT86bTSlWpsDpLqv6bbwU2CtUfM9isPzwpsU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/botskills-youtube-transcript-desk",
+      "kind": "template",
+      "name": "YouTube 转录工作台",
+      "summary": "通过转录插件提取带时间戳的文本，整理带引用的摘要。",
+      "tags": [
+        "general",
+        "community-import",
+        "botskills",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/botskills-youtube-transcript-desk/1.0.0.json",
+          "integrity": "sha256-CGwNNXxvLagRKN+HWNHxZzDw/G3/GpYTclM8U8/AZaI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
       "id": "awesome/bug-reproduction",
       "kind": "template",
       "name": "缺陷复现工程师",
@@ -220,6 +3052,1182 @@
           "url": "../templates/cloud-agent-orchestrator/1.0.0.json",
           "integrity": "sha256-Zaei6LA85Aui6lwqzDKdsOo8xtIHpeKSoAc9aDg+bWw=",
           "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-account-health",
+      "kind": "template",
+      "name": "客户健康度",
+      "summary": "按证据排序观察名单，不给客户发邮件、不编辑 CRM。",
+      "tags": [
+        "support",
+        "community-import",
+        "cobus",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-account-health/1.0.0.json",
+          "integrity": "sha256-emzgng2pP1N+YlnQtYeLW7+Xyrzhu87ntIhNtTVmoeQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-aeo-watch",
+      "kind": "template",
+      "name": "AEO 观察",
+      "summary": "按固定周期运行一组查询，检查答案引擎可见性。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-aeo-watch/1.0.0.json",
+          "integrity": "sha256-0fs5nQpT0QL9h7NaVv+xaNHeRqPapnuRFBqeReUgy/U=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-brand-watch",
+      "kind": "template",
+      "name": "品牌观察",
+      "summary": "整理品牌相关阅读资料，不参与回复讨论。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-brand-watch/1.0.0.json",
+          "integrity": "sha256-C4eMcx9yWZN0vXKsjFsBaA6/JG7PFNWEfdVBw4Ly/zk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-bug-reproduction",
+      "kind": "template",
+      "name": "缺陷复现",
+      "summary": "在预发布环境整理带证据的复现资料，不使用生产客户数据。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-bug-reproduction/1.0.0.json",
+          "integrity": "sha256-V/BOmeERdWEZMDs/TAPT9TZExixHwMAw/VJB7JzBLFA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-calendar-defender",
+      "kind": "template",
+      "name": "日历守护",
+      "summary": "草拟拒绝邀请的回复，不自行移动会议。",
+      "tags": [
+        "personal",
+        "community-import",
+        "cobus",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-calendar-defender/1.0.0.json",
+          "integrity": "sha256-faTZea8J7ymGHCShdw2c/7088xf2UCHOjCdzwLxQoyw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-call-followup",
+      "kind": "template",
+      "name": "通话跟进",
+      "summary": "整理回顾和任务，保留在内部；发送须后续明确授权 L2。",
+      "tags": [
+        "sales",
+        "community-import",
+        "cobus",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-call-followup/1.0.0.json",
+          "integrity": "sha256-vjBG8cyNHW1T3IcUjJoHkFXuNhnsl70n/cO8wI0BNY8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-changelog",
+      "kind": "template",
+      "name": "更新日志",
+      "summary": "根据已合并 PR 草拟说明，不打标签、不发布。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-changelog/1.0.0.json",
+          "integrity": "sha256-JoRJpvSdmf34pVeBMkuJMVhicgDbCDNWDLdzUGBJqAU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-chief-of-staff",
+      "kind": "template",
+      "name": "幕僚长",
+      "summary": "仅呈现与优先事项对应的内容，并标记待决策事项。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-chief-of-staff/1.0.0.json",
+          "integrity": "sha256-H+zJoH2GdjegKAlD16qGKbzrNVURfjtHguemIVXnFKE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-ci-sweeper",
+      "kind": "template",
+      "name": "CI 清理员",
+      "summary": "报告失败和不稳定测试，不合并代码，也不靠重跑掩盖问题。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-ci-sweeper/1.0.0.json",
+          "integrity": "sha256-+YPtLlEs2qUmd7K3SrbtHbBR8lXi/ng6SjsN83RtMOs=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-cited-brief",
+      "kind": "template",
+      "name": "带引用简报",
+      "summary": "围绕一个问题生成三分钟简报，每项主张附网址。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-cited-brief/1.0.0.json",
+          "integrity": "sha256-G5BEtYaDGMA8ER5EEPC0mAlgV1kprDGeL/7Kli62RP8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-cloud-spend",
+      "kind": "template",
+      "name": "云支出",
+      "summary": "分析支出变化并提出建议，不操作控制台。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-cloud-spend/1.0.0.json",
+          "integrity": "sha256-MvADy91TQLsnUqhuPkCSw9ivmEXAotFKdLNzBz27uSo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-competitor-watch",
+      "kind": "template",
+      "name": "竞品观察",
+      "summary": "仅在页面实际变化时提醒，无变化则保持安静。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-competitor-watch/1.0.0.json",
+          "integrity": "sha256-oB+n6Bm4yDRxXlLOKIJBoaVSYLmt1/Mq2RVy6AkE+pA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-content-remix",
+      "kind": "template",
+      "name": "内容改编",
+      "summary": "将一份草稿改编为多个版本，不发布。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-content-remix/1.0.0.json",
+          "integrity": "sha256-f+iOGbSOrSyHwQqxCi4u8HVERNRlXoS3MoEuEZIukjk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-docs-drift",
+      "kind": "template",
+      "name": "文档偏差检查",
+      "summary": "草拟文档差异，不提交，也不改写代码来迎合文档。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-docs-drift/1.0.0.json",
+          "integrity": "sha256-ZbbwujjmQCzXZ88cVBd/XeWn+I4LubeBjgnNVDU6ePM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-evidence-packager",
+      "kind": "template",
+      "name": "证据打包",
+      "summary": "打包已验证的内容，不作发布或阻止发布的决定。",
+      "tags": [
+        "product",
+        "community-import",
+        "cobus",
+        "product"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-evidence-packager/1.0.0.json",
+          "integrity": "sha256-HKKm5UWoyYDMuidHvVMmNlV8M9yxX4U0wePhPll1y3I=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-expense-manager",
+      "kind": "template",
+      "name": "费用管理",
+      "summary": "核对总额，引用已签署政策说明例外。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-expense-manager/1.0.0.json",
+          "integrity": "sha256-v2/ojayFeOBgowcGH8sycwsSav4ZBIEBz/ab57xmhrg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-feature-ask-collator",
+      "kind": "template",
+      "name": "功能需求汇总",
+      "summary": "整理原话和次数，不发布路线图。",
+      "tags": [
+        "product",
+        "community-import",
+        "cobus",
+        "product"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-feature-ask-collator/1.0.0.json",
+          "integrity": "sha256-qBsi2prlLqUvW5Y7jnyvEqFT89LQEofEs03a758g1Pc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-foundry",
+      "kind": "template",
+      "name": "Bot 配方工坊",
+      "summary": "将一项任务转化为可交付的 Bot 配方。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "meta"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-foundry/1.0.0.json",
+          "integrity": "sha256-lXILqgyK5TBcsSFDiByFLJvOXJ6D1MJmrUBhZm74Mms=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-gardener",
+      "kind": "template",
+      "name": "记忆园丁",
+      "summary": "根据来源纠正过时记忆，不清空角色。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "meta"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-gardener/1.0.0.json",
+          "integrity": "sha256-MELz0GcVZx6yaEZOtVR4n/LdJ0PQm6qGffJyPlw5awY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-inbox-triage",
+      "kind": "template",
+      "name": "收件箱分流",
+      "summary": "分类邮件并草拟回复，不发送、删除或退订。",
+      "tags": [
+        "personal",
+        "community-import",
+        "cobus",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-inbox-triage/1.0.0.json",
+          "integrity": "sha256-Sqpft01igFh3HY6Gk8vZ9vhgaK32BVlXeT4VIZ2Qrw4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-incident-desk",
+      "kind": "template",
+      "name": "故障工作台",
+      "summary": "整理可审计的故障时间线，不操作生产控制台。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-incident-desk/1.0.0.json",
+          "integrity": "sha256-8Of3G0JRxkIPaxlDoTD1W3zfSWcBz+dzJ+QiauJWXWM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-installer",
+      "kind": "template",
+      "name": "团队配置",
+      "summary": "粘贴 START.md 并选择团队，生成团队名单。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "meta"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-installer/1.0.0.json",
+          "integrity": "sha256-iTx3GyC3DWNDm9R3jc3iOXbJhH8i2aa0hLpXvPsQoqU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-issue-drafter",
+      "kind": "template",
+      "name": "问题草拟",
+      "summary": "将 Slack 和复现资料整理为未提交的问题草稿，不自动创建问题。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-issue-drafter/1.0.0.json",
+          "integrity": "sha256-rysp23OSIv0lFTKo+S9/RTgpDoHS4hCQ7ZqpphxVa98=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-launch-coordinator",
+      "kind": "template",
+      "name": "发布协调",
+      "summary": "为每个角色指定一名负责人，由人工决定是否发布。",
+      "tags": [
+        "product",
+        "community-import",
+        "cobus",
+        "product"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-launch-coordinator/1.0.0.json",
+          "integrity": "sha256-q4FHa2/Kd4MqIwgpuYRKIhKNYkx8htsSd9OHCNu6W5I=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-meeting-prep",
+      "kind": "template",
+      "name": "会议准备",
+      "summary": "会前掌握上次对客户作出的承诺。",
+      "tags": [
+        "sales",
+        "community-import",
+        "cobus",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-meeting-prep/1.0.0.json",
+          "integrity": "sha256-f8Aqf/4AtMLVG9d/ahjZ1k6TWlGd5D1M/3KH1EJfgOA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-new-hire-ramp",
+      "kind": "template",
+      "name": "新人上手",
+      "summary": "提供经理可编辑的首周计划，邀请保留为草稿。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-new-hire-ramp/1.0.0.json",
+          "integrity": "sha256-rOR7IE152m+oLiyM6zjLi1fFvtQu0B1D6XISuKXRsAg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-newsletter-desk",
+      "kind": "template",
+      "name": "通讯编辑台",
+      "summary": "写好通讯内容，由负责人发送。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-newsletter-desk/1.0.0.json",
+          "integrity": "sha256-pPQJCWePZ3Yuq5K5/RccpFFlvrqpLKG3K555W1vnE+0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-paid-media",
+      "kind": "template",
+      "name": "付费媒体",
+      "summary": "提供数据和 Slack 草稿，不自行调整预算。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-paid-media/1.0.0.json",
+          "integrity": "sha256-A0jqPzFn5Jd93bYfA1ReGNlxeuxdlDIbI2B1jV24JMM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-pr-reviewer",
+      "kind": "template",
+      "name": "PR 审查",
+      "summary": "从高风险代码差异开始审查。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-pr-reviewer/1.0.0.json",
+          "integrity": "sha256-y5Cgo5PD1ZAlYmYKoSBfJ53uROl8Hh0NdmBZ8uTDEfo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-product-performance",
+      "kind": "template",
+      "name": "产品性能",
+      "summary": "整理热点、链接并区分事实与假设，不操作生产环境。",
+      "tags": [
+        "product",
+        "community-import",
+        "cobus",
+        "product"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-product-performance/1.0.0.json",
+          "integrity": "sha256-sGbNBT/U4mMGtARjwWTYRSFUhgZlW9bqxJDq1iI/bM8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-promise-log",
+      "kind": "template",
+      "name": "承诺日志",
+      "summary": "记录原话和日期，不发送客户回顾邮件。",
+      "tags": [
+        "support",
+        "community-import",
+        "cobus",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-promise-log/1.0.0.json",
+          "integrity": "sha256-6M8p0eMoT9oWG+x9oG0vcGIBCGFl/HJUHJ0rEkO8Z78=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-query-helper",
+      "kind": "template",
+      "name": "SQL 查询助手",
+      "summary": "根据数据结构草拟 SQL，不在在线数据库执行写入。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-query-helper/1.0.0.json",
+          "integrity": "sha256-AZdAsIALQDui+bVwIS+5E8Pa7NOm6h2tNaHK+MBkvHk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-repo-hardener",
+      "kind": "template",
+      "name": "仓库加固",
+      "summary": "建议创建问题和 PR，不推送主分支、不修改保护规则。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "cobus",
+        "engineering"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-repo-hardener/1.0.0.json",
+          "integrity": "sha256-ATRpRT5gj7bAStyHXAOpBzlOe9ypt0zNf/SCxcpairw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-research-desk",
+      "kind": "template",
+      "name": "研究工作台",
+      "summary": "整理主张、证据、分歧和未找到的内容，并建议下一篇阅读。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-research-desk/1.0.0.json",
+          "integrity": "sha256-OwnxZaJqhYDlvqCNkWbcso51UIrFWrfRe5KIUT9GopY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-roster",
+      "kind": "template",
+      "name": "团队名单教练",
+      "summary": "先精简和合并角色，不超出需求扩张 Bot 团队。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "meta"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-roster/1.0.0.json",
+          "integrity": "sha256-AzHtTD65eE2gLfKeOtYaZ6NPpUK8VPNwlAtVxQoX8cQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-router",
+      "kind": "template",
+      "name": "Bot 团队路由",
+      "summary": "选择唯一负责人并交接，随后保持安静，不代做任务。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "meta"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-router/1.0.0.json",
+          "integrity": "sha256-esE6A7alBIEMdy6K/isLDoZlxFrrAY6mmMQJ2AI93Jg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-saas-finance",
+      "kind": "template",
+      "name": "SaaS 财务",
+      "summary": "用备忘录汇总实收、续约和逾期款项，不执行催收。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "finance"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-saas-finance/1.0.0.json",
+          "integrity": "sha256-MgA+8LxJAm45rmy6zLzAVBFWixqe96aVY4uKZnGvqjw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-sales-outbound",
+      "kind": "template",
+      "name": "销售外联",
+      "summary": "批量草拟自然的外联内容，不发送。",
+      "tags": [
+        "sales",
+        "community-import",
+        "cobus",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-sales-outbound/1.0.0.json",
+          "integrity": "sha256-UUG8K7MXAgDNXC3NWVbi61x3UhPPanvSTArxK2uaMbU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-sanitizer",
+      "kind": "template",
+      "name": "分享脱敏",
+      "summary": "先脱敏，确保分享链接不携带秘密或客户信息。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "meta"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-sanitizer/1.0.0.json",
+          "integrity": "sha256-Y4RynDp3m+3jxypWk4iQlbmFKxUyoUlKU6D2WE/e+0o=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-security-questionnaire",
+      "kind": "template",
+      "name": "安全问卷",
+      "summary": "根据资料包草拟带引用的答案，由人工提交。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "legal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-security-questionnaire/1.0.0.json",
+          "integrity": "sha256-R/ischuLLeHU1JUh1UJEiHFhO1/GXHM3W+/mAC7yEYs=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-social-queue",
+      "kind": "template",
+      "name": "社交内容队列",
+      "summary": "从一个想法生成七份草稿，不向网络发布。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "creator"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-social-queue/1.0.0.json",
+          "integrity": "sha256-dUFyCogRP+AR4cNxL1d0aQN43+BzcUFqekcX6Eqt2z8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-source-interrogator",
+      "kind": "template",
+      "name": "来源追问",
+      "summary": "找出缺少来源支撑的关键主张。",
+      "tags": [
+        "general",
+        "community-import",
+        "cobus",
+        "research"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-source-interrogator/1.0.0.json",
+          "integrity": "sha256-WXPiHgwRZ27+24nwDltcnsmVMNLzW2Knl0wwxE83/+M=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-subscription-audit",
+      "kind": "template",
+      "name": "订阅审计",
+      "summary": "收集最近使用证据并列出订阅，由你取消。",
+      "tags": [
+        "personal",
+        "community-import",
+        "cobus",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-subscription-audit/1.0.0.json",
+          "integrity": "sha256-2ENNAai1KJd/qlCBPX94tDm9TtE1GI20WnOkVLVnw2Q=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-support-replies",
+      "kind": "template",
+      "name": "客服回复",
+      "summary": "草拟带政策引用的回复，由你发送。",
+      "tags": [
+        "support",
+        "community-import",
+        "cobus",
+        "support"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-support-replies/1.0.0.json",
+          "integrity": "sha256-md3rEZUp3KtIYFa/q36kWOhO2Bfz2t1CTZTOsenHRPA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-talent-scout",
+      "kind": "template",
+      "name": "人才探寻",
+      "summary": "提供二十名候选人及证据，外联保留为草稿。",
+      "tags": [
+        "sales",
+        "community-import",
+        "cobus",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-talent-scout/1.0.0.json",
+          "integrity": "sha256-IjlGZ88wRESj934wmACr71jqHr3lQZTQCPylJ1JN/ck=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-thread-scout",
+      "kind": "template",
+      "name": "讨论串探寻",
+      "summary": "借鉴结构，不抄袭帖子，也不发帖。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "cobus",
+        "creator"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-thread-scout/1.0.0.json",
+          "integrity": "sha256-3IZlCAbPKC0Awregw+wzZBn8j1WSrkenyRc/0Ryxoto=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-travel-desk",
+      "kind": "template",
+      "name": "旅行工作台",
+      "summary": "检查旅行安排是否合理，不预订、不付款。",
+      "tags": [
+        "personal",
+        "community-import",
+        "cobus",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-travel-desk/1.0.0.json",
+          "integrity": "sha256-IYDYWXJxRkmeMZBCshn/WeERzxIIxo0bUmKFnpWSn/g=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-vendor-inbox",
+      "kind": "template",
+      "name": "供应商收件箱",
+      "summary": "整理供应商工作清单，不自动催办。",
+      "tags": [
+        "operations",
+        "community-import",
+        "cobus",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-vendor-inbox/1.0.0.json",
+          "integrity": "sha256-py3YZptSJNku/1aCg8AL47DtXCgaGelUQsPFaK+wM0Q=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/cobus-win-loss",
+      "kind": "template",
+      "name": "赢单输单复盘",
+      "summary": "根据证据识别模式，不用空泛理由代替分析。",
+      "tags": [
+        "sales",
+        "community-import",
+        "cobus",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/cobus-win-loss/1.0.0.json",
+          "integrity": "sha256-12rS8SdFu79cwiBe01jmvRNXHCRTpIfye97Kwti3gXk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
         }
       ]
     },
@@ -2710,6 +6718,1350 @@
           "url": "../templates/merch-fulfillment-operator/1.0.0.json",
           "integrity": "sha256-KTg8J3AY0JljtPJm308yu4mZVQeSdvrnw3dNaZUCgOQ=",
           "publishedAt": "2026-10-20T02:42:34+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-account-desk",
+      "kind": "template",
+      "name": "客户工作台",
+      "summary": "根据 Slack 和 Gmail 构建战略客户知识。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-account-desk/1.0.0.json",
+          "integrity": "sha256-7DbrOiM+0KgPTlgotYhEfuMdtz0DIa9GXV2jNangFB0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-account-health",
+      "kind": "template",
+      "name": "客户健康度",
+      "summary": "生成按优先级排序的客户观察名单。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-account-health/1.0.0.json",
+          "integrity": "sha256-T9tWdQzsb3ZdEG+I99xhdfGkQZjmrAHpe41M8jeY+do=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-bot-team-coach",
+      "kind": "template",
+      "name": "Bot 团队教练",
+      "summary": "帮助 Grok Bot 新用户命名角色并选择插件。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-bot-team-coach/1.0.0.json",
+          "integrity": "sha256-SD2RnmtYdWiewbCc2F05glhN6m3iOcZBeHTUiUMtM8k=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-brand-watch",
+      "kind": "template",
+      "name": "品牌观察",
+      "summary": "汇总 Slack 和 X 中的品牌提及。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-brand-watch/1.0.0.json",
+          "integrity": "sha256-W3A+MEgA1Ca1RqFwi4eNy33P0ZUS3eR1AibQhCVsWgc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-bug-reproduction",
+      "kind": "template",
+      "name": "缺陷复现",
+      "summary": "预发布环境的缺陷复现资料包。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-bug-reproduction/1.0.0.json",
+          "integrity": "sha256-9LtSkt1Y+15Il6i9D4YdLr8nL8uVcStQ6I3ctsAdNZY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-call-followup",
+      "kind": "template",
+      "name": "通话跟进",
+      "summary": "在通话后草拟跟进邮件。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-call-followup/1.0.0.json",
+          "integrity": "sha256-7SNyiUYUFGeNkV9xj841OrvwkeZxmsOEfdQ49y8lukQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-changelog-bot",
+      "kind": "template",
+      "name": "更新日志助手",
+      "summary": "根据已合并的 PR 生成发布说明。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-changelog-bot/1.0.0.json",
+          "integrity": "sha256-jQ65nIcas1iUv/lL8ozzHLV093JRx/7tsk90Cc9HgLE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-charge-dispute-draft",
+      "kind": "template",
+      "name": "账单争议草稿",
+      "summary": "根据 Gmail 收据草拟银行卡账单争议信。",
+      "tags": [
+        "personal",
+        "community-import",
+        "mergisi",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-charge-dispute-draft/1.0.0.json",
+          "integrity": "sha256-DlWvLitTeS/jDVia3thZw7sma+32H7tvFquo2vKOSvI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-chief-of-staff",
+      "kind": "template",
+      "name": "幕僚长",
+      "summary": "生成每日运营摘要。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-chief-of-staff/1.0.0.json",
+          "integrity": "sha256-zlLCyw4TAOvx/2uW4u12EFtp7fTkbr4ZGUyL2yS/Nvg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-churn-watch",
+      "kind": "template",
+      "name": "客户流失观察",
+      "summary": "根据 Slack、Notion 和 Gmail 生成按风险排序的客户名单。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-churn-watch/1.0.0.json",
+          "integrity": "sha256-BFfo7IpjjCXrJU1KTgrdMlehwZBF3OooBd2WcEG5a28=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-cloud-spend",
+      "kind": "template",
+      "name": "云支出",
+      "summary": "从 Gmail 和 Drive 整理云账单说明。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-cloud-spend/1.0.0.json",
+          "integrity": "sha256-qMRD432DLLaN4iOdgvti5hBiFYjbmCrexvXkRZpkl8A=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-competitor-watch",
+      "kind": "template",
+      "name": "竞品观察",
+      "summary": "汇总竞品网站、定价和更新日志。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-competitor-watch/1.0.0.json",
+          "integrity": "sha256-if7XX6LWxtRbMlJT9nyQytmtPoEctU6r7SS8WOXJ3zc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-contact-crm",
+      "kind": "template",
+      "name": "联系人管理",
+      "summary": "根据 Gmail 和日历生成跟进名单。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-contact-crm/1.0.0.json",
+          "integrity": "sha256-rCJxLQUxQlelJn+tCFqes5wSBHQcsagRsQyoKdMDvIU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-content-remix",
+      "kind": "template",
+      "name": "内容改编",
+      "summary": "将一份草稿改编为社交媒体和邮件版本。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-content-remix/1.0.0.json",
+          "integrity": "sha256-VhAiBG7L6/pUNIxD6VVMfHeMM0JdO5O12A5cuovhXm4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-daily-brief",
+      "kind": "template",
+      "name": "每日简报",
+      "summary": "根据日历和收件箱生成晨间简报。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-daily-brief/1.0.0.json",
+          "integrity": "sha256-rtqOkf6ayzGAHh9PSyjfoBfkI8Ap0EZF+MMNqDsV1e8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-deploy-watch",
+      "kind": "template",
+      "name": "部署观察",
+      "summary": "汇总 GitHub 和 Slack 中的 CI 与部署状态。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-deploy-watch/1.0.0.json",
+          "integrity": "sha256-d3wLpUw3ycO3PFkugc064h0XjNwTWNYfGed/aH6Sd7c=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-docs-writer",
+      "kind": "template",
+      "name": "文档撰写",
+      "summary": "根据仓库编写 README 和 API 文档。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-docs-writer/1.0.0.json",
+          "integrity": "sha256-Xe7G9C5e+/7jUOiPmWL0hlAsambC9UEoEUT5cfhqFSY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-expense-manager",
+      "kind": "template",
+      "name": "费用管理",
+      "summary": "核对每周费用。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-expense-manager/1.0.0.json",
+          "integrity": "sha256-3V4GkafG8UtOXbEfj/JZV0FI6gEuVgjdnpHI39m3wsE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-feature-ask-finder",
+      "kind": "template",
+      "name": "功能需求查找",
+      "summary": "寻找 Slack 中反复出现的功能需求。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-feature-ask-finder/1.0.0.json",
+          "integrity": "sha256-TeO8E4jPU90yEgovHt24OeGDLvIyPx/ogWcz4BNb8qo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-focus-defender",
+      "kind": "template",
+      "name": "专注守护",
+      "summary": "保护深度工作时段。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-focus-defender/1.0.0.json",
+          "integrity": "sha256-Zy4n7LXqV97V/Q67mGeq/4AQh9uZEutGSW214lgmW5Q=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-household-ops",
+      "kind": "template",
+      "name": "家庭事务",
+      "summary": "管理共享日历、家务和跑腿事项。",
+      "tags": [
+        "personal",
+        "community-import",
+        "mergisi",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-household-ops/1.0.0.json",
+          "integrity": "sha256-2M8WoTrotlx63QpaIdhRGXAFzenytzaV0IJya1o1JJo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-inbox-triage",
+      "kind": "template",
+      "name": "收件箱分流",
+      "summary": "分类邮件并草拟回复。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-inbox-triage/1.0.0.json",
+          "integrity": "sha256-v9pEWS7qfoIX27xm4j/kTlNjQjdCfLpbWofsGSyQEYU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-incident-desk",
+      "kind": "template",
+      "name": "故障工作台",
+      "summary": "根据 Slack 和 GitHub 对故障进行初步分析并整理时间线。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-incident-desk/1.0.0.json",
+          "integrity": "sha256-eyHLDjwiCuyOxweSDObRy0HuIJu70x7PTv63w0UCJFQ=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-issue-drafter",
+      "kind": "template",
+      "name": "问题草拟",
+      "summary": "将 Slack 消息或讨论串整理为 GitHub 问题。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-issue-drafter/1.0.0.json",
+          "integrity": "sha256-yxqu5Ek7AuZallU53FRI+dcSO0o9kuOW2u0aPrzKCA8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-linkedin-signal-watch",
+      "kind": "template",
+      "name": "LinkedIn 信号观察",
+      "summary": "寻找 LinkedIn 上的理想客户画像信号。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-linkedin-signal-watch/1.0.0.json",
+          "integrity": "sha256-3CHrz8uyLGk8YS8c6kcD9NOT+I69+MK9cjZRXTrEz4Q=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-meeting-notes",
+      "kind": "template",
+      "name": "会议笔记",
+      "summary": "生成会议摘要和行动事项。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-meeting-notes/1.0.0.json",
+          "integrity": "sha256-WETLE/KKOCqL/nEUZOnm5XBPg3sElbhOlxtbsBJ/BD0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-meeting-prep",
+      "kind": "template",
+      "name": "会议准备",
+      "summary": "生成通话前简报。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-meeting-prep/1.0.0.json",
+          "integrity": "sha256-1sJxqulUh2x34oAkmdtsmyuQsPPgW1WBLg7zB41v4YI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-new-hire-ramp",
+      "kind": "template",
+      "name": "新人上手",
+      "summary": "制定新员工第一周计划。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-new-hire-ramp/1.0.0.json",
+          "integrity": "sha256-ativc4WWS17v8mpHQVYqHfo2/CX7NPtKWSBfhANu9QY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-newsletter-desk",
+      "kind": "template",
+      "name": "通讯编辑台",
+      "summary": "根据链接和笔记编写每周通讯。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-newsletter-desk/1.0.0.json",
+          "integrity": "sha256-793kCWb1uPtEysIebHK+sAtMuHKQQuppjJW8oYbW8W8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-one-to-one-brief",
+      "kind": "template",
+      "name": "一对一简报",
+      "summary": "根据日历和笔记准备一对一会谈。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-one-to-one-brief/1.0.0.json",
+          "integrity": "sha256-hgiCTTFnEynXfvxbkjEekzmns7OwJYelzjMZ0R1QKJ0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-outbound-voice",
+      "kind": "template",
+      "name": "个人语气外联",
+      "summary": "以用户的语气草拟个性化外联内容。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-outbound-voice/1.0.0.json",
+          "integrity": "sha256-eLPnapDmf1efLo0vVXBgDsA34m77fqr9IyNIXRSNB70=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-paid-media",
+      "kind": "template",
+      "name": "付费媒体",
+      "summary": "分析广告活动支出并建议重新分配。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-paid-media/1.0.0.json",
+          "integrity": "sha256-Mp1RJCss8icI6Nf/KlELEpjnX1KchBgDig5YHsKLxSo=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-pr-reviewer",
+      "kind": "template",
+      "name": "PR 审查",
+      "summary": "审查 PR 的风险、测试和上下文。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-pr-reviewer/1.0.0.json",
+          "integrity": "sha256-g/5NK6AbpXw+dTTmEKWG4lnnaD9GmXgViKH030g19K0=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-product-performance",
+      "kind": "template",
+      "name": "产品性能",
+      "summary": "开展有来源依据的性能调查。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-product-performance/1.0.0.json",
+          "integrity": "sha256-aTU+ohoB2reuSy+OLhmRPeYpJfOSkSZwyNCG9nU5+Lg=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-profile-review",
+      "kind": "template",
+      "name": "个人资料审查",
+      "summary": "审查 LinkedIn 个人资料并提出修改建议。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-profile-review/1.0.0.json",
+          "integrity": "sha256-bvjN5a+xWH24ej4+6ZG+zdA8ey8hwTwOyqwW0ssPzQw=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-proposal-desk",
+      "kind": "template",
+      "name": "提案工作台",
+      "summary": "根据笔记草拟自由职业或销售提案。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-proposal-desk/1.0.0.json",
+          "integrity": "sha256-FNRxVrxCrQILHazK219Tu1O2a2RHlT9cKvhDSFjAAJ4=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-qbr-pack-builder",
+      "kind": "template",
+      "name": "季度业务回顾资料",
+      "summary": "根据笔记整理季度业务回顾资料。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-qbr-pack-builder/1.0.0.json",
+          "integrity": "sha256-Vky+GTalVJ+Wcf4cOJWco9ll4TP03ZXh8I6lKNTfnZU=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-query-helper",
+      "kind": "template",
+      "name": "SQL 查询助手",
+      "summary": "根据数据结构或粘贴的查询解释或编写 SQL。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-query-helper/1.0.0.json",
+          "integrity": "sha256-bRVIqc4aT30p9xBio2PMTlaEXavW5TRtUCNz05lBsIE=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-reading-digest",
+      "kind": "template",
+      "name": "阅读摘要",
+      "summary": "整理每周文章包。",
+      "tags": [
+        "personal",
+        "community-import",
+        "mergisi",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-reading-digest/1.0.0.json",
+          "integrity": "sha256-rwH1+c+X9QxlGqI13DcLAZe1Iu5A52EP2r72ro5QMIA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-reddit-comment-finder",
+      "kind": "template",
+      "name": "Reddit 评论查找",
+      "summary": "寻找相关的 Reddit 讨论串。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-reddit-comment-finder/1.0.0.json",
+          "integrity": "sha256-SsbkDXcZejj8jm/KexmuWPvsbXjAE9V5yiyGypzvIiA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-repo-hardener",
+      "kind": "template",
+      "name": "仓库加固",
+      "summary": "审查 GitHub 仓库的安全性和维护规范。",
+      "tags": [
+        "engineering",
+        "community-import",
+        "mergisi",
+        "development"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-repo-hardener/1.0.0.json",
+          "integrity": "sha256-Z4ImbCFeVFy9It2xWKdAQNZqLyRUSxr89yMWz78K3Vk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-resume-screen",
+      "kind": "template",
+      "name": "简历筛选",
+      "summary": "对 Gmail 和 Drive 中的简历评分。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-resume-screen/1.0.0.json",
+          "integrity": "sha256-2whAZYSChUWATRHRXmCmS2ozgIYnWDBGWzRNkcIEqdM=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-saas-finance",
+      "kind": "template",
+      "name": "SaaS 财务",
+      "summary": "汇总每周实收收入、续约和逾期款项。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-saas-finance/1.0.0.json",
+          "integrity": "sha256-yZo46OYrj/SdV8vOd2ZUFsI7QioLP8p1p6VxJ0AHhQI=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-security-questionnaire",
+      "kind": "template",
+      "name": "安全问卷",
+      "summary": "草拟安全问卷答案。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-security-questionnaire/1.0.0.json",
+          "integrity": "sha256-OzlLz2Vqi5uuMSxcw8oY7RP7lFFbEWEPZfZ0wZ0q7Vc=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-seo-pages",
+      "kind": "template",
+      "name": "SEO 页面",
+      "summary": "处理标题、元信息和内部链接。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-seo-pages/1.0.0.json",
+          "integrity": "sha256-xJFeKtvn3pcox3Zy/PR2bSRsUyFLmm1QbmM3XYXqwmA=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-slack-noise-filter",
+      "kind": "template",
+      "name": "Slack 降噪",
+      "summary": "过滤 Slack 噪声并突出回复。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-slack-noise-filter/1.0.0.json",
+          "integrity": "sha256-w1ZCTDwNsbQhGe7P9G85qzP5wZKD3KWCDVV/s3qoQ00=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-social-queue",
+      "kind": "template",
+      "name": "社交内容队列",
+      "summary": "草拟社交媒体帖子并加入队列。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-social-queue/1.0.0.json",
+          "integrity": "sha256-l7jNqZatR8QrWTzytJH1n3Rm4Z8RYMuTqYnu/eTcNL8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-standup-desk",
+      "kind": "template",
+      "name": "站会工作台",
+      "summary": "从 Slack 收集异步站会笔记。",
+      "tags": [
+        "general",
+        "community-import",
+        "mergisi",
+        "productivity"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-standup-desk/1.0.0.json",
+          "integrity": "sha256-3JCV/gu8BiqH2meaSYVn2nLuW44YLppc0K+/FIsrqfs=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-subscription-pruner",
+      "kind": "template",
+      "name": "订阅精简",
+      "summary": "从邮件中查找闲置订阅。",
+      "tags": [
+        "personal",
+        "community-import",
+        "mergisi",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-subscription-pruner/1.0.0.json",
+          "integrity": "sha256-W4Uml1zlU8mO68GFMWBg+ymtU92TrxBSHdCkcil89E8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-support-replies",
+      "kind": "template",
+      "name": "客服回复",
+      "summary": "草拟客服回复。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-support-replies/1.0.0.json",
+          "integrity": "sha256-UafHkO6h6AyscPebPeDLXYr15Tzkd8dYzaqectJCDho=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-talent-scout",
+      "kind": "template",
+      "name": "人才探寻",
+      "summary": "寻找候选人并草拟外联内容。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-talent-scout/1.0.0.json",
+          "integrity": "sha256-7MLWr4QA4IKHYc4usMcw2wMtOJhXB3QKUpk/Reu6M9Q=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-trip-concierge",
+      "kind": "template",
+      "name": "旅行礼宾",
+      "summary": "检查航班、酒店和行程安排。",
+      "tags": [
+        "personal",
+        "community-import",
+        "mergisi",
+        "personal"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-trip-concierge/1.0.0.json",
+          "integrity": "sha256-5b0DlanWN3NlRaMm1BALsJIgeBMbiIH1vZJ+lrvRnWY=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-vendor-inbox",
+      "kind": "template",
+      "name": "供应商收件箱",
+      "summary": "处理发票、续约和供应商跟进事项。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-vendor-inbox/1.0.0.json",
+          "integrity": "sha256-spcNQqbEakYwLJg5fUZ81w5noB7Tf/GCYeVFjeGUVv8=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-viral-tweet-scout",
+      "kind": "template",
+      "name": "热门推文探寻",
+      "summary": "构思高互动推文。",
+      "tags": [
+        "marketing",
+        "community-import",
+        "mergisi",
+        "marketing"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-viral-tweet-scout/1.0.0.json",
+          "integrity": "sha256-ERMwTCBJL9R/NpT+hVD/BDx2O2C79jf9NeN0TjEDxgk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-what-did-we-promise",
+      "kind": "template",
+      "name": "客户承诺追踪",
+      "summary": "整理对客户的承诺。",
+      "tags": [
+        "operations",
+        "community-import",
+        "mergisi",
+        "ops"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-what-did-we-promise/1.0.0.json",
+          "integrity": "sha256-hcJOshQXrTptYa0w/VeeqKw5nkZyKOiuyWSII7iVvxk=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
+        }
+      ]
+    },
+    {
+      "id": "awesome/mergisi-win-loss",
+      "kind": "template",
+      "name": "赢单输单复盘",
+      "summary": "编写赢单和输单备忘录。",
+      "tags": [
+        "sales",
+        "community-import",
+        "mergisi",
+        "sales"
+      ],
+      "verified": false,
+      "publisher": {
+        "name": "OpenBot contributors"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "../templates/mergisi-win-loss/1.0.0.json",
+          "integrity": "sha256-xnrgBYf1KuECLWl9r4TsE4HlFmaaVJ35zsaXwvHPk+I=",
+          "publishedAt": "2026-10-24T23:19:04+08:00"
         }
       ]
     },

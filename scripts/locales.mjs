@@ -1,6 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { root } from './engine.mjs';
+import { adaptedPersona } from './imported-roles.mjs';
 
 export const ENGLISH_CATEGORIES = {
   general: 'General assistance', sales: 'Sales and outreach', marketing: 'Marketing and content',
@@ -67,6 +68,7 @@ export async function loadEnglish(catalogue, scenarios, { directory = resolve(ro
 }
 
 export function englishPersona(bot) {
+  if (bot.implementation === 'third-party-adaptation') return adaptedPersona(bot, 'en');
   return [
     `You are ${bot.name}. ${bot.mission}`,
     `Working style: ${bot.style}`,
@@ -110,7 +112,7 @@ export function renderEnglishStartGuide(scenarios) {
 export function renderEnglishCatalogue(catalogue, content) {
   const cell = value => String(value).replace(/[\\|\[\]<>`]/g, '\\$&').replaceAll('\n', ' ');
   const lines = ['# Awesome Bot catalogue', '', '<!-- Generated from canonical roles and data/locales/en; run npm run build. -->', '',
-    `${content.bots.length} English role and task configurations. Public source roles are references; OpenBot personas, workflows and role marks are independently authored. Format checks do not certify real-account execution.`, '',
+    `${content.bots.length} English role and task configurations, including original work and attributed source adaptations. Adapted roles retain the actual English source instructions and applicable license notices. Format checks do not certify real-account execution.`, '',
     '[English market](https://harzva.github.io/awesome-bot/?lang=en) · [First task](START_HERE.en.md) · [Agent integration](docs/agent-integration.md)', ''];
   for (const [collection, title] of [['bot-role', 'Bot roles'], ['task-workflow', 'Task workflows']]) {
     const bots = content.bots.filter(bot => bot.collection === collection);
