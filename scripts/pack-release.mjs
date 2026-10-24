@@ -189,10 +189,10 @@ export async function packRelease({ root = ROOT, outDir = resolve(ROOT, 'dist/re
     const notes = [
       `# Awesome Bot v${version}`, '',
       ...(changeBody ? [changeBody, ''] : []),
-      `${counts.roles} original Bot roles and ${counts.workflows} task workflows (${counts.all} template configurations).`, '',
+      `${counts.roles} Bot roles (original and attributed adaptations) and ${counts.workflows} task workflows (${counts.all} template configurations).`, '',
       '- Every entry retains its source and implementation attribution.',
       '- Download a collection Fleet file for a configuration import, or the archive for the complete standalone project and static marketplace.',
-      '- Files with `-en-` in their names contain English personas and skills. The other collection files preserve the original Chinese configurations.',
+      '- Files with `-en-` in their names contain English personas and skills. The other collection files use Chinese metadata. Adapted roles preserve their original English instruction bodies in both languages.',
       '- Collections larger than 200 are split into numbered files. Host total-Bot limits still apply; install only the roles you need.',
       '- Model, account, tool, and screen setup remain with the host. The unsigned catalogue requires explicit community-source consent.',
       '- Exports contain no private memory or conversation data. Published artifacts are immutable.',

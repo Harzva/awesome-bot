@@ -1,0 +1,1117 @@
+[
+  {
+    "key": "mergisi/bug-reproduction",
+    "nameZh": "缺陷复现",
+    "summaryZh": "预发布环境的缺陷复现资料包。"
+  },
+  {
+    "key": "mergisi/changelog-bot",
+    "nameZh": "更新日志助手",
+    "summaryZh": "根据已合并的 PR 生成发布说明。"
+  },
+  {
+    "key": "mergisi/deploy-watch",
+    "nameZh": "部署观察",
+    "summaryZh": "汇总 GitHub 和 Slack 中的 CI 与部署状态。"
+  },
+  {
+    "key": "mergisi/docs-writer",
+    "nameZh": "文档撰写",
+    "summaryZh": "根据仓库编写 README 和 API 文档。"
+  },
+  {
+    "key": "mergisi/issue-drafter",
+    "nameZh": "问题草拟",
+    "summaryZh": "将 Slack 消息或讨论串整理为 GitHub 问题。"
+  },
+  {
+    "key": "mergisi/pr-reviewer",
+    "nameZh": "PR 审查",
+    "summaryZh": "审查 PR 的风险、测试和上下文。"
+  },
+  {
+    "key": "mergisi/query-helper",
+    "nameZh": "SQL 查询助手",
+    "summaryZh": "根据数据结构或粘贴的查询解释或编写 SQL。"
+  },
+  {
+    "key": "mergisi/repo-hardener",
+    "nameZh": "仓库加固",
+    "summaryZh": "审查 GitHub 仓库的安全性和维护规范。"
+  },
+  {
+    "key": "mergisi/brand-watch",
+    "nameZh": "品牌观察",
+    "summaryZh": "汇总 Slack 和 X 中的品牌提及。"
+  },
+  {
+    "key": "mergisi/competitor-watch",
+    "nameZh": "竞品观察",
+    "summaryZh": "汇总竞品网站、定价和更新日志。"
+  },
+  {
+    "key": "mergisi/content-remix",
+    "nameZh": "内容改编",
+    "summaryZh": "将一份草稿改编为社交媒体和邮件版本。"
+  },
+  {
+    "key": "mergisi/newsletter-desk",
+    "nameZh": "通讯编辑台",
+    "summaryZh": "根据链接和笔记编写每周通讯。"
+  },
+  {
+    "key": "mergisi/paid-media",
+    "nameZh": "付费媒体",
+    "summaryZh": "分析广告活动支出并建议重新分配。"
+  },
+  {
+    "key": "mergisi/profile-review",
+    "nameZh": "个人资料审查",
+    "summaryZh": "审查 LinkedIn 个人资料并提出修改建议。"
+  },
+  {
+    "key": "mergisi/reddit-comment-finder",
+    "nameZh": "Reddit 评论查找",
+    "summaryZh": "寻找相关的 Reddit 讨论串。"
+  },
+  {
+    "key": "mergisi/seo-pages",
+    "nameZh": "SEO 页面",
+    "summaryZh": "处理标题、元信息和内部链接。"
+  },
+  {
+    "key": "mergisi/social-queue",
+    "nameZh": "社交内容队列",
+    "summaryZh": "草拟社交媒体帖子并加入队列。"
+  },
+  {
+    "key": "mergisi/viral-tweet-scout",
+    "nameZh": "热门推文探寻",
+    "summaryZh": "构思高互动推文。"
+  },
+  {
+    "key": "mergisi/account-desk",
+    "nameZh": "客户工作台",
+    "summaryZh": "根据 Slack 和 Gmail 构建战略客户知识。"
+  },
+  {
+    "key": "mergisi/account-health",
+    "nameZh": "客户健康度",
+    "summaryZh": "生成按优先级排序的客户观察名单。"
+  },
+  {
+    "key": "mergisi/chief-of-staff",
+    "nameZh": "幕僚长",
+    "summaryZh": "生成每日运营摘要。"
+  },
+  {
+    "key": "mergisi/churn-watch",
+    "nameZh": "客户流失观察",
+    "summaryZh": "根据 Slack、Notion 和 Gmail 生成按风险排序的客户名单。"
+  },
+  {
+    "key": "mergisi/cloud-spend",
+    "nameZh": "云支出",
+    "summaryZh": "从 Gmail 和 Drive 整理云账单说明。"
+  },
+  {
+    "key": "mergisi/expense-manager",
+    "nameZh": "费用管理",
+    "summaryZh": "核对每周费用。"
+  },
+  {
+    "key": "mergisi/feature-ask-finder",
+    "nameZh": "功能需求查找",
+    "summaryZh": "寻找 Slack 中反复出现的功能需求。"
+  },
+  {
+    "key": "mergisi/incident-desk",
+    "nameZh": "故障工作台",
+    "summaryZh": "根据 Slack 和 GitHub 对故障进行初步分析并整理时间线。"
+  },
+  {
+    "key": "mergisi/new-hire-ramp",
+    "nameZh": "新人上手",
+    "summaryZh": "制定新员工第一周计划。"
+  },
+  {
+    "key": "mergisi/product-performance",
+    "nameZh": "产品性能",
+    "summaryZh": "开展有来源依据的性能调查。"
+  },
+  {
+    "key": "mergisi/qbr-pack-builder",
+    "nameZh": "季度业务回顾资料",
+    "summaryZh": "根据笔记整理季度业务回顾资料。"
+  },
+  {
+    "key": "mergisi/resume-screen",
+    "nameZh": "简历筛选",
+    "summaryZh": "对 Gmail 和 Drive 中的简历评分。"
+  },
+  {
+    "key": "mergisi/saas-finance",
+    "nameZh": "SaaS 财务",
+    "summaryZh": "汇总每周实收收入、续约和逾期款项。"
+  },
+  {
+    "key": "mergisi/security-questionnaire",
+    "nameZh": "安全问卷",
+    "summaryZh": "草拟安全问卷答案。"
+  },
+  {
+    "key": "mergisi/support-replies",
+    "nameZh": "客服回复",
+    "summaryZh": "草拟客服回复。"
+  },
+  {
+    "key": "mergisi/vendor-inbox",
+    "nameZh": "供应商收件箱",
+    "summaryZh": "处理发票、续约和供应商跟进事项。"
+  },
+  {
+    "key": "mergisi/what-did-we-promise",
+    "nameZh": "客户承诺追踪",
+    "summaryZh": "整理对客户的承诺。"
+  },
+  {
+    "key": "mergisi/charge-dispute-draft",
+    "nameZh": "账单争议草稿",
+    "summaryZh": "根据 Gmail 收据草拟银行卡账单争议信。"
+  },
+  {
+    "key": "mergisi/household-ops",
+    "nameZh": "家庭事务",
+    "summaryZh": "管理共享日历、家务和跑腿事项。"
+  },
+  {
+    "key": "mergisi/reading-digest",
+    "nameZh": "阅读摘要",
+    "summaryZh": "整理每周文章包。"
+  },
+  {
+    "key": "mergisi/subscription-pruner",
+    "nameZh": "订阅精简",
+    "summaryZh": "从邮件中查找闲置订阅。"
+  },
+  {
+    "key": "mergisi/trip-concierge",
+    "nameZh": "旅行礼宾",
+    "summaryZh": "检查航班、酒店和行程安排。"
+  },
+  {
+    "key": "mergisi/bot-team-coach",
+    "nameZh": "Bot 团队教练",
+    "summaryZh": "帮助 Grok Bot 新用户命名角色并选择插件。"
+  },
+  {
+    "key": "mergisi/daily-brief",
+    "nameZh": "每日简报",
+    "summaryZh": "根据日历和收件箱生成晨间简报。"
+  },
+  {
+    "key": "mergisi/focus-defender",
+    "nameZh": "专注守护",
+    "summaryZh": "保护深度工作时段。"
+  },
+  {
+    "key": "mergisi/inbox-triage",
+    "nameZh": "收件箱分流",
+    "summaryZh": "分类邮件并草拟回复。"
+  },
+  {
+    "key": "mergisi/meeting-notes",
+    "nameZh": "会议笔记",
+    "summaryZh": "生成会议摘要和行动事项。"
+  },
+  {
+    "key": "mergisi/one-to-one-brief",
+    "nameZh": "一对一简报",
+    "summaryZh": "根据日历和笔记准备一对一会谈。"
+  },
+  {
+    "key": "mergisi/slack-noise-filter",
+    "nameZh": "Slack 降噪",
+    "summaryZh": "过滤 Slack 噪声并突出回复。"
+  },
+  {
+    "key": "mergisi/standup-desk",
+    "nameZh": "站会工作台",
+    "summaryZh": "从 Slack 收集异步站会笔记。"
+  },
+  {
+    "key": "mergisi/call-followup",
+    "nameZh": "通话跟进",
+    "summaryZh": "在通话后草拟跟进邮件。"
+  },
+  {
+    "key": "mergisi/contact-crm",
+    "nameZh": "联系人管理",
+    "summaryZh": "根据 Gmail 和日历生成跟进名单。"
+  },
+  {
+    "key": "mergisi/linkedin-signal-watch",
+    "nameZh": "LinkedIn 信号观察",
+    "summaryZh": "寻找 LinkedIn 上的理想客户画像信号。"
+  },
+  {
+    "key": "mergisi/meeting-prep",
+    "nameZh": "会议准备",
+    "summaryZh": "生成通话前简报。"
+  },
+  {
+    "key": "mergisi/outbound-voice",
+    "nameZh": "个人语气外联",
+    "summaryZh": "以用户的语气草拟个性化外联内容。"
+  },
+  {
+    "key": "mergisi/proposal-desk",
+    "nameZh": "提案工作台",
+    "summaryZh": "根据笔记草拟自由职业或销售提案。"
+  },
+  {
+    "key": "mergisi/talent-scout",
+    "nameZh": "人才探寻",
+    "summaryZh": "寻找候选人并草拟外联内容。"
+  },
+  {
+    "key": "mergisi/win-loss",
+    "nameZh": "赢单输单复盘",
+    "summaryZh": "编写赢单和输单备忘录。"
+  },
+  {
+    "key": "cobus/social-queue",
+    "nameZh": "社交内容队列",
+    "summaryZh": "从一个想法生成七份草稿，不向网络发布。"
+  },
+  {
+    "key": "cobus/thread-scout",
+    "nameZh": "讨论串探寻",
+    "summaryZh": "借鉴结构，不抄袭帖子，也不发帖。"
+  },
+  {
+    "key": "cobus/bug-reproduction",
+    "nameZh": "缺陷复现",
+    "summaryZh": "在预发布环境整理带证据的复现资料，不使用生产客户数据。"
+  },
+  {
+    "key": "cobus/changelog",
+    "nameZh": "更新日志",
+    "summaryZh": "根据已合并 PR 草拟说明，不打标签、不发布。"
+  },
+  {
+    "key": "cobus/ci-sweeper",
+    "nameZh": "CI 清理员",
+    "summaryZh": "报告失败和不稳定测试，不合并代码，也不靠重跑掩盖问题。"
+  },
+  {
+    "key": "cobus/docs-drift",
+    "nameZh": "文档偏差检查",
+    "summaryZh": "草拟文档差异，不提交，也不改写代码来迎合文档。"
+  },
+  {
+    "key": "cobus/issue-drafter",
+    "nameZh": "问题草拟",
+    "summaryZh": "将 Slack 和复现资料整理为未提交的问题草稿，不自动创建问题。"
+  },
+  {
+    "key": "cobus/pr-reviewer",
+    "nameZh": "PR 审查",
+    "summaryZh": "从高风险代码差异开始审查。"
+  },
+  {
+    "key": "cobus/query-helper",
+    "nameZh": "SQL 查询助手",
+    "summaryZh": "根据数据结构草拟 SQL，不在在线数据库执行写入。"
+  },
+  {
+    "key": "cobus/repo-hardener",
+    "nameZh": "仓库加固",
+    "summaryZh": "建议创建问题和 PR，不推送主分支、不修改保护规则。"
+  },
+  {
+    "key": "cobus/saas-finance",
+    "nameZh": "SaaS 财务",
+    "summaryZh": "用备忘录汇总实收、续约和逾期款项，不执行催收。"
+  },
+  {
+    "key": "cobus/security-questionnaire",
+    "nameZh": "安全问卷",
+    "summaryZh": "根据资料包草拟带引用的答案，由人工提交。"
+  },
+  {
+    "key": "cobus/aeo-watch",
+    "nameZh": "AEO 观察",
+    "summaryZh": "按固定周期运行一组查询，检查答案引擎可见性。"
+  },
+  {
+    "key": "cobus/brand-watch",
+    "nameZh": "品牌观察",
+    "summaryZh": "整理品牌相关阅读资料，不参与回复讨论。"
+  },
+  {
+    "key": "cobus/competitor-watch",
+    "nameZh": "竞品观察",
+    "summaryZh": "仅在页面实际变化时提醒，无变化则保持安静。"
+  },
+  {
+    "key": "cobus/content-remix",
+    "nameZh": "内容改编",
+    "summaryZh": "将一份草稿改编为多个版本，不发布。"
+  },
+  {
+    "key": "cobus/newsletter-desk",
+    "nameZh": "通讯编辑台",
+    "summaryZh": "写好通讯内容，由负责人发送。"
+  },
+  {
+    "key": "cobus/paid-media",
+    "nameZh": "付费媒体",
+    "summaryZh": "提供数据和 Slack 草稿，不自行调整预算。"
+  },
+  {
+    "key": "cobus/foundry",
+    "nameZh": "Bot 配方工坊",
+    "summaryZh": "将一项任务转化为可交付的 Bot 配方。"
+  },
+  {
+    "key": "cobus/gardener",
+    "nameZh": "记忆园丁",
+    "summaryZh": "根据来源纠正过时记忆，不清空角色。"
+  },
+  {
+    "key": "cobus/installer",
+    "nameZh": "团队配置",
+    "summaryZh": "粘贴 START.md 并选择团队，生成团队名单。"
+  },
+  {
+    "key": "cobus/roster",
+    "nameZh": "团队名单教练",
+    "summaryZh": "先精简和合并角色，不超出需求扩张 Bot 团队。"
+  },
+  {
+    "key": "cobus/router",
+    "nameZh": "Bot 团队路由",
+    "summaryZh": "选择唯一负责人并交接，随后保持安静，不代做任务。"
+  },
+  {
+    "key": "cobus/sanitizer",
+    "nameZh": "分享脱敏",
+    "summaryZh": "先脱敏，确保分享链接不携带秘密或客户信息。"
+  },
+  {
+    "key": "cobus/chief-of-staff",
+    "nameZh": "幕僚长",
+    "summaryZh": "仅呈现与优先事项对应的内容，并标记待决策事项。"
+  },
+  {
+    "key": "cobus/cloud-spend",
+    "nameZh": "云支出",
+    "summaryZh": "分析支出变化并提出建议，不操作控制台。"
+  },
+  {
+    "key": "cobus/expense-manager",
+    "nameZh": "费用管理",
+    "summaryZh": "核对总额，引用已签署政策说明例外。"
+  },
+  {
+    "key": "cobus/incident-desk",
+    "nameZh": "故障工作台",
+    "summaryZh": "整理可审计的故障时间线，不操作生产控制台。"
+  },
+  {
+    "key": "cobus/new-hire-ramp",
+    "nameZh": "新人上手",
+    "summaryZh": "提供经理可编辑的首周计划，邀请保留为草稿。"
+  },
+  {
+    "key": "cobus/vendor-inbox",
+    "nameZh": "供应商收件箱",
+    "summaryZh": "整理供应商工作清单，不自动催办。"
+  },
+  {
+    "key": "cobus/calendar-defender",
+    "nameZh": "日历守护",
+    "summaryZh": "草拟拒绝邀请的回复，不自行移动会议。"
+  },
+  {
+    "key": "cobus/inbox-triage",
+    "nameZh": "收件箱分流",
+    "summaryZh": "分类邮件并草拟回复，不发送、删除或退订。"
+  },
+  {
+    "key": "cobus/subscription-audit",
+    "nameZh": "订阅审计",
+    "summaryZh": "收集最近使用证据并列出订阅，由你取消。"
+  },
+  {
+    "key": "cobus/travel-desk",
+    "nameZh": "旅行工作台",
+    "summaryZh": "检查旅行安排是否合理，不预订、不付款。"
+  },
+  {
+    "key": "cobus/evidence-packager",
+    "nameZh": "证据打包",
+    "summaryZh": "打包已验证的内容，不作发布或阻止发布的决定。"
+  },
+  {
+    "key": "cobus/feature-ask-collator",
+    "nameZh": "功能需求汇总",
+    "summaryZh": "整理原话和次数，不发布路线图。"
+  },
+  {
+    "key": "cobus/launch-coordinator",
+    "nameZh": "发布协调",
+    "summaryZh": "为每个角色指定一名负责人，由人工决定是否发布。"
+  },
+  {
+    "key": "cobus/product-performance",
+    "nameZh": "产品性能",
+    "summaryZh": "整理热点、链接并区分事实与假设，不操作生产环境。"
+  },
+  {
+    "key": "cobus/cited-brief",
+    "nameZh": "带引用简报",
+    "summaryZh": "围绕一个问题生成三分钟简报，每项主张附网址。"
+  },
+  {
+    "key": "cobus/research-desk",
+    "nameZh": "研究工作台",
+    "summaryZh": "整理主张、证据、分歧和未找到的内容，并建议下一篇阅读。"
+  },
+  {
+    "key": "cobus/source-interrogator",
+    "nameZh": "来源追问",
+    "summaryZh": "找出缺少来源支撑的关键主张。"
+  },
+  {
+    "key": "cobus/call-followup",
+    "nameZh": "通话跟进",
+    "summaryZh": "整理回顾和任务，保留在内部；发送须后续明确授权 L2。"
+  },
+  {
+    "key": "cobus/meeting-prep",
+    "nameZh": "会议准备",
+    "summaryZh": "会前掌握上次对客户作出的承诺。"
+  },
+  {
+    "key": "cobus/sales-outbound",
+    "nameZh": "销售外联",
+    "summaryZh": "批量草拟自然的外联内容，不发送。"
+  },
+  {
+    "key": "cobus/talent-scout",
+    "nameZh": "人才探寻",
+    "summaryZh": "提供二十名候选人及证据，外联保留为草稿。"
+  },
+  {
+    "key": "cobus/win-loss",
+    "nameZh": "赢单输单复盘",
+    "summaryZh": "根据证据识别模式，不用空泛理由代替分析。"
+  },
+  {
+    "key": "cobus/account-health",
+    "nameZh": "客户健康度",
+    "summaryZh": "按证据排序观察名单，不给客户发邮件、不编辑 CRM。"
+  },
+  {
+    "key": "cobus/promise-log",
+    "nameZh": "承诺日志",
+    "summaryZh": "记录原话和日期，不发送客户回顾邮件。"
+  },
+  {
+    "key": "cobus/support-replies",
+    "nameZh": "客服回复",
+    "summaryZh": "草拟带政策引用的回复，由你发送。"
+  },
+  {
+    "key": "botskills/account-expert",
+    "nameZh": "客户专家",
+    "summaryZh": "记住一个战略客户，提供有来源的通话前简报，涵盖人员、支出、故障和未解决需求。"
+  },
+  {
+    "key": "botskills/account-growth-coach",
+    "nameZh": "账号增长教练",
+    "summaryZh": "回顾上周 X 发帖，依据账号数据评分，并提出下周的三项改进。"
+  },
+  {
+    "key": "botskills/account-growth-planner",
+    "nameZh": "账号增长规划",
+    "summaryZh": "为一个 X 账号规划下一季度，明确增长假设、里程碑、每周节奏及风险。"
+  },
+  {
+    "key": "botskills/account-health-ranker",
+    "nameZh": "客户健康度排序",
+    "summaryZh": "在同一视图按风险和增购潜力给客户排序并展示评分信号，不联系客户、不编辑 CRM。"
+  },
+  {
+    "key": "botskills/account-media-rundown",
+    "nameZh": "客户媒体摘要",
+    "summaryZh": "每周扫描公开来源，向你发送关于一个战略客户的排序摘要，并附完整链接。"
+  },
+  {
+    "key": "botskills/account-tiering",
+    "nameZh": "客户分层",
+    "summaryZh": "每周依据实际使用和收入信号重新划分客户层级，说明调整建议及计算过程。"
+  },
+  {
+    "key": "botskills/ad-creative-generator",
+    "nameZh": "广告创意生成",
+    "summaryZh": "将已确认简报转为六份带标签的广告草稿，标注角度、测试假设及每项主张的来源。"
+  },
+  {
+    "key": "botskills/agent-inbox",
+    "nameZh": "智能体收件箱",
+    "summaryZh": "通过专用 Bot 邮箱处理工作，个人 Gmail 不进入会话，每次发送均等待你确认。"
+  },
+  {
+    "key": "botskills/amazon-cart-builder",
+    "nameZh": "Amazon 购物车助手",
+    "summaryZh": "根据再次购买和近期订单重建购物车，结账前停下，由你逐项审核并付款。"
+  },
+  {
+    "key": "botskills/argue-the-other-side",
+    "nameZh": "反方论证",
+    "summaryZh": "针对已作出的决定构建最有力的反方论点，并说明什么证据足以改变判断。"
+  },
+  {
+    "key": "botskills/bargain-scout",
+    "nameZh": "优惠探寻",
+    "summaryZh": "按书面规格和最高价格观察商品，附链接标记匹配项，不竞价、购买或付款。"
+  },
+  {
+    "key": "botskills/booking-pipeline-runner",
+    "nameZh": "预约流程跟进",
+    "summaryZh": "找出已同意却未预约的通话、爽约及停滞的改期，整理为附原话的有序工作清单。"
+  },
+  {
+    "key": "botskills/bookkeeping-auditor",
+    "nameZh": "账务审计",
+    "summaryZh": "审查已结账期间，按优先级列出异常、交易编号和纠正措施，不修改账簿。"
+  },
+  {
+    "key": "botskills/bookmark-skill-grader",
+    "nameZh": "书签技能评估",
+    "summaryZh": "将一个月的书签评为保留、待定和噪声，并把保留项转为可粘贴的口语技能触发语。"
+  },
+  {
+    "key": "botskills/bot-advisor",
+    "nameZh": "Bot 顾问",
+    "summaryZh": "每周检查 Bot 名单，用五项备忘录说明重复、沉默和应停用的角色，并提供可粘贴修改。"
+  },
+  {
+    "key": "botskills/brand-deck-keeper",
+    "nameZh": "品牌演示文稿维护",
+    "summaryZh": "对照现行价目表和更新日志审查客户演示文稿，为过时幻灯片提供可直接粘贴的修正。"
+  },
+  {
+    "key": "botskills/bug-repro-pack-builder",
+    "nameZh": "缺陷复现资料包",
+    "summaryZh": "仅在预发布环境把模糊缺陷报告转为含精确步骤、环境和证据的资料包，不接触生产客户数据。"
+  },
+  {
+    "key": "botskills/call-coach",
+    "nameZh": "通话教练",
+    "summaryZh": "按指定标准评估你录制的通话，生成一页点评，每项均引用你带时间戳的原话。"
+  },
+  {
+    "key": "botskills/call-follow-up-drafter",
+    "nameZh": "通话跟进草拟",
+    "summaryZh": "将每次通话转录整理为简短跟进邮件和结构化 CRM 笔记，以原话为依据并保留为草稿。"
+  },
+  {
+    "key": "botskills/chief-of-staff",
+    "nameZh": "幕僚长",
+    "summaryZh": "持续协调重复承诺，为每项指定一名负责人，并标记无人负责、重复分工和过时事项。"
+  },
+  {
+    "key": "botskills/chief-of-staff-briefing",
+    "nameZh": "幕僚长简报",
+    "summaryZh": "工作日早晨在专属聊天提供日历、待回复、待对方回复及隔夜变化的简报，逐条附链接。"
+  },
+  {
+    "key": "botskills/chief-of-staff-router",
+    "nameZh": "幕僚长路由",
+    "summaryZh": "作为统一入口分派请求给对应 Bot，维护 TEAM.md，并每周评估实际交付。"
+  },
+  {
+    "key": "botskills/churn-early-warning",
+    "nameZh": "流失早期预警",
+    "summaryZh": "在账单出现信号前数周识别使用量下降的客户，提供附数据的风险排序名单。"
+  },
+  {
+    "key": "botskills/churn-watch",
+    "nameZh": "客户流失观察",
+    "summaryZh": "每天早晨依据证据链标记高风险客户，帮助客户成功团队提前应对取消。"
+  },
+  {
+    "key": "botskills/churn-win-back-loop",
+    "nameZh": "流失客户挽回",
+    "summaryZh": "按流失原因整理已取消客户，准备待你批准的挽回序列草稿。"
+  },
+  {
+    "key": "botskills/citation-checker",
+    "nameZh": "引用检查",
+    "summaryZh": "逐一打开草稿链接并核对引文，报告死链、迁移页面及与来源不符的引文。"
+  },
+  {
+    "key": "botskills/claim-provenance-tracker",
+    "nameZh": "主张来源追踪",
+    "summaryZh": "追溯演示文稿或文档中每个数字的来源，标记仅有旧演示文稿作依据的数字。"
+  },
+  {
+    "key": "botskills/codebase-hardening-auditor",
+    "nameZh": "代码库加固审计",
+    "summaryZh": "审计快速交付的仓库，按优先级报告发现，附路径、行范围、代码片段和提交 SHA，不修改分支。"
+  },
+  {
+    "key": "botskills/competitor-ad-watch",
+    "nameZh": "竞品广告观察",
+    "summaryZh": "每周查看公开广告资料库，报告竞品新增、扩量及停投的广告创意。"
+  },
+  {
+    "key": "botskills/competitor-pricing-watch",
+    "nameZh": "竞品定价观察",
+    "summaryZh": "每天四次检查公开定价页，并排展示套餐和限额的真实变化。"
+  },
+  {
+    "key": "botskills/competitor-switch-scout",
+    "nameZh": "竞品替代需求探寻",
+    "summaryZh": "寻找公开求助替代指定竞品的帖子，补充讨论背景并草拟由你发送的外联内容。"
+  },
+  {
+    "key": "botskills/competitor-website-watch",
+    "nameZh": "竞品网站观察",
+    "summaryZh": "观察竞品网站除定价外的内容，报告定位、更新日志和招聘岗位的实际变化。"
+  },
+  {
+    "key": "botskills/content-idea-generator",
+    "nameZh": "内容创意生成",
+    "summaryZh": "结合自身分析数据和上升的搜索需求，按优先级给出创意，并附带日期的当下价值依据。"
+  },
+  {
+    "key": "botskills/content-planner-manager",
+    "nameZh": "内容计划管理",
+    "summaryZh": "跟踪编辑日历中的承诺、延期和无人负责事项，每行注明来源。"
+  },
+  {
+    "key": "botskills/crm-from-your-phone",
+    "nameZh": "手机语音转 CRM",
+    "summaryZh": "将会后随口录制的语音笔记整理为 CRM 字段，每个建议值均引用对应原话。"
+  },
+  {
+    "key": "botskills/deal-desk-autopilot",
+    "nameZh": "交易审批工作台",
+    "summaryZh": "整理一页交易审批材料，涵盖折扣理由、条款例外和必要审查，每项附来源。"
+  },
+  {
+    "key": "botskills/deck-localizer",
+    "nameZh": "演示文稿本地化",
+    "summaryZh": "为目标市场重构销售演示文稿，适配语言、货币和本地证据，并列出当地不能使用的主张。"
+  },
+  {
+    "key": "botskills/deck-updater",
+    "nameZh": "演示文稿更新",
+    "summaryZh": "对照实际交付检查销售演示文稿，列出错误、过时或缺失的页面及导致问题的变更。"
+  },
+  {
+    "key": "botskills/demo-clip-library",
+    "nameZh": "演示片段资料库",
+    "summaryZh": "按异议、功能和证据索引录制的演示，附时间戳，便于找到回答潜客问题的九十秒片段。"
+  },
+  {
+    "key": "botskills/desk-lap-nudge",
+    "nameZh": "久坐活动提醒",
+    "summaryZh": "发现久坐后利用你日历中的空隙提醒活动，避免打断会议。"
+  },
+  {
+    "key": "botskills/directory-page-drafter",
+    "nameZh": "目录页面草拟",
+    "summaryZh": "每天研究一个细分领域条目，写成附来源的 Markdown，由人工发布。"
+  },
+  {
+    "key": "botskills/disruptor-advocate",
+    "nameZh": "反方倡议者",
+    "summaryZh": "有意从反方审视计划，引用风险并归档异议，不发送给客户或团队频道。"
+  },
+  {
+    "key": "botskills/docs-self-serve-assistant",
+    "nameZh": "文档自助助手",
+    "summaryZh": "从真实工单找出文档解答不足的问题，为作者提供按优先级排序的缺口、客户原话和文档网址。"
+  },
+  {
+    "key": "botskills/email-injection-sentinel",
+    "nameZh": "邮件注入哨兵",
+    "summaryZh": "将来信各字段视为数据，标记提示注入模式，在你确认真实请求前阻止行动。"
+  },
+  {
+    "key": "botskills/email-purger",
+    "nameZh": "邮件清理规划",
+    "summaryZh": "将多年积累的邮件整理为分组删除建议，含数量、真实样例和供你逐项批准的保留清单。"
+  },
+  {
+    "key": "botskills/enablement-pack-builder",
+    "nameZh": "内部赋能资料包",
+    "summaryZh": "从云盘、通话录音和邮件讨论整理任意主题的内部资料包，帮助同事接手。"
+  },
+  {
+    "key": "botskills/engineering-agent-manager",
+    "nameZh": "工程智能体管理",
+    "summaryZh": "跟踪各编程智能体的工作、阻碍以及彼此重复的任务。"
+  },
+  {
+    "key": "botskills/evergreen-content-flywheel",
+    "nameZh": "长青内容更新",
+    "summaryZh": "找出流量衰减的已发布内容，按每小时工作可恢复的流量排序，安排更新优先级。"
+  },
+  {
+    "key": "botskills/expense-reconciler",
+    "nameZh": "费用核对",
+    "summaryZh": "按收据核对每周费用，引用政策标记例外并草拟催办内容，不修改报销、不发送消息。"
+  },
+  {
+    "key": "botskills/expert-call-prep",
+    "nameZh": "专家通话准备",
+    "summaryZh": "根据已知信息和以往通话未解问题准备提问清单，避免重复询问已有答案的问题。"
+  },
+  {
+    "key": "botskills/first-draft-from-outline",
+    "nameZh": "大纲转初稿",
+    "summaryZh": "严格按已批准大纲生成初稿，并标记大纲信息不足、无法据此撰写的位置。"
+  },
+  {
+    "key": "botskills/firstmate-router",
+    "nameZh": "大副路由",
+    "summaryZh": "将杂乱请求整理为通俗简报，分派给指定专业 Bot，带回结果且不继续转发。"
+  },
+  {
+    "key": "botskills/fleet-chief-of-staff",
+    "nameZh": "Bot 团队幕僚长",
+    "summaryZh": "作为 Bot 团队统一入口分派请求，维护职责 TEAM.md，并在不可撤销操作前询问。"
+  },
+  {
+    "key": "botskills/flight-check-in",
+    "nameZh": "航班值机",
+    "summaryZh": "从收件箱关注航班确认，为每趟航班准备值机资料，并在开放时提醒。"
+  },
+  {
+    "key": "botskills/forecast-notes-updater",
+    "nameZh": "预测备注更新",
+    "summaryZh": "结合通话和讨论检查未结交易，标记阶段未变但进展下滑、或未记录下一步的交易。"
+  },
+  {
+    "key": "botskills/grocery-autopilot",
+    "nameZh": "杂货补货助手",
+    "summaryZh": "根据真实订单历史和日历预测每周补货，生成标价购物篮，由你结账。"
+  },
+  {
+    "key": "botskills/grok-imagine-storyboard",
+    "nameZh": "Grok Imagine 分镜",
+    "summaryZh": "研究故事、规划场景并用 Grok Imagine 生成镜头，存入私有文件夹供你公开前审阅。"
+  },
+  {
+    "key": "botskills/gtm-chief-of-staff",
+    "nameZh": "GTM 幕僚长",
+    "summaryZh": "处理市场拓展衔接缺口，包括无人跟进的营销线索、被跨团队事项阻塞的交易和无人负责的承诺。"
+  },
+  {
+    "key": "botskills/headline-variant-desk",
+    "nameZh": "标题变体工作台",
+    "summaryZh": "为已完成内容提供标题选项，逐项标明切入角度和作出的承诺，便于有依据地选择。"
+  },
+  {
+    "key": "botskills/help-center-updater",
+    "nameZh": "帮助中心更新",
+    "summaryZh": "关注已合并 PR 中面向客户的变更，建议修改帮助文章，并排展示已发布原文与改写。"
+  },
+  {
+    "key": "botskills/icp-scored-outbound-list",
+    "nameZh": "理想客户评分外联名单",
+    "summaryZh": "研究客户，按书面理想客户画像评分并寻找联系人，返回审核名单，不发送、不加入外联序列。"
+  },
+  {
+    "key": "botskills/inbox-reply-digest",
+    "nameZh": "收件箱回复摘要",
+    "summaryZh": "汇总交易与外联讨论的隔夜回复，说明信号及今天需要你处理的一项事项。"
+  },
+  {
+    "key": "botskills/inbox-triage",
+    "nameZh": "收件箱分流",
+    "summaryZh": "每天早晨分类并标记邮件，为三个确实需要你的讨论串草拟回复，逐项等待批准。"
+  },
+  {
+    "key": "botskills/jargon-stripper",
+    "nameZh": "术语精简",
+    "summaryZh": "为指定读者改写草稿，列出替换的术语及理由，便于恢复必要术语。"
+  },
+  {
+    "key": "botskills/latency-investigator",
+    "nameZh": "延迟调查",
+    "summaryZh": "依据证据调查延迟或错误回归，定位热点和可疑变更时段并撰写报告，不修改告警或生产配置。"
+  },
+  {
+    "key": "botskills/lead-scout",
+    "nameZh": "销售线索探寻",
+    "summaryZh": "夜间依据公开信号寻找并排列意向线索，提供附证据链接的评分表，不接触潜客。"
+  },
+  {
+    "key": "botskills/linkedin-icp-prospect-tracker",
+    "nameZh": "LinkedIn 理想客户追踪",
+    "summaryZh": "维护符合理想客户画像的公司和人员名单，每周复核，每行附资料链接和匹配评分。"
+  },
+  {
+    "key": "botskills/linkedin-signal-watch",
+    "nameZh": "LinkedIn 信号观察",
+    "summaryZh": "关注销售管道客户的职位变更、融资和招聘激增，工作日提供排序摘要，每条提醒附链接。"
+  },
+  {
+    "key": "botskills/literature-scan",
+    "nameZh": "文献扫描",
+    "summaryZh": "围绕书面问题调查已发表研究，按实际共识归类发现，并明确列出分歧。"
+  },
+  {
+    "key": "botskills/live-discovery-slide",
+    "nameZh": "实时需求探索页",
+    "summaryZh": "通话中根据潜客原话构建一页需求探索幻灯片，含引文和时间戳，未解答处明确留空。"
+  },
+  {
+    "key": "botskills/mail-cleanup-assistant",
+    "nameZh": "邮件整理助手",
+    "summaryZh": "日常建议邮件标签、归档和可粘贴筛选规则，并说明每项判断依据。"
+  },
+  {
+    "key": "botskills/market-sizing-worksheet",
+    "nameZh": "市场规模工作表",
+    "summaryZh": "建立可审计的规模模型，每个假设均单独命名、注明来源且可修改。"
+  },
+  {
+    "key": "botskills/marketing-calendar-sync",
+    "nameZh": "营销日历同步",
+    "summaryZh": "每天核对营销日历与活动数据库的差异，逐行附上双方记录编号。"
+  },
+  {
+    "key": "botskills/marketing-os-auditor",
+    "nameZh": "营销系统审计",
+    "summaryZh": "按固定标准给营销系统评分并草拟下一项实验，不发布、不花费、不启动广告。"
+  },
+  {
+    "key": "botskills/marketplace-listing-scout",
+    "nameZh": "市场低价商品探寻",
+    "summaryZh": "依据照片识别公开市场上相对指定中位价偏低的商品，不给卖家发消息。"
+  },
+  {
+    "key": "botskills/meeting-double",
+    "nameZh": "会议分身",
+    "summaryZh": "提前一小时写好会前简报，再将你带回的转录整理为有负责人的行动项，不加入通话。"
+  },
+  {
+    "key": "botskills/meeting-prep-brief",
+    "nameZh": "会前简报",
+    "summaryZh": "在今日首场外部会议前准备全部外部会议简报，涵盖阶段、参会人、最近联系和欠对方的答案。"
+  },
+  {
+    "key": "botskills/motivated-seller-finder",
+    "nameZh": "急售卖家探寻",
+    "summaryZh": "扫描当地公开挂牌中的降价、滞销天数和重新挂牌，提供附来源的评分短名单。"
+  },
+  {
+    "key": "botskills/one-line-standup",
+    "nameZh": "一句话站会",
+    "summaryZh": "根据当天实际变化，将一天整理为一句真实、值得保留的话。"
+  },
+  {
+    "key": "botskills/org-chart-keeper",
+    "nameZh": "客户组织图维护",
+    "summaryZh": "每周依据公开和 CRM 来源重建目标客户采购组织，指出尚未建立关系的分支。"
+  },
+  {
+    "key": "botskills/outbound-in-your-voice",
+    "nameZh": "个人语气外联",
+    "summaryZh": "从你已发送邮件学习写作方式，草拟符合你语气的外联内容，止于草稿。"
+  },
+  {
+    "key": "botskills/paid-media-budget-review",
+    "nameZh": "付费媒体预算审查",
+    "summaryZh": "对照计划观察广告表现，附样本量提出预算调整建议，不改预算、不转发建议。"
+  },
+  {
+    "key": "botskills/paper-trading-desk",
+    "nameZh": "模拟交易工作台",
+    "summaryZh": "依据明确交易论点和书面止损记录模拟交易，标明模拟成交，不下实盘订单。"
+  },
+  {
+    "key": "botskills/persistent-bot-memory",
+    "nameZh": "Bot 持久记忆",
+    "summaryZh": "维护供其他 Bot 重读的持久上下文文件，仅收纳适合内容，删除前逐行展示。"
+  },
+  {
+    "key": "botskills/personal-cfo",
+    "nameZh": "个人财务主管",
+    "summaryZh": "工作日提供资金可维持时间、异常交易、投资组合偏差和费用简报，每个数字附来源。"
+  },
+  {
+    "key": "botskills/podcast-clip-desk",
+    "nameZh": "播客片段工作台",
+    "summaryZh": "剪出带时间戳的 YouTube 或播客片段、提取引文并草拟配文，由你发布。"
+  },
+  {
+    "key": "botskills/podcast-summarizer",
+    "nameZh": "播客摘要",
+    "summaryZh": "将单集转录整理为主张、数字和可用想法，逐项附时间戳；没有实质内容时明确说明。"
+  },
+  {
+    "key": "botskills/pr-review-sentinel",
+    "nameZh": "PR 审查哨兵",
+    "summaryZh": "对每个新 PR 做初审，提供按严重程度标记的发现和摘要评论，供人工审查前参考。"
+  },
+  {
+    "key": "botskills/product-expert",
+    "nameZh": "产品专家",
+    "summaryZh": "回答当前产品行为的内部问题，并附证明答案的文档、更新日志或已合并 PR。"
+  },
+  {
+    "key": "botskills/prospect-meeting-booker",
+    "nameZh": "潜客会议预约",
+    "summaryZh": "准备真实空闲时段、合适参会人、背景及回复草稿，由你发送完成预约。"
+  },
+  {
+    "key": "botskills/prospecting-sheet-builder",
+    "nameZh": "潜客开发表格",
+    "summaryZh": "夜间构建每名潜客一行的开发表格，每个单元格附来源链接，未经验证的信息明确留空。"
+  },
+  {
+    "key": "botskills/qbr-pack-builder",
+    "nameZh": "季度业务回顾资料",
+    "summaryZh": "为一个客户整理私有内部季度回顾草稿，每个数字注明来源字段和报告。"
+  },
+  {
+    "key": "botskills/sales-play-autopilot",
+    "nameZh": "销售策略助手",
+    "summaryZh": "跨多个客户执行已定义策略，跟踪各客户所处步骤，草拟下一步由人工执行。"
+  },
+  {
+    "key": "botskills/salesforce-report-builder",
+    "nameZh": "Salesforce 报告生成",
+    "summaryZh": "将销售管道问题转为已保存报告和通俗答案，附筛选条件、运行时间及各数字对应记录编号。"
+  },
+  {
+    "key": "botskills/source-verifier",
+    "nameZh": "来源核验",
+    "summaryZh": "逐项对照一手来源核查主张，附链接和日期标为已证实、相矛盾或无法核实，不编辑文档。"
+  },
+  {
+    "key": "botskills/sponsor-inbound-scout",
+    "nameZh": "赞助来信探寻",
+    "summaryZh": "从收件箱找出真实赞助询问，核实预算与品牌匹配度，提供按优先级排序且附来源的短名单。"
+  },
+  {
+    "key": "botskills/sponsorship-negotiator",
+    "nameZh": "赞助谈判",
+    "summaryZh": "围绕正在进行的赞助讨论，基于你过往交易准备还价立场、报价理由和让步顺序。"
+  },
+  {
+    "key": "botskills/standup-scribe",
+    "nameZh": "站会记录员",
+    "summaryZh": "根据昨日提交、已合并 PR 和日历草拟每日站会内容，会前私信发给你。"
+  },
+  {
+    "key": "botskills/stuck-bot-foreman",
+    "nameZh": "卡住的 Bot 督工",
+    "summaryZh": "检查同级 Bot 是否停滞，对卡住者提醒一次，仅在确需人工介入时通知你。"
+  },
+  {
+    "key": "botskills/style-guide-enforcer",
+    "nameZh": "风格指南检查",
+    "summaryZh": "按书面风格指南检查草稿，列出每处偏差、违反规则及所在行，不改写草稿。"
+  },
+  {
+    "key": "botskills/subscription-cancellation-advisor",
+    "nameZh": "订阅取消顾问",
+    "summaryZh": "说明一项订阅的具体取消路径、损失、是否享有旧价及适合操作的日期。"
+  },
+  {
+    "key": "botskills/subscription-pruner",
+    "nameZh": "订阅精简",
+    "summaryZh": "从收据找出所有重复扣费，结合年费和最近实际使用迹象排序。"
+  },
+  {
+    "key": "botskills/support-autopilot",
+    "nameZh": "客服队列助手",
+    "summaryZh": "每十分钟处理在线客服队列，为可回答对话留下有证据的回复草稿，并汇总需人工处理的事项。"
+  },
+  {
+    "key": "botskills/support-queue-pass",
+    "nameZh": "客服队列巡检",
+    "summaryZh": "每小时重读所有未结工单，报告过时、错分或违反服务时限的事项，每个标记附数据。"
+  },
+  {
+    "key": "botskills/support-reply-drafter",
+    "nameZh": "客服回复草拟",
+    "summaryZh": "以你的语气为待处理工单撰写回复，每项主张附来源，全部保留为未发送草稿。"
+  },
+  {
+    "key": "botskills/support-resolution-agent",
+    "nameZh": "客服问题诊断",
+    "summaryZh": "结合日志、历史工单和更新日志查明工单背后的实际故障，将诊断交给人工。"
+  },
+  {
+    "key": "botskills/support-ticket-fixer",
+    "nameZh": "客服工单整理",
+    "summaryZh": "整理新工单的类型、标签、缺失必填项、错误队列和重复记录，不修改对话。"
+  },
+  {
+    "key": "botskills/talent-scout",
+    "nameZh": "人才探寻",
+    "summaryZh": "按书面职位要求寻找候选人，用带日期的来源研究匹配度并准备外联草稿，不联系任何人且遵守地区隐私规则。"
+  },
+  {
+    "key": "botskills/telegram-fleet-door",
+    "nameZh": "Telegram 团队入口",
+    "summaryZh": "通过私密 Telegram 讨论控制许可名单内的 Bot 团队，不以你名义联系陌生人或加入公开群。"
+  },
+  {
+    "key": "botskills/tickets-to-changelog",
+    "nameZh": "工单转更新日志",
+    "summaryZh": "将本周已交付修复写成客户能理解的更新日志，每项附提出需求的工单编号。"
+  },
+  {
+    "key": "botskills/trust-center-deal-desk",
+    "nameZh": "信任中心交易工作台",
+    "summaryZh": "从已批准答案库为企业安全问卷生成有来源的草稿，并上报答案库未覆盖的问题。"
+  },
+  {
+    "key": "botskills/viral-tweet-scout",
+    "nameZh": "热门推文探寻",
+    "summaryZh": "只读查看 X 中主题下实际传播的内容，解释各自传播机制，并附链接和时间戳。"
+  },
+  {
+    "key": "botskills/vm-overwatch",
+    "nameZh": "虚拟机守护",
+    "summaryZh": "维护共享 Grok Bot 电脑，在工作日备份非机密文件，并提交每周组织回顾。"
+  },
+  {
+    "key": "botskills/what-did-we-promise",
+    "nameZh": "客户承诺追踪",
+    "summaryZh": "找出团队向客户作出却无人跟踪的承诺，逐字引用并附链接，标记已逾期事项。"
+  },
+  {
+    "key": "botskills/what-should-i-cook",
+    "nameZh": "今晚吃什么",
+    "summaryZh": "根据厨房现有食材选择晚餐，优先使用即将过期的食材，不因缺一种香草让你去采购。"
+  },
+  {
+    "key": "botskills/win-loss-memo",
+    "nameZh": "赢单输单备忘录",
+    "summaryZh": "直接依据记录诚实复盘已结交易，优先采用买方原话，而非销售人员的推断。"
+  },
+  {
+    "key": "botskills/x-account-crew",
+    "nameZh": "X 账号团队",
+    "summaryZh": "四个角色为一个 X 账号探寻、草拟、核实并排队帖子，交给你手动发布。"
+  },
+  {
+    "key": "botskills/youtube-transcript-desk",
+    "nameZh": "YouTube 转录工作台",
+    "summaryZh": "通过转录插件提取带时间戳的文本，整理带引用的摘要。"
+  }
+]

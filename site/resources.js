@@ -6,7 +6,7 @@
   const language = document.getElementById('resource-language');
   const rows = [...document.querySelectorAll('[data-project]')];
   const initial = new URLSearchParams(location.search);
-  input.value = (initial.get('q') || '').slice(0, 240);
+  if (!input.value) input.value = (initial.get('q') || '').slice(0, 240);
   scope.value = ['true', 'false'].includes(initial.get('scope')) ? initial.get('scope') : 'all';
   function update() {
     const query = input.value.trim().toLowerCase();

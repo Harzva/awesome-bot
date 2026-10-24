@@ -2,6 +2,7 @@
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { readFile, readdir } from 'node:fs/promises';
+import { hydrateImportedRole } from './imported-roles.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const engineRoot = process.env.OPENBOT_MARKET_ROOT
@@ -25,7 +26,7 @@ export async function readCatalogue() {
     if (!bot.author || typeof bot.author.name !== 'string' || !bot.author.name.trim()) throw new Error(`Entry author is required: ${sourceFile}`);
     if (typeof bot.license !== 'string' || !bot.license.trim()) throw new Error(`Entry license is required: ${sourceFile}`);
     if (typeof bot.version !== 'string' || !bot.version.trim()) throw new Error(`Entry version is required: ${sourceFile}`);
-    bots.push({ ...bot, sourceFile });
+    bots.push(await hydrateImportedRole({ ...bot, sourceFile }));
   }
   if (!bots.length) throw new Error('No catalogue entries found');
   return { ...catalogue, bots };

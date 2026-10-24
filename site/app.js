@@ -7,7 +7,7 @@
 
   const copy = {
     zh: {
-      navCatalog: 'Bot 市场', navResources: '开源与参考', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
+      navCatalog: 'Bot 市场', navResources: '开源与参考', sharedBots: '原站 Bot', sourceInstructions: '原始角色指令（英文）', adaptedNote: '第三方来源适配；保留英文原始步骤，回复语言由用户指定。宿主连接、权限与预约需要另行设置。', licenseLabel: '许可证', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
       filterLabel: '目录筛选', botTypeLabel: 'Bot 类型', categoryFilter: '按分类筛选', sortControlLabel: '排序方式',
       title: 'Bot 市场',
       lede: '探索角色与任务，找到适合你的 Bot。',
@@ -44,7 +44,7 @@
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
-      navCatalog: 'Marketplace', navResources: 'Projects & references', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
+      navCatalog: 'Marketplace', navResources: 'Projects & references', sharedBots: 'Shared Bots', sourceInstructions: 'Original role instructions (English)', adaptedNote: 'Attributed source adaptation. Original English steps retained; the user chooses the response language. Host connections, permissions and routines require separate setup.', licenseLabel: 'License', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
       filterLabel: 'Directory filters', botTypeLabel: 'Bot type', categoryFilter: 'Filter by category', sortControlLabel: 'Sort order',
       title: 'Bot marketplace',
       lede: 'Explore roles and tasks. Find a Bot for your work.',
@@ -260,7 +260,7 @@
   function entryHaystack(entry) {
     const fields = [
       entry.id, entry.name, entry.summary, entry.mission, entry.style, entry.sourceName,
-      entry.sourceAuthor, entry.category, ...(entry.tags || []), ...(entry.capabilities || [])
+      entry.sourceAuthor, entry.sourceMarket, entry.category, ...(entry.tags || []), ...(entry.capabilities || [])
     ];
     return fields.map((field) => valueText(field).toLocaleLowerCase()).join('\n');
   }
@@ -477,6 +477,8 @@
       sortSelect.options[0].textContent = label('nameSort');
       sortSelect.options[1].textContent = label('originalNameSort');
     }
+    const shared = doc.getElementById('shared-bots-link');
+    if (shared) shared.href = state.language === 'en' ? './shared-bots.html?lang=en' : './shared-bots.html';
     const resources = doc.getElementById('resources-link');
     if (resources) resources.href = state.language === 'en' ? './resources.en.html' : './resources.html';
     const language = doc.getElementById('language-toggle');
@@ -929,7 +931,16 @@
     if (entry.author) {
       source.append(doc.createTextNode(` · ${label('templateAuthor')}${entry.author}`));
     }
+    if (entry.sourceMarket) source.append(doc.createTextNode(` · ${entry.sourceMarket}`));
     header.append(source);
+    if (entry.provenance) {
+      header.append(make('p', 'detail-source', label('adaptedNote')));
+      const attribution = make('p', 'detail-source');
+      attribution.append(doc.createTextNode(`${label('licenseLabel')}: ${entry.license} · `));
+      linkFor(attribution, entry.provenance.licenseUrl, entry.license, {});
+      attribution.append(doc.createTextNode(` · ${entry.provenance.revision.slice(0, 12)}`));
+      header.append(attribution);
+    }
     shell.append(header);
 
     const actions = make('div', 'detail-actions');
@@ -977,6 +988,11 @@
       });
       section.append(list);
       shell.append(section);
+    }
+    if (entry.sourcePrompt) {
+      const original = make('details', 'detail-section');
+      original.append(make('summary', '', label('sourceInstructions')), make('pre', 'prompt-text', entry.sourcePrompt));
+      shell.append(original);
     }
     appendGuidance(shell, entry.guidance);
     appendPermissions(shell, entry.permissions);

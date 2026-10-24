@@ -1,6 +1,7 @@
 import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve, relative } from 'node:path';
 import { engineModule, root, readCatalogue } from './engine.mjs';
+import { adaptedPersona } from './imported-roles.mjs';
 import { assertVersionImmutability } from './check-versions.mjs';
 import { loadScenarios, renderStartGuide } from './scenarios.mjs';
 import { loadEnglish, renderEnglishStartGuide, renderEnglishCatalogue } from './locales.mjs';
@@ -57,7 +58,7 @@ for (const bot of catalogue.bots) {
   demand(!ids.has(bot.id), `Duplicate bot id: ${bot.id}`);
   ids.add(bot.id);
   demand(categories.has(bot.category), `Unknown category: ${bot.id}`);
-  demand(bot.implementation === 'openbot-original', `Unclear implementation ownership: ${bot.id}`);
+  demand(['openbot-original', 'third-party-adaptation'].includes(bot.implementation), `Unclear implementation ownership: ${bot.id}`);
   for (const key of ['name', 'summary', 'mission', 'style', 'boundaries', 'welcome']) demand(typeof bot[key] === 'string' && !!bot[key].trim(), `${bot.id}.${key} must be nonempty text`);
   for (const key of ['inputs', 'outputs', 'workflow', 'requirements', 'quickPrompts']) demand(Array.isArray(bot[key]) && bot[key].length > 0 && bot[key].every(value => typeof value === 'string' && !!value.trim()), `${bot.id}.${key} must contain nonempty text`);
   for (const key of ['tags', 'capabilities']) demand(Array.isArray(bot[key]) && bot[key].every(value => typeof value === 'string' && !!value.trim()), `${bot.id}.${key} must be a text array`);
@@ -73,7 +74,7 @@ for (const bot of catalogue.bots) {
   if (errors.length) continue;
   const slug = bot.id.split('/')[1];
   demand(/^[a-z0-9][a-z0-9-]*$/.test(slug), `Invalid slug: ${bot.id}`);
-  const persona = [
+  const persona = bot.implementation === 'third-party-adaptation' ? adaptedPersona(bot, 'zh') : [
     `你是${bot.name}。${bot.mission}`,
     `工作方式：${bot.style}`,
     `开始前确认：${bot.inputs.join('；')}。缺失信息先说明；能用现有材料完成的部分继续推进。`,
@@ -86,7 +87,7 @@ for (const bot of catalogue.bots) {
   const manifest = {
     schema: 'openbot.market/1', kind: 'template', id: bot.id,
     version: bot.version, name: bot.name, summary: bot.summary,
-    description: `${bot.mission} 输入：${bot.inputs.join('、')}。交付：${bot.outputs.join('、')}。这是OpenBot独立编写的模板，公开参考见来源字段。`,
+    description: `${bot.mission} 输入：${bot.inputs.join('、')}。交付：${bot.outputs.join('、')}。${bot.implementation === 'third-party-adaptation' ? '这是保留英文原始指令与许可通知的第三方角色适配，尚未完成真实任务验收。' : '这是OpenBot独立编写的模板，公开参考见来源字段。'}`,
     author: bot.author, license: bot.license,
     tags: [bot.category, ...bot.tags], openbot: bot.openbot || '>=0.9.9',
     capabilities: bot.capabilities,
@@ -102,7 +103,7 @@ for (const bot of catalogue.bots) {
       taskExamples: [{ title: bot.example.title, prompt: bot.example.prompt }]
     },
     state: { version: 1, reads: 1, note: '模板仅声明人设与技能，不创建自定义持久数据格式；任务产物由宿主与用户另行管理。' },
-    'x-origin': { implementation: 'openbot-original', affiliation: 'independent', references: bot.references, upstreamConfigurationImported: false },
+    'x-origin': { implementation: bot.implementation, affiliation: 'independent', references: bot.references, upstreamConfigurationImported: false, ...(bot.provenance ? { provenance: bot.provenance } : {}) },
     'x-collection': bot.collection,
     'x-requires': bot.requirements
   };
@@ -147,16 +148,16 @@ for (const { bot, manifest, versions } of latest.values()) {
     const old = prior?.versions?.find(value => value.version === item.manifest.version && value.integrity === integrity);
     resolvedVersions.push({ version: item.manifest.version, url: `../${item.file}`, integrity, publishedAt: old?.publishedAt || catalogue.updatedAt });
   }
-  entries.push({ id: bot.id, kind: 'template', name: bot.name, summary: bot.summary, tags: manifest.tags, verified: false, publisher: { name: bot.author.name }, versions: resolvedVersions });
+  entries.push({ id: bot.id, kind: 'template', name: bot.name, summary: bot.summary, tags: manifest.tags, verified: false, publisher: { name: bot.implementation === 'third-party-adaptation' ? 'OpenBot contributors' : bot.author.name }, versions: resolvedVersions });
 }
 
-const registry = { schema: REGISTRY_SCHEMA, name: 'Awesome Bot — OpenBot 原创模板（开发目录，未签名）', updatedAt: catalogue.updatedAt, entries };
+const registry = { schema: REGISTRY_SCHEMA, name: 'Awesome Bot — OpenBot 模板（原创与来源适配，未签名）', updatedAt: catalogue.updatedAt, entries };
 errors.push(...validateRegistry(registry).errors);
 expected.set('registry/index.json', json(registry));
 
 const lines = [
   '# Awesome Bot 目录', '',
-  `核验日期：${catalogue.updatedAt.slice(0, 10)}。${catalogue.bots.filter(b => b.collection === 'bot-role').length} 个 OpenBot 兼容原创角色模板 + ${catalogue.bots.filter(b => b.collection === 'task-workflow').length} 个任务工作流，均有来源记录。模板尚未完成逐项真实账号任务验收。`, '',
+  `核验日期：${catalogue.updatedAt.slice(0, 10)}。${catalogue.bots.filter(b => b.collection === 'bot-role').length} 个 OpenBot 兼容角色模板（含注明来源的第三方适配） + ${catalogue.bots.filter(b => b.collection === 'task-workflow').length} 个任务工作流，均有来源记录。模板尚未完成逐项真实账号任务验收。`, '',
   `已收录 Grok Marketplace 的 ${inventory.marketplaceBots.length} 个公开条目（${inventory.officialTeamCategoryCount} 个带 Grok Bot Team 标签），以及 ${inventory.useCases.length} 个任务场景。完整逐项来源、作者与适配状态见 [来源清单](sources/grok-inventory.json)。部分详情公开显示设置文本；本目录没有复制这些文本或导入其账号连接与运行环境。`, '',
   '## Grok Marketplace 全量索引', '',
   `${inventory.marketplaceBotCount}个原平台条目均有对应的OpenBot原创角色模板，保留原作者和原平台创建链接。模板根据公开职责独立编写，不代表原配置兼容或相同行为。${inventory.useCaseCount}个参考任务工作流和社区新增条目在下方分别展示。`, '',
@@ -167,7 +168,7 @@ for (const item of inventory.marketplaceBots) {
   const local = catalogue.bots.find((b) => b.id === item.localTemplateId);
   lines.push(`| [${cell(item.name)}](${item.url}) | ${cell(item.author || '未标注')} | ${cell(item.categories.join(' / ') || '未分类')} | ${local ? `[${cell(local.name)}](${templateFile(local)})` : '待适配：保留原平台入口'} |`);
 }
-for (const [collection, title] of [['bot-role', 'OpenBot 原创角色'], ['task-workflow', '原创任务工作流']]) {
+for (const [collection, title] of [['bot-role', 'OpenBot 角色（原创与来源适配）'], ['task-workflow', '原创任务工作流']]) {
 lines.push('', `## ${title}`, '');
 for (const [id, name] of categories) {
   const bots = catalogue.bots.filter((b) => b.category === id && b.collection === collection);
