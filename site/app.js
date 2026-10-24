@@ -7,7 +7,7 @@
 
   const copy = {
     zh: {
-      navCatalog: 'Bot 市场', navResources: '开源与参考', sharedBots: '原站 Bot', sourceInstructions: '原始角色指令（英文）', adaptedNote: '第三方来源适配；保留英文原始步骤，回复语言由用户指定。宿主连接、权限与预约需要另行设置。', licenseLabel: '许可证', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
+      navCatalog: 'Bot 市场', navResources: '开源与参考', navHandbook: '使用手册', handbookStart: '从使用手册开始：上手、团队协作与开发接入', sharedBots: '原站 Bot', sourceInstructions: '原始角色指令（英文）', adaptedNote: '第三方来源适配；保留英文原始步骤，回复语言由用户指定。宿主连接、权限与预约需要另行设置。', licenseLabel: '许可证', navSubmit: '投稿', kicker: 'Awesome Bot', languageToggle: '切换语言与 Bot 内容',
       filterLabel: '目录筛选', botTypeLabel: 'Bot 类型', categoryFilter: '按分类筛选', sortControlLabel: '排序方式',
       title: 'Bot 市场',
       lede: '探索角色与任务，找到适合你的 Bot。',
@@ -44,7 +44,7 @@
       notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
-      navCatalog: 'Marketplace', navResources: 'Projects & references', sharedBots: 'Shared Bots', sourceInstructions: 'Original role instructions (English)', adaptedNote: 'Attributed source adaptation. Original English steps retained; the user chooses the response language. Host connections, permissions and routines require separate setup.', licenseLabel: 'License', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
+      navCatalog: 'Marketplace', navResources: 'Projects & references', navHandbook: 'Handbook', handbookStart: 'Start with the handbook: first task, teamwork and integration', sharedBots: 'Shared Bots', sourceInstructions: 'Original role instructions (English)', adaptedNote: 'Attributed source adaptation. Original English steps retained; the user chooses the response language. Host connections, permissions and routines require separate setup.', licenseLabel: 'License', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
       filterLabel: 'Directory filters', botTypeLabel: 'Bot type', categoryFilter: 'Filter by category', sortControlLabel: 'Sort order',
       title: 'Bot marketplace',
       lede: 'Explore roles and tasks. Find a Bot for your work.',
@@ -479,6 +479,7 @@
     }
     const shared = doc.getElementById('shared-bots-link');
     if (shared) shared.href = state.language === 'en' ? './shared-bots.html?lang=en' : './shared-bots.html';
+    ['handbook-link', 'handbook-start-link'].forEach(id => { const link = doc.getElementById(id); if (link) link.href = state.language === 'en' ? './handbook.en.html' : './handbook.html'; });
     const resources = doc.getElementById('resources-link');
     if (resources) resources.href = state.language === 'en' ? './resources.en.html' : './resources.html';
     const language = doc.getElementById('language-toggle');
@@ -486,7 +487,7 @@
     const home = doc.querySelector('.brand');
     if (home) home.href = state.language === 'en' ? './?lang=en' : './';
     if (!state.detailId) doc.title = label('pageTitle');
-    doc.querySelectorAll('[data-import-guide]').forEach(link => { link.href = `https://github.com/Harzva/awesome-bot/blob/main/START_HERE${state.language === 'en' ? '.en' : ''}.md`; });
+    doc.querySelectorAll('[data-import-guide]').forEach(link => { link.href = `./handbook-start${state.language === 'en' ? '.en' : ''}.html`; });
     const fallback = doc.getElementById('browse-github');
     if (fallback) fallback.href = `https://github.com/Harzva/awesome-bot/blob/main/CATALOGUE${state.language === 'en' ? '.en' : ''}.md`;
     for (const id of ['agent-copy-status', 'copy-status', 'share-status']) setText(doc.getElementById(id), '');
@@ -960,7 +961,7 @@
     }
     const resources = make('div', 'detail-resource-links');
     appendAction(resources, `agents/${state.language}/${entry.id.split('/')[1]}.md`, label('agentMarkdown'), false, false);
-    appendAction(resources, `https://github.com/Harzva/awesome-bot/blob/main/START_HERE${state.language === 'en' ? '.en' : ''}.md`, label('importGuide'), false, false);
+    appendAction(resources, `./handbook-start${state.language === 'en' ? '.en' : ''}.html`, label('importGuide'), false, false);
     appendAction(resources, entry.manifestUrl, label('manifest'), false, false);
     appendAction(resources, entry.originalUrl, label('original'), false, false);
     appendAction(resources, entry.editUrl, label('edit'), false, false);

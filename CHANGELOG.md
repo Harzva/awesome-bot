@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.0 — 2026-10-25
+
+- Add a bilingual handbook with learning paths for first-time users, teams and developers, chapter search, printable pages and Markdown editions.
+- Reuse the marketplace's existing scenarios and downloads; preserve all published template and registry bytes.
+- Connect the handbook from the market, shared-source directory, project references and Agent discovery guide. Content distinguishes OpenBot configuration contracts from external Grok platform behavior.
+
 ## 0.8.0 — 2026-10-24
 
 - Import 223 attributed Bot role instructions from three licensed, fixed-revision sources, with Chinese/English metadata and original English prompt bodies retained. Keep complete MIT notices inside both exported personas.

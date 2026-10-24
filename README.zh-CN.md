@@ -9,6 +9,13 @@
 网站支持中英文名称搜索、分类、角色/工作流切换、职责详情、浏览器收藏、单项或批量下载。可分享当前筛选或单个 Bot 链接，刷新及浏览器返回会恢复筛选和界面语言；收藏只保存在本机，分享链接不携带收藏筛选。加载失败可保留筛选重试，或转到 GitHub 目录。英文模式覆盖371个Bot的职责、人设、技能、示例、配置下载和5个场景；223个来源适配角色在两种语言下均保留原始英文指令；可直接打开[英文市场](https://harzva.github.io/awesome-bot/?lang=en)。每个Bot配有原创稳定的角色标识。内容由同一组条目生成，独立克隆即可构建。
 
 
+## 使用手册
+
+[使用手册](https://harzva.github.io/awesome-bot/handbook.html)提供**新手上手、团队使用、开发者参考**三条路径。十章覆盖概念、选型与导入、任务写法、交接、现有五个场景、Agent 接入、贡献、排错和术语。支持全文搜索、章节打印、Markdown 下载与[完整英文版](https://harzva.github.io/awesome-bot/handbook.en.html)。
+
+手册以本站已实现的配置和网页能力为准，借鉴 GrokBot Guide 的组织方式，不把 Grok 专属控件写成 OpenBot 功能。查看[来源核查](docs/handbook-sources-20261025.md)。
+
+
 ## 其他市场的 Bot
 
 市场现有 **371 个 OpenBot 配置模板**，包含从 Awesome Grokbot、Grok Bot Templates 和 BotSkills 适配的 **223 个具体角色**。保留原始英文指令与适用许可通知，同时提供中英文名称、摘要和使用说明；原有 148 条配置保持不变。在市场搜索 Bot 或来源名称，查看原始指令与来源后下载配置。

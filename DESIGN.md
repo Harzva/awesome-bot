@@ -56,3 +56,11 @@ Version-specific screenshots, independent visual review and browser evidence are
 Version 0.5 acceptance passed independent visual review in Chinese and English at all four target sizes. The accepted captures use the `accepted-` prefix. First-card detail and download actions are visible at every target; the final English desktop actions stay on one row, and phone sort values remain legible. Earlier captures and the first blocking review remain as evidence of the bounded fixes. The final scoped layout scan reported no findings.
 
 Actual browser checks confirmed category/select synchronization, saved filtering, English scene downloads, all three main detail actions, a real paste of the selected English Bot's Agent prompt, Escape focus restoration and refresh preserving the selected scenario. Public deployment and release package checks are recorded separately from these local UI results.
+
+## Handbook reading surface (0.9)
+
+The bilingual handbook expands the existing visual system for reading. It uses the same white surfaces, neutral text and self-hosted typography, with a narrow chapter directory beside a bounded prose column. Three reader paths lead to first tasks, team use and developer reference; search and chapter navigation stay separate from market filtering.
+
+At phone widths the native directory disclosure starts collapsed; without JavaScript it stays open so all chapters remain reachable. Code and tables scroll inside their own containers. Section anchors and matching-language links preserve reading context. Printing hides navigation and keeps the chapter body. Markdown and structured downloads remain available independently of search.
+
+This surface introduces no raster assets or replacement brand. The external guide informs content organization; its logos and animation artwork are not website assets. Desktop (1440 × 1000) and phone (390 × 844) captures and browser checks are retained with the 0.9 publication evidence outside this repository.

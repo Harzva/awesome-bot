@@ -7,7 +7,8 @@ import { loadEnglish, localizePlan, englishPersona } from './locales.mjs';
 import { avatarPath, avatarSVG } from './avatars.mjs';
 import { writeAgentSurface } from './agent-surface.mjs';
 import { writeExternalProjects } from './external-projects.mjs';
-import { writeSharedBots } from './shared-bots.mjs';
+import { writeSharedBots, readSharedBots } from './shared-bots.mjs';
+import { writeHandbook } from './handbook.mjs';
 
 const args = process.argv.slice(2);
 if (args.some(arg => !arg.startsWith('--out='))) throw new Error('Usage: node scripts/build-site.mjs [--out=<directory>]');
@@ -168,6 +169,7 @@ await writeFile(resolve(output, 'catalogue.en.json'), json(englishData));
 const agents = await writeAgentSurface({ output, catalogues: { zh: data, en: englishData }, contentRevision: packageMetadata.version });
 await writeExternalProjects({ output, version: packageMetadata.version });
 await writeSharedBots({ output, version: packageMetadata.version });
+const handbook = await writeHandbook({ output, version: packageMetadata.version, catalogues: { zh: data, en: englishData }, shared: await readSharedBots() });
 await writeFile(resolve(output, 'robots.txt'), 'User-agent: *\nAllow: /\n');
-await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/shared-bots.html</loc></url></urlset>\n');
+await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/shared-bots.html</loc></url>' + handbook.pages.map(page => `<url><loc>https://harzva.github.io/awesome-bot/${page}</loc></url>`).join('') + '</urlset>\n');
 console.log(JSON.stringify({ ok: true, output, ...counts, individualDownloads: entries.length, scenarioDownloads: scenarios.length, englishEntries: englishEntries.length, agentCards: agents.cards }));
