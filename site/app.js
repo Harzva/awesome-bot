@@ -766,7 +766,20 @@
     favorite.addEventListener('click', () => {
       if (state.favorites.has(entry.id)) state.favorites.delete(entry.id); else state.favorites.add(entry.id);
       saveFavorites();
+      if (!state.favoritesOnly) {
+        setText(favorite, state.favorites.has(entry.id) ? label('saved') : label('save'));
+        favorite.setAttribute('aria-pressed', String(state.favorites.has(entry.id)));
+        return;
+      }
+      const rows = Array.from(article.parentElement.children);
+      const position = rows.indexOf(article);
+      const hadFocus = article.contains(doc.activeElement);
       renderResults();
+      if (hadFocus) {
+        const remaining = doc.querySelectorAll('#results .favorite-button');
+        const target = remaining[Math.min(position, remaining.length - 1)] || doc.getElementById('results-title');
+        if (target) { if (!remaining.length) target.tabIndex = -1; target.focus(); }
+      }
     });
     const details = make('button', 'detail-button', label('viewDetails'));
     details.type = 'button';

@@ -94,8 +94,14 @@
   const change = () => { state.page = 1;render(); };
   ui.search.addEventListener('input', change);ui.source.addEventListener('change', change);ui.platform.addEventListener('change', change);
   ui.form.addEventListener('submit', e => { e.preventDefault();change(); });
-  ui.prev.addEventListener('click', () => {state.page--;render();ui.count.scrollIntoView({block:'start'});});
-  ui.next.addEventListener('click', () => {state.page++;render();ui.count.scrollIntoView({block:'start'});});
+  const turnPage = direction => {
+    state.page += direction;
+    render();
+    ui.count.focus({ preventScroll: true });
+    ui.count.scrollIntoView({ block: 'start' });
+  };
+  ui.prev.addEventListener('click', () => turnPage(-1));
+  ui.next.addEventListener('click', () => turnPage(1));
   ui.language.addEventListener('click', () => {state.lang = state.lang === 'en' ? 'zh' : 'en';copy();sourcesList();render();});
   ui.retry.addEventListener('click', load);
   window.addEventListener('popstate', () => {readRoute();copy();sourcesList();render();});
