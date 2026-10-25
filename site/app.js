@@ -41,7 +41,7 @@
       copyResults: '分享当前筛选', copyDetail: '复制 Bot 链接', shareSuccess: '链接已复制', retryCatalogue: '重新加载', retrying: '正在重试…', browseGitHub: '在 GitHub 浏览', missingDetail: '链接中的 Bot 已不在目录中，可继续搜索。',
       scenarioLabel: '场景', scenarioFilter: '选择任务场景', allScenarios: '选择任务场景', downloadScenario: '下载此场景', copyFirstTask: '复制首个任务', copyStep: '复制这一步', taskCopied: '任务提示词已复制，请补充自己的材料后发送。', importGuide: '导入与首次使用', scenarioGuide: '准备材料与使用步骤', startWith: '先从这个 Bot 开始：', scenarioNote: '按步骤在对应 Bot 中开始，审阅产物后再交接。下载不会自动执行任务。', missingScenario: '链接中的场景已不在目录中，可继续浏览全部 Bot。', feedbackBot: '反馈这个 Bot', botsUnit: '个 Bot',
       agentTitle: '交给 Agent 读取', agentBody: '复制加载指令，粘贴给能读取链接的 Agent。它可按需读取角色、步骤和配置；复制不会安装或启动 Bot。', copyAgent: '复制给 Agent', agentCopied: '加载指令已复制，粘贴到能读取链接的 Agent 中。', agentMarkdown: 'Markdown 说明', agentIndex: 'Agent 索引', asideLabel: '市场工具', pageTitle: 'Awesome Bot — Bot 市场', homeLabel: 'Awesome Bot 首页', navigationLabel: '主导航', inventoryLabel: '市场说明',
-      notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
+      scenarioPractice: '用虚构材料练习', notTestedValue: '尚未测试', noDetails: '暂未提供', copySuccess: '已复制索引 URL', copyFailed: '复制失败，请手动复制。'
     },
     en: {
       navCatalog: 'Marketplace', navResources: 'Projects & references', navHandbook: 'Handbook', handbookStart: 'Start with the handbook: first task, teamwork and integration', sharedBots: 'Shared Bots', sourceInstructions: 'Original role instructions (English)', adaptedNote: 'Attributed source adaptation. Original English steps retained; the user chooses the response language. Host connections, permissions and routines require separate setup.', licenseLabel: 'License', navSubmit: 'Submit', kicker: 'Awesome Bot', languageToggle: 'Switch language and Bot content',
@@ -78,7 +78,7 @@
       copyResults: 'Share this search', copyDetail: 'Copy Bot link', shareSuccess: 'Link copied', retryCatalogue: 'Retry loading', retrying: 'Retrying…', browseGitHub: 'Browse on GitHub', missingDetail: 'The linked Bot is no longer in the directory. You can keep searching.',
       scenarioLabel: 'Goal', scenarioFilter: 'Choose a task scenario', allScenarios: 'Choose a goal', downloadScenario: 'Download this scenario', copyFirstTask: 'Copy first task', copyStep: 'Copy this step', taskCopied: 'Task prompt copied. Add your own materials before sending.', importGuide: 'Import and get started', scenarioGuide: 'Materials and steps', startWith: 'Start with this Bot: ', scenarioNote: 'Start each step in its Bot, review the output, then hand it over. Downloading does not run the tasks.', missingScenario: 'The linked scenario is no longer in the directory. You can browse all Bots.', feedbackBot: 'Report a Bot issue', botsUnit: 'Bots',
       agentTitle: 'Read with your Agent', agentBody: 'Copy the loading prompt into an Agent that can read links. It can fetch role context, steps and configuration on demand. Copying does not install or start a Bot.', copyAgent: 'Copy for Agent', agentCopied: 'Loading prompt copied. Paste it into an Agent that can read links.', agentMarkdown: 'Markdown context', agentIndex: 'Agent index', asideLabel: 'Marketplace tools', pageTitle: 'Awesome Bot — Bot marketplace', homeLabel: 'Awesome Bot home', navigationLabel: 'Main navigation', inventoryLabel: 'Marketplace summary',
-      notTestedValue: 'Not tested', noDetails: 'Not provided', copySuccess: 'Index URL copied', copyFailed: 'Copy failed. Copy it manually.'
+      scenarioPractice: 'Try the practice', notTestedValue: 'Not tested', noDetails: 'Not provided', copySuccess: 'Index URL copied', copyFailed: 'Copy failed. Copy it manually.'
     }
   };
 
@@ -653,6 +653,16 @@
       download.href = scenario.downloadUrl;
       download.setAttribute('download', '');
       setText(download, `${label('downloadScenario')} · ${scenario.botIds.length} ${label('botsUnit')}`);
+    }
+    const practice = doc.getElementById('scenario-practice');
+    const practiceContainer = doc.getElementById('scenario-practice-container');
+    if (practice && practiceContainer) {
+      const available = practice.dataset.handbookPractices.split(',').includes(scenario.id);
+      practiceContainer.hidden = !available;
+      if (available) {
+        practice.href = `./handbook-scenarios${state.language === 'en' ? '.en' : ''}.html#practice-${encodeURIComponent(scenario.id)}`;
+        setText(practice, label('scenarioPractice'));
+      }
     }
     const key = `${scenario.id}:${state.language}`;
     if (state.scenarioRenderKey === key) return;

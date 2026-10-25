@@ -175,6 +175,11 @@ html[lang^="en"] .handbook-page .handbook-only-en {
   line-height: 1.35;
 }
 
+.handbook-page .handbook-content article section[id^="practice-"] > h3:first-of-type {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
 .handbook-page .handbook-content article p,
 .handbook-page .handbook-content article li,
 .handbook-page .handbook-content article dd {

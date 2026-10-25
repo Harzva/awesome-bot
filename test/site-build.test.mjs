@@ -104,6 +104,14 @@ test('the static market offers complete, deterministic and unprivileged download
     }
     assert.equal(site.scenarios.length, 5);
     assert.equal(en.scenarios.length, 5);
+    const handbook = JSON.parse(await readFile(join(output, 'handbook.json'), 'utf8'));
+    const practiceIds = new Set(handbook.chapters.find(chapter => chapter.id === 'scenarios').sections.map(section => section.id));
+    const expectedPractices = site.scenarios.filter(scenario => practiceIds.has(`practice-${scenario.id}`)).map(scenario => scenario.id);
+    const indexHtml = await readFile(join(output, 'index.html'), 'utf8');
+    assert.deepEqual(indexHtml.match(/data-handbook-practices="([^"]*)"/)[1].split(','), expectedPractices);
+    for (const id of expectedPractices) {
+      for (const suffix of ['', '.en']) assert.ok((await readFile(join(output, `handbook-scenarios${suffix}.html`), 'utf8')).includes(`id="practice-${id}"`));
+    }
     for (const scenario of en.scenarios) {
       assert.doesNotMatch(JSON.stringify(scenario), /\p{Script=Han}/u);
       const fleet = JSON.parse(await readFile(join(output, scenario.downloadUrl), 'utf8'));

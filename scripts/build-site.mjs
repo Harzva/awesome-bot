@@ -170,6 +170,7 @@ const agents = await writeAgentSurface({ output, catalogues: { zh: data, en: eng
 await writeExternalProjects({ output, version: packageMetadata.version });
 await writeSharedBots({ output, version: packageMetadata.version });
 const handbook = await writeHandbook({ output, version: packageMetadata.version, catalogues: { zh: data, en: englishData }, shared: await readSharedBots() });
+await writeFile(indexFile, (await readFile(indexFile, 'utf8')).replace('data-handbook-practices=""', `data-handbook-practices="${handbook.practiceScenarioIds.join(',')}"`));
 await writeFile(resolve(output, 'robots.txt'), 'User-agent: *\nAllow: /\n');
 await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/shared-bots.html</loc></url>' + handbook.pages.map(page => `<url><loc>https://harzva.github.io/awesome-bot/${page}</loc></url>`).join('') + '</urlset>\n');
 console.log(JSON.stringify({ ok: true, output, ...counts, individualDownloads: entries.length, scenarioDownloads: scenarios.length, englishEntries: englishEntries.length, agentCards: agents.cards }));

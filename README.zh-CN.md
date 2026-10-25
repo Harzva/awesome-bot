@@ -13,7 +13,7 @@
 
 [使用手册](https://harzva.github.io/awesome-bot/handbook.html)提供**新手上手、团队使用、开发者参考**三条路径。十章覆盖概念、选型与导入、任务写法、交接、现有五个场景、Agent 接入、贡献、排错和术语。支持全文搜索、章节打印、Markdown 下载与[完整英文版](https://harzva.github.io/awesome-bot/handbook.en.html)。
 
-[五份实战练习](https://harzva.github.io/awesome-bot/handbook-scenarios.html)提供虚构材料、预先编写的教学参考、验收条件和定点纠错提示。新手可对照第一份答案，团队可演练退回与重新交接，开发者可[校验本地快照并拒绝被修改的副本](https://harzva.github.io/awesome-bot/handbook-agents.html#local-lab)。这些示例不代表 Bot 已完成真实账号任务。
+[五份实战练习](https://harzva.github.io/awesome-bot/handbook-scenarios.html)可从市场场景与手册任务卡直接进入，任务要求和虚构材料可以一起复制；教学参考、验收条件和修订要求各自明确标注。新手可对照第一份答案，团队可演练退回与重新交接，开发者可[校验本地快照并拒绝被修改的副本](https://harzva.github.io/awesome-bot/handbook-agents.html#local-lab)。这些示例不代表 Bot 已完成真实账号任务。
 
 手册以本站已实现的配置和网页能力为准，借鉴 GrokBot Guide 的组织方式，不把 Grok 专属控件写成 OpenBot 功能。查看[来源核查](docs/handbook-sources-20261025.md)。
 
