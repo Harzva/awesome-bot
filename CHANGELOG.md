@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.2 — 2026-10-25
+
+- Add five bilingual practice packs to the existing scenarios, each with fictional source material, a prepared reference excerpt, three acceptance checks and a targeted correction prompt.
+- Give first-time readers a worked answer and correction example; show teams how to return, revise and accept a handoff without treating technical delivery as business acceptance.
+- Add a runnable local snapshot verification exercise with a deliberate tampering check, clarify the two digest contracts and document CLI output and error handling.
+- Keep the existing reading layout, scenario recipes, Bot configurations and published template bytes. These exercises are teaching material, not claims of real-account task results.
+
 ## 0.9.1 — 2026-10-25
 
 - Copy handbook examples without changing their text, with visible success and manual-copy recovery.

@@ -535,6 +535,11 @@ html[lang^="en"] .handbook-page .handbook-only-en {
   .handbook-page .handbook-content article > .handbook-lede {
     font-size: 16px;
   }
+
+  .handbook-page .handbook-content article pre code.language-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
 }
 
 @media (max-width: 480px) {

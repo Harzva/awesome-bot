@@ -15,6 +15,8 @@ The repository builds independently after a clean clone. One JSON file per entry
 
 Read the [handbook](https://harzva.github.io/awesome-bot/handbook.en.html) through three paths: **first task**, **team use**, and **developer reference**. Ten chapters cover concepts, choosing and importing a configuration, writing tasks, handoffs, the existing five scenarios, Agent integration, contribution, troubleshooting and reference terms. Chapters are searchable, printable and available as Markdown; the same content is available in [Chinese](https://harzva.github.io/awesome-bot/handbook.html).
 
+The [five practice packs](https://harzva.github.io/awesome-bot/handbook-scenarios.en.html) include fictional materials, prepared reference excerpts, acceptance checks and correction prompts. New readers can compare their first answer, teams can rehearse a returned handoff, and developers can [verify a local snapshot and reject an altered copy](https://harzva.github.io/awesome-bot/handbook-agents.en.html#local-lab). The examples do not claim that a Bot has completed a real-account task.
+
 The handbook follows this project's actual configuration and website contracts. Its structure learns from GrokBot Guide without presenting Grok-only controls as OpenBot features. See the [dated source review](docs/handbook-sources-20261025.md).
 
 

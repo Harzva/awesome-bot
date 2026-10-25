@@ -55,13 +55,15 @@
         "en": "Developer: read, verify, and contribute"
       },
       "summary": {
-        "zh": "了解格式与 SHA-256，使用 CLI 导出，维护版本与发布。",
-        "en": "Learn formats and SHA-256, export through the CLI, and maintain versions and releases."
+        "zh": "从本地快照校验与缺陷复验练习入手，再查贡献、排错和格式契约。",
+        "en": "Start with local snapshot verification and a bug-retest exercise, then consult contribution, troubleshooting and file contracts."
       },
       "chapters": [
         "concepts",
+        "scenarios",
         "agents",
         "contribute",
+        "troubleshooting",
         "reference"
       ]
     }
@@ -119,6 +121,13 @@
                   }
                 }
               ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "开始前：已有能处理文本的 Agent 就能练习，无需先购买账号。Copy for Agent 是复制上下文，下载是保存文件，导入是让宿主读取配置；三者是不同动作。导入入口以实际宿主为准。",
+                "en": "Before starting, any existing Agent that handles text can do this exercise; no account purchase is required first. Copy for Agent copies context, download saves a file, and import asks a host to read configuration. These are separate actions. Use the import entry available in your actual host."
+              }
             }
           ]
         },
@@ -142,6 +151,28 @@
               "text": {
                 "zh": "请根据虚构材料写一份不超过180字的周报草稿。\n目标：周五交付报名页。\n记录A（周三）：表单页面已完成，尚未测试。\n记录B（周四）：桌面测试通过；手机测试未开始。\n记录C（周四）：文案等待小林确认，预计周五上午回复。\n产物：目标、已验证进展、待验收、阻塞、下一步五项。\n验收：引用A/B/C；不把页面完成写成全部验收；缺负责人时标待确认。\n边界：只出草稿，不发布、不联系任何人。",
                 "en": "Write a weekly status draft of no more than 120 words from these fictional records.\nGoal: deliver a registration page on Friday.\nRecord A (Wednesday): form page complete; not tested.\nRecord B (Thursday): desktop tests passed; mobile tests not started.\nRecord C (Thursday): copy awaits Alex's approval, expected Friday morning.\nOutput: goal, verified progress, pending acceptance, blockers, next steps.\nAcceptance: cite A/B/C; do not equate page completion with full acceptance; mark missing owners as unconfirmed.\nBoundary: draft only. Do not publish or contact anyone."
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "以下是预先编写的教学参考，不是实际 Bot 运行结果。措辞不必一致，但五项和证据边界应保留；编号对应原记录。",
+                "en": "The following is a prepared teaching reference, not an actual Bot run. Wording may vary, but preserve the five items and evidence limits. Numbered citations identify the original records."
+              }
+            },
+            {
+              "type": "code",
+              "text": {
+                "zh": "目标：周五交付报名页。\n已验证进展：表单完成[A]，桌面测试通过[B]。\n待验收：手机测试未开始[B]。\n阻塞：文案待小林确认，预计周五上午回复[C]。\n下一步：补手机测试，负责人待确认；跟进文案，再验收。",
+                "en": "Goal: deliver the registration page on Friday.\nVerified progress: form complete [A]; desktop tests passed [B].\nPending acceptance: mobile tests not started [B].\nBlocker: copy awaits Alex, expected Friday morning [C].\nNext: arrange mobile testing (owner unconfirmed), follow up on copy, then review acceptance."
+              },
+              "language": "text"
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "错误句：“报名页已全部验收。”定点修订提示：“只修订这句：桌面已通过；手机未开始；文案待确认。引用B/C，不改其他已核对内容。”",
+                "en": "Incorrect: “The registration page has passed full acceptance.” Targeted revision prompt: “Revise only this sentence: desktop passed; mobile not started; copy pending. Cite B/C and retain other checked content.”"
               }
             }
           ]
@@ -644,6 +675,21 @@
                   }
                 }
               ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "每次导入留一条记录。来源身份与宿主实际身份分开填；不把来源 ID 当作新 Bot ID。宿主不显示 ID 时记“未取得”。虚构任务通过只说明本次任务可用；升级身份对账仍待实际 ID 等证据补齐。",
+                "en": "Keep one record per import. Separate source identity from actual host identity; never treat a source ID as the new Bot ID. If the host does not show an ID, write “not obtained.” Passing a fictional task establishes usability for that task; upgrade identity reconciliation still needs the actual ID and supporting evidence."
+              }
+            },
+            {
+              "type": "code",
+              "text": {
+                "zh": "来源 ID：\n来源版本 / 语言：\n下载文件名：\n文件 SHA-256（未核对则注明）：\n宿主 / 版本：\n导入时间：\n宿主实际名称：\n宿主实际 Bot ID（未显示填“未取得”）：\n虚构任务与结果：\n任务可用：是 / 否 / 未验证\n升级身份对账：已完成（附依据）/ 待补证据",
+                "en": "Source ID:\nSource version / language:\nDownloaded filename:\nFile SHA-256 (mark if unchecked):\nHost / version:\nImport time:\nActual host name:\nActual host Bot ID (write “not obtained” if hidden):\nFictional task and result:\nTask usability: yes / no / unverified\nUpgrade identity reconciliation: complete (attach evidence) / evidence pending"
+              },
+              "language": "text"
             }
           ]
         }
@@ -945,6 +991,28 @@
                 "zh": "任务：客户会议准备 / 草稿第2版\n当前负责人：资料整理\n下一负责人：会议准备\n输入：事实表v2、来源清单v1（已脱敏）\n已验证：三条需求有原话和日期\n未验证：预算、决策人；不要补猜\n下一产物：一页简报和五个问题\n验收人：项目负责人\n允许动作：读这些文件、写草稿；不联系客户\n停止条件：来源缺失或冲突无法解释",
                 "en": "Task: customer meeting preparation / draft v2\nCurrent owner: research and intake\nNext owner: meeting preparation\nInputs: fact table v2, source list v1 (sanitized)\nVerified: three needs have quotes and dates\nUnverified: budget and decision maker; do not guess\nNext output: one-page brief and five questions\nReviewer: project owner\nAllowed actions: read these files, write a draft; no customer contact\nStop condition: missing sources or unexplained conflicts"
               }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "用青禾工作室练一次手动交接；以下材料均为虚构，仅写草稿，不联系客户。回执由接收者明确填写，不代表宿主有后台状态机。",
+                "en": "Practice a manual handoff with Qinghe Studio. All materials below are fictional. Write drafts only; do not contact the customer. The recipient explicitly fills in the receipt; this does not imply a background state machine in the host."
+              }
+            },
+            {
+              "type": "code",
+              "text": {
+                "zh": "A｜简介：青禾工作室，12人客户服务团队。\nB｜2026-10-20沟通：希望月底汇总工单；预算、决策人未确认。\nC｜产品验证：仅验证CSV导入；实时同步未验证。\n事实表v1：含A/B，漏C。\n接收回执：退回v1；缺产品验证边界C，暂停写简报。\n事实表v2：补C；预算、决策人和实时同步仍未确认。\n旧简报：基于v1，标“待复核”，暂停流转。\n审阅人林的回执：决定接受事实表v2；按v2重核简报草稿后再交审阅。",
+                "en": "A | Profile: Qinghe Studio, a 12-person customer service team.\nB | Discussion on 2026-10-20: wants a month-end ticket summary; budget and decision maker unconfirmed.\nC | Product validation: CSV import verified; real-time sync unverified.\nFact table v1: includes A/B, omits C.\nReceipt: return v1; product validation limits C missing; pause brief drafting.\nFact table v2: add C; budget, decision maker, and real-time sync remain unconfirmed.\nOld brief: based on v1; mark “review pending” and hold circulation.\nReviewer Lee's receipt: decision to accept fact table v2; recheck the draft brief against v2 before resubmitting."
+              },
+              "language": "text"
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "停止：缺来源、版本不清或冲突未解释。恢复：补齐材料，审阅人林写明接受的版本；旧产物标待复核，完成重核后才交下一人。接受事实表不等于简报或产品已验收。",
+                "en": "Stop for missing sources, unclear versions, or unexplained conflicts. Resume after materials are supplied and reviewer Lee names the accepted version. Mark old outputs for review and recheck them before the next handoff. Accepting a fact table does not accept the brief or product."
+              }
             }
           ]
         },
@@ -1059,7 +1127,8 @@
       },
       "audiences": [
         "start",
-        "team"
+        "team",
+        "developer"
       ],
       "sections": [
         {
@@ -1075,6 +1144,68 @@
                 "zh": "本站有 {{scenarios}} 个中英对齐场景：客户会议、周报、缺陷复测、反馈转需求和产品发布。每个场景提供少量相关角色和可复制的首任务。",
                 "en": "The site offers {{scenarios}} bilingual scenarios: customer meetings, weekly reports, bug retesting, feedback-to-requirements, and product launches. Each provides a small set of relevant roles and a first task to copy."
               }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "先看角色与原始任务，再用下面的虚构材料练一次。五份参考产物均为预先编写的教学示例，按证据核对，不要求措辞相同。",
+                "en": "Review the roles and original tasks, then try the fictional materials below. All five reference outputs are prepared teaching examples. Check the evidence; the wording need not match."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "实战：从事实表到会前简报",
+                    "en": "Practice: from a fact table to a meeting brief"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#practice-customer-meeting",
+                    "en": "./handbook-scenarios.en.html#practice-customer-meeting"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "实战：把交付、测试与验收分开",
+                    "en": "Practice: separate delivery, testing, and acceptance"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#practice-weekly-report",
+                    "en": "./handbook-scenarios.en.html#practice-weekly-report"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "实战：没有环境时先做复验计划",
+                    "en": "Practice: plan retesting without an environment"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#practice-bug-retest",
+                    "en": "./handbook-scenarios.en.html#practice-bug-retest"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "实战：把重复与冲突反馈变成候选需求",
+                    "en": "Practice: turn duplicate and conflicting feedback into candidates"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#practice-feedback-to-requirements",
+                    "en": "./handbook-scenarios.en.html#practice-feedback-to-requirements"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "实战：证据不足时暂缓发布",
+                    "en": "Practice: hold a launch when evidence is missing"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#practice-product-launch",
+                    "en": "./handbook-scenarios.en.html#practice-product-launch"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1087,6 +1218,497 @@
           "blocks": [
             {
               "type": "scenarios"
+            }
+          ]
+        },
+        {
+          "id": "practice-customer-meeting",
+          "title": {
+            "zh": "实战：从事实表到会前简报",
+            "en": "Practice: from a fact table to a meeting brief"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "适合新手与团队交接。以下材料全部虚构；参考产物是预先编写的教学示例，不是 Bot 运行结果。复制材料，先做来源事实表，再整理一页会前简报及五个问题；仅出内部草稿，不作客户承诺。",
+                "en": "For beginners and team handoffs. All materials below are fictional. The reference output is a prepared teaching example, not a Bot run. Copy the materials, build a sourced fact table, then prepare a one-page meeting brief and five questions. Produce an internal draft without customer commitments."
+              }
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "A｜公司简介，2026-10-19：青禾工作室是12人的客户服务团队。\nB｜沟通记录，2026-10-20：希望月底汇总工单；预算、决策人未知。\nC｜内部演示记录，2026-10-21：仅验证CSV导入；实时同步未验证。\nD｜会谈目标，2026-10-23：澄清汇总口径、数据来源与试用条件。\nE｜参会信息：我方客户经理；客户参会人和职责待确认。\nF｜范围：仅用A—E；不得推断采购意愿、报价或承诺实时同步。",
+                "en": "A | Company profile, 2026-10-19: Qinghe Studio is a customer service team of 12.\nB | Conversation, 2026-10-20: wants month-end ticket summaries; budget and decision-maker unknown.\nC | Internal demo, 2026-10-21: only CSV import verified; real-time sync unverified.\nD | Meeting goal, 2026-10-23: clarify summary definitions, data sources, and trial conditions.\nE | Attendees: our account manager; customer attendees and responsibilities unconfirmed.\nF | Scope: use A-E only; infer no purchase intent, price, or real-time sync commitment."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "把A—F交给客户研究专员（awesome/account-research-specialist）：按“事实／来源日期／需求信号／待核实假设”建表。",
+                  "en": "Give A-F to Account Research Specialist (awesome/account-research-specialist): build a table of facts, source dates, need signals, and assumptions to verify."
+                },
+                {
+                  "zh": "人工核对每行后，将事实表、B/C原文及未知项交给销售会前准备员（awesome/meeting-prep-buddy）；要求一页简报，含议程、恰好五个问题和材料待办。",
+                  "en": "After human review, pass the fact table, B/C, and unknowns to Meeting Prep Buddy (awesome/meeting-prep-buddy). Request one page with an agenda, exactly five questions, and material tasks."
+                },
+                {
+                  "zh": "人工审阅承诺范围后保存草稿；问题和待办由参会人确认，不自动发给客户。",
+                  "en": "Have a human review commitment boundaries and save the draft. Attendees confirm questions and tasks; do not send it automatically."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "教学参考节选｜背景：青禾工作室，12人客户服务团队（A，2026-10-19）。\n目标与议程：澄清月底工单汇总（B）；核对口径→数据→试用条件（D）。\n能力边界：CSV导入已在虚构内部记录验证；实时同步待验证（C）；预算、决策人未知（B）。\n五问题：汇总哪些字段？以哪个日期划月？数据从哪里导出？谁决定试用？预算与评估标准是什么？\n材料待办：我方客户经理准备CSV样例与演示范围；客户参会人/职责待确认（C/E）。",
+                "en": "Teaching reference excerpt | Background: Qinghe Studio, a customer service team of 12 (A, 2026-10-19).\nGoal and agenda: clarify month-end ticket summaries (B); definitions, data, then trial conditions (D).\nCapability boundary: fictional internal record verifies CSV import only; sync unverified (C); budget and decision-maker unknown (B).\nFive questions: Which fields? Which date defines the month? Where is data exported? Who decides on a trial? What budget and evaluation criteria apply?\nMaterial tasks: our account manager prepares a CSV sample and demo scope; customer attendees and responsibilities unconfirmed (C/E)."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "逐行保留材料编号；已有日期照录，未提供则标未提供。事实、需求信号、假设分列，不能把希望汇总写成采购意向。",
+                  "en": "Keep each source ID. Copy supplied dates and mark absent dates as not provided. Separate facts, demand signals and hypotheses; wanting a monthly summary is not purchase intent."
+                },
+                {
+                  "zh": "一页草稿含议程、五问题和材料待办；五问题覆盖口径、日期、来源、决策与预算。",
+                  "en": "Check the one-page draft includes an agenda, five questions, and material tasks covering definitions, dates, sources, decision-making, and budget."
+                },
+                {
+                  "zh": "保留预算/决策人未知、实时同步未验证；没有对外承诺或已发送声明。",
+                  "en": "Retain unknown budget and decision-maker, and unverified sync. Include no external commitment or sent-message claim."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "只修缺口：保留已核对事实表。将“支持实时同步”改为“待验证（C）”；补齐缺失的来源或五问题中的缺项，仅返回受影响行和修订后简报，不补造客户信息。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
+                "en": "Repair only gaps: keep the reviewed fact table. Replace any sync-support claim with \"unverified (C)\"; add missing sources or questions. Return affected rows and the revised brief without inventing customer information. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "查看场景任务卡",
+                    "en": "Open scenario task cards"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#scenario-customer-meeting",
+                    "en": "./handbook-scenarios.en.html#scenario-customer-meeting"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "在市场查看所需角色",
+                    "en": "View scenario roles in the market"
+                  },
+                  "url": {
+                    "zh": "./?scenario=customer-meeting",
+                    "en": "./?lang=en&scenario=customer-meeting"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practice-weekly-report",
+          "title": {
+            "zh": "实战：把交付、测试与验收分开",
+            "en": "Practice: separate delivery, testing, and acceptance"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "适合新手练习与团队汇报。以下材料全部虚构；参考产物是预先编写的教学示例，不是 Bot 运行结果。复制记录，写2026-10-19至2026-10-23周报草稿，保留证据编号；不得把旧成果或技术测试写成当周业务验收。",
+                "en": "For beginners and team reporting. All materials are fictional. The reference is a prepared teaching example, not a Bot run. Copy the records and draft the report for 2026-10-19 through 2026-10-23 with evidence IDs. Keep earlier work and technical tests separate from current business acceptance."
+              }
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "A｜本周目标：2026-10-23交付报名页草稿，业务验收另约。\nB｜2026-10-20：小陈提交报名页v0.3草稿与交付记录。\nC｜2026-10-21：技术记录显示桌面8项测试通过；手机测试未开始。\nD｜2026-10-23：业务方尚未验收，未提供通过记录。\nE｜2026-10-16：上周已完成报名字段表，不计本周新增交付。\nF｜2026-10-22：法务文案待确认，尚无负责人及回复日期。\nG｜下一步：小陈计划2026-10-26执行手机测试；文案责任人待指派。",
+                "en": "A | Weekly goal: deliver a registration-page draft on 2026-10-23; arrange business acceptance separately.\nB | 2026-10-20: Chen submitted page draft v0.3 with a delivery record.\nC | 2026-10-21: technical record shows 8 desktop tests passed; mobile testing not started.\nD | 2026-10-23: business acceptance still pending; no approval record supplied.\nE | 2026-10-16: registration field list completed last week; exclude from new weekly deliveries.\nF | 2026-10-22: legal copy pending; owner and response date unknown.\nG | Next: Chen plans mobile tests on 2026-10-26; copy owner awaits assignment."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "交给进度报告编辑（awesome/status-report-writer）：按本周交付、技术验证、业务待验收、旧成果、阻塞/下一步分组，每项附编号。",
+                  "en": "Give records to Status Report Writer (awesome/status-report-writer): group current delivery, technical validation, business acceptance pending, earlier work, and blockers/next steps, citing IDs."
+                },
+                {
+                  "zh": "由报告负责人核对周期与证据；把无人负责的文案列为“请求指派”，确认后再向相应读者发送。",
+                  "en": "The report owner checks dates and evidence, flags the copy blocker as an assignment request, and sends only after confirmation."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "教学参考节选｜周期：2026-10-19—2026-10-23；报名页v0.3草稿已交付（A/B）。\n技术验证：桌面8项通过；手机未测（C）。\n业务状态：尚未验收（D）；不得标记项目全部完成。\n旧成果：字段表于2026-10-16完成，仅作背景（E）。\n阻塞/行动：文案负责人和回复日期待指派（F）；小陈计划2026-10-26测手机（G）。",
+                "en": "Teaching reference excerpt | Period: 2026-10-19 through 2026-10-23; page draft v0.3 delivered (A/B).\nTechnical validation: 8 desktop tests passed; mobile untested (C).\nBusiness status: acceptance pending (D); do not mark the whole project complete.\nEarlier work: field list completed on 2026-10-16, background only (E).\nBlocker/action: assign a copy owner and response date (F); Chen plans mobile tests on 2026-10-26 (G)."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "交付仅计B，E单独标上周；周期与下一步日期不混用。",
+                  "en": "Count B as this week's delivery and E as earlier work; distinguish reporting dates from next-step dates."
+                },
+                {
+                  "zh": "8项只属于桌面技术测试；手机和业务验收状态分别保留。",
+                  "en": "Limit the count of 8 to desktop technical tests; preserve separate mobile and business acceptance states."
+                },
+                {
+                  "zh": "每个状态有证据编号；F负责人/日期保持未知并提出指派请求，不擅填人名。",
+                  "en": "Source every status. Keep F owner/date unknown and request assignment without inventing a name."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "只修缺口：保留已引用的交付记录。把“已全部验收”拆成C技术验证与D待验收；把E移到历史背景；为F补指派请求。仅返回修改的段落，不重写已通过项。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
+                "en": "Repair only gaps: retain sourced delivery records. Split any \"fully accepted\" claim into technical validation (C) and pending acceptance (D), move E to background, and add an assignment request for F. Return changed paragraphs only. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "查看场景任务卡",
+                    "en": "Open scenario task cards"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#scenario-weekly-report",
+                    "en": "./handbook-scenarios.en.html#scenario-weekly-report"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "在市场查看所需角色",
+                    "en": "View scenario roles in the market"
+                  },
+                  "url": {
+                    "zh": "./?scenario=weekly-report",
+                    "en": "./?lang=en&scenario=weekly-report"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practice-bug-retest",
+          "title": {
+            "zh": "实战：没有环境时先做复验计划",
+            "en": "Practice: plan retesting without an environment"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "适合开发者与团队交接。以下浏览器反馈、日志、版本均为虚构；参考产物是预先编写的教学示例，不是 Bot 运行结果。本练习无真实测试环境，只练计划与证据分类，所有执行状态为待执行，不能写已复现或已修复。",
+                "en": "For developers and team handoffs. Browser feedback, logs, and versions below are fictional. The reference is a prepared teaching example, not a Bot run. There is no real test environment. Practice planning and evidence classification only; execution remains pending, with no reproduced or fixed claims."
+              }
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "A｜虚构反馈，2026-10-21：Chrome 129 / macOS 14，草稿版v0.3；点两次提交后看到两个报名条目。\nB｜预期：同一提交意图只产生一个条目；反馈人称偶发，未统计频率。\nC｜虚构日志：10:02:01 POST /signup 201；10:02:01 POST /signup 201；无请求ID。\nD｜最小输入：姓名“测试甲”、邮箱 test@example.invalid；仅用于计划。\nE｜开发备注：候选版v0.3.1增加提交中禁用按钮；没有修复验证记录。\nF｜核心路径：正常、空白、失败重试；真实环境、账号、实际版本均未提供。\nG｜上线条件：原版可重复证据、候选版同条件复验及三条路径记录经负责人审阅。",
+                "en": "A | Fictional report, 2026-10-21: Chrome 129 / macOS 14, draft v0.3; two clicks on Submit show two registrations.\nB | Expected: one submission intent creates one entry; reporter says intermittent, frequency unmeasured.\nC | Fictional log: 10:02:01 POST /signup 201; 10:02:01 POST /signup 201; no request IDs.\nD | Minimal input: name \"Test A\", email test@example.invalid; planning only.\nE | Developer note: candidate v0.3.1 disables the button during submission; no fix verification record.\nF | Core paths: normal, blank, failed-request retry; no real environment, account, or actual build supplied.\nG | Release conditions: repeatable baseline evidence, candidate retest under matching conditions, and three path records reviewed by an owner."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "交给缺陷复现员（awesome/bug-reproduction）：把A/B列为报告、C列为虚构日志线索、E列为修复假设；给出单击对照→双击→重复试验的最小计划，列明缺失环境。",
+                  "en": "Give records to Bug Reproduction (awesome/bug-reproduction): classify A/B as reports, C as a fictional log clue, and E as a fix hypothesis. Plan a single-click control, double-click case, and repeated trials; list missing environment details."
+                },
+                {
+                  "zh": "人工核对后，将计划、未验证假设和空白执行栏交给创业产品质量检查员（awesome/grok-startup-qa-bot），排正常/空白/失败重试与候选版复验顺序，全部标待执行。",
+                  "en": "After human review, pass the plan, unverified hypotheses, and blank execution fields to Startup QA Bot (awesome/grok-startup-qa-bot). Sequence normal, blank, retry, and candidate checks, all pending."
+                },
+                {
+                  "zh": "实际执行者另行取得获准环境后填记录；发布负责人按真实证据判定，不用这份虚构示例作为通过记录。",
+                  "en": "A real executor obtains an authorized environment and completes records separately. The release owner decides from real evidence, not this fictional example."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "教学参考节选｜分类：A/B为反馈，C为虚构日志线索，E为候选修复说明；均不证明原因。\n计划：固定输入D；原版单击对照、双击并记录每轮结果；候选版按相同条件复验。\n检查：正常→空白→失败重试；当前全部待执行（F）。\n实际执行者填写：姓名___ 日期___ 版本/环境___ 次数___ 预期/实际___ 日志/截图位置___。\n完成条件：原版可重复证据、候选版结果、三路径记录齐全，失败项关闭且发布负责人签核（G）。",
+                "en": "Teaching reference excerpt | Classification: A/B are reports, C is a fictional log clue, E is a candidate fix note; none proves a cause.\nPlan: fix input D; run baseline single-click control and double-click trials, recording each outcome; retest the candidate under matching conditions.\nChecks: normal, blank, then failed-request retry; all currently pending (F).\nReal executor fills: name___ date___ build/environment___ trials___ expected/actual___ log/screenshot location___.\nCompletion: repeatable baseline evidence, candidate results, and three path records complete; failures resolved and release owner signs off (G)."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "计划明确单击对照、双击、重复次数需记录；两条201日志不能直接证明双条目或根因。",
+                  "en": "Require a single-click control, double-click cases, and recorded trial counts. Two 201 lines alone establish neither duplicate entries nor root cause."
+                },
+                {
+                  "zh": "原版、候选版与三路径都有待执行项；保留实际执行者、日期、环境、版本、结果和证据栏。",
+                  "en": "Include pending baseline, candidate, and three-path checks, with executor, date, environment, build, result, and evidence fields."
+                },
+                {
+                  "zh": "无真实运行时不出现已复现/已修复/可上线结论；真实完成须满足G并核对实际记录。",
+                  "en": "Without real execution, claim neither reproduction, repair, nor release readiness. Real completion requires G and reviewed execution records."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "只修缺口：保留已有计划。将无证据的“已复现/已修复”改为“待实际执行”；只补缺失的对照、路径或记录栏，并指出还需要哪份真实证据，不生成执行结果。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
+                "en": "Repair only gaps: keep the plan. Replace unsupported reproduced/fixed claims with \"pending real execution\". Add only missing controls, paths, or record fields and identify required real evidence; generate no execution results. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "查看场景任务卡",
+                    "en": "Open scenario task cards"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#scenario-bug-retest",
+                    "en": "./handbook-scenarios.en.html#scenario-bug-retest"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "在市场查看所需角色",
+                    "en": "View scenario roles in the market"
+                  },
+                  "url": {
+                    "zh": "./?scenario=bug-retest",
+                    "en": "./?lang=en&scenario=bug-retest"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practice-feedback-to-requirements",
+          "title": {
+            "zh": "实战：把重复与冲突反馈变成候选需求",
+            "en": "Practice: turn duplicate and conflicting feedback into candidates"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "适合团队交接，新手可先核对来源。以下材料全部虚构；参考产物是预先编写的教学示例，不是 Bot 运行结果。复制记录，形成有追溯的需求候选及待确认优先级；少数样本不能推出多数需求，不承诺排期或直接写入需求库。",
+                "en": "For team handoffs; beginners can start by checking sources. All materials are fictional. The reference is a prepared teaching example, not a Bot run. Copy the records to produce traceable requirement candidates with unconfirmed priorities. A small sample cannot establish majority demand; promise no schedule and do not write to a backlog."
+              }
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "A｜工单T01，2026-10-19，用户U1/管理员：每周导出CSV太费步骤，想一键导出。\nB｜邮件M01，2026-10-20，用户U1：再次转发T01，同一事件。\nC｜工单T02，2026-10-20，用户U2/管理员：希望直接默认展示全部成员。\nD｜访谈I01，2026-10-21，用户U3/普通成员：不要默认显示全部成员，担心暴露名单。\nE｜工单T03，2026-10-22，用户U2：CSV导出找不到入口；与T02是不同问题。\nF｜已有需求R07：简化CSV导出，状态待评审；近期仅调整导航名称。\nG｜范围：3名用户、2种角色；总用户数、代表性、影响频次与优先级均未知。",
+                "en": "A | Ticket T01, 2026-10-19, U1/admin: weekly CSV export takes too many steps; wants one-click export.\nB | Email M01, 2026-10-20, U1: forwards T01 again, the same incident.\nC | Ticket T02, 2026-10-20, U2/admin: wants all members shown by default.\nD | Interview I01, 2026-10-21, U3/member: opposes showing all members by default due to roster privacy.\nE | Ticket T03, 2026-10-22, U2: cannot find CSV export; a different issue from T02.\nF | Existing R07: simplify CSV export, awaiting review; recent change only renamed navigation.\nG | Coverage: 3 users, 2 roles; total population, representativeness, impact frequency, and priorities unknown."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "先交产品反馈分析员（awesome/product-feedback-analyst）：保留编号与原话，A/B归为同一事件；分别整理导出任务与成员可见性冲突，说明样本缺口。",
+                  "en": "Start with Product Feedback Analyst (awesome/product-feedback-analyst): preserve IDs and quotes, deduplicate A/B as one incident, separate export tasks from conflicting member-visibility requests, and state sample gaps."
+                },
+                {
+                  "zh": "人工核对主题后交功能请求跟踪员（awesome/feature-request-tracker）：把A/E关联R07，不因同一用户而合并C/E；形成需求候选、来源、冲突、验证方法与待确认优先级。",
+                  "en": "After human review, pass themes to Feature Request Tracker (awesome/feature-request-tracker): link A/E to R07, keep C/E distinct despite the shared user, and record candidates, sources, conflicts, validation, and unconfirmed priorities."
+                },
+                {
+                  "zh": "产品负责人核实影响与权限规则后决定优先级和是否落库；保留未决问题。",
+                  "en": "The product owner verifies impact and access rules before deciding priorities and backlog entry; retain open questions."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "教学参考节选｜去重：A/B同一事件，保留两来源，计1个事件；不能算两名用户。\n候选R07补充：简化并明确CSV导出入口，证据A/E，2名用户；保留操作步骤与可发现性两类问题。\n候选N02：澄清按角色的成员可见性，C要求全显、D反对；不能直接默认全显。\n验证：走查导出任务；向两类角色核实可见范围与权限政策，补影响频次。\n优先级：R07/N02均待产品负责人确认；3人样本不代表多数（G），不承诺开发日期。",
+                "en": "Teaching reference excerpt | Deduplication: A/B are one incident with two sources; do not count two users.\nR07 candidate addition: simplify and clarify CSV export, A/E from 2 users; retain both step-count and discoverability issues.\nCandidate N02: clarify member visibility by role; C requests all-visible, D opposes it; do not default to all-visible.\nValidation: walk through export; confirm visibility and access policy with both roles, then measure impact frequency.\nPriority: R07/N02 await product-owner confirmation; 3 users do not represent a majority (G); promise no development date."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "A/B只计同一事件，仍可追溯两来源；C/E同人不同事，不能误去重。",
+                  "en": "Count A/B as one incident while retaining both sources; do not deduplicate C/E, different issues from one user."
+                },
+                {
+                  "zh": "每条候选有编号、来源与验证方法；A/E关联R07而非无依据新增重复需求。",
+                  "en": "Give every candidate an ID, sources, and validation method; link A/E to R07 instead of creating an unsupported duplicate."
+                },
+                {
+                  "zh": "保留C/D冲突、3人覆盖限制及待确认优先级；没有“多数用户需要”或已排期结论。",
+                  "en": "Retain the C/D conflict, three-user coverage limit, and unconfirmed priorities; claim neither majority demand nor a scheduled feature."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "只修缺口：保留已追溯候选；修正A/B计数，补C/D相反意见或缺失来源，把无依据优先级改为待确认。只返回受影响候选与去重说明，不重新编排已通过部分。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
+                "en": "Repair only gaps: retain traceable candidates. Correct the A/B count, add missing C/D opposition or sources, and mark unsupported priorities unconfirmed. Return affected candidates and deduplication notes only. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "查看场景任务卡",
+                    "en": "Open scenario task cards"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#scenario-feedback-to-requirements",
+                    "en": "./handbook-scenarios.en.html#scenario-feedback-to-requirements"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "在市场查看所需角色",
+                    "en": "View scenario roles in the market"
+                  },
+                  "url": {
+                    "zh": "./?scenario=feedback-to-requirements",
+                    "en": "./?lang=en&scenario=feedback-to-requirements"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practice-product-launch",
+          "title": {
+            "zh": "实战：证据不足时暂缓发布",
+            "en": "Practice: hold a launch when evidence is missing"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "适合团队交接与产品负责人审阅。以下材料全部虚构；参考产物是预先编写的教学示例，不是 Bot 运行结果。复制材料，准备定位草案与带依赖的日历；包含未通过项和未知指标，结论应是人工暂缓，不能制造已上线状态。",
+                "en": "For team handoffs and product-owner review. All materials are fictional. The reference is a prepared teaching example, not a Bot run. Copy the materials to prepare positioning and a calendar with dependencies. Include failed checks and unknown metrics; record a human hold decision without inventing a live launch."
+              }
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "A｜目标客群：小型活动团队；3份访谈提到人工整理报名数据耗时，样本不具代表性。\nB｜产品证据，2026-10-21：演示仅验证CSV导出；节省时间比例、转化率未知。\nC｜质量记录，2026-10-22：手机失败重试检查未通过，复验结果尚无。\nD｜目标日期：2026-10-28拟发布介绍页与邮件；日期未经确认，尚未上线。\nE｜素材：介绍页草稿已备；邮件文案未完成，无客户证言授权。\nF｜负责人：小林制作、小周审核；2026-10-27审核时间固定，邮件依赖介绍页审核通过。\nG｜人工决定，2026-10-23：暂缓对外发布；恢复需C复验通过记录、素材审阅通过及负责人重新确认日期。",
+                "en": "A | Audience: small event teams; 3 interviews mention time spent organizing registrations, not a representative sample.\nB | Product evidence, 2026-10-21: demo verifies CSV export only; time-saving percentage and conversion rate unknown.\nC | Quality record, 2026-10-22: mobile failed-request retry check failed; no retest result yet.\nD | Target: introduction page and email proposed for 2026-10-28; date unconfirmed, not live.\nE | Assets: page draft ready; email copy incomplete; no authorization for customer testimonials.\nF | Owners: Lin creates, Zhou reviews; review slot fixed on 2026-10-27; email depends on page approval.\nG | Human decision, 2026-10-23: hold external release; resume only with passing C retest evidence, approved assets, and owners reconfirming the date."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "先交产品定位与上市策划员（awesome/grok-product-marketer）：按A/B写面向客群的定位草案，区分可证明能力与价值假设；删除虚构比例和证言，保留C/G门槛。",
+                  "en": "Start with Product Marketer (awesome/grok-product-marketer): draft audience positioning from A/B, separating demonstrated capability from value hypotheses. Include no invented metrics or testimonials; retain C/G gates."
+                },
+                {
+                  "zh": "人工核对后交营销排期管理员（awesome/marketing-calendar-owner）：倒排制作、审核、渠道检查点，标明F固定节点与依赖；2026-10-28仅为待确认目标。",
+                  "en": "After human review, pass it to Marketing Calendar Owner (awesome/marketing-calendar-owner): work backward through creation, review, and channel checkpoints, with F dependencies and fixed slot; keep 2026-10-28 as an unconfirmed target."
+                },
+                {
+                  "zh": "人工按G维持暂缓；补齐真实证据后由负责人重新审阅日期，再依另行授权执行发布。",
+                  "en": "A human maintains the hold under G. Once real evidence is complete, owners review the date again and execute publication under separate authorization."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "教学参考节选｜定位草案：为小型活动团队提供CSV导出整理入口（A/B）；省时效果仍是假设。\n文案边界：不写节省百分比、转化增长或客户证言（B/E）。\n日历：小林完成邮件草稿→小周2026-10-27审核介绍页与邮件→渠道检查；邮件依赖介绍页批准（E/F）。\n状态：人工暂缓（G）；手机失败重试未通过（C），2026-10-28待重新确认，尚未上线（D）。\n恢复证据：C复验通过记录＋两素材批准记录＋负责人确认的新日期；未知效果指标另列验证计划。",
+                "en": "Teaching reference excerpt | Positioning draft: a CSV export workflow for small event teams (A/B); time savings remain a hypothesis.\nCopy boundary: no saving percentage, conversion uplift, or customer testimonial (B/E).\nCalendar: Lin completes email draft, Zhou reviews page and email on 2026-10-27, then channel checks; email depends on page approval (E/F).\nStatus: human hold (G); mobile retry failed (C); 2026-10-28 awaits reconfirmation, not live (D).\nResume evidence: passing C retest record, both asset approvals, and an owner-confirmed date; unknown outcome metrics need a separate validation plan."
+              }
+            },
+            {
+              "type": "steps",
+              "items": [
+                {
+                  "zh": "每个价值主张对应A/B或标假设；未知指标不能补造数字，未经授权证言不进入文案。",
+                  "en": "Source value claims to A/B or mark them hypotheses. Invent no missing metrics and include no unauthorized testimonials."
+                },
+                {
+                  "zh": "日历有制作/审核负责人、2026-10-27固定检查点和邮件依赖；未确认目标不得写成承诺。",
+                  "en": "Include creation/review owners, the fixed 2026-10-27 checkpoint, and the email dependency; do not turn the target into a promise."
+                },
+                {
+                  "zh": "明确C未通过、G人工暂缓及三类恢复证据；计划草稿不等于已上线。",
+                  "en": "State the failed C check, human hold G, and all three resume-evidence requirements; a draft plan is not a live launch."
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "text": {
+                "zh": "只修缺口：保留有证据定位与日历；删除无依据效果数值，补C/G门槛和缺失依赖。仅返回改动行及仍缺的恢复证据，不自行解除暂缓或改成已发布。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
+                "en": "Repair only gaps: retain sourced positioning and calendar entries. Remove unsupported metrics and add missing C/G gates or dependencies. Return changed lines and outstanding resume evidence; do not lift the hold or mark the launch live. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "查看场景任务卡",
+                    "en": "Open scenario task cards"
+                  },
+                  "url": {
+                    "zh": "./handbook-scenarios.html#scenario-product-launch",
+                    "en": "./handbook-scenarios.en.html#scenario-product-launch"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "在市场查看所需角色",
+                    "en": "View scenario roles in the market"
+                  },
+                  "url": {
+                    "zh": "./?scenario=product-launch",
+                    "en": "./?lang=en&scenario=product-launch"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1339,6 +1961,139 @@
               }
             }
           ]
+        },
+        {
+          "id": "local-lab",
+          "title": {
+            "zh": "本地快照校验与失败练习",
+            "en": "Verify a local snapshot and reject an altered copy"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "准备 Node.js 22+，先从 GitHub clone 本仓库并进入仓库根目录，运行下方准备命令。clone、依赖安装和构建可能需要网络；只有后面的校验阶段完全读取本地文件。它不调用模型，也不表示模型可以离线运行。 命令使用macOS/Linux或Windows WSL的shell；其他终端可将JS标记之间的代码另存为.mjs，再用Node运行。",
+                "en": "Use Node.js 22+, clone this repository from GitHub, and enter its root before running the setup below. Cloning, dependency installation, and building may need network access. Only the verification phase below reads entirely local files. It does not call a model or establish offline model execution. The commands use a macOS/Linux or Windows WSL shell. In another terminal, save the code between the JS markers as an .mjs file and run it with Node."
+              }
+            },
+            {
+              "type": "code",
+              "language": "sh",
+              "text": {
+                "zh": "git clone https://github.com/Harzva/awesome-bot.git\ncd awesome-bot\nnpm ci --ignore-scripts\nnpm run check\nnpm run build:site",
+                "en": "git clone https://github.com/Harzva/awesome-bot.git\ncd awesome-bot\nnpm ci --ignore-scripts\nnpm run check\nnpm run build:site"
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "已 clone 并完成 npm ci --ignore-scripts 时，从 npm run check 开始。检查失败先修复或重新取得同一份完整源快照，不跳过检查。随后在仓库根目录整体复制执行下面的 sh 块：它按 discovery → 英文索引 → 进度报告角色卡 → Fleet 字节读取，URL 必须匹配预期站点与路径，本地路径与符号链接也不能逃出 dist/site。",
+                "en": "If the repository is already cloned and npm ci --ignore-scripts has completed, start at npm run check. Repair a failed check or retrieve a complete consistent source snapshot before proceeding. Copy and run the entire sh block below from the repository root. It reads discovery, the English index, the Status Report Writer card, and then Fleet bytes. URLs must match the expected site and paths; local paths and symlinks must stay inside dist/site."
+              }
+            },
+            {
+              "type": "code",
+              "language": "sh",
+              "text": {
+                "zh": "node --input-type=module <<'JS'\nimport assert from 'node:assert/strict';\nimport { readFile, realpath } from 'node:fs/promises';\nimport { resolve, sep } from 'node:path';\nimport { createHash } from 'node:crypto';\nconst root = await realpath(resolve('dist/site'));\nconst base = new URL('https://harzva.github.io/awesome-bot/');\nasync function bytesAt(url, expected) {\n  assert.equal(url, new URL(expected, base).href, 'unexpected URL');\n  const u = new URL(url);\n  assert.equal(u.origin, base.origin);\n  assert.equal(u.search + u.hash, '');\n  assert.ok(u.pathname.startsWith(base.pathname));\n  const relative = decodeURIComponent(u.pathname.slice(base.pathname.length));\n  assert.ok(!relative.includes('\\\\') && !relative.includes('\\0'));\n  const path = resolve(root, relative);\n  assert.ok(path.startsWith(root + sep), 'path escaped site root');\n  const actual = await realpath(path);\n  assert.ok(actual.startsWith(root + sep), 'symlink escaped site root');\n  return readFile(actual);\n}\nasync function jsonAt(url, expected) {\n  return JSON.parse((await bytesAt(url, expected)).toString('utf8'));\n}\nconst discovery = await jsonAt(new URL('agents/index.json', base).href, 'agents/index.json');\nassert.equal(discovery.schema, 'awesome.bot.agent-discovery/1');\nassert.equal(discovery.configurationFormat, 'openbot.fleet/1');\nassert.ok(discovery.contentRevision);\nconst languages = discovery.languages.filter(x => x.locale === 'en');\nassert.equal(languages.length, 1);\nconst index = await jsonAt(languages[0].url, 'agents/en/index.json');\nassert.equal(index.schema, 'awesome.bot.agent-index/1');\nassert.equal(index.locale, 'en');\nassert.equal(index.contentRevision, discovery.contentRevision);\nassert.equal(index.count, index.entries.length);\nassert.equal(languages[0].count, index.count);\nconst matches = index.entries.filter(x => x.id === 'awesome/status-report-writer');\nassert.equal(matches.length, 1);\nconst entry = matches[0];\nconst card = await jsonAt(entry.json, 'agents/en/status-report-writer.json');\nassert.equal(card.schema, 'awesome.bot.agent/1');\nassert.equal(card.id, entry.id);\nassert.equal(card.locale, index.locale);\nassert.equal(card.contentRevision, index.contentRevision);\nassert.ok(entry.templateVersion);\nassert.equal(card.templateVersion, entry.templateVersion);\nassert.equal(card.configuration.format, 'openbot.fleet/1');\nassert.equal(card.configuration.locale, card.locale);\nassert.equal(card.configuration.grantsTools, false);\nassert.equal(card.configuration.grantsContainer, false);\nassert.equal(card.configuration.includesAccountsOrMemory, false);\nassert.equal(card.configuration.importRequiresHostConfirmation, true);\nconst original = await bytesAt(card.configuration.url, 'exports/en/status-report-writer.fleet.json');\nfunction verify(bytes) {\n  assert.equal(bytes.length, card.configuration.bytes, 'byte length mismatch');\n  assert.match(card.configuration.sha256, /^[0-9a-f]{64}$/);\n  assert.equal(createHash('sha256').update(bytes).digest('hex'), card.configuration.sha256, 'SHA-256 mismatch');\n}\nverify(original);\nconst fleet = JSON.parse(original.toString('utf8'));\nassert.equal(fleet.schema, card.configuration.format);\nassert.equal(fleet.mode, 'config');\nassert.equal(fleet.bots.length, 1);\nconst bot = fleet.bots[0];\nassert.equal(bot.id, card.id.split('/')[1]);\nassert.equal(bot.toolsEnabled, false);\nassert.equal(bot.containerEnabled, false);\nassert.deepEqual(bot.messages, []);\nassert.deepEqual(bot.files, []);\nassert.deepEqual(bot.channels, {});\nassert.deepEqual(bot.memory, { profile: '', journal: [] });\nassert.equal(bot.summary, null);\nassert.deepEqual(fleet.shared, { skills: [], files: [] });\nconsole.log('PASS original snapshot');\nconst altered = Buffer.from(original);\nassert.ok(altered.length > 0);\naltered[0] ^= 1;\nassert.throws(() => verify(altered), { code: 'ERR_ASSERTION', message: /SHA-256 mismatch/ });\nverify(original);\nconsole.log('PASS altered copy rejected');\nJS",
+                "en": "node --input-type=module <<'JS'\nimport assert from 'node:assert/strict';\nimport { readFile, realpath } from 'node:fs/promises';\nimport { resolve, sep } from 'node:path';\nimport { createHash } from 'node:crypto';\nconst root = await realpath(resolve('dist/site'));\nconst base = new URL('https://harzva.github.io/awesome-bot/');\nasync function bytesAt(url, expected) {\n  assert.equal(url, new URL(expected, base).href, 'unexpected URL');\n  const u = new URL(url);\n  assert.equal(u.origin, base.origin);\n  assert.equal(u.search + u.hash, '');\n  assert.ok(u.pathname.startsWith(base.pathname));\n  const relative = decodeURIComponent(u.pathname.slice(base.pathname.length));\n  assert.ok(!relative.includes('\\\\') && !relative.includes('\\0'));\n  const path = resolve(root, relative);\n  assert.ok(path.startsWith(root + sep), 'path escaped site root');\n  const actual = await realpath(path);\n  assert.ok(actual.startsWith(root + sep), 'symlink escaped site root');\n  return readFile(actual);\n}\nasync function jsonAt(url, expected) {\n  return JSON.parse((await bytesAt(url, expected)).toString('utf8'));\n}\nconst discovery = await jsonAt(new URL('agents/index.json', base).href, 'agents/index.json');\nassert.equal(discovery.schema, 'awesome.bot.agent-discovery/1');\nassert.equal(discovery.configurationFormat, 'openbot.fleet/1');\nassert.ok(discovery.contentRevision);\nconst languages = discovery.languages.filter(x => x.locale === 'en');\nassert.equal(languages.length, 1);\nconst index = await jsonAt(languages[0].url, 'agents/en/index.json');\nassert.equal(index.schema, 'awesome.bot.agent-index/1');\nassert.equal(index.locale, 'en');\nassert.equal(index.contentRevision, discovery.contentRevision);\nassert.equal(index.count, index.entries.length);\nassert.equal(languages[0].count, index.count);\nconst matches = index.entries.filter(x => x.id === 'awesome/status-report-writer');\nassert.equal(matches.length, 1);\nconst entry = matches[0];\nconst card = await jsonAt(entry.json, 'agents/en/status-report-writer.json');\nassert.equal(card.schema, 'awesome.bot.agent/1');\nassert.equal(card.id, entry.id);\nassert.equal(card.locale, index.locale);\nassert.equal(card.contentRevision, index.contentRevision);\nassert.ok(entry.templateVersion);\nassert.equal(card.templateVersion, entry.templateVersion);\nassert.equal(card.configuration.format, 'openbot.fleet/1');\nassert.equal(card.configuration.locale, card.locale);\nassert.equal(card.configuration.grantsTools, false);\nassert.equal(card.configuration.grantsContainer, false);\nassert.equal(card.configuration.includesAccountsOrMemory, false);\nassert.equal(card.configuration.importRequiresHostConfirmation, true);\nconst original = await bytesAt(card.configuration.url, 'exports/en/status-report-writer.fleet.json');\nfunction verify(bytes) {\n  assert.equal(bytes.length, card.configuration.bytes, 'byte length mismatch');\n  assert.match(card.configuration.sha256, /^[0-9a-f]{64}$/);\n  assert.equal(createHash('sha256').update(bytes).digest('hex'), card.configuration.sha256, 'SHA-256 mismatch');\n}\nverify(original);\nconst fleet = JSON.parse(original.toString('utf8'));\nassert.equal(fleet.schema, card.configuration.format);\nassert.equal(fleet.mode, 'config');\nassert.equal(fleet.bots.length, 1);\nconst bot = fleet.bots[0];\nassert.equal(bot.id, card.id.split('/')[1]);\nassert.equal(bot.toolsEnabled, false);\nassert.equal(bot.containerEnabled, false);\nassert.deepEqual(bot.messages, []);\nassert.deepEqual(bot.files, []);\nassert.deepEqual(bot.channels, {});\nassert.deepEqual(bot.memory, { profile: '', journal: [] });\nassert.equal(bot.summary, null);\nassert.deepEqual(fleet.shared, { skills: [], files: [] });\nconsole.log('PASS original snapshot');\nconst altered = Buffer.from(original);\nassert.ok(altered.length > 0);\naltered[0] ^= 1;\nassert.throws(() => verify(altered), { code: 'ERR_ASSERTION', message: /SHA-256 mismatch/ });\nverify(original);\nconsole.log('PASS altered copy rejected');\nJS"
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "完成判据是依次出现 PASS original snapshot 和 PASS altered copy rejected 两行，进程退出码为 0。版本和摘要取自当前快照，不需要改成某个写死的版本或 SHA。负例只翻转 Buffer 副本的一字节，以 assert.throws 证明摘要校验拒绝；源码和原始产物没有被写入。",
+                "en": "Completion requires the two lines PASS original snapshot and PASS altered copy rejected, in that order, with exit code 0. Versions and digests come from the current snapshot; no hard-coded version or SHA is needed. The negative case flips one byte only in a Buffer copy and uses assert.throws to prove rejection. Source files and original artifacts are never written."
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "schema 按每层的实际类型检查；id 与 templateVersion 在索引和角色卡间核对，locale 在索引、角色卡与 configuration 间核对，contentRevision 在 discovery、索引和角色卡间核对。Fleet 本身没有 locale、templateVersion 或 contentRevision 字段；这里核对其 schema、单 Bot 的 slug ID 与实际空结构，不臆造字段。",
+                "en": "Each layer is checked against its actual schema. ID and templateVersion agree between index and card; locale agrees across index, card, and configuration; contentRevision agrees across discovery, index, and card. Fleet has no locale, templateVersion, or contentRevision fields. Its schema, single Bot slug ID, and actual empty structures are checked without inventing fields."
+              }
+            },
+            {
+              "type": "list",
+              "items": [
+                {
+                  "zh": "ENOENT：确认当前目录是仓库根、Node.js 为 22+，并确认 npm run check 和 npm run build:site 成功；不要从其他版本手工拼入缺失文件。",
+                  "en": "ENOENT: confirm the repository-root working directory, Node.js 22+, and successful npm run check and npm run build:site. Do not fill missing files manually from another version."
+                },
+                {
+                  "zh": "版本、语言或 URL 断言失败：停止使用这份混合快照，从同一 Git 快照重新生成整个 dist/site 后重试，不放宽断言。",
+                  "en": "Version, language, or URL assertion failure: stop using the mixed snapshot and regenerate all of dist/site from one Git snapshot before retrying. Do not relax assertions."
+                },
+                {
+                  "zh": "字节长度或 SHA-256 失败：保留失败记录，重新生成或重新取得完整一致快照；不要修改角色卡摘要让错误文件通过。",
+                  "en": "Byte-length or SHA-256 failure: keep the failure record and regenerate or retrieve a complete consistent snapshot. Do not edit the card digest to accept a bad file."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "digest-kinds",
+          "title": {
+            "zh": "分清两种摘要",
+            "en": "Distinguish the two digests"
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "字段",
+                  "en": "Field"
+                },
+                {
+                  "zh": "计算对象与格式",
+                  "en": "Input and format"
+                },
+                {
+                  "zh": "比较边界",
+                  "en": "Comparison boundary"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "registry integrity",
+                    "en": "registry integrity"
+                  },
+                  {
+                    "zh": "规范清单的 canonicalJson：键递归排序、无格式空白；SHA-256 后使用 sha256-<base64>。",
+                    "en": "canonicalJson of the canonical manifest: recursively sorted keys and no formatting whitespace; SHA-256 encoded as sha256-<base64>."
+                  },
+                  {
+                    "zh": "由 engine/src/manifest.mjs 的 integrityOf 定义；不是下载文件的原始字节摘要。",
+                    "en": "Defined by integrityOf in engine/src/manifest.mjs; it is not a digest of raw download bytes."
+                  }
+                ],
+                [
+                  {
+                    "zh": "Agent configuration.sha256 / bytes",
+                    "en": "Agent configuration.sha256 / bytes"
+                  },
+                  {
+                    "zh": "configuration.url 指向的具体 Fleet 导出字节；SHA-256 为 64 位十六进制，bytes 为字节数。",
+                    "en": "The exact Fleet export bytes at configuration.url; SHA-256 is 64 hexadecimal characters and bytes is the byte count."
+                  },
+                  {
+                    "zh": "由 scripts/agent-surface.mjs 读取产物计算；只与同一 URL、语言和快照的字节比较。",
+                    "en": "Computed from the artifact by scripts/agent-surface.mjs; compare only bytes from the same URL, language, and snapshot."
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "CLI 经 scripts/market.mjs 复用引擎导出，默认时间取当前 Date.now()；站点构建使用 metadata.updatedAt 的固定时间。exportedAt 和 Bot createdAt 因此可能不同；中文规范投影和英文站点投影的人设等文本也不同。即使角色 ID 和模板版本相同，这些导出的字节与摘要仍可能不同，不能混用 registry integrity、CLI 文件摘要、中文下载或英文下载摘要。",
+                "en": "The CLI wrapper scripts/market.mjs reuses engine export, which defaults to Date.now(); site builds use the fixed metadata.updatedAt time. exportedAt and Bot createdAt can therefore differ. The Chinese canonical projection and English site projection also differ in persona and other text. Even with the same role ID and template version, export bytes and digests can differ. Do not interchange registry integrity, a CLI file digest, or Chinese and English download digests."
+              }
+            }
+          ]
         }
       ],
       "sources": [
@@ -1580,6 +2335,84 @@
               ]
             }
           ]
+        },
+        {
+          "id": "cli-output-errors",
+          "title": {
+            "zh": "理解 CLI 输出与失败",
+            "en": "Understand CLI output and failures"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "--json 只选择命令结果格式；信任检查仍可能向 stdout 写出警告。通过 npm run market 调用时，npm 也可能输出脚本 banner。因此不要对整段 stdout 直接 JSON.parse，也不要假设存在清理所有输出的专用标志。文件导出使用 --out=<file>，命令成功后读取该文件再解析；保留退出码和诊断输出。",
+                "en": "--json selects the command result format; trust checks can still write warnings to stdout. Invoking npm run market may add npm script banners. Do not JSON.parse the entire stdout or assume a dedicated flag removes all diagnostic output. For file export, use --out=<file>, then read and parse that file after command success. Keep the exit code and diagnostic output."
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "install 是生成 Fleet 配置文件，不会把 Bot 写入运行中的 App。帮助中的 0.9.9 是兼容规划示例，不能据此判断当前宿主版本；先核实目标宿主版本再填写 --openbot。接受社区内容及未固定信任源须由使用者明确选择，不能靠修复参数错误自动增加接受标志。",
+                "en": "install generates a Fleet configuration file; it does not write a Bot into the running App. The 0.9.9 in help is a compatibility-planning example, not evidence of the current host version. Verify the target host version before supplying --openbot. Acceptance of community content and an unpinned source is an explicit user choice; repairing a parameter error must not silently add acceptance flags."
+              }
+            },
+            {
+              "type": "table",
+              "headers": [
+                {
+                  "zh": "失败或现象",
+                  "en": "Failure or symptom"
+                },
+                {
+                  "zh": "真实含义与恢复",
+                  "en": "Meaning and recovery"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "zh": "plan / install 缺 --openbot",
+                    "en": "plan / install missing --openbot"
+                  },
+                  {
+                    "zh": "报错以 Provide --openbot=<target-version> 开头，并说明复用 CLI 的默认版本较旧。查明目标宿主实际版本，补 --openbot=<target-version> 后重试。",
+                    "en": "The error starts with Provide --openbot=<target-version> and explains that the reused CLI default is older. Determine the actual target host version, add --openbot=<target-version>, and retry."
+                  }
+                ],
+                [
+                  {
+                    "zh": "install 缺 --out",
+                    "en": "install missing --out"
+                  },
+                  {
+                    "zh": "报错为 Provide --out=<file>; this command generates a configuration file and does not install into your App. 选择可写的新目标文件路径，补 --out=<file>，并保留正确的 --openbot。两者都缺时先遇到 --out 错误。",
+                    "en": "The error is Provide --out=<file>; this command generates a configuration file and does not install into your App. Choose a writable new destination file, add --out=<file>, and retain the correct --openbot. If both are missing, the --out error comes first."
+                  }
+                ],
+                [
+                  {
+                    "zh": "--out= 或 --out 后无路径",
+                    "en": "--out= or --out without a path"
+                  },
+                  {
+                    "zh": "报错为 --out requires a file path。给出非空文件路径；单独的标志不代表自动选择路径。",
+                    "en": "The error is --out requires a file path. Supply a nonempty file path; a bare flag does not select a destination automatically."
+                  }
+                ],
+                [
+                  {
+                    "zh": "stdout 在 JSON 前出现警告或 banner",
+                    "en": "Warnings or banners precede JSON on stdout"
+                  },
+                  {
+                    "zh": "这是输出混合，不等于 Fleet 文件损坏。检查退出码，阅读警告；导出结果从 --out 文件读取，查看本包装器帮助用 npm run market -- help。",
+                    "en": "Mixed output does not imply a corrupted Fleet file. Check the exit code and read warnings. Read exported data from the --out file; inspect wrapper help with npm run market -- help."
+                  }
+                ]
+              ]
+            }
+          ]
         }
       ],
       "sources": [
@@ -1752,6 +2585,28 @@
                   }
                 ]
               ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "读不到文件时，把以下两行公开虚构文本直接贴给当前 Agent，请它只复述两条事实并标行号。不要放入客户资料。",
+                "en": "If a file cannot be read, paste these two lines of public fictional text directly into the current Agent. Ask it to restate only the two facts with line numbers. Do not include customer materials."
+              }
+            },
+            {
+              "type": "code",
+              "text": {
+                "zh": "1｜虚构项目：纸飞机；目标周五交草稿。\n2｜桌面测试通过；手机测试未开始。",
+                "en": "1 | Fictional project: Paper Plane; draft due Friday.\n2 | Desktop tests passed; mobile tests not started."
+              },
+              "language": "text"
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "若复述正确，记录“粘贴文本可读；原文件读取仍未验证”，保存这次结果。下一步只查原文件路径、格式或授权；若文本也失败，保留报错定位模型或会话问题。条件未变时不盲目重试，不重置已成功的步骤。",
+                "en": "If the restatement is correct, record “pasted text readable; original file reading still unverified” and save the result. Next check only the original file path, format, or access. If text also fails, preserve the error to investigate the model or session. Avoid blind retries under unchanged conditions and retain successful steps."
+              }
             }
           ]
         },
