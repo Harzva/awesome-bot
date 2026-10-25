@@ -10,6 +10,102 @@
     if (className) element.className = className;
     return element;
   };
+  const routeElement = document.getElementById('handbook-path-data');
+  const routeData = routeElement ? JSON.parse(routeElement.textContent) : null;
+  const pathContext = document.querySelector('.handbook-path-context');
+  const pager = document.querySelector('.handbook-pager');
+  const fullBookPager = pager ? Array.from(pager.childNodes, node => node.cloneNode(true)) : [];
+  const originalLinks = new WeakMap();
+  let completion;
+  const selectedPath = () => routeData?.paths.find(path => path.id === new URL(location.href).searchParams.get('path'));
+  function routeLink(value, path = selectedPath()) {
+    const target = new URL(value, location.href);
+    if (path) target.searchParams.set('path', path.id);
+    return target.pathname + target.search + target.hash;
+  }
+  function syncHandbookLinks() {
+    const path = selectedPath();
+    document.querySelectorAll('a[href]').forEach(link => {
+      if (!originalLinks.has(link)) originalLinks.set(link, link.getAttribute('href'));
+      const original = originalLinks.get(link);
+      // Same-page anchors already retain the current query, including path and q.
+      if (original.startsWith('#') || link.hasAttribute('data-handbook-path-exit') || link.hasAttribute('data-handbook-path-choice')) return;
+      const target = new URL(original, location.href);
+      if (target.origin !== location.origin || !/\/handbook(?:-[a-z0-9-]+)?(?:\.en)?\.html$/.test(target.pathname)) return;
+      const explicitPath = routeData?.paths.find(item => item.id === target.searchParams.get('path'));
+      if (!explicitPath) {
+        target.searchParams.delete('path');
+        if (path) target.searchParams.set('path', path.id);
+      }
+      if (link.hasAttribute('data-handbook-language')) {
+        const current = new URL(location.href);
+        const query = current.searchParams.get('q');
+        if (query) target.searchParams.set('q', query); else target.searchParams.delete('q');
+        target.hash = current.hash;
+      }
+      link.href = target.pathname + target.search + target.hash;
+    });
+  }
+  function pathAnchor(title, href) {
+    const link = make('a', title);
+    link.href = href;
+    return link;
+  }
+  function renderPath() {
+    const path = selectedPath();
+    document.querySelectorAll('[data-handbook-completion-link]').forEach(link => { link.hidden = false; });
+    if (completion) { completion.remove(); completion = null; }
+    if (pager) { pager.hidden = false; pager.replaceChildren(...fullBookPager.map(node => node.cloneNode(true))); }
+    if (pathContext) {
+      pathContext.hidden = !path;
+      pathContext.replaceChildren();
+      if (path) {
+        const position = path.chapters.indexOf(routeData.chapter);
+        const w = routeData.words;
+        const readingPosition = position >= 0
+          ? (locale === 'en' ? `Chapter ${position + 1}/${path.chapters.length}` : `第 ${position + 1}/${path.chapters.length} 章`)
+          : w.supplementary;
+        pathContext.append(document.createTextNode(`${path.title} · ${readingPosition} · `), pathAnchor(w.pathDirectory, routeLink(`${routeData.home}#path-${path.id}`, path)), document.createTextNode(' · '));
+        const exit = new URL(location.href);
+        exit.searchParams.delete('path');
+        const exitLink = pathAnchor(w.exitPath, exit.pathname + exit.search + exit.hash);
+        exitLink.dataset.handbookPathExit = '';
+        pathContext.append(exitLink);
+        if (pager) {
+          pager.replaceChildren();
+          pager.hidden = position < 0;
+          if (position >= 0) {
+            for (const [offset, relation, title] of [[-1, 'prev', w.previous], [1, 'next', w.next]]) {
+              const chapter = routeData.chapters.find(item => item.id === path.chapters[position + offset]);
+              if (chapter) {
+                const link = pathAnchor(`${title}: ${chapter.title}`, routeLink(chapter.url, path));
+                link.rel = relation;
+                pager.append(link);
+              }
+            }
+            if (position === path.chapters.length - 1) {
+              completion = make('section', undefined, 'handbook-path-completion');
+              completion.id = 'handbook-path-completion';
+              completion.append(make('h2', w.completion), make('p', w.completionIntro));
+              const checks = make('ul');
+              path.completionChecks.forEach(check => {
+                const item = make('li');
+                item.append(pathAnchor(check.title, check.url));
+                checks.append(item);
+              });
+              const practices = make('ul');
+              path.practiceLinks.forEach(practice => { const item = make('li'); item.append(pathAnchor(practice.title, practice.url)); practices.append(item); });
+              completion.append(checks, make('h3', w.practice), practices, pathAnchor(w.pathDirectory, routeLink(`${routeData.home}#path-${path.id}`, path)));
+              pager.before(completion);
+            }
+          }
+        }
+      }
+    }
+    syncHandbookLinks();
+    if (completion && location.hash === '#handbook-path-completion') completion.scrollIntoView();
+  }
+  renderPath();
   const contents = document.getElementById('handbook-directory');
   if (contents) contents.open = !matchMedia('(max-width: 760px)').matches;
   document.querySelectorAll('[data-handbook-print]').forEach(button => button.addEventListener('click', () => window.print()));
@@ -63,13 +159,7 @@
     const query = input.value.trim();
     if (query) route.searchParams.set('q', query); else route.searchParams.delete('q');
     history.replaceState(null, '', route.pathname + route.search + route.hash);
-    const language = document.querySelector('[data-handbook-language]');
-    if (language) {
-      const target = new URL(language.getAttribute('href'), location.href);
-      if (query) target.searchParams.set('q', query); else target.searchParams.delete('q');
-      target.hash = route.hash;
-      language.href = target.pathname + target.search + target.hash;
-    }
+    syncHandbookLinks();
   }
   function validTarget(value) {
     return typeof value === 'string' && /^\.\/handbook-[a-z0-9-]+(?:\.en)?\.html#[a-z0-9-]+$/.test(value);
@@ -124,7 +214,8 @@
         for (const entry of matches) {
           const item = make('li');
           const link = make('a', entry.chapter + ' · ' + entry.title);
-          link.href = entry.url;
+          originalLinks.set(link, entry.url);
+          link.href = routeLink(entry.url);
           item.append(link, make('p', excerpt(entry, terms)));
           list.append(item);
         }
@@ -152,7 +243,7 @@
   input.addEventListener('input', event => { if (!event.isComposing) schedule(); });
   input.addEventListener('compositionstart', () => { composing = true; clearTimeout(timer); ++sequence; });
   input.addEventListener('compositionend', () => { composing = false; schedule(); });
-  window.addEventListener('popstate', () => { input.value = (new URL(location.href).searchParams.get('q') || '').slice(0, 160); search(); });
+  window.addEventListener('popstate', () => { renderPath(); input.value = (new URL(location.href).searchParams.get('q') || '').slice(0, 160); search(); });
   window.addEventListener('hashchange', saveRoute);
   saveRoute();
   if (input.value.trim()) search();

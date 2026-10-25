@@ -23,10 +23,54 @@
       "chapters": [
         "start",
         "concepts",
-        "choose-import",
         "instructions",
+        "choose-import",
         "scenarios",
         "troubleshooting"
+      ],
+      "practiceLinks": [
+        {
+          "chapter": "start",
+          "section": "exercise",
+          "label": {
+            "zh": "从一份虚构周报开始",
+            "en": "Start with a fictional weekly report"
+          }
+        },
+        {
+          "chapter": "scenarios",
+          "section": "practice-weekly-report",
+          "label": {
+            "zh": "再练：区分交付、测试与验收",
+            "en": "Next exercise: delivery, testing, and acceptance"
+          }
+        }
+      ],
+      "completionChecks": [
+        {
+          "chapter": "start",
+          "section": "accept",
+          "text": {
+            "zh": "核对每项结论的来源，保留未知项；参考示例不必逐字照抄。",
+            "en": "Check the source of each claim and keep unknowns explicit; the reference is not a wording template."
+          }
+        },
+        {
+          "chapter": "instructions",
+          "section": "iterate",
+          "text": {
+            "zh": "针对一个具体缺口修订，再保存自己的任务、材料与结果。",
+            "en": "Revise one specific gap, then save your task, inputs, and result."
+          }
+        },
+        {
+          "chapter": "choose-import",
+          "section": "compare",
+          "text": {
+            "zh": "能分清阅读、下载与宿主导入；如有导入，保留本次核对记录。",
+            "en": "Distinguish reading, downloading, and host import; if you imported, keep a verification record."
+          }
+        }
       ]
     },
     {
@@ -46,6 +90,50 @@
         "scenarios",
         "agents",
         "troubleshooting"
+      ],
+      "practiceLinks": [
+        {
+          "chapter": "team",
+          "section": "handoff",
+          "label": {
+            "zh": "先练一次退回、修订与重新接收",
+            "en": "Practice returning, revising, and accepting a handoff"
+          }
+        },
+        {
+          "chapter": "scenarios",
+          "section": "practice-customer-meeting",
+          "label": {
+            "zh": "接着交接事实表与会前简报",
+            "en": "Then hand off a fact table and meeting brief"
+          }
+        }
+      ],
+      "completionChecks": [
+        {
+          "chapter": "team",
+          "section": "owners",
+          "text": {
+            "zh": "本次任务有明确的负责人、接收者和审阅人。",
+            "en": "Name the task owner, recipient, and reviewer."
+          }
+        },
+        {
+          "chapter": "team",
+          "section": "handoff",
+          "text": {
+            "zh": "能追踪退回原因、补齐材料和接受的版本；旧产物已重新核对。",
+            "en": "Track the return reason, added materials, and accepted version; recheck affected earlier outputs."
+          }
+        },
+        {
+          "chapter": "scenarios",
+          "section": "practice-customer-meeting",
+          "text": {
+            "zh": "交给下一角色的材料保留来源与未知项；事实表和最终简报分别验收。",
+            "en": "Keep sources and unknowns in the next role's inputs; review the fact table and final brief separately."
+          }
+        }
       ]
     },
     {
@@ -65,6 +153,50 @@
         "contribute",
         "troubleshooting",
         "reference"
+      ],
+      "practiceLinks": [
+        {
+          "chapter": "agents",
+          "section": "local-lab",
+          "label": {
+            "zh": "运行本地快照正例与失败例",
+            "en": "Run the local snapshot success and failure cases"
+          }
+        },
+        {
+          "chapter": "scenarios",
+          "section": "practice-bug-retest",
+          "label": {
+            "zh": "练习编写有边界的复验计划",
+            "en": "Practice a bounded retest plan"
+          }
+        }
+      ],
+      "completionChecks": [
+        {
+          "chapter": "agents",
+          "section": "local-lab",
+          "text": {
+            "zh": "本地校验依次出现两行 PASS，退出码为 0；篡改副本被拒绝，原文件保持不变。",
+            "en": "The local check prints both PASS lines in order and exits 0; it rejects the altered copy without changing original files."
+          }
+        },
+        {
+          "chapter": "scenarios",
+          "section": "practice-bug-retest",
+          "text": {
+            "zh": "能区分复验计划和真实测试结果，记录当前缺少的环境或证据。",
+            "en": "Distinguish a retest plan from a real test result and record missing environment access or evidence."
+          }
+        },
+        {
+          "chapter": "contribute",
+          "section": "checks",
+          "text": {
+            "zh": "如有贡献，检查双语生成物与版本契约，并保存可复现的验证记录。",
+            "en": "If contributing, check bilingual output and version contracts, and keep reproducible verification records."
+          }
+        }
       ]
     }
   ],
@@ -93,8 +225,8 @@
             {
               "type": "paragraph",
               "text": {
-                "zh": "新手先做本章练习；团队读完基础概念后安排交接；开发者可从 Agent 读取和贡献章节开始。无需下载整个目录。",
-                "en": "Beginners can start with this exercise. Teams can learn the concepts and arrange handoffs. Developers can start with Agent access and contribution. There is no need to download the whole catalogue."
+                "zh": "新手先做本章练习；团队读完基础概念后安排交接；开发者可直接进入本地快照实验。按路径阅读时，章末会接到本路径的下一章。无需下载整个目录。",
+                "en": "Beginners can start with this exercise. Teams can learn the concepts and arrange handoffs. Developers can go directly to the local snapshot lab. In a reading path, the chapter footer leads to the next chapter on that path. There is no need to download the whole catalogue."
               }
             },
             {
@@ -102,22 +234,32 @@
               "items": [
                 {
                   "label": {
-                    "zh": "团队协作",
-                    "en": "Team collaboration"
+                    "zh": "新手：开始本章练习",
+                    "en": "Beginner: start this exercise"
                   },
                   "url": {
-                    "zh": "./handbook-team.html",
-                    "en": "./handbook-team.en.html"
+                    "zh": "./handbook-start.html?path=start#exercise",
+                    "en": "./handbook-start.en.html?path=start#exercise"
                   }
                 },
                 {
                   "label": {
-                    "zh": "开发与贡献",
-                    "en": "Development and contribution"
+                    "zh": "团队协作",
+                    "en": "Team collaboration"
                   },
                   "url": {
-                    "zh": "./handbook-contribute.html",
-                    "en": "./handbook-contribute.en.html"
+                    "zh": "./handbook-team.html?path=team",
+                    "en": "./handbook-team.en.html?path=team"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "开发者：本地快照实验",
+                    "en": "Developer: local snapshot lab"
+                  },
+                  "url": {
+                    "zh": "./handbook-agents.html?path=developer#local-lab",
+                    "en": "./handbook-agents.en.html?path=developer#local-lab"
                   }
                 }
               ]
@@ -141,8 +283,8 @@
             {
               "type": "paragraph",
               "text": {
-                "zh": "选择“进度报告编辑”，或者把任务交给当前能处理文本的 Agent。练习不需要连接真实邮箱或项目账号；角色资料仍服从 Agent 的原有指令。",
-                "en": "Choose Status Report Writer, or give this task to an Agent that handles text. The exercise needs no real mailbox or project account. Role context remains subject to the Agent's existing instructions."
+                "zh": "先完整复制下方“练习任务与材料”，贴给当前能处理文本的 Agent，生成第一份周报草稿；这一步无需下载或导入，也不需要连接真实邮箱或项目账号。可选用“进度报告编辑”的角色资料，仍服从 Agent 的原有指令。",
+                "en": "Copy the entire “Practice task and materials” block below into your existing text-capable Agent to produce the first weekly report draft. This step needs no download, import, real mailbox or project account. Optionally use Status Report Writer role context, subject to the Agent’s existing instructions."
               }
             },
             {
@@ -1926,6 +2068,13 @@
           },
           "blocks": [
             {
+              "type": "paragraph",
+              "text": {
+                "zh": "团队读者重点理解按需发现角色、提供上下文和确认权限即可；不必先克隆仓库或安装 Node，也不要求每位协作者手动计算 SHA-256。继续阅读“读取与信任的边界”；“本地快照校验与失败练习”可留给开发者。",
+                "en": "Team readers can focus on discovering roles as needed, supplying context and confirming permissions. Collaboration does not require cloning the repository, installing Node or having every collaborator calculate SHA-256 manually. Continue to “Reading and trust boundaries”; the local snapshot lab can be left to developers."
+              }
+            },
+            {
               "type": "steps",
               "items": [
                 {
@@ -1973,6 +2122,16 @@
                   "url": {
                     "zh": "./agents/en/index.json",
                     "en": "./agents/en/index.json"
+                  }
+                },
+                {
+                  "label": {
+                    "zh": "读取与信任的边界",
+                    "en": "Reading and trust boundaries"
+                  },
+                  "url": {
+                    "zh": "./handbook-agents.html#trust",
+                    "en": "./handbook-agents.en.html#trust"
                   }
                 }
               ]
@@ -2102,6 +2261,28 @@
                 "zh": "Copy for Agent 只复制提示，网站不会联系 Agent。无法读链接时，经 Agent 正常粘贴或附件入口提供对应 Markdown，并说明限制。SHA-256 匹配说明与元数据一致，不证明发布者身份；当前目录未签名。",
                 "en": "Copy for Agent copies a prompt; the site does not contact an Agent. If links are inaccessible, provide the relevant Markdown through normal paste or attachment and state the limitation. A SHA-256 match proves agreement with metadata, not publisher identity. The current catalogue is unsigned."
               }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "理解上述边界后，团队读者可继续排错；实际接入、下载或升级仍须执行对应契约要求的完整性与信任核验，由负责接入的人或工具完成。",
+                "en": "After understanding these boundaries, team readers can continue to troubleshooting. Actual integration, download and upgrade work must still perform the integrity and trust checks required by the applicable contract, through the responsible integrator or tools."
+              }
+            },
+            {
+              "type": "links",
+              "items": [
+                {
+                  "label": {
+                    "zh": "团队路径：继续排错",
+                    "en": "Team path: continue to troubleshooting"
+                  },
+                  "url": {
+                    "zh": "./handbook-troubleshooting.html?path=team",
+                    "en": "./handbook-troubleshooting.en.html?path=team"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -2496,8 +2677,8 @@
             {
               "type": "paragraph",
               "text": {
-                "zh": "install 是生成 Fleet 配置文件，不会把 Bot 写入运行中的 App。帮助中的 0.9.9 是兼容规划示例，不能据此判断当前宿主版本；先核实目标宿主版本再填写 --openbot。接受社区内容及未固定信任源须由使用者明确选择，不能靠修复参数错误自动增加接受标志。",
-                "en": "install generates a Fleet configuration file; it does not write a Bot into the running App. The 0.9.9 in help is a compatibility-planning example, not evidence of the current host version. Verify the target host version before supplying --openbot. Acceptance of community content and an unpinned source is an explicit user choice; repairing a parameter error must not silently add acceptance flags."
+                "zh": "install 是生成 Fleet 配置文件，不会把 Bot 写入运行中的 App。本包装器要求显式填写目标 --openbot，不会检测运行中宿主的版本。npm run market -- help 显示用法及 0.9.9 示例，不表示当前宿主或默认规划版本。重试前，从目标宿主自身的版本信息核实实际版本；若版本未知，先停止兼容规划，不猜填 0.9.9 或默认值。接受社区内容及未固定信任源须由使用者明确选择，不能靠修复参数错误自动增加接受标志。",
+                "en": "install generates a Fleet configuration file; it does not write a Bot into the running App. This wrapper requires an explicit target --openbot and does not detect the running host version. npm run market -- help shows usage and a 0.9.9 example, not the current host or default planning version. Before retrying, verify the actual version using the target host’s own version information. If it is unknown, stop compatibility planning rather than guess 0.9.9 or a default. Acceptance of community content and an unpinned source is an explicit user choice; repairing a parameter error must not silently add acceptance flags."
               }
             },
             {
@@ -2519,8 +2700,8 @@
                     "en": "plan / install missing --openbot"
                   },
                   {
-                    "zh": "报错以 Provide --openbot=<target-version> 开头，并说明复用 CLI 的默认版本较旧。查明目标宿主实际版本，补 --openbot=<target-version> 后重试。",
-                    "en": "The error starts with Provide --openbot=<target-version> and explains that the reused CLI default is older. Determine the actual target host version, add --openbot=<target-version>, and retry."
+                    "zh": "报错以 Provide --openbot=<target-version> 开头。本包装器要求实际目标版本，不检测运行中宿主。先核对目标宿主自身的版本信息，再补 --openbot=<target-version> 重试；未知时停止兼容规划，不照抄帮助示例或猜默认值。",
+                    "en": "The error starts with Provide --openbot=<target-version>. This wrapper requires the actual target version and does not detect the running host. Check the target host’s own version information, then retry with --openbot=<target-version>. If unknown, stop compatibility planning; do not copy the help example or guess a default."
                   }
                 ],
                 [
