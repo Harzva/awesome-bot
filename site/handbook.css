@@ -405,6 +405,51 @@ html[lang^="en"] .handbook-page .handbook-only-en {
   white-space: pre;
 }
 
+.handbook-page .handbook-code-actions {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 16px 0 0;
+}
+
+.handbook-page .handbook-code-actions button[data-handbook-copy] {
+  display: inline-flex;
+  min-height: 44px;
+  max-width: 100%;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.handbook-page .handbook-code-actions button[data-handbook-copy]:hover:not(:disabled) {
+  background: var(--surface-soft);
+}
+
+.handbook-page .handbook-code-actions .handbook-copy-status {
+  min-width: 0;
+  max-width: 100%;
+  flex: 1 1 12rem;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.handbook-page .handbook-code-actions .handbook-copy-status:empty {
+  display: none;
+}
+
 .handbook-page .handbook-content article pre code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
@@ -529,7 +574,9 @@ html[lang^="en"] .handbook-page .handbook-only-en {
   .handbook-page .handbook-skip-link,
   .handbook-page .handbook-sidebar,
   .handbook-page .handbook-search,
+  .handbook-page #handbook-results,
   .handbook-page .handbook-actions,
+  .handbook-page .handbook-code-actions,
   .handbook-page .handbook-pager,
   .handbook-page .site-footer {
     display: none !important;

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.1 — 2026-10-25
+
+- Copy handbook examples without changing their text, with visible success and manual-copy recovery.
+- Search every matching handbook section, show relevant excerpts and wait for completed Chinese input.
+- Keep keyboard focus when saving/removing market favorites and paging through Shared Bots; expose the JSON fallback on load failure.
+- Make individual Markdown chapters portable while preserving code and prompt content exactly. Published Bot configuration bytes are unchanged.
+
 ## 0.9.0 — 2026-10-25
 
 - Add a bilingual handbook with learning paths for first-time users, teams and developers, chapter search, printable pages and Markdown editions.

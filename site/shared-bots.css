@@ -238,6 +238,16 @@
   color: var(--accent);
 }
 
+.shared-page .shared-error a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding-inline: 2px;
+  color: var(--ink);
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+
 .shared-page .shared-pagination {
   display: flex;
   align-items: center;

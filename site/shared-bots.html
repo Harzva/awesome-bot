@@ -61,7 +61,7 @@
       </form>
 
       <section class="shared-results" aria-labelledby="shared-count">
-        <p id="shared-count" class="shared-count" role="status" aria-live="polite" aria-atomic="true" data-copy="countLoading">正在加载原站 Bot…</p>
+        <p id="shared-count" tabindex="-1" class="shared-count" role="status" aria-live="polite" aria-atomic="true" data-copy="countLoading">正在加载原站 Bot…</p>
         <div id="shared-list" class="shared-list" aria-live="polite" aria-busy="true">
           <p class="shared-loading" data-copy="listLoading">正在读取目录…</p>
         </div>
@@ -73,6 +73,7 @@
           <h2 data-copy="errorTitle">暂时无法加载目录</h2>
           <p data-copy="errorBody">请稍后重试，也可查看原始 JSON 索引。</p>
           <button id="shared-retry" class="shared-secondary-button" type="button" data-copy="retry">重试</button>
+          <a href="./shared-bots.json" data-copy="jsonIndex">JSON 原始索引</a>
         </div>
       </section>
 

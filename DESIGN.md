@@ -64,3 +64,5 @@ The bilingual handbook expands the existing visual system for reading. It uses t
 At phone widths the native directory disclosure starts collapsed; without JavaScript it stays open so all chapters remain reachable. Code and tables scroll inside their own containers. Section anchors and matching-language links preserve reading context. Printing hides navigation and keeps the chapter body. Markdown and structured downloads remain available independently of search.
 
 This surface introduces no raster assets or replacement brand. The external guide informs content organization; its logos and animation artwork are not website assets. Desktop (1440 × 1000) and phone (390 × 844) captures and browser checks are retained with the 0.9 publication evidence outside this repository.
+
+Version 0.9.1 adds progressive copy controls before code examples, with inline status outside the copied text and a manual-selection recovery path. Search waits for completed composition and shows every matching section with an excerpt. Print omits search results and copy controls. Market favorites preserve their keyboard position; directory pagination moves focus before the new results.
