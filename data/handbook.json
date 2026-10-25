@@ -151,6 +151,14 @@
               "text": {
                 "zh": "请根据虚构材料写一份不超过180字的周报草稿。\n目标：周五交付报名页。\n记录A（周三）：表单页面已完成，尚未测试。\n记录B（周四）：桌面测试通过；手机测试未开始。\n记录C（周四）：文案等待小林确认，预计周五上午回复。\n产物：目标、已验证进展、待验收、阻塞、下一步五项。\n验收：引用A/B/C；不把页面完成写成全部验收；缺负责人时标待确认。\n边界：只出草稿，不发布、不联系任何人。",
                 "en": "Write a weekly status draft of no more than 120 words from these fictional records.\nGoal: deliver a registration page on Friday.\nRecord A (Wednesday): form page complete; not tested.\nRecord B (Thursday): desktop tests passed; mobile tests not started.\nRecord C (Thursday): copy awaits Alex's approval, expected Friday morning.\nOutput: goal, verified progress, pending acceptance, blockers, next steps.\nAcceptance: cite A/B/C; do not equate page completion with full acceptance; mark missing owners as unconfirmed.\nBoundary: draft only. Do not publish or contact anyone."
+              },
+              "label": {
+                "zh": "练习任务与材料",
+                "en": "Practice task and materials"
+              },
+              "copyLabel": {
+                "zh": "复制练习任务",
+                "en": "Copy practice task"
               }
             },
             {
@@ -166,7 +174,15 @@
                 "zh": "目标：周五交付报名页。\n已验证进展：表单完成[A]，桌面测试通过[B]。\n待验收：手机测试未开始[B]。\n阻塞：文案待小林确认，预计周五上午回复[C]。\n下一步：补手机测试，负责人待确认；跟进文案，再验收。",
                 "en": "Goal: deliver the registration page on Friday.\nVerified progress: form complete [A]; desktop tests passed [B].\nPending acceptance: mobile tests not started [B].\nBlocker: copy awaits Alex, expected Friday morning [C].\nNext: arrange mobile testing (owner unconfirmed), follow up on copy, then review acceptance."
               },
-              "language": "text"
+              "language": "text",
+              "label": {
+                "zh": "教学参考节选",
+                "en": "Teaching reference excerpt"
+              },
+              "copyLabel": {
+                "zh": "复制参考节选",
+                "en": "Copy reference excerpt"
+              }
             },
             {
               "type": "paragraph",
@@ -516,6 +532,13 @@
                   "en": "Check body language and platform assumptions, especially in English source adaptations."
                 }
               ]
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "按持续职责和方法选 bot-role；需要围绕产物的步骤模板时选 task-workflow，模板可按需要重复使用。两者都要在宿主预览确认，再核对工具、账号与人工交接；任务流程本身不提供自动编排或已验证的运行状态，验收仍看具体产物。",
+                "en": "Choose bot-role for an ongoing responsibility and method; choose task-workflow for a step template organized around an output, reusable as needed. Preview and confirm either in the host, then check tools, accounts, and human handoffs. A workflow template does not itself provide automatic orchestration or a verified runtime state; assess the actual output against acceptance criteria."
+              }
             }
           ]
         },
@@ -679,15 +702,15 @@
             {
               "type": "paragraph",
               "text": {
-                "zh": "每次导入留一条记录。来源身份与宿主实际身份分开填；不把来源 ID 当作新 Bot ID。宿主不显示 ID 时记“未取得”。虚构任务通过只说明本次任务可用；升级身份对账仍待实际 ID 等证据补齐。",
-                "en": "Keep one record per import. Separate source identity from actual host identity; never treat a source ID as the new Bot ID. If the host does not show an ID, write “not obtained.” Passing a fictional task establishes usability for that task; upgrade identity reconciliation still needs the actual ID and supporting evidence."
+                "zh": "每次导入在本地或受限团队台账追加一条记录，不覆盖历史；升级时关联原记录 ID。来源身份与宿主实际身份分开填，不把来源 ID 当作新 Bot ID。宿主不显示 ID 时记“未取得”，以后取得再追加证据；ID 缺失不能作为同一身份的依据。虚构任务通过只说明本次任务可用，升级身份仍需核对同一宿主的实际 Bot ID 等证据。",
+                "en": "Append one record per import to a local or access-restricted team log, preserving history; link upgrades to the earlier record ID. Separate source identity from actual host identity, and never treat a source ID as the new Bot ID. If the host does not show an ID, write “not obtained” and append evidence when available; a missing ID is not evidence of the same identity. Passing a fictional task establishes usability for that task; upgrade identity still requires evidence such as the actual Bot ID in the same host."
               }
             },
             {
               "type": "code",
               "text": {
-                "zh": "来源 ID：\n来源版本 / 语言：\n下载文件名：\n文件 SHA-256（未核对则注明）：\n宿主 / 版本：\n导入时间：\n宿主实际名称：\n宿主实际 Bot ID（未显示填“未取得”）：\n虚构任务与结果：\n任务可用：是 / 否 / 未验证\n升级身份对账：已完成（附依据）/ 待补证据",
-                "en": "Source ID:\nSource version / language:\nDownloaded filename:\nFile SHA-256 (mark if unchecked):\nHost / version:\nImport time:\nActual host name:\nActual host Bot ID (write “not obtained” if hidden):\nFictional task and result:\nTask usability: yes / no / unverified\nUpgrade identity reconciliation: complete (attach evidence) / evidence pending"
+                "zh": "记录 ID：\n关联原记录 ID（升级时）：\n来源 URL：\n来源 ID：\n来源版本 / 语言：\n下载文件名：\n文件 SHA-256（未核对则注明）：\n宿主 / 版本：\n导入时间：\n宿主实际名称：\n宿主实际 Bot ID（未显示填“未取得”）：\n虚构任务与结果：\n任务可用：是 / 否 / 未验证\n升级身份对账：已完成（附依据）/ 待补证据",
+                "en": "Record ID:\nEarlier record ID (for upgrades):\nSource URL:\nSource ID:\nSource version / language:\nDownloaded filename:\nFile SHA-256 (mark if unchecked):\nHost / version:\nImport time:\nActual host name:\nActual host Bot ID (write “not obtained” if hidden):\nFictional task and result:\nTask usability: yes / no / unverified\nUpgrade identity reconciliation: complete (attach evidence) / evidence pending"
               },
               "language": "text"
             }
@@ -1239,8 +1262,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "A｜公司简介，2026-10-19：青禾工作室是12人的客户服务团队。\nB｜沟通记录，2026-10-20：希望月底汇总工单；预算、决策人未知。\nC｜内部演示记录，2026-10-21：仅验证CSV导入；实时同步未验证。\nD｜会谈目标，2026-10-23：澄清汇总口径、数据来源与试用条件。\nE｜参会信息：我方客户经理；客户参会人和职责待确认。\nF｜范围：仅用A—E；不得推断采购意愿、报价或承诺实时同步。",
-                "en": "A | Company profile, 2026-10-19: Qinghe Studio is a customer service team of 12.\nB | Conversation, 2026-10-20: wants month-end ticket summaries; budget and decision-maker unknown.\nC | Internal demo, 2026-10-21: only CSV import verified; real-time sync unverified.\nD | Meeting goal, 2026-10-23: clarify summary definitions, data sources, and trial conditions.\nE | Attendees: our account manager; customer attendees and responsibilities unconfirmed.\nF | Scope: use A-E only; infer no purchase intent, price, or real-time sync commitment."
+                "zh": "任务：作为客户研究专员，只用以下虚构材料，整理供会前准备使用的事实表。\n产物：事实、来源编号与日期、需求信号、待核实假设四列。未提供的日期、预算与决策人明确标未知；不得推断采购意向。\n边界：仅写内部草稿；不联系客户、不报价、不承诺未经验证的能力。\n\n虚构材料：\nA｜公司简介，2026-10-19：青禾工作室是12人的客户服务团队。\nB｜沟通记录，2026-10-20：希望月底汇总工单；预算、决策人未知。\nC｜内部演示记录，2026-10-21：仅验证CSV导入；实时同步未验证。\nD｜会谈目标，2026-10-23：澄清汇总口径、数据来源与试用条件。\nE｜参会信息：我方客户经理；客户参会人和职责待确认。\nF｜范围：仅用A—E；不得推断采购意愿、报价或承诺实时同步。",
+                "en": "Task: act as the Account Research Specialist. Use only the fictional materials below to prepare a fact table for meeting preparation.\nOutput: facts, source IDs and dates, need signals, and assumptions to verify. Mark absent dates, budget and decision-maker as unknown; do not infer purchase intent.\nBoundary: internal draft only. Do not contact customers, quote prices or promise unverified capabilities.\n\nFictional materials:\nA | Company profile, 2026-10-19: Qinghe Studio is a customer service team of 12.\nB | Conversation, 2026-10-20: wants month-end ticket summaries; budget and decision-maker unknown.\nC | Internal demo, 2026-10-21: only CSV import verified; real-time sync unverified.\nD | Meeting goal, 2026-10-23: clarify summary definitions, data sources, and trial conditions.\nE | Attendees: our account manager; customer attendees and responsibilities unconfirmed.\nF | Scope: use A-E only; infer no purchase intent, price, or real-time sync commitment."
+              },
+              "label": {
+                "zh": "练习任务与材料",
+                "en": "Practice task and materials"
+              },
+              "copyLabel": {
+                "zh": "复制练习任务",
+                "en": "Copy practice task"
               }
             },
             {
@@ -1264,8 +1295,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "教学参考节选｜背景：青禾工作室，12人客户服务团队（A，2026-10-19）。\n目标与议程：澄清月底工单汇总（B）；核对口径→数据→试用条件（D）。\n能力边界：CSV导入已在虚构内部记录验证；实时同步待验证（C）；预算、决策人未知（B）。\n五问题：汇总哪些字段？以哪个日期划月？数据从哪里导出？谁决定试用？预算与评估标准是什么？\n材料待办：我方客户经理准备CSV样例与演示范围；客户参会人/职责待确认（C/E）。",
-                "en": "Teaching reference excerpt | Background: Qinghe Studio, a customer service team of 12 (A, 2026-10-19).\nGoal and agenda: clarify month-end ticket summaries (B); definitions, data, then trial conditions (D).\nCapability boundary: fictional internal record verifies CSV import only; sync unverified (C); budget and decision-maker unknown (B).\nFive questions: Which fields? Which date defines the month? Where is data exported? Who decides on a trial? What budget and evaluation criteria apply?\nMaterial tasks: our account manager prepares a CSV sample and demo scope; customer attendees and responsibilities unconfirmed (C/E)."
+                "zh": "背景：青禾工作室，12人客户服务团队（A，2026-10-19）。\n目标与议程：澄清月底工单汇总（B）；核对口径→数据→试用条件（D）。\n能力边界：CSV导入已在虚构内部记录验证；实时同步待验证（C）；预算、决策人未知（B）。\n五问题：汇总哪些字段？以哪个日期划月？数据从哪里导出？谁决定试用？预算与评估标准是什么？\n材料待办：我方客户经理准备CSV样例与演示范围；客户参会人/职责待确认（C/E）。",
+                "en": "Background: Qinghe Studio, a customer service team of 12 (A, 2026-10-19).\nGoal and agenda: clarify month-end ticket summaries (B); definitions, data, then trial conditions (D).\nCapability boundary: fictional internal record verifies CSV import only; sync unverified (C); budget and decision-maker unknown (B).\nFive questions: Which fields? Which date defines the month? Where is data exported? Who decides on a trial? What budget and evaluation criteria apply?\nMaterial tasks: our account manager prepares a CSV sample and demo scope; customer attendees and responsibilities unconfirmed (C/E)."
+              },
+              "label": {
+                "zh": "教学参考节选",
+                "en": "Teaching reference excerpt"
+              },
+              "copyLabel": {
+                "zh": "复制参考节选",
+                "en": "Copy reference excerpt"
               }
             },
             {
@@ -1291,6 +1330,14 @@
               "text": {
                 "zh": "只修缺口：保留已核对事实表。将“支持实时同步”改为“待验证（C）”；补齐缺失的来源或五问题中的缺项，仅返回受影响行和修订后简报，不补造客户信息。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
                 "en": "Repair only gaps: keep the reviewed fact table. Replace any sync-support claim with \"unverified (C)\"; add missing sources or questions. Return affected rows and the revised brief without inventing customer information. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              },
+              "label": {
+                "zh": "修订要求",
+                "en": "Revision request"
+              },
+              "copyLabel": {
+                "zh": "复制修订要求",
+                "en": "Copy revision request"
               }
             },
             {
@@ -1338,8 +1385,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "A｜本周目标：2026-10-23交付报名页草稿，业务验收另约。\nB｜2026-10-20：小陈提交报名页v0.3草稿与交付记录。\nC｜2026-10-21：技术记录显示桌面8项测试通过；手机测试未开始。\nD｜2026-10-23：业务方尚未验收，未提供通过记录。\nE｜2026-10-16：上周已完成报名字段表，不计本周新增交付。\nF｜2026-10-22：法务文案待确认，尚无负责人及回复日期。\nG｜下一步：小陈计划2026-10-26执行手机测试；文案责任人待指派。",
-                "en": "A | Weekly goal: deliver a registration-page draft on 2026-10-23; arrange business acceptance separately.\nB | 2026-10-20: Chen submitted page draft v0.3 with a delivery record.\nC | 2026-10-21: technical record shows 8 desktop tests passed; mobile testing not started.\nD | 2026-10-23: business acceptance still pending; no approval record supplied.\nE | 2026-10-16: registration field list completed last week; exclude from new weekly deliveries.\nF | 2026-10-22: legal copy pending; owner and response date unknown.\nG | Next: Chen plans mobile tests on 2026-10-26; copy owner awaits assignment."
+                "zh": "任务：作为进度报告编辑，只用以下虚构记录写2026-10-19至2026-10-23的周报草稿。\n产物：本周交付、技术验证、业务待验收、旧成果、阻塞与下一步五项，每个状态附材料编号。缺失的负责人和日期标未知，并提出指派请求。\n边界：不把技术测试写成业务验收，不把旧成果记作本周新交付；只写草稿，不发送。\n\n虚构材料：\nA｜本周目标：2026-10-23交付报名页草稿，业务验收另约。\nB｜2026-10-20：小陈提交报名页v0.3草稿与交付记录。\nC｜2026-10-21：技术记录显示桌面8项测试通过；手机测试未开始。\nD｜2026-10-23：业务方尚未验收，未提供通过记录。\nE｜2026-10-16：上周已完成报名字段表，不计本周新增交付。\nF｜2026-10-22：法务文案待确认，尚无负责人及回复日期。\nG｜下一步：小陈计划2026-10-26执行手机测试；文案责任人待指派。",
+                "en": "Task: act as the Status Report Writer. Use only the fictional records below to draft the report for 2026-10-19 through 2026-10-23.\nOutput: current delivery, technical validation, business acceptance pending, earlier work, and blockers/next steps. Cite source IDs for every status. Mark missing owners and dates unknown and request assignment.\nBoundary: do not equate technical tests with business acceptance or earlier work with current delivery. Draft only; do not send.\n\nFictional materials:\nA | Weekly goal: deliver a registration-page draft on 2026-10-23; arrange business acceptance separately.\nB | 2026-10-20: Chen submitted page draft v0.3 with a delivery record.\nC | 2026-10-21: technical record shows 8 desktop tests passed; mobile testing not started.\nD | 2026-10-23: business acceptance still pending; no approval record supplied.\nE | 2026-10-16: registration field list completed last week; exclude from new weekly deliveries.\nF | 2026-10-22: legal copy pending; owner and response date unknown.\nG | Next: Chen plans mobile tests on 2026-10-26; copy owner awaits assignment."
+              },
+              "label": {
+                "zh": "练习任务与材料",
+                "en": "Practice task and materials"
+              },
+              "copyLabel": {
+                "zh": "复制练习任务",
+                "en": "Copy practice task"
               }
             },
             {
@@ -1359,8 +1414,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "教学参考节选｜周期：2026-10-19—2026-10-23；报名页v0.3草稿已交付（A/B）。\n技术验证：桌面8项通过；手机未测（C）。\n业务状态：尚未验收（D）；不得标记项目全部完成。\n旧成果：字段表于2026-10-16完成，仅作背景（E）。\n阻塞/行动：文案负责人和回复日期待指派（F）；小陈计划2026-10-26测手机（G）。",
-                "en": "Teaching reference excerpt | Period: 2026-10-19 through 2026-10-23; page draft v0.3 delivered (A/B).\nTechnical validation: 8 desktop tests passed; mobile untested (C).\nBusiness status: acceptance pending (D); do not mark the whole project complete.\nEarlier work: field list completed on 2026-10-16, background only (E).\nBlocker/action: assign a copy owner and response date (F); Chen plans mobile tests on 2026-10-26 (G)."
+                "zh": "周期：2026-10-19—2026-10-23；报名页v0.3草稿已交付（A/B）。\n技术验证：桌面8项通过；手机未测（C）。\n业务状态：尚未验收（D）；不得标记项目全部完成。\n旧成果：字段表于2026-10-16完成，仅作背景（E）。\n阻塞/行动：文案负责人和回复日期待指派（F）；小陈计划2026-10-26测手机（G）。",
+                "en": "Period: 2026-10-19 through 2026-10-23; page draft v0.3 delivered (A/B).\nTechnical validation: 8 desktop tests passed; mobile untested (C).\nBusiness status: acceptance pending (D); do not mark the whole project complete.\nEarlier work: field list completed on 2026-10-16, background only (E).\nBlocker/action: assign a copy owner and response date (F); Chen plans mobile tests on 2026-10-26 (G)."
+              },
+              "label": {
+                "zh": "教学参考节选",
+                "en": "Teaching reference excerpt"
+              },
+              "copyLabel": {
+                "zh": "复制参考节选",
+                "en": "Copy reference excerpt"
               }
             },
             {
@@ -1386,6 +1449,14 @@
               "text": {
                 "zh": "只修缺口：保留已引用的交付记录。把“已全部验收”拆成C技术验证与D待验收；把E移到历史背景；为F补指派请求。仅返回修改的段落，不重写已通过项。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
                 "en": "Repair only gaps: retain sourced delivery records. Split any \"fully accepted\" claim into technical validation (C) and pending acceptance (D), move E to background, and add an assignment request for F. Return changed paragraphs only. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              },
+              "label": {
+                "zh": "修订要求",
+                "en": "Revision request"
+              },
+              "copyLabel": {
+                "zh": "复制修订要求",
+                "en": "Copy revision request"
               }
             },
             {
@@ -1433,15 +1504,23 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "A｜虚构反馈，2026-10-21：Chrome 129 / macOS 14，草稿版v0.3；点两次提交后看到两个报名条目。\nB｜预期：同一提交意图只产生一个条目；反馈人称偶发，未统计频率。\nC｜虚构日志：10:02:01 POST /signup 201；10:02:01 POST /signup 201；无请求ID。\nD｜最小输入：姓名“测试甲”、邮箱 test@example.invalid；仅用于计划。\nE｜开发备注：候选版v0.3.1增加提交中禁用按钮；没有修复验证记录。\nF｜核心路径：正常、空白、失败重试；真实环境、账号、实际版本均未提供。\nG｜上线条件：原版可重复证据、候选版同条件复验及三条路径记录经负责人审阅。",
-                "en": "A | Fictional report, 2026-10-21: Chrome 129 / macOS 14, draft v0.3; two clicks on Submit show two registrations.\nB | Expected: one submission intent creates one entry; reporter says intermittent, frequency unmeasured.\nC | Fictional log: 10:02:01 POST /signup 201; 10:02:01 POST /signup 201; no request IDs.\nD | Minimal input: name \"Test A\", email test@example.invalid; planning only.\nE | Developer note: candidate v0.3.1 disables the button during submission; no fix verification record.\nF | Core paths: normal, blank, failed-request retry; no real environment, account, or actual build supplied.\nG | Release conditions: repeatable baseline evidence, candidate retest under matching conditions, and three path records reviewed by an owner."
+                "zh": "任务：作为缺陷复现工程师，只用以下虚构材料编写最小复现计划。当前没有真实测试环境，不执行测试。\n产物：区分反馈、日志线索与修复假设；列单击对照、双击和重复试验，保留预期/实际、次数、版本、环境与证据的空白记录栏，并列缺失环境。\n边界：执行项全部标待执行；两条日志不能直接证明根因，不声称已复现、已修复或可上线。\n\n虚构材料：\nA｜虚构反馈，2026-10-21：Chrome 129 / macOS 14，草稿版v0.3；点两次提交后看到两个报名条目。\nB｜预期：同一提交意图只产生一个条目；反馈人称偶发，未统计频率。\nC｜虚构日志：10:02:01 POST /signup 201；10:02:01 POST /signup 201；无请求ID。\nD｜最小输入：姓名“测试甲”、邮箱 test@example.invalid；仅用于计划。\nE｜开发备注：候选版v0.3.1增加提交中禁用按钮；没有修复验证记录。\nF｜核心路径：正常、空白、失败重试；真实环境、账号、实际版本均未提供。\nG｜上线条件：原版可重复证据、候选版同条件复验及三条路径记录经负责人审阅。",
+                "en": "Task: act as Bug Reproduction. Use only the fictional materials below to write a minimal reproduction plan. There is no real test environment; do not run tests.\nOutput: separate reports, log clues and fix hypotheses. Plan single-click controls, double-click cases and repeated trials. Leave fields for expected/actual outcomes, trial counts, build, environment and evidence blank, and list missing environment details.\nBoundary: mark execution pending throughout. Two log lines do not prove a root cause; claim no reproduction, repair or release readiness.\n\nFictional materials:\nA | Fictional report, 2026-10-21: Chrome 129 / macOS 14, draft v0.3; two clicks on Submit show two registrations.\nB | Expected: one submission intent creates one entry; reporter says intermittent, frequency unmeasured.\nC | Fictional log: 10:02:01 POST /signup 201; 10:02:01 POST /signup 201; no request IDs.\nD | Minimal input: name \"Test A\", email test@example.invalid; planning only.\nE | Developer note: candidate v0.3.1 disables the button during submission; no fix verification record.\nF | Core paths: normal, blank, failed-request retry; no real environment, account, or actual build supplied.\nG | Release conditions: repeatable baseline evidence, candidate retest under matching conditions, and three path records reviewed by an owner."
+              },
+              "label": {
+                "zh": "练习任务与材料",
+                "en": "Practice task and materials"
+              },
+              "copyLabel": {
+                "zh": "复制练习任务",
+                "en": "Copy practice task"
               }
             },
             {
               "type": "steps",
               "items": [
                 {
-                  "zh": "交给缺陷复现员（awesome/bug-reproduction）：把A/B列为报告、C列为虚构日志线索、E列为修复假设；给出单击对照→双击→重复试验的最小计划，列明缺失环境。",
+                  "zh": "交给缺陷复现工程师（awesome/bug-reproduction）：把A/B列为报告、C列为虚构日志线索、E列为修复假设；给出单击对照→双击→重复试验的最小计划，列明缺失环境。",
                   "en": "Give records to Bug Reproduction (awesome/bug-reproduction): classify A/B as reports, C as a fictional log clue, and E as a fix hypothesis. Plan a single-click control, double-click case, and repeated trials; list missing environment details."
                 },
                 {
@@ -1458,8 +1537,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "教学参考节选｜分类：A/B为反馈，C为虚构日志线索，E为候选修复说明；均不证明原因。\n计划：固定输入D；原版单击对照、双击并记录每轮结果；候选版按相同条件复验。\n检查：正常→空白→失败重试；当前全部待执行（F）。\n实际执行者填写：姓名___ 日期___ 版本/环境___ 次数___ 预期/实际___ 日志/截图位置___。\n完成条件：原版可重复证据、候选版结果、三路径记录齐全，失败项关闭且发布负责人签核（G）。",
-                "en": "Teaching reference excerpt | Classification: A/B are reports, C is a fictional log clue, E is a candidate fix note; none proves a cause.\nPlan: fix input D; run baseline single-click control and double-click trials, recording each outcome; retest the candidate under matching conditions.\nChecks: normal, blank, then failed-request retry; all currently pending (F).\nReal executor fills: name___ date___ build/environment___ trials___ expected/actual___ log/screenshot location___.\nCompletion: repeatable baseline evidence, candidate results, and three path records complete; failures resolved and release owner signs off (G)."
+                "zh": "分类：A/B为反馈，C为虚构日志线索，E为候选修复说明；均不证明原因。\n计划：固定输入D；原版单击对照、双击并记录每轮结果；候选版按相同条件复验。\n检查：正常→空白→失败重试；当前全部待执行（F）。\n实际执行者填写：姓名___ 日期___ 版本/环境___ 次数___ 预期/实际___ 日志/截图位置___。\n完成条件：原版可重复证据、候选版结果、三路径记录齐全，失败项关闭且发布负责人签核（G）。",
+                "en": "Classification: A/B are reports, C is a fictional log clue, E is a candidate fix note; none proves a cause.\nPlan: fix input D; run baseline single-click control and double-click trials, recording each outcome; retest the candidate under matching conditions.\nChecks: normal, blank, then failed-request retry; all currently pending (F).\nReal executor fills: name___ date___ build/environment___ trials___ expected/actual___ log/screenshot location___.\nCompletion: repeatable baseline evidence, candidate results, and three path records complete; failures resolved and release owner signs off (G)."
+              },
+              "label": {
+                "zh": "教学参考节选",
+                "en": "Teaching reference excerpt"
+              },
+              "copyLabel": {
+                "zh": "复制参考节选",
+                "en": "Copy reference excerpt"
               }
             },
             {
@@ -1485,6 +1572,14 @@
               "text": {
                 "zh": "只修缺口：保留已有计划。将无证据的“已复现/已修复”改为“待实际执行”；只补缺失的对照、路径或记录栏，并指出还需要哪份真实证据，不生成执行结果。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
                 "en": "Repair only gaps: keep the plan. Replace unsupported reproduced/fixed claims with \"pending real execution\". Add only missing controls, paths, or record fields and identify required real evidence; generate no execution results. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              },
+              "label": {
+                "zh": "修订要求",
+                "en": "Revision request"
+              },
+              "copyLabel": {
+                "zh": "复制修订要求",
+                "en": "Copy revision request"
               }
             },
             {
@@ -1532,8 +1627,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "A｜工单T01，2026-10-19，用户U1/管理员：每周导出CSV太费步骤，想一键导出。\nB｜邮件M01，2026-10-20，用户U1：再次转发T01，同一事件。\nC｜工单T02，2026-10-20，用户U2/管理员：希望直接默认展示全部成员。\nD｜访谈I01，2026-10-21，用户U3/普通成员：不要默认显示全部成员，担心暴露名单。\nE｜工单T03，2026-10-22，用户U2：CSV导出找不到入口；与T02是不同问题。\nF｜已有需求R07：简化CSV导出，状态待评审；近期仅调整导航名称。\nG｜范围：3名用户、2种角色；总用户数、代表性、影响频次与优先级均未知。",
-                "en": "A | Ticket T01, 2026-10-19, U1/admin: weekly CSV export takes too many steps; wants one-click export.\nB | Email M01, 2026-10-20, U1: forwards T01 again, the same incident.\nC | Ticket T02, 2026-10-20, U2/admin: wants all members shown by default.\nD | Interview I01, 2026-10-21, U3/member: opposes showing all members by default due to roster privacy.\nE | Ticket T03, 2026-10-22, U2: cannot find CSV export; a different issue from T02.\nF | Existing R07: simplify CSV export, awaiting review; recent change only renamed navigation.\nG | Coverage: 3 users, 2 roles; total population, representativeness, impact frequency, and priorities unknown."
+                "zh": "任务：作为产品反馈分析员，只用以下虚构记录整理反馈主题，供人工核对后再交给功能请求跟踪员。\n产物：主题、用户任务、原始编号与原话、去重关系、冲突及样本缺口。A/B只计同一事件；C/E为同人不同事，分别保留。\n边界：不把3人样本写成多数需求，不决定优先级、承诺排期或改写需求库。\n\n虚构材料：\nA｜工单T01，2026-10-19，用户U1/管理员：每周导出CSV太费步骤，想一键导出。\nB｜邮件M01，2026-10-20，用户U1：再次转发T01，同一事件。\nC｜工单T02，2026-10-20，用户U2/管理员：希望直接默认展示全部成员。\nD｜访谈I01，2026-10-21，用户U3/普通成员：不要默认显示全部成员，担心暴露名单。\nE｜工单T03，2026-10-22，用户U2：CSV导出找不到入口；与T02是不同问题。\nF｜已有需求R07：简化CSV导出，状态待评审；近期仅调整导航名称。\nG｜范围：3名用户、2种角色；总用户数、代表性、影响频次与优先级均未知。",
+                "en": "Task: act as the Product Feedback Analyst. Use only the fictional records below to organize feedback themes for human review before handoff to Feature Request Tracker.\nOutput: themes, user tasks, source IDs and quotes, deduplication, conflicts and sample gaps. Count A/B as one incident; retain C/E as separate issues from one user.\nBoundary: do not turn a three-user sample into majority demand, set priorities, promise dates or edit a backlog.\n\nFictional materials:\nA | Ticket T01, 2026-10-19, U1/admin: weekly CSV export takes too many steps; wants one-click export.\nB | Email M01, 2026-10-20, U1: forwards T01 again, the same incident.\nC | Ticket T02, 2026-10-20, U2/admin: wants all members shown by default.\nD | Interview I01, 2026-10-21, U3/member: opposes showing all members by default due to roster privacy.\nE | Ticket T03, 2026-10-22, U2: cannot find CSV export; a different issue from T02.\nF | Existing R07: simplify CSV export, awaiting review; recent change only renamed navigation.\nG | Coverage: 3 users, 2 roles; total population, representativeness, impact frequency, and priorities unknown."
+              },
+              "label": {
+                "zh": "练习任务与材料",
+                "en": "Practice task and materials"
+              },
+              "copyLabel": {
+                "zh": "复制练习任务",
+                "en": "Copy practice task"
               }
             },
             {
@@ -1557,8 +1660,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "教学参考节选｜去重：A/B同一事件，保留两来源，计1个事件；不能算两名用户。\n候选R07补充：简化并明确CSV导出入口，证据A/E，2名用户；保留操作步骤与可发现性两类问题。\n候选N02：澄清按角色的成员可见性，C要求全显、D反对；不能直接默认全显。\n验证：走查导出任务；向两类角色核实可见范围与权限政策，补影响频次。\n优先级：R07/N02均待产品负责人确认；3人样本不代表多数（G），不承诺开发日期。",
-                "en": "Teaching reference excerpt | Deduplication: A/B are one incident with two sources; do not count two users.\nR07 candidate addition: simplify and clarify CSV export, A/E from 2 users; retain both step-count and discoverability issues.\nCandidate N02: clarify member visibility by role; C requests all-visible, D opposes it; do not default to all-visible.\nValidation: walk through export; confirm visibility and access policy with both roles, then measure impact frequency.\nPriority: R07/N02 await product-owner confirmation; 3 users do not represent a majority (G); promise no development date."
+                "zh": "去重：A/B同一事件，保留两来源，计1个事件；不能算两名用户。\n候选R07补充：简化并明确CSV导出入口，证据A/E，2名用户；保留操作步骤与可发现性两类问题。\n候选N02：澄清按角色的成员可见性，C要求全显、D反对；不能直接默认全显。\n验证：走查导出任务；向两类角色核实可见范围与权限政策，补影响频次。\n优先级：R07/N02均待产品负责人确认；3人样本不代表多数（G），不承诺开发日期。",
+                "en": "Deduplication: A/B are one incident with two sources; do not count two users.\nR07 candidate addition: simplify and clarify CSV export, A/E from 2 users; retain both step-count and discoverability issues.\nCandidate N02: clarify member visibility by role; C requests all-visible, D opposes it; do not default to all-visible.\nValidation: walk through export; confirm visibility and access policy with both roles, then measure impact frequency.\nPriority: R07/N02 await product-owner confirmation; 3 users do not represent a majority (G); promise no development date."
+              },
+              "label": {
+                "zh": "教学参考节选",
+                "en": "Teaching reference excerpt"
+              },
+              "copyLabel": {
+                "zh": "复制参考节选",
+                "en": "Copy reference excerpt"
               }
             },
             {
@@ -1584,6 +1695,14 @@
               "text": {
                 "zh": "只修缺口：保留已追溯候选；修正A/B计数，补C/D相反意见或缺失来源，把无依据优先级改为待确认。只返回受影响候选与去重说明，不重新编排已通过部分。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
                 "en": "Repair only gaps: retain traceable candidates. Correct the A/B count, add missing C/D opposition or sources, and mark unsupported priorities unconfirmed. Return affected candidates and deduplication notes only. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              },
+              "label": {
+                "zh": "修订要求",
+                "en": "Revision request"
+              },
+              "copyLabel": {
+                "zh": "复制修订要求",
+                "en": "Copy revision request"
               }
             },
             {
@@ -1631,8 +1750,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "A｜目标客群：小型活动团队；3份访谈提到人工整理报名数据耗时，样本不具代表性。\nB｜产品证据，2026-10-21：演示仅验证CSV导出；节省时间比例、转化率未知。\nC｜质量记录，2026-10-22：手机失败重试检查未通过，复验结果尚无。\nD｜目标日期：2026-10-28拟发布介绍页与邮件；日期未经确认，尚未上线。\nE｜素材：介绍页草稿已备；邮件文案未完成，无客户证言授权。\nF｜负责人：小林制作、小周审核；2026-10-27审核时间固定，邮件依赖介绍页审核通过。\nG｜人工决定，2026-10-23：暂缓对外发布；恢复需C复验通过记录、素材审阅通过及负责人重新确认日期。",
-                "en": "A | Audience: small event teams; 3 interviews mention time spent organizing registrations, not a representative sample.\nB | Product evidence, 2026-10-21: demo verifies CSV export only; time-saving percentage and conversion rate unknown.\nC | Quality record, 2026-10-22: mobile failed-request retry check failed; no retest result yet.\nD | Target: introduction page and email proposed for 2026-10-28; date unconfirmed, not live.\nE | Assets: page draft ready; email copy incomplete; no authorization for customer testimonials.\nF | Owners: Lin creates, Zhou reviews; review slot fixed on 2026-10-27; email depends on page approval.\nG | Human decision, 2026-10-23: hold external release; resume only with passing C retest evidence, approved assets, and owners reconfirming the date."
+                "zh": "任务：作为产品定位与上市策划员，只用以下虚构材料写定位草案，供人工核对后再准备排期。\n产物：目标客群、客户任务、可证明能力、价值假设、内容需求和待验证项；每个主张附材料编号，保留失败检查与人工暂缓状态。\n边界：不编造指标、客户证言或已上线状态，不确认发布日、不执行发布。\n\n虚构材料：\nA｜目标客群：小型活动团队；3份访谈提到人工整理报名数据耗时，样本不具代表性。\nB｜产品证据，2026-10-21：演示仅验证CSV导出；节省时间比例、转化率未知。\nC｜质量记录，2026-10-22：手机失败重试检查未通过，复验结果尚无。\nD｜目标日期：2026-10-28拟发布介绍页与邮件；日期未经确认，尚未上线。\nE｜素材：介绍页草稿已备；邮件文案未完成，无客户证言授权。\nF｜负责人：小林制作、小周审核；2026-10-27审核时间固定，邮件依赖介绍页审核通过。\nG｜人工决定，2026-10-23：暂缓对外发布；恢复需C复验通过记录、素材审阅通过及负责人重新确认日期。",
+                "en": "Task: act as the Product Marketer. Use only the fictional materials below to draft positioning for human review before scheduling.\nOutput: audience, customer task, evidenced capabilities, value hypotheses, content needs and open validation items. Cite source IDs for each claim and retain failed checks and the human hold.\nBoundary: invent no metrics, testimonials or live-launch status. Do not confirm a launch date or publish.\n\nFictional materials:\nA | Audience: small event teams; 3 interviews mention time spent organizing registrations, not a representative sample.\nB | Product evidence, 2026-10-21: demo verifies CSV export only; time-saving percentage and conversion rate unknown.\nC | Quality record, 2026-10-22: mobile failed-request retry check failed; no retest result yet.\nD | Target: introduction page and email proposed for 2026-10-28; date unconfirmed, not live.\nE | Assets: page draft ready; email copy incomplete; no authorization for customer testimonials.\nF | Owners: Lin creates, Zhou reviews; review slot fixed on 2026-10-27; email depends on page approval.\nG | Human decision, 2026-10-23: hold external release; resume only with passing C retest evidence, approved assets, and owners reconfirming the date."
+              },
+              "label": {
+                "zh": "练习任务与材料",
+                "en": "Practice task and materials"
+              },
+              "copyLabel": {
+                "zh": "复制练习任务",
+                "en": "Copy practice task"
               }
             },
             {
@@ -1656,8 +1783,16 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "教学参考节选｜定位草案：为小型活动团队提供CSV导出整理入口（A/B）；省时效果仍是假设。\n文案边界：不写节省百分比、转化增长或客户证言（B/E）。\n日历：小林完成邮件草稿→小周2026-10-27审核介绍页与邮件→渠道检查；邮件依赖介绍页批准（E/F）。\n状态：人工暂缓（G）；手机失败重试未通过（C），2026-10-28待重新确认，尚未上线（D）。\n恢复证据：C复验通过记录＋两素材批准记录＋负责人确认的新日期；未知效果指标另列验证计划。",
-                "en": "Teaching reference excerpt | Positioning draft: a CSV export workflow for small event teams (A/B); time savings remain a hypothesis.\nCopy boundary: no saving percentage, conversion uplift, or customer testimonial (B/E).\nCalendar: Lin completes email draft, Zhou reviews page and email on 2026-10-27, then channel checks; email depends on page approval (E/F).\nStatus: human hold (G); mobile retry failed (C); 2026-10-28 awaits reconfirmation, not live (D).\nResume evidence: passing C retest record, both asset approvals, and an owner-confirmed date; unknown outcome metrics need a separate validation plan."
+                "zh": "定位草案：为小型活动团队提供CSV导出整理入口（A/B）；省时效果仍是假设。\n文案边界：不写节省百分比、转化增长或客户证言（B/E）。\n日历：小林完成邮件草稿→小周2026-10-27审核介绍页与邮件→渠道检查；邮件依赖介绍页批准（E/F）。\n状态：人工暂缓（G）；手机失败重试未通过（C），2026-10-28待重新确认，尚未上线（D）。\n恢复证据：C复验通过记录＋两素材批准记录＋负责人确认的新日期；未知效果指标另列验证计划。",
+                "en": "Positioning draft: a CSV export workflow for small event teams (A/B); time savings remain a hypothesis.\nCopy boundary: no saving percentage, conversion uplift, or customer testimonial (B/E).\nCalendar: Lin completes email draft, Zhou reviews page and email on 2026-10-27, then channel checks; email depends on page approval (E/F).\nStatus: human hold (G); mobile retry failed (C); 2026-10-28 awaits reconfirmation, not live (D).\nResume evidence: passing C retest record, both asset approvals, and an owner-confirmed date; unknown outcome metrics need a separate validation plan."
+              },
+              "label": {
+                "zh": "教学参考节选",
+                "en": "Teaching reference excerpt"
+              },
+              "copyLabel": {
+                "zh": "复制参考节选",
+                "en": "Copy reference excerpt"
               }
             },
             {
@@ -1683,6 +1818,14 @@
               "text": {
                 "zh": "只修缺口：保留有证据定位与日历；删除无依据效果数值，补C/G门槛和缺失依赖。仅返回改动行及仍缺的恢复证据，不自行解除暂缓或改成已发布。 审阅人若发现缺口，退回产出该内容的角色；人工复核修订后再交接或保存，不自动流转。",
                 "en": "Repair only gaps: retain sourced positioning and calendar entries. Remove unsupported metrics and add missing C/G gates or dependencies. Return changed lines and outstanding resume evidence; do not lift the hold or mark the launch live. If a reviewer finds a gap, return it to the role that produced it. A human reviews the revision before handoff or saving; there is no automatic routing."
+              },
+              "label": {
+                "zh": "修订要求",
+                "en": "Revision request"
+              },
+              "copyLabel": {
+                "zh": "复制修订要求",
+                "en": "Copy revision request"
               }
             },
             {
@@ -2621,8 +2764,8 @@
               "type": "code",
               "language": "text",
               "text": {
-                "zh": "公开反馈（请脱敏）\n页面或公开Bot ID：\n模板版本 / 语言 / 内容修订：\n宿主版本（涉及导入时）：\n时间与最小步骤：\n预期结果：\n实际结果和错误码：\n可公开小样例：\n不包含：账号、密钥、私有对话、客户材料",
-                "en": "Public feedback (sanitize first)\nPage or public Bot ID:\nTemplate version / language / content revision:\nHost version (for import issues):\nTime and minimal steps:\nExpected result:\nActual result and error code:\nSmall public sample:\nExclude accounts, keys, private conversations, and customer materials."
+                "zh": "公开反馈（请脱敏）\n页面或公开Bot ID：\n模板版本 / 语言 / 内容修订：\n宿主版本（涉及导入时）：\n时间与最小步骤：\n预期结果：\n实际结果和错误码：\n可公开小样例：\n敏感资料处理状态（如适用，不写敏感值）：\n不包含：账号、密钥、私有对话、客户材料",
+                "en": "Public feedback (sanitize first)\nPage or public Bot ID:\nTemplate version / language / content revision:\nHost version (for import issues):\nTime and minimal steps:\nExpected result:\nActual result and error code:\nSmall public sample:\nSensitive-material handling status (if applicable; no sensitive values):\nExclude accounts, keys, private conversations, and customer materials."
               }
             },
             {
@@ -2630,6 +2773,13 @@
               "text": {
                 "zh": "角色详情反馈入口会预填公开 Bot ID、模板版本和来源。提交前仍需检查自己添加的材料，不公开完整私有日志。",
                 "en": "Role detail feedback links prefill the public Bot ID, template version, and source. Review your additions before submission and keep complete private logs out of public feedback."
+              }
+            },
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "若已误贴敏感资料，先处理暴露：凭据在对应服务侧撤销或轮换，删除聊天不等于凭据失效；客户资料按实际服务删除或限制访问，并确认暴露范围。反馈只记录处理状态与必要的范围说明，不再次粘贴敏感值。",
+                "en": "If sensitive material was pasted by mistake, address the exposure first: revoke or rotate credentials at the relevant service; deleting a chat does not invalidate credentials. For customer materials, delete them or restrict access in the actual service and establish the exposure scope. Report only handling status and necessary scope details, without repeating sensitive values."
               }
             }
           ]
@@ -2796,12 +2946,42 @@
               "rows": [
                 [
                   {
+                    "zh": "Agent",
+                    "en": "Agent"
+                  },
+                  {
+                    "zh": "在宿主中结合模型、指令和可用工具处理任务的执行者；能力取决于实际配置与授权",
+                    "en": "An executor that uses a model, instructions, and available tools in a host to handle tasks; its capabilities depend on actual configuration and authorization"
+                  }
+                ],
+                [
+                  {
                     "zh": "Bot 角色",
                     "en": "Bot role"
                   },
                   {
                     "zh": "职责、方法和前提的配置",
                     "en": "Configuration of responsibilities, methods, and prerequisites"
+                  }
+                ],
+                [
+                  {
+                    "zh": "宿主",
+                    "en": "Host"
+                  },
+                  {
+                    "zh": "承载 Bot 或 Agent 的应用或运行环境，管理可用工具与账号授权",
+                    "en": "The application or runtime that runs a Bot or Agent and manages available tools and account authorization"
+                  }
+                ],
+                [
+                  {
+                    "zh": "模型",
+                    "en": "Model"
+                  },
+                  {
+                    "zh": "提供生成与推理能力的组件；可用工具和账号权限由宿主另行配置",
+                    "en": "The component providing generation and reasoning; available tools and account permissions are configured separately in the host"
                   }
                 ],
                 [
@@ -2885,6 +3065,13 @@
             "en": "Find licenses and attribution"
           },
           "blocks": [
+            {
+              "type": "paragraph",
+              "text": {
+                "zh": "{{roles}} 个角色中包含 {{adapted}} 个带来源适配角色，另有 {{workflows}} 个任务流程。Shared Bots 仅为来源链接，不计入本站可导入配置；具体条目的许可与来源以 data/entries 中的 license / references 及适用许可文件为准。",
+                "en": "The {{roles}} roles include {{adapted}} source-adapted roles; there are also {{workflows}} task workflows. Shared Bots are source links and are excluded from this site’s importable configuration count. For each entry, check license / references in data/entries and the applicable license files."
+              }
+            },
             {
               "type": "paragraph",
               "text": {

@@ -195,7 +195,7 @@ main,
 
 .brand-copy small {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -370,7 +370,7 @@ h1 em {
   flex: 0 0 auto;
   min-width: 55px;
   padding: 0 18px;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 12px;
   text-align: right;
 }

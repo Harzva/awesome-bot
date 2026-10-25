@@ -18,7 +18,7 @@
   document.querySelectorAll('.handbook-content pre').forEach(pre => {
     const source = pre.querySelector('code') || pre;
     const actions = make('div', undefined, 'handbook-code-actions');
-    const button = make('button', locale === 'en' ? 'Copy text' : '复制内容');
+    const button = make('button', pre.dataset.copyLabel || (locale === 'en' ? 'Copy text' : '复制内容'));
     const status = make('span', '', 'handbook-copy-status');
     button.type = 'button';
     button.dataset.handbookCopy = '';

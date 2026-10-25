@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.3 — 2026-10-25
+
+- Link marketplace scenarios and handbook task cards directly to their matching practice packs; search results now land on the individual scenario card.
+- Make the first practice copy include both instructions and fictional materials. Give task, reference and revision blocks distinct bilingual headings and copy labels, including in Markdown.
+- Clarify role/workflow choices, catalogue counts and runtime terms. Extend import records with traceable history and distinguish missing identity evidence from a confirmed upgrade.
+- Add concise guidance for accidentally shared sensitive material, and align the bug-reproduction role name with the catalogue. Preserve published Bot, registry and scenario bytes.
+
 ## 0.9.2 — 2026-10-25
 
 - Add five bilingual practice packs to the existing scenarios, each with fictional source material, a prepared reference excerpt, three acceptance checks and a targeted correction prompt.
