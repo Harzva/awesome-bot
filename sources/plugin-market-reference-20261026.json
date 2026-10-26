@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-26",
+  "sources": [
+    {
+      "url": "https://x.ai/bot/marketplace",
+      "observed": "Bot marketplace exposes category filters, search by creator or bot name, and Add links. Creator attribution is separate from the Bot role.",
+      "limit": "This is a Bot catalogue reference, not evidence of a DSH installation or a plugin distribution contract."
+    },
+    {
+      "url": "https://docs.x.ai/grok-bot/bots",
+      "observed": "Documentation describes browsing, adding and importing Bot copies.",
+      "limit": "The plugin market retains its own source, version and permission explanation; no upstream branding or artwork is copied."
+    }
+  ],
+  "dshValidator": { "package": "@deepseek-ai/dsh-plugin-market-index", "version": "0.2.1-rc.2", "format": 1 },
+  "decision": "Shared website navigation; separate Bot template, DSH bundle and desktop-host plugin contracts."
+}

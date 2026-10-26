@@ -64,7 +64,7 @@ Use **Copy for Agent** in the market or an individual Bot detail, then paste the
 
 ## Run locally
 
-Node.js **22 or newer**. No runtime package dependencies.
+Node.js **22 or newer**. The static site has no browser runtime dependencies; its build uses the locked official DSH index validator.
 
 ```sh
 git clone https://github.com/Harzva/awesome-bot.git
@@ -125,3 +125,7 @@ Format and import checks are not certifications that every role has completed re
 [Awesome DSH Plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) and [DSH Market](https://github.com/dsh-market/dsh-market) inform project organization and discovery. Roles, workflows, skills, plugins and execution runtimes remain distinct. See the [reference benchmark](docs/reference-benchmark.md), [source notes](SOURCE.md) and [App integration contract](INTEGRATION.md).
 
 Original content and code use [MIT](LICENSE). Upstream names and references retain their owners' rights; see [third-party notices](THIRD_PARTY_NOTICES.md). This is an independent project, unaffiliated with xAI or DeepSeek.
+
+## Plugins
+
+[Browse plugins](https://harzva.github.io/awesome-bot/plugins.html?lang=en) alongside Bot templates. DSH bundles use a separate [format-1 Git index](https://harzva.github.io/awesome-bot/dsh/index.json); OpenBot desktop plugins retain their own desktop installation contract. Plugin versions pin a Git commit and release archive checksum. Downloads do not install, enable, or grant permissions. See [the plugin guide](docs/plugins.md).

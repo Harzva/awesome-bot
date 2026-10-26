@@ -154,6 +154,8 @@ test('community growth beyond one Fleet package keeps the market and individual 
   const fixture = join(directory, 'repository');
   try {
     await cp(root, fixture, { recursive: true, filter: file => !['.git', 'dist', 'out', '.cache', 'node_modules'].some(name => file === resolve(root, name)) });
+    // The site generator uses the locked official DSH index parser.
+    await cp(resolve(root, 'node_modules'), join(fixture, 'node_modules'), { recursive: true });
     const catalogue = await readCatalogue();
     const needed = Math.max(1, 201 - catalogue.bots.length);
     const source = JSON.parse(await readFile(join(fixture, 'data/entries/chief-of-staff.json'), 'utf8'));

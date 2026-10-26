@@ -1,6 +1,6 @@
 {
   "name": "awesome-bot-market",
-  "version": "0.9.4",
+  "version": "0.10.0",
   "private": true,
   "type": "module",
   "description": "A source-backed Bot directory with original OpenBot roles, workflows and reproducible configuration downloads",
@@ -30,5 +30,8 @@
     "check:versions": "node scripts/check-versions.mjs",
     "sync:imports": "node scripts/sync-imported-roles.mjs",
     "check:imports": "node scripts/sync-imported-roles.mjs --check"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-plugin-market-index": "0.2.1-rc.2"
   }
 }

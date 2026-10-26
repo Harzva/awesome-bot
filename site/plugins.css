@@ -1,0 +1,358 @@
+.plugin-market-page .site-nav .is-current {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.plugin-masthead {
+  padding-bottom: 20px;
+}
+
+.plugin-results-section {
+  padding: 0 0 54px;
+}
+
+.plugin-results-heading {
+  margin-bottom: 0;
+}
+
+.plugin-results-tools {
+  max-width: 60%;
+}
+
+.plugin-results-tools .results-status {
+  margin-bottom: 0;
+}
+
+.plugin-results-tools .text-button {
+  min-height: 34px;
+  padding: 6px 10px;
+  border-radius: var(--radius-control);
+  font-size: 12px;
+}
+
+.plugin-results-tools #clear-search {
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.plugin-results-tools #clear-search:hover {
+  border-color: var(--ink);
+  background: var(--surface-soft);
+}
+
+.plugin-list {
+  min-width: 0;
+}
+
+.plugin-entry {
+  padding: 19px 0 21px;
+  border-bottom: 1px solid var(--line);
+}
+
+.plugin-entry-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 285px);
+  gap: 26px;
+  align-items: start;
+}
+
+.plugin-kind {
+  margin: 0 0 5px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.plugin-name {
+  margin: 0 0 5px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.plugin-summary {
+  max-width: 710px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.plugin-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+  margin: 2px 0 0;
+}
+
+.plugin-meta-item {
+  min-width: 0;
+}
+
+.plugin-meta-item dt {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.plugin-meta-item dd {
+  margin: 1px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.plugin-capabilities,
+.plugin-path-note {
+  margin: 13px 0 0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.plugin-capabilities strong,
+.plugin-path-note strong {
+  font-weight: 600;
+}
+
+.plugin-path-note {
+  color: var(--muted);
+}
+
+.plugin-path-note strong {
+  color: var(--ink);
+}
+
+.plugin-details {
+  margin-top: 15px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+}
+
+.plugin-details > summary {
+  width: fit-content;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.plugin-details > summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.plugin-detail-body {
+  padding: 14px 0 2px;
+}
+
+.plugin-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 28px;
+}
+
+.plugin-detail-field {
+  min-width: 0;
+}
+
+.plugin-detail-field h4,
+.plugin-install-spec h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.plugin-detail-field p,
+.plugin-detail-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.plugin-source-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--ink);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.plugin-revision {
+  display: block;
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.plugin-detail-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.plugin-detail-list li + li {
+  margin-top: 3px;
+}
+
+.plugin-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 14px;
+}
+
+.plugin-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 5px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.3;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.plugin-action:hover {
+  border-color: var(--ink);
+  background: var(--surface-soft);
+}
+
+.plugin-install-spec {
+  margin-top: 15px;
+}
+
+.plugin-install-guide {
+  margin: 0 0 14px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.plugin-install-guide h4 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.plugin-install-guide ol {
+  padding-left: 20px;
+}
+
+.plugin-install-spec pre {
+  max-width: 100%;
+  margin: 0 0 8px;
+  padding: 10px 12px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.plugin-state {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.plugin-state h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.plugin-state p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+#action-status {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .plugin-entry-head {
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 230px);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .plugin-results-heading {
+    display: block;
+  }
+
+  .plugin-results-heading > div:first-child {
+    margin-bottom: 8px;
+  }
+
+  .plugin-results-tools {
+    display: flex;
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px 8px;
+    margin-bottom: 8px;
+  }
+
+  .plugin-results-tools .results-status {
+    flex-basis: 100%;
+    max-width: none;
+    text-align: left;
+  }
+
+  .plugin-entry-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .plugin-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 12px;
+  }
+
+  .plugin-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plugin-market-page .site-nav {
+    gap: 8px;
+  }
+
+  .plugin-market-page .site-nav a {
+    font-size: 12px;
+  }
+
+  .plugin-entry {
+    padding: 16px 0 18px;
+  }
+
+  .plugin-name {
+    font-size: 19px;
+  }
+
+  .plugin-results-tools {
+    align-items: flex-start;
+  }
+}

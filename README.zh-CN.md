@@ -59,7 +59,7 @@
 
 ## 本地开发
 
-需要 Node.js 22 或更新版本，无运行时 npm 依赖。
+需要 Node.js 22 或更新版本。静态网页没有浏览器运行时依赖；构建使用锁定版本的 DSH 官方索引校验器。
 
 ```sh
 git clone https://github.com/Harzva/awesome-bot.git
@@ -92,3 +92,7 @@ PR 运行独立构建、格式与来源覆盖检查、导出和公开产物审�
 项目借鉴 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 的目录、贡献与维护机制，保留自己的 Bot 语义和安装格式。见[参考检查表](docs/reference-benchmark.md)。本项目不生成虚假评分、热度或下载数。
 
 原创内容采用 [MIT](LICENSE)。上游名称和引用归原权利人；详见[来源说明](SOURCE.md)与[第三方声明](THIRD_PARTY_NOTICES.md)。本项目独立于 xAI 和 DeepSeek。
+
+## 插件市场
+
+[浏览插件](https://harzva.github.io/awesome-bot/plugins.html)，为已有 Bot 增加能力。DSH 工具包提供独立的 [format-1 Git 索引](https://harzva.github.io/awesome-bot/dsh/index.json)；OpenBot 桌面插件沿用自己的桌面安装流程。每个版本固定 Git 提交和下载包摘要，下载不等于安装、启用或授权。见[插件说明](docs/plugins.md)。
