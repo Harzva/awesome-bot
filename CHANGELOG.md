@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.0 — 2026-10-26
+
+- Add a bilingual plugin marketplace with searchable capabilities, requirements, pinned source versions and actual release downloads.
+- Generate a DSH format-1 Git index using the official validator; keep executable bundles separate from Bot configuration exports and desktop-host-only packages.
+- List the independent UseChat adapter and existing desktop capture and SuperTerminal packages. Installation, permissions and real-device verification remain distinct.
+- Preserve all existing Bot templates, published manifest versions, handbook and reference pages.
+
 ## 0.9.3 — 2026-10-25
 
 - Link marketplace scenarios and handbook task cards directly to their matching practice packs; search results now land on the individual scenario card.

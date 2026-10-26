@@ -1,0 +1,210 @@
+{
+  "schema": "awesome.bot.plugins/1",
+  "updatedAt": "2026-10-26",
+  "entries": [
+    {
+      "id": "wechat-usechat",
+      "name": {
+        "zh": "微信 · UseChat",
+        "en": "WeChat · UseChat"
+      },
+      "summary": {
+        "zh": "通过本机 UseChat 为 Bot 提供微信环境检查、指定对话读取与经批准的文字发送。",
+        "en": "Use local UseChat to diagnose WeChat setup, read selected visible chats and submit approved text."
+      },
+      "packageName": "@harzva/dsh-wechat-usechat",
+      "version": "0.1.0",
+      "repository": "https://github.com/Harzva/dsh-wechat-usechat",
+      "revision": "4e546e1ddbb2e170fc6dce35aa1fceb67a074a3f",
+      "license": "MIT",
+      "platforms": [
+        "macOS"
+      ],
+      "format": "dsh-bundle",
+      "downloadUrl": "https://github.com/Harzva/dsh-wechat-usechat/releases/download/v0.1.0/harzva-dsh-wechat-usechat-0.1.0.tgz",
+      "sha256": "e211069893163cc06609f9df3caad6d8ff59ee3dae77a5060226bb2294eea1cf",
+      "docsUrl": "https://github.com/Harzva/dsh-wechat-usechat/blob/4e546e1ddbb2e170fc6dce35aa1fceb67a074a3f/README.md",
+      "dsh": {
+        "engine": "0.2.1-rc.2",
+        "publishTimestamp": 1793000496
+      },
+      "capabilities": {
+        "zh": [
+          "环境诊断 usechat_doctor",
+          "读取允许对话 usechat_read",
+          "逐次批准后发送文字 usechat_send_text"
+        ],
+        "en": [
+          "Setup diagnosis: usechat_doctor",
+          "Allowed visible chat reading: usechat_read",
+          "Individually approved text sends: usechat_send_text"
+        ]
+      },
+      "requirements": {
+        "zh": [
+          "macOS、已登录的微信和独立安装的 UseChat Helper",
+          "Node.js 22.19+、DSH 0.2.1-rc.2",
+          "宿主配置允许对话、视觉模型和共享窗口操作锁；系统授予屏幕录制与辅助功能权限",
+          "发送需宿主显式开启，并接入真实逐次审批服务"
+        ],
+        "en": [
+          "macOS, signed-in WeChat and separately installed UseChat Helper",
+          "Node.js 22.19+, DSH 0.2.1-rc.2",
+          "Host-selected chats, vision provider and shared UI lease; OS screen recording and accessibility permissions",
+          "Sending requires an explicit host write flag and a real per-call approval service"
+        ]
+      },
+      "limitations": {
+        "zh": [
+          "仅支持可见对话与文字发送；不承诺完整历史或视频号控制",
+          "远程视觉模型可能接收当前窗口截图和 OCR",
+          "发送默认关闭；不确定结果禁止自动重发",
+          "已验证 DSH 安装、工具注册与审批拦截，尚未操作真实微信消息"
+        ],
+        "en": [
+          "Visible chats and text only; no full-history or video-channel control claim",
+          "A remote vision provider may receive window screenshots and OCR",
+          "Sending starts disabled; uncertain outcomes cannot automatically retry",
+          "DSH installation, tool registration and approval denial verified; real WeChat messages not exercised"
+        ]
+      },
+      "openbot": {
+        "status": "git-adapter-required",
+        "note": {
+          "zh": "普通 DSH 可按固定 Git 提交安装；OpenBot 在线安装需要宿主 Git 来源适配更新。",
+          "en": "Standalone DSH can install the pinned Git commit; OpenBot online installation needs the host Git-source adapter update."
+        }
+      }
+    },
+    {
+      "repository": "https://github.com/Harzva/dsh-desktop-capture",
+      "revision": "1592e6c8d637d92975f5505ece96b3e21f2eaa1c",
+      "license": "MIT",
+      "platforms": [
+        "macOS"
+      ],
+      "format": "openbot-desktop",
+      "dsh": null,
+      "docsUrl": "https://github.com/Harzva/dsh-desktop-capture/blob/1592e6c8d637d92975f5505ece96b3e21f2eaa1c/README.md",
+      "openbot": {
+        "status": "desktop-host",
+        "note": {
+          "zh": "通过 OpenBot 桌面插件管理器安装、启用；普通 DSH 不能单独运行。",
+          "en": "Install and enable with the OpenBot desktop plugin manager; not a standalone DSH tool bundle."
+        }
+      },
+      "id": "desktop-capture",
+      "name": {
+        "zh": "截图与录制",
+        "en": "Screen capture & recording"
+      },
+      "summary": {
+        "zh": "让 Bot 查看界面，录制应用或桌面，制作带配音的演示素材。",
+        "en": "Let a Bot observe a screen, record an app or desktop, and create narrated demo material."
+      },
+      "version": "0.3.1",
+      "packageName": "@openbot/dsh-desktop-capture",
+      "sha256": "40aa35bc0d7d3f633d76917c707e3a3d5aa57498fff88e42d88223f724c5fc86",
+      "downloadUrl": "https://github.com/Harzva/dsh-desktop-capture/releases/download/v0.3.1/openbot-dsh-desktop-capture-0.3.1.tgz",
+      "capabilities": {
+        "zh": [
+          "应用与桌面截图",
+          "画面录制",
+          "演示与配音工具"
+        ],
+        "en": [
+          "App and desktop screenshots",
+          "Screen recording",
+          "Demo and narration tools"
+        ]
+      },
+      "requirements": {
+        "zh": [
+          "Apple Silicon Mac，macOS 15 或更新",
+          "OpenBot Desktop Host API 1",
+          "按任务授予屏幕录制、麦克风或摄像头权限"
+        ],
+        "en": [
+          "Apple Silicon Mac, macOS 15 or newer",
+          "OpenBot Desktop Host API 1",
+          "Screen recording, microphone or camera permission for the selected task"
+        ]
+      },
+      "limitations": {
+        "zh": [
+          "网站下载不会自动安装或启用",
+          "摄像头采集不代表已支持画中画成片"
+        ],
+        "en": [
+          "A website download does not install or enable the plugin",
+          "Camera capture does not establish camera-overlay video support"
+        ]
+      }
+    },
+    {
+      "repository": "https://github.com/Harzva/dsh-desktop-capture",
+      "revision": "1592e6c8d637d92975f5505ece96b3e21f2eaa1c",
+      "license": "MIT",
+      "platforms": [
+        "macOS"
+      ],
+      "format": "openbot-desktop",
+      "dsh": null,
+      "docsUrl": "https://github.com/Harzva/dsh-desktop-capture/blob/1592e6c8d637d92975f5505ece96b3e21f2eaa1c/README.md",
+      "openbot": {
+        "status": "desktop-host",
+        "note": {
+          "zh": "通过 OpenBot 桌面插件管理器安装、启用；普通 DSH 不能单独运行。",
+          "en": "Install and enable with the OpenBot desktop plugin manager; not a standalone DSH tool bundle."
+        }
+      },
+      "id": "superterminal",
+      "name": {
+        "zh": "超级终端",
+        "en": "SuperTerminal"
+      },
+      "summary": {
+        "zh": "为 Bot 提供终端会话、输出读取与受控命令输入。",
+        "en": "Give a Bot terminal sessions, output reading and controlled command input."
+      },
+      "version": "0.2.1",
+      "packageName": "@openbot/dsh-superterminal",
+      "sha256": "0359c51c9da46e56beb06ef4df7efe371757abf983f33f95ad2515f4a667b55e",
+      "downloadUrl": "https://github.com/Harzva/dsh-desktop-capture/releases/download/v0.3.1/openbot-dsh-superterminal-0.2.1.tgz",
+      "capabilities": {
+        "zh": [
+          "打开与关闭终端",
+          "读取输出和命令记录",
+          "受控输入与终端设置"
+        ],
+        "en": [
+          "Open and close terminals",
+          "Read output and command history",
+          "Controlled input and terminal settings"
+        ]
+      },
+      "requirements": {
+        "zh": [
+          "Apple Silicon 或 Intel Mac",
+          "OpenBot Desktop Host API 1",
+          "所选 Bot 具有相应终端权限"
+        ],
+        "en": [
+          "Apple Silicon or Intel Mac",
+          "OpenBot Desktop Host API 1",
+          "Terminal permissions for the selected Bot"
+        ]
+      },
+      "limitations": {
+        "zh": [
+          "安装不授予命令执行权限",
+          "需要桌面宿主，不作为独立 DSH 工具包安装"
+        ],
+        "en": [
+          "Installation grants no command execution permission",
+          "Requires the desktop host; not a standalone DSH tool bundle"
+        ]
+      }
+    }
+  ]
+}

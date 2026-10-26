@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="浏览 Awesome Bot 插件，查看来源、版本、平台、权限需求与安装方式。">
+    <meta name="theme-color" content="#ffffff">
+    <title>Awesome Bot · 插件市场</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./plugins.css">
+  </head>
+  <body class="plugin-market-page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Awesome Bot 首页" data-i18n-aria-label="homeLabel">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Awesome Bot</strong>
+          <small>OpenBot directory</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航" data-i18n-aria-label="navigationLabel">
+        <a id="bot-market-link" href="./" data-i18n="navBots">Bot 市场</a>
+        <a id="resources-link" href="./resources.html" data-i18n="navResources">开源与参考</a>
+        <a id="plugins-current-link" class="is-current" href="./plugins.html" aria-current="page" data-i18n="navPlugins">插件市场</a>
+        <a id="handbook-link" href="./handbook.html" data-i18n="navHandbook">使用手册</a>
+        <a href="https://github.com/Harzva/awesome-bot" target="_blank" rel="noreferrer">GitHub</a>
+        <button id="language-toggle" class="language-toggle" type="button" aria-label="切换界面语言" data-i18n-aria-label="languageToggle">EN</button>
+      </nav>
+    </header>
+
+    <main id="plugins">
+      <section class="masthead plugin-masthead" aria-labelledby="page-title">
+        <div class="masthead-copy">
+          <h1 id="page-title" data-i18n="title">插件市场</h1>
+          <p id="page-lede" class="lede" data-i18n="lede">查看插件能力、来源和接入要求。下载不会在此页面自动安装或运行。</p>
+        </div>
+        <div class="masthead-note" aria-label="目录说明" data-i18n-aria-label="inventoryLabel">
+          <span class="note-rule" aria-hidden="true"></span>
+          <p><strong id="plugin-count">—</strong> <span data-i18n="pluginsLabel">个插件可查</span></p>
+          <p class="muted"><span data-i18n="updatedLabel">目录更新时间：</span><time id="updated-at">—</time></p>
+        </div>
+      </section>
+
+      <section class="search-section" aria-labelledby="search-label">
+        <label id="search-label" class="sr-only" for="plugin-search" data-i18n="searchLabel">搜索插件</label>
+        <div class="search-shell">
+          <span class="search-symbol" aria-hidden="true"></span>
+          <input id="plugin-search" type="search" maxlength="240" autocomplete="off" spellcheck="false" placeholder="搜索名称、能力、系统或来源" data-i18n-placeholder="searchPlaceholder">
+          <span id="search-count" class="search-count" aria-live="polite">—</span>
+        </div>
+        <p class="search-hint" data-i18n="searchHint">可按名称、简介、版本、许可证、平台、能力和来源搜索</p>
+      </section>
+
+      <section class="plugin-results-section" aria-labelledby="results-title">
+        <div class="results-heading plugin-results-heading">
+          <div>
+            <h2 id="results-title"><span data-i18n="resultsTitle">全部插件</span> <span id="results-total" class="heading-count">—</span></h2>
+          </div>
+          <div class="results-heading-tools plugin-results-tools">
+            <p id="results-status" class="results-status" aria-live="polite" data-i18n="loading">正在读取目录…</p>
+            <button id="copy-search" class="text-button" type="button" data-i18n="shareSearch">复制搜索链接</button>
+            <button id="clear-search" class="text-button" type="button" data-i18n="clearSearch" hidden>清除搜索</button>
+            <p id="action-status" class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <section id="load-error" class="plugin-state" hidden aria-labelledby="error-title">
+          <h3 id="error-title" data-i18n="errorTitle">目录暂不可用</h3>
+          <p data-i18n="errorBody">请检查网络后重试。</p>
+          <button id="retry-catalogue" class="text-button" type="button" data-i18n="retry">重新加载</button>
+        </section>
+        <section id="empty-state" class="plugin-state" hidden aria-labelledby="empty-title">
+          <h3 id="empty-title" data-i18n="emptyTitle">没有匹配的插件</h3>
+          <p id="empty-body" data-i18n="emptyBody">换一个关键词，或清除搜索后再试。</p>
+          <button id="clear-empty-search" class="text-button" type="button" data-i18n="clearSearch">清除搜索</button>
+        </section>
+        <div id="plugin-list" class="plugin-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Awesome Bot · <span data-i18n="footerText">开源目录，欢迎审阅与投稿。</span></p>
+      <a href="https://github.com/Harzva/awesome-bot/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT</a>
+    </footer>
+
+    <noscript>
+      <div class="no-script" data-i18n="noScript">需要启用 JavaScript 才能搜索和查看目录。</div>
+    </noscript>
+    <script src="./plugins.js" defer></script>
+  </body>
+</html>

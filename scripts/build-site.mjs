@@ -9,6 +9,7 @@ import { writeAgentSurface } from './agent-surface.mjs';
 import { writeExternalProjects } from './external-projects.mjs';
 import { writeSharedBots, readSharedBots } from './shared-bots.mjs';
 import { writeHandbook } from './handbook.mjs';
+import { writePlugins } from './plugins.mjs';
 
 const args = process.argv.slice(2);
 if (args.some(arg => !arg.startsWith('--out='))) throw new Error('Usage: node scripts/build-site.mjs [--out=<directory>]');
@@ -49,6 +50,9 @@ await cp(resolve(root, 'site'), output, { recursive: true });
 const indexFile = resolve(output, 'index.html');
 const indexHtml = await readFile(indexFile, 'utf8');
 await writeFile(indexFile, indexHtml.replace(/((?:href|src)=["'])(\.\/(?:styles\.css|navigation\.js|app\.js))(["'])/g,
+  (_, prefix, asset, suffix) => `${prefix}${asset}?v=${encodeURIComponent(packageMetadata.version)}${suffix}`));
+const pluginPage = resolve(output, 'plugins.html');
+await writeFile(pluginPage, (await readFile(pluginPage, 'utf8')).replace(/((?:href|src)=["'])(\.\/(?:styles\.css|plugins\.css|plugins\.js))(["'])/g,
   (_, prefix, asset, suffix) => `${prefix}${asset}?v=${encodeURIComponent(packageMetadata.version)}${suffix}`));
 await cp(resolve(root, 'templates'), resolve(output, 'templates'), { recursive: true });
 await cp(resolve(root, 'registry'), resolve(output, 'registry'), { recursive: true });
@@ -168,9 +172,10 @@ await writeFile(resolve(output, 'catalogue.json'), json(data));
 await writeFile(resolve(output, 'catalogue.en.json'), json(englishData));
 const agents = await writeAgentSurface({ output, catalogues: { zh: data, en: englishData }, contentRevision: packageMetadata.version });
 await writeExternalProjects({ output, version: packageMetadata.version });
+await writePlugins({ output });
 await writeSharedBots({ output, version: packageMetadata.version });
 const handbook = await writeHandbook({ output, version: packageMetadata.version, catalogues: { zh: data, en: englishData }, shared: await readSharedBots() });
 await writeFile(indexFile, (await readFile(indexFile, 'utf8')).replace('data-handbook-practices=""', `data-handbook-practices="${handbook.practiceScenarioIds.join(',')}"`));
 await writeFile(resolve(output, 'robots.txt'), 'User-agent: *\nAllow: /\n');
-await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/shared-bots.html</loc></url>' + handbook.pages.map(page => `<url><loc>https://harzva.github.io/awesome-bot/${page}</loc></url>`).join('') + '</urlset>\n');
+await writeFile(resolve(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://harzva.github.io/awesome-bot/</loc></url><url><loc>https://harzva.github.io/awesome-bot/plugins.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/resources.en.html</loc></url><url><loc>https://harzva.github.io/awesome-bot/shared-bots.html</loc></url>' + handbook.pages.map(page => `<url><loc>https://harzva.github.io/awesome-bot/${page}</loc></url>`).join('') + '</urlset>\n');
 console.log(JSON.stringify({ ok: true, output, ...counts, individualDownloads: entries.length, scenarioDownloads: scenarios.length, englishEntries: englishEntries.length, agentCards: agents.cards }));
